@@ -1,0 +1,175 @@
+builder: mozilla-esr52_ubuntu64_vm_test_pgo-mochitest-clipboard
+slave: tst-linux64-spot-006
+starttime: 1528502562.65
+results: cancelled (6)
+buildid: 20180608150819
+builduid: b298b373e93d4f8dbf92436c9ed838a2
+revision: cbfdf01aac455e0591471201c96b89dee98190b5
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:42.645749) =========
+master: http://buildbot-master52.bb.releng.use1.mozilla.com:8201/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:42.646192) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:42.646510) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:42.806684) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 1 secs) (at 2018-06-08 17:02:42.807177) =========
+bash -c 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502559.455647-203873827
+  _=/tools/buildbot/bin/python
+ using PTY: False
+--2018-06-08 17:02:42--  https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py
+Resolving hg.mozilla.org (hg.mozilla.org)... 63.245.215.102, 63.245.215.25
+Connecting to hg.mozilla.org (hg.mozilla.org)|63.245.215.102|:443... connected.
+HTTP request sent, awaiting response... 200 Script output follows
+Length: 12179 (12K) [text/x-python]
+Saving to: `archiver_client.py'
+
+     0K .......... .                                          100% 7.81M=0.001s
+
+2018-06-08 17:02:43 (7.81 MB/s) - `archiver_client.py' saved [12179/12179]
+
+program finished with exit code 0
+elapsedTime=0.541510
+========= master_lag: 0.48 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 1 secs) (at 2018-06-08 17:02:43.832568) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:43.833107) =========
+rm -rf scripts properties
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502559.455647-203873827
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.041139
+========= master_lag: 0.02 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:43.890102) =========
+
+========= Started 'bash -c ...' interrupted (results: 4, elapsed: 1 secs) (at 2018-06-08 17:02:43.890670) =========
+bash -c 'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502559.455647-203873827
+  _=/tools/buildbot/bin/python
+ using PTY: False
+2018-06-08 17:02:44,021 truncating revision to first 12 chars
+2018-06-08 17:02:44,021 Setting DEBUG logging.
+2018-06-08 17:02:44,022 attempt 1/10
+2018-06-08 17:02:44,022 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/releases/mozilla-esr52/cbfdf01aac45?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-08 17:02:45,305 unpacking tar archive at: mozilla-esr52-cbfdf01aac45/testing/mozharness/
+
+command interrupted, attempting to kill
+process killed by signal 9
+program finished with exit code -1
+elapsedTime=1.427103
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+========= master_lag: 0.05 =========
+========= Finished 'bash -c ...' interrupted (results: 4, elapsed: 1 secs) (at 2018-06-08 17:02:45.367068) =========
+
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Started no change (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:45.367617) =========
+bash -c 'for file in `ls -1`; do cat $file; done'
+ in dir /builds/slave/test/properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'for file in `ls -1`; do cat $file; done']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test/properties
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502559.455647-203873827
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.029385
+
+========= master_lag: 0.05 =========
+========= Finished no change (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:45.442474) =========
+
+========= Started 'rm -f ...' interrupted (results: 4, elapsed: 0 secs) (at 2018-06-08 17:02:45.443232) =========
+rm -f oauth.txt
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'oauth.txt']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502559.455647-203873827
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.019025
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+========= master_lag: 0.02 =========
+========= Finished 'rm -f ...' interrupted (results: 4, elapsed: 0 secs) (at 2018-06-08 17:02:45.481975) =========
+
+========= Started reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 17:02:45.482462) =========
+========= Finished reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 17:02:45.482819) =========
+
+========= Total master_lag: 0.61 =========
+

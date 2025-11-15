@@ -1,0 +1,1085 @@
+builder: mozilla-esr52-macosx64-debug
+slave: bld-lion-r5-002
+starttime: 1528494756.91
+results: cancelled (6)
+buildid: 20180608145219
+builduid: 271b302eedcf469b86eedcfd435ce9d8
+revision: a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:36.915304) =========
+master: http://buildbot-master85.bb.releng.scl3.mozilla.com:8001/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:36.915798) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:36.916079) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:37.016145) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:37.016502) =========
+bash -c 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py'
+ in dir /builds/slave/m-esr52-m64-d-0000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-ONZaV4/Render
+  DISPLAY=/tmp/launch-jDmy9v/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/m-esr52-m64-d-0000000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-KWI2m5/Listeners
+  TMPDIR=/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+--2018-06-08 14:52:37--  https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py
+Resolving hg.mozilla.org... 63.245.215.25, 63.245.215.102
+Connecting to hg.mozilla.org|63.245.215.25|:443... connected.
+HTTP request sent, awaiting response... 200 Script output follows
+Length: 12179 (12K) [text/x-python]
+Saving to: 'archiver_client.py'
+
+     0K .......... .                                          100% 27.5M=0s
+
+2018-06-08 14:52:37 (27.5 MB/s) - 'archiver_client.py' saved [12179/12179]
+
+program finished with exit code 0
+elapsedTime=0.624681
+========= master_lag: 0.02 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:37.665244) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:37.665570) =========
+rm -rf scripts properties
+ in dir /builds/slave/m-esr52-m64-d-0000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-ONZaV4/Render
+  DISPLAY=/tmp/launch-jDmy9v/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/m-esr52-m64-d-0000000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-KWI2m5/Listeners
+  TMPDIR=/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.162907
+========= master_lag: 0.01 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:37.841406) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 1 secs) (at 2018-06-08 14:52:37.841758) =========
+bash -c 'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 --destination scripts --debug'
+ in dir /builds/slave/m-esr52-m64-d-0000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 --destination scripts --debug']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-ONZaV4/Render
+  DISPLAY=/tmp/launch-jDmy9v/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/m-esr52-m64-d-0000000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-KWI2m5/Listeners
+  TMPDIR=/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+2018-06-08 14:52:38,037 truncating revision to first 12 chars
+2018-06-08 14:52:38,037 Setting DEBUG logging.
+2018-06-08 14:52:38,037 attempt 1/10
+2018-06-08 14:52:38,037 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/releases/mozilla-esr52/a7a20deda4de?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-08 14:52:38,825 unpacking tar archive at: mozilla-esr52-a7a20deda4de/testing/mozharness/
+program finished with exit code 0
+elapsedTime=1.365271
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 1 secs) (at 2018-06-08 14:52:39.220887) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.221212) =========
+script_repo_revision: a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.221621) =========
+
+========= Started downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.221888) =========
+========= Finished downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.233552) =========
+
+========= Started remove old nonce (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.233821) =========
+rm -f nonce
+ in dir /builds/slave/m-esr52-m64-d-0000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'nonce']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-ONZaV4/Render
+  DISPLAY=/tmp/launch-jDmy9v/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/m-esr52-m64-d-0000000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-KWI2m5/Listeners
+  TMPDIR=/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.018285
+========= master_lag: 0.03 =========
+========= Finished remove old nonce (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.284910) =========
+
+========= Started downloading to token (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.285207) =========
+Slave: bld-lion-r5-002
+IP: 10.26.52.22
+Duration: 25200
+URI: https://signing4.srv.releng.scl3.mozilla.com:9110/token
+========= Finished downloading to token (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.317152) =========
+
+========= Started set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.317649) =========
+bash -c pwd
+ in dir /tools/checkouts/build-tools (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'pwd']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-ONZaV4/Render
+  DISPLAY=/tmp/launch-jDmy9v/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/tools/checkouts/build-tools
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-KWI2m5/Listeners
+  TMPDIR=/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+/tools/checkouts/build-tools
+program finished with exit code 0
+elapsedTime=0.005884
+toolsdir: '/tools/checkouts/build-tools'
+========= master_lag: 0.05 =========
+========= Finished set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:39.373028) =========
+
+========= Started '/tools/buildbot/bin/python scripts/scripts/fx_desktop_build.py ...' interrupted (results: 4, elapsed: 4 mins, 39 secs) (at 2018-06-08 14:52:39.373825) =========
+/tools/buildbot/bin/python scripts/scripts/fx_desktop_build.py --config builds/releng_base_mac_64_builds.py --custom-build-variant-cfg debug --config balrog/production.py --branch mozilla-esr52 --build-pool production
+ in dir /builds/slave/m-esr52-m64-d-0000000000000000/. (timeout 10800 secs) (maxTime 19800 secs)
+ watching logfiles {}
+ argv: ['/tools/buildbot/bin/python', 'scripts/scripts/fx_desktop_build.py', '--config', 'builds/releng_base_mac_64_builds.py', '--custom-build-variant-cfg', 'debug', '--config', 'balrog/production.py', '--branch', 'mozilla-esr52', '--build-pool', 'production']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-ONZaV4/Render
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=/tmp/launch-jDmy9v/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LC_ALL=C
+  LOGNAME=cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=obj-firefox
+  MOZ_SIGNING_SERVERS=gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  MOZ_SIGN_CMD=python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  PATH=/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+  PROPERTIES_FILE=/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json
+  PWD=/builds/slave/m-esr52-m64-d-0000000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-KWI2m5/Listeners
+  TINDERBOX_OUTPUT=1
+  TMPDIR=/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/
+  TOOLTOOL_CACHE=/builds/tooltool_cache
+  TOOLTOOL_HOME=/builds
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+14:52:39     INFO - MultiFileLogger online at 20180608 14:52:39 in /builds/slave/m-esr52-m64-d-0000000000000000
+14:52:39     INFO - Script was run with '--custom-build-variant-cfg debug' and 'debug' matches a key in 'builds/releng_sub_mac_configs/64_debug.py'. Updating self.config with items from that key's value.
+14:52:39     INFO - Script was run with '--branch mozilla-esr52' and 'mozilla-esr52' matches a key in 'builds/branch_specifics.py'. Updating self.config with items from that key's value.
+14:52:39     INFO - Script was run with '--build-pool production' and 'production' matches a key in 'builds/build_pool_specifics.py'. Updating self.config with items from that key's value.
+14:52:39     INFO - The branch 'mozilla-esr52' has custom behavior for the platform 'macosx64-debug'. Updating self.config with the following from 'platform_overrides' found in 'builds/branch_specifics.py':
+14:52:39     INFO - {'update_channel': 'default'}
+14:52:39     INFO - To generate a config file based upon options passed and config files used, run script as before but extend options with "--dump-config"
+14:52:39     INFO - For a diff of where self.config got its items, run the script again as before but extend options with: "--dump-config-hierarchy"
+14:52:39     INFO - Both --dump-config and --dump-config-hierarchy don't actually run any actions.
+14:52:39     INFO - We are running this in buildbot, grab the build props
+14:52:39     INFO - Using buildbot properties:
+14:52:39     INFO - {
+14:52:39     INFO -     "project": "", 
+14:52:39     INFO -     "product": "firefox", 
+14:52:39     INFO -     "script_repo_revision": "production", 
+14:52:39     INFO -     "scheduler": "mozilla-esr52-firefox", 
+14:52:39     INFO -     "repository": "", 
+14:52:39     INFO -     "buildername": "OS X 10.7 64-bit mozilla-esr52 leak test build", 
+14:52:39     INFO -     "buildid": "20180608145219", 
+14:52:39     INFO -     "basedir": "/builds/slave/m-esr52-m64-d-0000000000000000", 
+14:52:39     INFO -     "buildnumber": 10, 
+14:52:39     INFO -     "platform": "macosx64-debug", 
+14:52:39     INFO -     "master": "http://buildbot-master85.bb.releng.scl3.mozilla.com:8001/", 
+14:52:39     INFO -     "branch": "mozilla-esr52", 
+14:52:39     INFO -     "revision": "a7a20deda4de9057e6f7e3cb8be4452f0b376fd3", 
+14:52:39     INFO -     "slavename": "bld-lion-r5-002", 
+14:52:39     INFO -     "builduid": "271b302eedcf469b86eedcfd435ce9d8", 
+14:52:39     INFO -     "repo_path": "releases/mozilla-esr52"
+14:52:39     INFO - }
+14:52:39     INFO - Setting buildbot property stage_platform to macosx64-debug
+14:52:39     INFO - mkdir: /builds/slave/m-esr52-m64-d-0000000000000000/properties
+14:52:39     INFO - Writing buildbot properties ['stage_platform'] to /builds/slave/m-esr52-m64-d-0000000000000000/properties/stage_platform
+14:52:39     INFO - Writing to file /builds/slave/m-esr52-m64-d-0000000000000000/properties/stage_platform
+14:52:39     INFO - Contents:
+14:52:39     INFO -  stage_platform:macosx64-debug
+14:52:39  WARNING - Try message not found.
+14:52:39     INFO - Run as scripts/scripts/fx_desktop_build.py --config builds/releng_base_mac_64_builds.py --custom-build-variant-cfg debug --config balrog/production.py --branch mozilla-esr52 --build-pool production
+14:52:39     INFO - Determining buildid from buildbot properties
+14:52:39     INFO - Setting buildbot property buildid to 20180608145219
+14:52:39     INFO - Writing buildbot properties ['buildid'] to /builds/slave/m-esr52-m64-d-0000000000000000/properties/buildid
+14:52:39     INFO - Writing to file /builds/slave/m-esr52-m64-d-0000000000000000/properties/buildid
+14:52:39     INFO - Contents:
+14:52:39     INFO -  buildid:20180608145219
+14:52:39     INFO - Determining builduid from buildbot properties
+14:52:39     INFO - Setting buildbot property builduid to 271b302eedcf469b86eedcfd435ce9d8
+14:52:39     INFO - Writing buildbot properties ['builduid'] to /builds/slave/m-esr52-m64-d-0000000000000000/properties/builduid
+14:52:39     INFO - Writing to file /builds/slave/m-esr52-m64-d-0000000000000000/properties/builduid
+14:52:39     INFO - Contents:
+14:52:39     INFO -  builduid:271b302eedcf469b86eedcfd435ce9d8
+14:52:39     INFO - Release promotion update channel: default
+14:52:39     INFO - Creating virtualenv /builds/slave/m-esr52-m64-d-0000000000000000/build/venv
+14:52:39     INFO - Virtualenv /builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/python appears to already exist; skipping virtualenv creation.
+14:52:39     INFO - Installing requests==2.8.1 into virtualenv /builds/slave/m-esr52-m64-d-0000000000000000/build/venv
+14:52:39     INFO - retry: Calling run_command with args: [['/builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'requests==2.8.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1011a62d0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1014a0210>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10150cdb0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x100641bb8>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x101477840>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1011bd2a0>, 'level': 'critical'}], 'cwd': '/builds/slave/m-esr52-m64-d-0000000000000000/build', 'env': {'MOZ_AUTOMATION': '1', 'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'MOZ_OBJDIR': 'obj-firefox', 'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'CCACHE_UMASK': '002', 'XPCOM_DEBUG_BREAK': 'stack-and-abort', 'Apple_PubSub_Socket_Render': '/tmp/launch-ONZaV4/Render', 'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'DISPLAY': '/tmp/launch-jDmy9v/org.x:0', 'HOME': '/Users/cltbld', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'CCACHE_DIR': '/builds/ccache', 'SSH_AUTH_SOCK': '/tmp/launch-KWI2m5/Listeners', 'SHELL': '/bin/bash', 'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110', 'LC_ALL': 'C', 'TOOLTOOL_HOME': '/builds', 'TMPDIR': '/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/', 'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/m-esr52-m64-d-0000000000000000', 'TINDERBOX_OUTPUT': '1', 'PROPERTIES_FILE': '/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'CCACHE_COMPRESS': '1', 'TOOLTOOL_CACHE': '/builds/tooltool_cache'}}, attempt #1
+14:52:39     INFO - Running command: ['/builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'requests==2.8.1'] in /builds/slave/m-esr52-m64-d-0000000000000000/build
+14:52:39     INFO - Copy/paste: /builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org requests==2.8.1
+14:52:39     INFO - Using env: {'Apple_PubSub_Socket_Render': '/tmp/launch-ONZaV4/Render',
+14:52:39     INFO -  'CCACHE_COMPRESS': '1',
+14:52:39     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:52:39     INFO -  'CCACHE_UMASK': '002',
+14:52:39     INFO -  'DISPLAY': '/tmp/launch-jDmy9v/org.x:0',
+14:52:39     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+14:52:39     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:52:39     INFO -  'HOME': '/Users/cltbld',
+14:52:39     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+14:52:39     INFO -  'LC_ALL': 'C',
+14:52:39     INFO -  'LOGNAME': 'cltbld',
+14:52:39     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild',
+14:52:39     INFO -  'MOZ_AUTOMATION': '1',
+14:52:39     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:52:39     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:52:39     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:52:39     INFO -  'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:52:39     INFO -  'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin',
+14:52:39     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json',
+14:52:39     INFO -  'PWD': '/builds/slave/m-esr52-m64-d-0000000000000000',
+14:52:39     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+14:52:39     INFO -  'SHELL': '/bin/bash',
+14:52:39     INFO -  'SSH_AUTH_SOCK': '/tmp/launch-KWI2m5/Listeners',
+14:52:39     INFO -  'TINDERBOX_OUTPUT': '1',
+14:52:39     INFO -  'TMPDIR': '/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/',
+14:52:39     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:52:39     INFO -  'TOOLTOOL_HOME': '/builds',
+14:52:39     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+14:52:39     INFO -  'USER': 'cltbld',
+14:52:39     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+14:52:39     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+14:52:39     INFO -  'XPCOM_DEBUG_BREAK': 'stack-and-abort',
+14:52:39     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+14:52:41     INFO -  Ignoring indexes: https://pypi.python.org/simple
+14:52:41     INFO -  Collecting requests==2.8.1
+14:52:46     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/requests-2.8.1-py2.py3-none-any.whl (497kB)
+14:52:46     INFO -  Installing collected packages: requests
+14:52:46     INFO -    Found existing installation: requests 2.7.0
+14:52:46     INFO -      Uninstalling requests-2.7.0:
+14:52:46     INFO -        Successfully uninstalled requests-2.7.0
+14:52:46     INFO -  Successfully installed requests-2.8.1
+14:52:46     INFO - Return code: 0
+14:52:46     INFO - Installing PyHawk-with-a-single-extra-commit==0.1.5 into virtualenv /builds/slave/m-esr52-m64-d-0000000000000000/build/venv
+14:52:46     INFO - retry: Calling run_command with args: [['/builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'PyHawk-with-a-single-extra-commit==0.1.5']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1011a62d0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1014a0210>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10150cdb0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x100641bb8>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x101477840>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1011bd2a0>, 'level': 'critical'}], 'cwd': '/builds/slave/m-esr52-m64-d-0000000000000000/build', 'env': {'MOZ_AUTOMATION': '1', 'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'MOZ_OBJDIR': 'obj-firefox', 'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'CCACHE_UMASK': '002', 'XPCOM_DEBUG_BREAK': 'stack-and-abort', 'Apple_PubSub_Socket_Render': '/tmp/launch-ONZaV4/Render', 'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'DISPLAY': '/tmp/launch-jDmy9v/org.x:0', 'HOME': '/Users/cltbld', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'CCACHE_DIR': '/builds/ccache', 'SSH_AUTH_SOCK': '/tmp/launch-KWI2m5/Listeners', 'SHELL': '/bin/bash', 'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110', 'LC_ALL': 'C', 'TOOLTOOL_HOME': '/builds', 'TMPDIR': '/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/', 'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/m-esr52-m64-d-0000000000000000', 'TINDERBOX_OUTPUT': '1', 'PROPERTIES_FILE': '/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'CCACHE_COMPRESS': '1', 'TOOLTOOL_CACHE': '/builds/tooltool_cache'}}, attempt #1
+14:52:46     INFO - Running command: ['/builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'PyHawk-with-a-single-extra-commit==0.1.5'] in /builds/slave/m-esr52-m64-d-0000000000000000/build
+14:52:46     INFO - Copy/paste: /builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org PyHawk-with-a-single-extra-commit==0.1.5
+14:52:46     INFO - Using env: {'Apple_PubSub_Socket_Render': '/tmp/launch-ONZaV4/Render',
+14:52:46     INFO -  'CCACHE_COMPRESS': '1',
+14:52:46     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:52:46     INFO -  'CCACHE_UMASK': '002',
+14:52:46     INFO -  'DISPLAY': '/tmp/launch-jDmy9v/org.x:0',
+14:52:46     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+14:52:46     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:52:46     INFO -  'HOME': '/Users/cltbld',
+14:52:46     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+14:52:46     INFO -  'LC_ALL': 'C',
+14:52:46     INFO -  'LOGNAME': 'cltbld',
+14:52:46     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild',
+14:52:46     INFO -  'MOZ_AUTOMATION': '1',
+14:52:46     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:52:46     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:52:46     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:52:46     INFO -  'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:52:46     INFO -  'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin',
+14:52:46     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json',
+14:52:46     INFO -  'PWD': '/builds/slave/m-esr52-m64-d-0000000000000000',
+14:52:46     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+14:52:46     INFO -  'SHELL': '/bin/bash',
+14:52:46     INFO -  'SSH_AUTH_SOCK': '/tmp/launch-KWI2m5/Listeners',
+14:52:46     INFO -  'TINDERBOX_OUTPUT': '1',
+14:52:46     INFO -  'TMPDIR': '/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/',
+14:52:46     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:52:46     INFO -  'TOOLTOOL_HOME': '/builds',
+14:52:46     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+14:52:46     INFO -  'USER': 'cltbld',
+14:52:46     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+14:52:46     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+14:52:46     INFO -  'XPCOM_DEBUG_BREAK': 'stack-and-abort',
+14:52:46     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+14:52:47     INFO -  Ignoring indexes: https://pypi.python.org/simple
+14:52:47     INFO -  Requirement already satisfied (use --upgrade to upgrade): PyHawk-with-a-single-extra-commit==0.1.5 in ./venv/lib/python2.7/site-packages
+14:52:47     INFO - Return code: 0
+14:52:47     INFO - Installing taskcluster==0.0.26 into virtualenv /builds/slave/m-esr52-m64-d-0000000000000000/build/venv
+14:52:47     INFO - retry: Calling run_command with args: [['/builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'taskcluster==0.0.26']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1011a62d0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1014a0210>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10150cdb0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x100641bb8>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x101477840>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1011bd2a0>, 'level': 'critical'}], 'cwd': '/builds/slave/m-esr52-m64-d-0000000000000000/build', 'env': {'MOZ_AUTOMATION': '1', 'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'MOZ_OBJDIR': 'obj-firefox', 'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'CCACHE_UMASK': '002', 'XPCOM_DEBUG_BREAK': 'stack-and-abort', 'Apple_PubSub_Socket_Render': '/tmp/launch-ONZaV4/Render', 'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'DISPLAY': '/tmp/launch-jDmy9v/org.x:0', 'HOME': '/Users/cltbld', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'CCACHE_DIR': '/builds/ccache', 'SSH_AUTH_SOCK': '/tmp/launch-KWI2m5/Listeners', 'SHELL': '/bin/bash', 'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110', 'LC_ALL': 'C', 'TOOLTOOL_HOME': '/builds', 'TMPDIR': '/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/', 'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/m-esr52-m64-d-0000000000000000', 'TINDERBOX_OUTPUT': '1', 'PROPERTIES_FILE': '/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'CCACHE_COMPRESS': '1', 'TOOLTOOL_CACHE': '/builds/tooltool_cache'}}, attempt #1
+14:52:47     INFO - Running command: ['/builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'taskcluster==0.0.26'] in /builds/slave/m-esr52-m64-d-0000000000000000/build
+14:52:47     INFO - Copy/paste: /builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org taskcluster==0.0.26
+14:52:47     INFO - Using env: {'Apple_PubSub_Socket_Render': '/tmp/launch-ONZaV4/Render',
+14:52:47     INFO -  'CCACHE_COMPRESS': '1',
+14:52:47     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:52:47     INFO -  'CCACHE_UMASK': '002',
+14:52:47     INFO -  'DISPLAY': '/tmp/launch-jDmy9v/org.x:0',
+14:52:47     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+14:52:47     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:52:47     INFO -  'HOME': '/Users/cltbld',
+14:52:47     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+14:52:47     INFO -  'LC_ALL': 'C',
+14:52:47     INFO -  'LOGNAME': 'cltbld',
+14:52:47     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild',
+14:52:47     INFO -  'MOZ_AUTOMATION': '1',
+14:52:47     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:52:47     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:52:47     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:52:47     INFO -  'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:52:47     INFO -  'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin',
+14:52:47     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json',
+14:52:47     INFO -  'PWD': '/builds/slave/m-esr52-m64-d-0000000000000000',
+14:52:47     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+14:52:47     INFO -  'SHELL': '/bin/bash',
+14:52:47     INFO -  'SSH_AUTH_SOCK': '/tmp/launch-KWI2m5/Listeners',
+14:52:47     INFO -  'TINDERBOX_OUTPUT': '1',
+14:52:47     INFO -  'TMPDIR': '/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/',
+14:52:47     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:52:47     INFO -  'TOOLTOOL_HOME': '/builds',
+14:52:47     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+14:52:47     INFO -  'USER': 'cltbld',
+14:52:47     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+14:52:47     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+14:52:47     INFO -  'XPCOM_DEBUG_BREAK': 'stack-and-abort',
+14:52:47     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+14:52:47     INFO -  Ignoring indexes: https://pypi.python.org/simple
+14:52:47     INFO -  Requirement already satisfied (use --upgrade to upgrade): taskcluster==0.0.26 in ./venv/lib/python2.7/site-packages
+14:52:47     INFO -  Requirement already satisfied (use --upgrade to upgrade): slugid in ./venv/lib/python2.7/site-packages (from taskcluster==0.0.26)
+14:52:47     INFO -  Collecting requests<=2.7.0,>=2.4.3 (from taskcluster==0.0.26)
+14:52:51     INFO -  Requirement already satisfied (use --upgrade to upgrade): PyHawk-with-a-single-extra-commit==0.1.5 in ./venv/lib/python2.7/site-packages (from taskcluster==0.0.26)
+14:52:51     INFO -  Installing collected packages: requests
+14:52:51     INFO -    Found existing installation: requests 2.8.1
+14:52:51     INFO -      Uninstalling requests-2.8.1:
+14:52:51     INFO -        Successfully uninstalled requests-2.8.1
+14:52:51     INFO -  Successfully installed requests-2.7.0
+14:52:51     INFO - Return code: 0
+14:52:51     INFO - Done creating virtualenv /builds/slave/m-esr52-m64-d-0000000000000000/build/venv.
+14:52:51     INFO - Getting output from command: ['/builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip', 'freeze']
+14:52:51     INFO - Copy/paste: /builds/slave/m-esr52-m64-d-0000000000000000/build/venv/bin/pip freeze
+14:52:52     INFO - Reading from file tmpfile_stdout
+14:52:52     INFO - Current package versions:
+14:52:52     INFO -   PyHawk-with-a-single-extra-commit == 0.1.5
+14:52:52     INFO -   requests == 2.7.0
+14:52:52     INFO -   slugid == 1.0.7
+14:52:52     INFO -   taskcluster == 0.0.26
+14:52:52     INFO - Running pre-run listener: suppress_windows_modal_dialogs
+14:52:52     INFO - Dumping config to /builds/slave/m-esr52-m64-d-0000000000000000/logs/localconfig.json.
+14:52:52     INFO - {'app_ini_path': '%(obj_dir)s/dist/bin/application.ini',
+14:52:52     INFO -  'append_to_log': False,
+14:52:52     INFO -  'balrog_credentials_file': 'oauth.txt',
+14:52:52     INFO -  'balrog_servers': ({'balrog_api_root': 'https://aus4-admin.mozilla.org/api',
+14:52:52     INFO -                      'balrog_usernames': {'Fennec': 'ffxbld',
+14:52:52     INFO -                                           'firefox': 'ffxbld',
+14:52:52     INFO -                                           'mobile': 'ffxbld',
+14:52:52     INFO -                                           'thunderbird': 'tbirdbld'},
+14:52:52     INFO -                      'ignore_failures': False,
+14:52:52     INFO -                      'url_replacements': (('http://archive.mozilla.org/pub',
+14:52:52     INFO -                                            'http://download.cdn.mozilla.net/pub'),)},),
+14:52:52     INFO -  'base_name': 'OS X 10.7 %(branch)s',
+14:52:52     INFO -  'base_work_dir': '/builds/slave/m-esr52-m64-d-0000000000000000',
+14:52:52     INFO -  'branch': 'mozilla-esr52',
+14:52:52     INFO -  'branch_uses_per_checkin_strategy': True,
+14:52:52     INFO -  'build_pool': 'production',
+14:52:52     INFO -  'build_resources_path': '%(abs_src_dir)s/obj-firefox/.mozbuild/build_resources.json',
+14:52:52     INFO -  'build_variant': 'debug',
+14:52:52     INFO -  'buildbot_json_path': 'buildprops.json',
+14:52:52     INFO -  'check_test_env': {'MINIDUMP_SAVE_PATH': '%(base_work_dir)s/minidumps',
+14:52:52     INFO -                     'MINIDUMP_STACKWALK': '%(abs_tools_dir)s/breakpad/osx64/minidump_stackwalk'},
+14:52:52     INFO -  'clobberer_url': 'https://api.pub.build.mozilla.org/clobberer/lastclobber',
+14:52:52     INFO -  'clone_by_revision': False,
+14:52:52     INFO -  'clone_upstream_url': 'https://hg.mozilla.org/mozilla-unified',
+14:52:52     INFO -  'clone_with_purge': False,
+14:52:52     INFO -  'config_files': ('builds/releng_base_mac_64_builds.py',
+14:52:52     INFO -                   '/builds/slave/m-esr52-m64-d-0000000000000000/scripts/scripts/../configs/builds/releng_sub_mac_configs/64_debug.py',
+14:52:52     INFO -                   'balrog/production.py',
+14:52:52     INFO -                   'builds/branch_specifics.py',
+14:52:52     INFO -                   'builds/build_pool_specifics.py'),
+14:52:52     INFO -  'debug_build': True,
+14:52:52     INFO -  'default_actions': ('clobber',
+14:52:52     INFO -                      'clone-tools',
+14:52:52     INFO -                      'checkout-sources',
+14:52:52     INFO -                      'build',
+14:52:52     INFO -                      'upload-files',
+14:52:52     INFO -                      'sendchange',
+14:52:52     INFO -                      'check-test',
+14:52:52     INFO -                      'generate-build-stats',
+14:52:52     INFO -                      'update'),
+14:52:52     INFO -  'enable_ccache': True,
+14:52:52     INFO -  'enable_count_ctors': False,
+14:52:52     INFO -  'enable_release_promotion': True,
+14:52:52     INFO -  'enable_signing': True,
+14:52:52     INFO -  'enable_talos_sendchange': False,
+14:52:52     INFO -  'enable_unittest_sendchange': True,
+14:52:52     INFO -  'env': {'CCACHE_COMPRESS': '1',
+14:52:52     INFO -          'CCACHE_DIR': '/builds/ccache',
+14:52:52     INFO -          'CCACHE_UMASK': '002',
+14:52:52     INFO -          'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:52:52     INFO -          'LC_ALL': 'C',
+14:52:52     INFO -          'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild',
+14:52:52     INFO -          'MOZ_AUTOMATION': '1',
+14:52:52     INFO -          'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:52:52     INFO -          'MOZ_OBJDIR': 'obj-firefox',
+14:52:52     INFO -          'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin',
+14:52:52     INFO -          'TINDERBOX_OUTPUT': '1',
+14:52:52     INFO -          'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:52:52     INFO -          'TOOLTOOL_HOME': '/builds',
+14:52:52     INFO -          'XPCOM_DEBUG_BREAK': 'stack-and-abort'},
+14:52:52     INFO -  'exes': {'buildbot': '/tools/buildbot/bin/buildbot',
+14:52:52     INFO -           'python2.7': '/tools/buildbot/bin/python'},
+14:52:52     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+14:52:52     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+14:52:52     INFO -  'graph_selector': '/server/collect.cgi',
+14:52:52     INFO -  'graph_server': 'graphs.mozilla.org',
+14:52:52     INFO -  'include_post_upload_builddir': False,
+14:52:52     INFO -  'is_automation': True,
+14:52:52     INFO -  'log_level': 'info',
+14:52:52     INFO -  'log_to_console': True,
+14:52:52     INFO -  'nightly_build': False,
+14:52:52     INFO -  'nightly_promotion_branches': ('mozilla-central', 'mozilla-aurora'),
+14:52:52     INFO -  'objdir': 'obj-firefox',
+14:52:52     INFO -  'old_packages': ('%(objdir)s/dist/firefox-*',
+14:52:52     INFO -                   '%(objdir)s/dist/fennec*',
+14:52:52     INFO -                   '%(objdir)s/dist/seamonkey*',
+14:52:52     INFO -                   '%(objdir)s/dist/thunderbird*',
+14:52:52     INFO -                   '%(objdir)s/dist/install/sea/*.exe'),
+14:52:52     INFO -  'opt_config_files': (),
+14:52:52     INFO -  'periodic_clobber': 168,
+14:52:52     INFO -  'pgo_build': False,
+14:52:52     INFO -  'pgo_platforms': ('linux', 'linux64', 'win32', 'win64'),
+14:52:52     INFO -  'pip_index': False,
+14:52:52     INFO -  'platform': 'macosx64',
+14:52:52     INFO -  'platform_overrides': {'linux': {'force_clobber': True,
+14:52:52     INFO -                                   'src_mozconfig': 'browser/config/mozconfigs/linux32/release'},
+14:52:52     INFO -                         'linux-debug': {'update_channel': 'default'},
+14:52:52     INFO -                         'linux64': {'force_clobber': True,
+14:52:52     INFO -                                     'src_mozconfig': 'browser/config/mozconfigs/linux64/release'},
+14:52:52     INFO -                         'linux64-asan': {'update_channel': 'default'},
+14:52:52     INFO -                         'linux64-asan-debug': {'update_channel': 'default'},
+14:52:52     INFO -                         'linux64-cc': {'update_channel': 'default'},
+14:52:52     INFO -                         'linux64-debug': {'update_channel': 'default'},
+14:52:52     INFO -                         'linux64-st-an': {'update_channel': 'default'},
+14:52:52     INFO -                         'linux64-st-an-debug': {'update_channel': 'default'},
+14:52:52     INFO -                         'linux64-tsan': {'update_channel': 'default'},
+14:52:52     INFO -                         'macosx64': {'force_clobber': True,
+14:52:52     INFO -                                      'src_mozconfig': 'browser/config/mozconfigs/macosx-universal/release'},
+14:52:52     INFO -                         'macosx64-debug': {'update_channel': 'default'},
+14:52:52     INFO -                         'macosx64-st-an': {'update_channel': 'default'},
+14:52:52     INFO -                         'macosx64-st-an-debug': {'update_channel': 'default'},
+14:52:52     INFO -                         'win32': {'force_clobber': True,
+14:52:52     INFO -                                   'src_mozconfig': 'browser/config/mozconfigs/win32/release'},
+14:52:52     INFO -                         'win32-debug': {'update_channel': 'default'},
+14:52:52     INFO -                         'win64': {'force_clobber': True,
+14:52:52     INFO -                                   'src_mozconfig': 'browser/config/mozconfigs/win64/release'},
+14:52:52     INFO -                         'win64-debug': {'update_channel': 'default'}},
+14:52:52     INFO -  'platform_supports_post_upload_to_latest': True,
+14:52:52     INFO -  'publish_nightly_en_US_routes': True,
+14:52:52     INFO -  'release_to_try_builds': False,
+14:52:52     INFO -  'repo_base': 'https://hg.mozilla.org',
+14:52:52     INFO -  'repo_path': 'releases/mozilla-esr52',
+14:52:52     INFO -  'scm_level': 1,
+14:52:52     INFO -  'sendchange_masters': ('buildbot-master81.build.mozilla.org:9301',),
+14:52:52     INFO -  'src_mozconfig': 'browser/config/mozconfigs/macosx64/debug',
+14:52:52     INFO -  'stage_platform': 'macosx64-debug',
+14:52:52     INFO -  'stage_product': 'firefox',
+14:52:52     INFO -  'stage_server': 'upload.ffxbld.productdelivery.prod.mozaws.net',
+14:52:52     INFO -  'stage_ssh_key': 'ffxbld_rsa',
+14:52:52     INFO -  'stage_username': 'ffxbld',
+14:52:52     INFO -  'taskcluster_credentials_file': 'oauth.txt',
+14:52:52     INFO -  'taskcluster_index': 'index',
+14:52:52     INFO -  'tinderbox_build_dir': None,
+14:52:52     INFO -  'to_tinderbox_dated': True,
+14:52:52     INFO -  'tools_repo': 'https://hg.mozilla.org/build/tools',
+14:52:52     INFO -  'tooltool_bootstrap': 'setup.sh',
+14:52:52     INFO -  'tooltool_manifest_src': 'browser/config/tooltool-manifests/macosx64/releng.manifest',
+14:52:52     INFO -  'tooltool_script': ('/builds/tooltool.py',),
+14:52:52     INFO -  'tooltool_url': 'https://api.pub.build.mozilla.org/tooltool/',
+14:52:52     INFO -  'update_channel': 'default',
+14:52:52     INFO -  'upload_env': {'UPLOAD_HOST': '%(stage_server)s',
+14:52:52     INFO -                 'UPLOAD_SSH_KEY': '/Users/cltbld/.ssh/%(stage_ssh_key)s',
+14:52:52     INFO -                 'UPLOAD_TO_TEMP': '1',
+14:52:52     INFO -                 'UPLOAD_USER': '%(stage_username)s'},
+14:52:52     INFO -  'use_branch_in_symbols_extra_buildid': False,
+14:52:52     INFO -  'use_clobberer': True,
+14:52:52     INFO -  'vcs_share_base': '/builds/hg-shared',
+14:52:52     INFO -  'virtualenv_modules': ('requests==2.8.1',
+14:52:52     INFO -                         'PyHawk-with-a-single-extra-commit==0.1.5',
+14:52:52     INFO -                         'taskcluster==0.0.26'),
+14:52:52     INFO -  'virtualenv_path': 'venv',
+14:52:52     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+14:52:52     INFO -  'who': '',
+14:52:52     INFO -  'work_dir': 'build'}
+14:52:52     INFO - [mozharness: 2018-06-08 21:52:52.661143Z] Skipping get-secrets step.
+14:52:52     INFO - [mozharness: 2018-06-08 21:52:52.662370Z] Running clobber step.
+14:52:52     INFO - Running main action method: clobber
+14:52:52     INFO - retry: Calling run_command with args: [['/builds/slave/m-esr52-m64-d-0000000000000000/scripts/external_tools/clobberer.py', '-s', 'scripts', '-s', 'logs', '-s', 'buildprops.json', '-s', 'token', '-s', 'oauth.txt', '-t', '168', 'https://api.pub.build.mozilla.org/clobberer/lastclobber', 'mozilla-esr52', 'OS X 10.7 64-bit mozilla-esr52 leak test build', 'm-esr52-m64-d-0000000000000000', 'bld-lion-r5-002', 'http://buildbot-master85.bb.releng.scl3.mozilla.com:8001/']], kwargs: {'error_list': [{'substr': 'Error contacting server', 'explanation': 'Error contacting server for clobberer information.', 'level': 'error'}], 'cwd': '/builds/slave'}, attempt #1
+14:52:52     INFO - Running command: ['/builds/slave/m-esr52-m64-d-0000000000000000/scripts/external_tools/clobberer.py', '-s', 'scripts', '-s', 'logs', '-s', 'buildprops.json', '-s', 'token', '-s', 'oauth.txt', '-t', '168', 'https://api.pub.build.mozilla.org/clobberer/lastclobber', 'mozilla-esr52', 'OS X 10.7 64-bit mozilla-esr52 leak test build', 'm-esr52-m64-d-0000000000000000', 'bld-lion-r5-002', 'http://buildbot-master85.bb.releng.scl3.mozilla.com:8001/'] in /builds/slave
+14:52:52     INFO - Copy/paste: /builds/slave/m-esr52-m64-d-0000000000000000/scripts/external_tools/clobberer.py -s scripts -s logs -s buildprops.json -s token -s oauth.txt -t 168 https://api.pub.build.mozilla.org/clobberer/lastclobber mozilla-esr52 "OS X 10.7 64-bit mozilla-esr52 leak test build" m-esr52-m64-d-0000000000000000 bld-lion-r5-002 http://buildbot-master85.bb.releng.scl3.mozilla.com:8001/
+14:52:54     INFO -  Checking clobber URL: https://api.pub.build.mozilla.org/clobberer/lastclobber?master=http%3A%2F%2Fbuildbot-master85.bb.releng.scl3.mozilla.com%3A8001%2F&slave=bld-lion-r5-002&builddir=m-esr52-m64-d-0000000000000000&branch=mozilla-esr52&buildername=OS+X+10.7+64-bit+mozilla-esr52+leak+test+build
+14:52:54     INFO -  m-esr52-m64-d-0000000000000000:Our last clobber date:  2018-06-05 14:51:51
+14:52:54     INFO -  m-esr52-m64-d-0000000000000000:Server clobber date:    2018-06-05 14:51:51
+14:52:54     INFO - Return code: 0
+14:52:54     INFO - [mozharness: 2018-06-08 21:52:54.077642Z] Finished clobber step (success)
+14:52:54     INFO - [mozharness: 2018-06-08 21:52:54.077933Z] Running clone-tools step.
+14:52:54     INFO - Running main action method: clone_tools
+14:52:54     INFO - retry: Calling _get_revision with args: (<mozharness.base.vcs.mercurial.MercurialVCS object at 0x1012f6ad0>, '/builds/slave/m-esr52-m64-d-0000000000000000/build/tools'), kwargs: {}, attempt #1
+14:52:54  WARNING - did not specify revision or branch; assuming "default"
+14:52:54     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', '--version']
+14:52:54     INFO - Copy/paste: hg --config ui.merge=internal:merge --version
+14:52:54     INFO -  Mercurial Distributed SCM (version 4.4.1)
+14:52:54     INFO -  (see https://mercurial-scm.org for more information)
+14:52:54     INFO -  Copyright (C) 2005-2017 Matt Mackall and others
+14:52:54     INFO -  This is free software; see the source for copying conditions. There is NO
+14:52:54     INFO -  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+14:52:54     INFO - Return code: 0
+14:52:54     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', 'debuginstall']
+14:52:54     INFO - Copy/paste: hg --config ui.merge=internal:merge debuginstall
+14:52:54     INFO -  checking encoding (US-ASCII)...
+14:52:54     INFO -  checking Python executable (/tools/python27/bin/python2.7)
+14:52:54     INFO -  checking Python version (2.7.12)
+14:52:54     INFO -  checking Python lib (/tools/python27/lib/python2.7)...
+14:52:54     INFO -  checking Python security support (sni,tls1.0)
+14:52:54     INFO -    TLS 1.2 not supported by Python install; network connections lack modern security
+14:52:54     INFO -  checking Mercurial version (4.4.1)
+14:52:54     INFO -  checking Mercurial custom build ()
+14:52:54     INFO -  checking module policy (c)
+14:52:54     INFO -  checking installed modules (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial)...
+14:52:54     INFO -  checking registered compression engines (bz2, bz2truncated, none, zlib, zstd)
+14:52:54     INFO -  checking available compression engines (bz2, bz2truncated, none, zlib, zstd)
+14:52:54     INFO -  checking available compression engines for wire protocol (zstd, zlib, bz2, none)
+14:52:54     INFO -  checking templates (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial/templates)...
+14:52:54     INFO -  checking default template (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial/templates/map-cmdline.default)
+14:52:54     INFO -  checking commit editor... (vi)
+14:52:54     INFO -  checking username (Mozilla Release Engineering <release@mozilla.com>)
+14:52:54     INFO -  no problems detected
+14:52:54     INFO - Return code: 0
+14:52:54     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', '--config', 'extensions.robustcheckout=/builds/slave/m-esr52-m64-d-0000000000000000/scripts/external_tools/robustcheckout.py', 'robustcheckout', 'https://hg.mozilla.org/build/tools', '/builds/slave/m-esr52-m64-d-0000000000000000/build/tools', '--sharebase', '/builds/hg-shared', '--branch', 'default']
+14:52:54     INFO - Copy/paste: hg --config ui.merge=internal:merge --config extensions.robustcheckout=/builds/slave/m-esr52-m64-d-0000000000000000/scripts/external_tools/robustcheckout.py robustcheckout https://hg.mozilla.org/build/tools /builds/slave/m-esr52-m64-d-0000000000000000/build/tools --sharebase /builds/hg-shared --branch default
+14:52:54     INFO -  ensuring https://hg.mozilla.org/build/tools@default is available at /builds/slave/m-esr52-m64-d-0000000000000000/build/tools
+14:52:54     INFO -  (existing repository shared store: /builds/hg-shared/7ae7fb134bf7aec6ec96a062ff47a69053dd2973/.hg)
+14:52:54     INFO -  (pulling to obtain default)
+14:52:54     INFO -  warning: connecting to hg.mozilla.org using legacy security technology (TLS 1.0); see https://mercurial-scm.org/wiki/SecureConnections for more info
+14:52:54     INFO -  (remote resolved default to db9d67c3554f2fa1e9d9f3090e072b44d23e5798; result is not deterministic)
+14:52:54     INFO -  (revision already present locally; not pulling)
+14:52:54     INFO -  2 files updated, 0 files merged, 0 files removed, 0 files unresolved
+14:52:54     INFO -  updated to db9d67c3554f2fa1e9d9f3090e072b44d23e5798
+14:52:54     INFO - Return code: 0
+14:52:54     INFO - [mozharness: 2018-06-08 21:52:54.969988Z] Finished clone-tools step (success)
+14:52:54     INFO - [mozharness: 2018-06-08 21:52:54.970173Z] Running checkout-sources step.
+14:52:54     INFO - Running main action method: checkout_sources
+14:52:54     INFO - Release promotion update channel: default
+14:52:54     INFO - retry: Calling _get_revision with args: (<mozharness.base.vcs.mercurial.MercurialVCS object at 0x1012f6910>, '/builds/slave/m-esr52-m64-d-0000000000000000/build/src'), kwargs: {}, attempt #1
+14:52:54     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', '--version']
+14:52:54     INFO - Copy/paste: hg --config ui.merge=internal:merge --version
+14:52:55     INFO -  Mercurial Distributed SCM (version 4.4.1)
+14:52:55     INFO -  (see https://mercurial-scm.org for more information)
+14:52:55     INFO -  Copyright (C) 2005-2017 Matt Mackall and others
+14:52:55     INFO -  This is free software; see the source for copying conditions. There is NO
+14:52:55     INFO -  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+14:52:55     INFO - Return code: 0
+14:52:55     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', 'debuginstall']
+14:52:55     INFO - Copy/paste: hg --config ui.merge=internal:merge debuginstall
+14:52:55     INFO -  checking encoding (US-ASCII)...
+14:52:55     INFO -  checking Python executable (/tools/python27/bin/python2.7)
+14:52:55     INFO -  checking Python version (2.7.12)
+14:52:55     INFO -  checking Python lib (/tools/python27/lib/python2.7)...
+14:52:55     INFO -  checking Python security support (sni,tls1.0)
+14:52:55     INFO -    TLS 1.2 not supported by Python install; network connections lack modern security
+14:52:55     INFO -  checking Mercurial version (4.4.1)
+14:52:55     INFO -  checking Mercurial custom build ()
+14:52:55     INFO -  checking module policy (c)
+14:52:55     INFO -  checking installed modules (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial)...
+14:52:55     INFO -  checking registered compression engines (bz2, bz2truncated, none, zlib, zstd)
+14:52:55     INFO -  checking available compression engines (bz2, bz2truncated, none, zlib, zstd)
+14:52:55     INFO -  checking available compression engines for wire protocol (zstd, zlib, bz2, none)
+14:52:55     INFO -  checking templates (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial/templates)...
+14:52:55     INFO -  checking default template (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial/templates/map-cmdline.default)
+14:52:55     INFO -  checking commit editor... (vi)
+14:52:55     INFO -  checking username (Mozilla Release Engineering <release@mozilla.com>)
+14:52:55     INFO -  no problems detected
+14:52:55     INFO - Return code: 0
+14:52:55     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', '--config', 'extensions.robustcheckout=/builds/slave/m-esr52-m64-d-0000000000000000/scripts/external_tools/robustcheckout.py', 'robustcheckout', 'https://hg.mozilla.org/releases/mozilla-esr52', '/builds/slave/m-esr52-m64-d-0000000000000000/build/src', '--sharebase', '/builds/hg-shared', '--upstream', 'https://hg.mozilla.org/mozilla-unified', '--revision', 'a7a20deda4de9057e6f7e3cb8be4452f0b376fd3']
+14:52:55     INFO - Copy/paste: hg --config ui.merge=internal:merge --config extensions.robustcheckout=/builds/slave/m-esr52-m64-d-0000000000000000/scripts/external_tools/robustcheckout.py robustcheckout https://hg.mozilla.org/releases/mozilla-esr52 /builds/slave/m-esr52-m64-d-0000000000000000/build/src --sharebase /builds/hg-shared --upstream https://hg.mozilla.org/mozilla-unified --revision a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+14:52:55     INFO -  ensuring https://hg.mozilla.org/releases/mozilla-esr52@a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 is available at /builds/slave/m-esr52-m64-d-0000000000000000/build/src
+14:52:55     INFO -  (existing repository shared store: /builds/hg-shared/8ba995b74e18334ab3707f27e9eb8f4e37ba3d29/.hg)
+14:52:55     INFO -  (pulling to obtain a7a20deda4de9057e6f7e3cb8be4452f0b376fd3)
+14:52:55     INFO -  warning: connecting to hg.mozilla.org using legacy security technology (TLS 1.0); see https://mercurial-scm.org/wiki/SecureConnections for more info
+14:53:03     INFO -  
+14:53:03     INFO - changesets [===================>                                          ] 1/3
+14:53:03     INFO -                                                                                 
+14:53:03     INFO - searching for changes
+14:53:03     INFO -  adding changesets
+14:53:03     INFO -  adding manifests
+14:53:03     INFO -  adding file changes
+14:53:03     INFO -  added 3 changesets with 4 changes to 4 files
+14:53:17     INFO -  
+14:53:17     INFO - updating [===============================================================>] 4/4
+14:53:17     INFO -                                                                                 
+14:53:17     INFO - new changesets f5b7301d0b5f:a7a20deda4de
+14:53:17     INFO -  4 files updated, 0 files merged, 0 files removed, 0 files unresolved
+14:53:17     INFO -  updated to a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+14:53:17     INFO - Return code: 0
+14:53:17     INFO - Setting buildbot property comments to No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update
+14:53:17     INFO - Writing buildbot properties ['comments'] to /builds/slave/m-esr52-m64-d-0000000000000000/properties/comments
+14:53:17     INFO - Writing to file /builds/slave/m-esr52-m64-d-0000000000000000/properties/comments
+14:53:17     INFO - Contents:
+14:53:17     INFO -  comments:No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update
+14:53:17     INFO - Setting buildbot property got_revision to a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+14:53:17     INFO - Writing buildbot properties ['got_revision'] to /builds/slave/m-esr52-m64-d-0000000000000000/properties/got_revision
+14:53:17     INFO - Writing to file /builds/slave/m-esr52-m64-d-0000000000000000/properties/got_revision
+14:53:17     INFO - Contents:
+14:53:17     INFO -  got_revision:a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+14:53:17     INFO - [mozharness: 2018-06-08 21:53:17.785637Z] Finished checkout-sources step (success)
+14:53:17     INFO - [mozharness: 2018-06-08 21:53:17.785927Z] Skipping setup-mock step.
+14:53:17     INFO - [mozharness: 2018-06-08 21:53:17.786190Z] Running build step.
+14:53:17     INFO - Running main action method: build
+14:53:17     INFO - Release promotion update channel: default
+14:53:17     INFO - Running command: ['ccache', '-z'] in /builds/slave/m-esr52-m64-d-0000000000000000
+14:53:17     INFO - Copy/paste: ccache -z
+14:53:17     INFO - Using env: {'Apple_PubSub_Socket_Render': '/tmp/launch-ONZaV4/Render',
+14:53:17     INFO -  'CCACHE_COMPRESS': '1',
+14:53:17     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:53:17     INFO -  'CCACHE_UMASK': '002',
+14:53:17     INFO -  'DISPLAY': '/tmp/launch-jDmy9v/org.x:0',
+14:53:17     INFO -  'ENABLE_RELEASE_PROMOTION': '1',
+14:53:17     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+14:53:17     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:53:17     INFO -  'HOME': '/Users/cltbld',
+14:53:17     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+14:53:17     INFO -  'LC_ALL': 'C',
+14:53:17     INFO -  'LOGNAME': 'cltbld',
+14:53:17     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild',
+14:53:17     INFO -  'MOZ_AUTOMATION': '1',
+14:53:17     INFO -  'MOZ_BUILD_DATE': '20180608145219',
+14:53:17     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:53:17     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:53:17     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:53:17     INFO -  'MOZ_SIGN_CMD': 'python /builds/slave/m-esr52-m64-d-0000000000000000/build/tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/build/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /builds/slave/m-esr52-m64-d-0000000000000000/build/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:53:17     INFO -  'MOZ_SOURCE_REPO': 'https://hg.mozilla.org/releases/mozilla-esr52',
+14:53:17     INFO -  'MOZ_UPDATE_CHANNEL': 'default',
+14:53:17     INFO -  'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin',
+14:53:17     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json',
+14:53:17     INFO -  'PWD': '/builds/slave/m-esr52-m64-d-0000000000000000',
+14:53:17     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+14:53:17     INFO -  'SHELL': '/bin/bash',
+14:53:17     INFO -  'SSH_AUTH_SOCK': '/tmp/launch-KWI2m5/Listeners',
+14:53:17     INFO -  'TINDERBOX_OUTPUT': '1',
+14:53:17     INFO -  'TMPDIR': '/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/',
+14:53:17     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:53:17     INFO -  'TOOLTOOL_HOME': '/builds',
+14:53:17     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+14:53:17     INFO -  'USER': 'cltbld',
+14:53:17     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+14:53:17     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+14:53:17     INFO -  'XPCOM_DEBUG_BREAK': 'stack-and-abort',
+14:53:17     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+14:53:18     INFO -  Statistics cleared
+14:53:18     INFO - Return code: 0
+14:53:18     INFO - removing old packages...
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.checksums
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.checksums',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.checksums.asc
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.checksums.asc',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.common.tests.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.common.tests.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.cppunittest.tests.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.cppunittest.tests.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.crashreporter-symbols-full.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.crashreporter-symbols-full.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.dmg
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.dmg',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.gtest.tests.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.gtest.tests.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.json
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.json',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.mochitest.tests.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.mochitest.tests.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.mozinfo.json
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.mozinfo.json',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.reftest.tests.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.reftest.tests.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.talos.tests.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.talos.tests.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.test_packages.json
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.test_packages.json',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.txt
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.txt',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.web-platform.tests.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.web-platform.tests.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.xpcshell.tests.zip
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64.xpcshell.tests.zip',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64_info.txt
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.en-US.mac64_info.txt',), kwargs: {}, attempt #1
+14:53:18     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.x-test.mac64.dmg
+14:53:18     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/firefox-52.8.2.x-test.mac64.dmg',), kwargs: {}, attempt #1
+14:53:18     INFO - Using in-tree mozconfig
+14:53:18     INFO - Reading from file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/browser/config/mozconfigs/macosx64/debug
+14:53:18     INFO - Contents:
+14:53:18     INFO -  . $topsrcdir/build/macosx/mozconfig.common
+14:53:18     INFO -  
+14:53:18     INFO -  ac_add_options --enable-debug
+14:53:18     INFO -  ac_add_options --enable-dmd
+14:53:18     INFO -  ac_add_options --enable-verify-mar
+14:53:18     INFO -  
+14:53:18     INFO -  # Needed to enable breakpad in application.ini
+14:53:18     INFO -  export MOZILLA_OFFICIAL=1
+14:53:18     INFO -  
+14:53:18     INFO -  # Enable Telemetry
+14:53:18     INFO -  export MOZ_TELEMETRY_REPORTING=1
+14:53:18     INFO -  
+14:53:18     INFO -  if test "${MOZ_UPDATE_CHANNEL}" = "nightly"; then
+14:53:18     INFO -  ac_add_options --with-macbundlename-prefix=Firefox
+14:53:18     INFO -  fi
+14:53:18     INFO -  
+14:53:18     INFO -  # Package js shell.
+14:53:18     INFO -  export MOZ_PACKAGE_JSSHELL=1
+14:53:18     INFO -  
+14:53:18     INFO -  ac_add_options --with-branding=browser/branding/nightly
+14:53:18     INFO -  
+14:53:18     INFO -  . "$topsrcdir/build/mozconfig.rust"
+14:53:18     INFO -  . "$topsrcdir/build/mozconfig.common.override"
+14:53:18     INFO -  . "$topsrcdir/build/mozconfig.cache"
+14:53:18     INFO - mozconfig content:
+14:53:18     INFO - . $topsrcdir/build/macosx/mozconfig.common
+14:53:18     INFO - 
+14:53:18     INFO - ac_add_options --enable-debug
+14:53:18     INFO - ac_add_options --enable-dmd
+14:53:18     INFO - ac_add_options --enable-verify-mar
+14:53:18     INFO - 
+14:53:18     INFO - # Needed to enable breakpad in application.ini
+14:53:18     INFO - export MOZILLA_OFFICIAL=1
+14:53:18     INFO - 
+14:53:18     INFO - # Enable Telemetry
+14:53:18     INFO - export MOZ_TELEMETRY_REPORTING=1
+14:53:18     INFO - 
+14:53:18     INFO - if test "${MOZ_UPDATE_CHANNEL}" = "nightly"; then
+14:53:18     INFO - ac_add_options --with-macbundlename-prefix=Firefox
+14:53:18     INFO - fi
+14:53:18     INFO - 
+14:53:18     INFO - # Package js shell.
+14:53:18     INFO - export MOZ_PACKAGE_JSSHELL=1
+14:53:18     INFO - 
+14:53:18     INFO - ac_add_options --with-branding=browser/branding/nightly
+14:53:18     INFO - 
+14:53:18     INFO - . "$topsrcdir/build/mozconfig.rust"
+14:53:18     INFO - . "$topsrcdir/build/mozconfig.common.override"
+14:53:18     INFO - . "$topsrcdir/build/mozconfig.cache"
+14:53:18     INFO - Copying /builds/slave/m-esr52-m64-d-0000000000000000/build/src/browser/config/mozconfigs/macosx64/debug to /builds/slave/m-esr52-m64-d-0000000000000000/build/src/.mozconfig
+14:53:18     INFO - ['sh', '/builds/slave/m-esr52-m64-d-0000000000000000/build/tools/scripts/tooltool/tooltool_wrapper.sh', '/builds/slave/m-esr52-m64-d-0000000000000000/build/src/browser/config/tooltool-manifests/macosx64/releng.manifest', 'https://api.pub.build.mozilla.org/tooltool/', 'setup.sh', '/builds/tooltool.py', '--authentication-file', '/builds/relengapi.tok', '-c', '/builds/tooltool_cache']
+14:53:18     INFO - Running command: ['sh', '/builds/slave/m-esr52-m64-d-0000000000000000/build/tools/scripts/tooltool/tooltool_wrapper.sh', '/builds/slave/m-esr52-m64-d-0000000000000000/build/src/browser/config/tooltool-manifests/macosx64/releng.manifest', 'https://api.pub.build.mozilla.org/tooltool/', 'setup.sh', '/builds/tooltool.py', '--authentication-file', '/builds/relengapi.tok', '-c', '/builds/tooltool_cache'] in /builds/slave/m-esr52-m64-d-0000000000000000/build/src
+14:53:18     INFO - Copy/paste: sh /builds/slave/m-esr52-m64-d-0000000000000000/build/tools/scripts/tooltool/tooltool_wrapper.sh /builds/slave/m-esr52-m64-d-0000000000000000/build/src/browser/config/tooltool-manifests/macosx64/releng.manifest https://api.pub.build.mozilla.org/tooltool/ setup.sh /builds/tooltool.py --authentication-file /builds/relengapi.tok -c /builds/tooltool_cache
+14:53:18     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/browser/config/tooltool-manifests/macosx64/releng.manifest content
+14:53:18     INFO -  =======================================================
+14:53:18     INFO -  [
+14:53:18     INFO -  {
+14:53:18     INFO -  "version": "clang 3.8.0",
+14:53:18     INFO -  "size": 133060926,
+14:53:18     INFO -  "digest": "aff5ad3ac2d41db19d1ba0df5f97b189a7d7e1b6af8c56e22c2b0cced84d75fa98394ded6a4ba5713652e6684a0a46f47aeccf87991f9e849bf8d7d82e564f6f",
+14:53:18     INFO -  "algorithm": "sha512",
+14:53:18     INFO -  "filename": "clang.tar.bz2",
+14:53:18     INFO -  "unpack": true
+14:53:18     INFO -  },
+14:53:18     INFO -  {
+14:53:18     INFO -  "version": "rustc 1.13.0 (2c6933acc 2016-11-07) repack",
+14:53:18     INFO -  "size": 104593379,
+14:53:18     INFO -  "digest": "9cbc4a6d4d647dd79629e97c0e7b177443d30e669ccd761ab520728d8c2b7e1cc4ab38ec444c1957649338c4088861db3bfe4f840ec3fedcc01f9f1a74da200a",
+14:53:18     INFO -  "algorithm": "sha512",
+14:53:18     INFO -  "filename": "rustc.tar.bz2",
+14:53:18     INFO -  "unpack": true
+14:53:18     INFO -  },
+14:53:18     INFO -  {
+14:53:18     INFO -  "version": "cargo 0.13.0-nightly (eca9e15 2016-11-01) repack",
+14:53:18     INFO -  "size": 2351877,
+14:53:18     INFO -  "digest": "76283ceda49015f66b03d18b3c28f70ed4baa09accdfc17b2ec935c7af3e9471d140256a33737563baa2545c34e556a125ade6d4858b9226b8c770dbd7c0756f",
+14:53:18     INFO -  "algorithm": "sha512",
+14:53:18     INFO -  "filename": "cargo.tar.bz2",
+14:53:18     INFO -  "unpack": true
+14:53:18     INFO -  },
+14:53:18     INFO -  {
+14:53:18     INFO -  "version": "cctools port from commit hash db1f8d906cb28, ld only",
+14:53:18     INFO -  "size": 634496,
+14:53:18     INFO -  "digest": "037f31fcf29e7bb7fada0d2bdd5e95c7d4cb2692f2a5c98ed6f6a7561b9d81622d015f0d12b291d3667719655f1369e8ce8a0a4a4773aa0ee4753e04a8821173",
+14:53:18     INFO -  "algorithm": "sha512",
+14:53:18     INFO -  "filename": "cctools.tar.bz2",
+14:53:18     INFO -  "unpack": true
+14:53:18     INFO -  },
+14:53:18     INFO -  {
+14:53:18     INFO -  "size": 167175,
+14:53:18     INFO -  "digest": "0b71a936edf5bd70cf274aaa5d7abc8f77fe8e7b5593a208f805cc9436fac646b9c4f0b43c2b10de63ff3da671497d35536077ecbc72dba7f8159a38b580f831",
+14:53:18     INFO -  "algorithm": "sha512",
+14:53:18     INFO -  "filename": "sccache.tar.bz2",
+14:53:18     INFO -  "unpack": true
+14:53:18     INFO -  }
+14:53:18     INFO -  ]
+14:53:18     INFO -  =======================================================
+14:53:18     INFO -  Fetching...
+14:53:19     INFO -  Executing: ['/builds/tooltool.py', '--authentication-file', '/builds/relengapi.tok', '-c', '/builds/tooltool_cache', '--url', 'https://api.pub.build.mozilla.org/tooltool/', '--overwrite', '-m', '/builds/slave/m-esr52-m64-d-0000000000000000/build/src/browser/config/tooltool-manifests/macosx64/releng.manifest', 'fetch', '-c', '/builds/tooltool_cache']
+14:53:21     INFO -  INFO - rm tree: clang
+14:53:21     INFO -  INFO - untarring "clang.tar.bz2"
+14:53:43     INFO -  INFO - rm tree: rustc
+14:53:43     INFO -  INFO - untarring "rustc.tar.bz2"
+14:53:57     INFO -  INFO - rm tree: cargo
+14:53:57     INFO -  INFO - untarring "cargo.tar.bz2"
+14:53:57     INFO -  INFO - rm tree: cctools
+14:53:57     INFO -  INFO - untarring "cctools.tar.bz2"
+14:53:57     INFO -  INFO - rm tree: sccache
+14:53:57     INFO -  INFO - untarring "sccache.tar.bz2"
+14:53:58     INFO - Return code: 0
+14:53:58     INFO - Release promotion update channel: default
+14:53:58     INFO - Removing previous mach property file: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/mach_build_properties.json
+14:53:58     INFO - rmtree: /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/mach_build_properties.json
+14:53:58     INFO - retry: Calling remove with args: ('/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/dist/mach_build_properties.json',), kwargs: {}, attempt #1
+14:53:58     INFO - Release promotion update channel: default
+14:53:58     INFO - Using buildbot properties:
+14:53:58     INFO - {
+14:53:58     INFO -     "project": "", 
+14:53:58     INFO -     "product": "firefox", 
+14:53:58     INFO -     "script_repo_revision": "production", 
+14:53:58     INFO -     "scheduler": "mozilla-esr52-firefox", 
+14:53:58     INFO -     "repository": "", 
+14:53:58     INFO -     "buildername": "OS X 10.7 64-bit mozilla-esr52 leak test build", 
+14:53:58     INFO -     "buildid": "20180608145219", 
+14:53:58     INFO -     "basedir": "/builds/slave/m-esr52-m64-d-0000000000000000", 
+14:53:58     INFO -     "buildnumber": 10, 
+14:53:58     INFO -     "platform": "macosx64-debug", 
+14:53:58     INFO -     "master": "http://buildbot-master85.bb.releng.scl3.mozilla.com:8001/", 
+14:53:58     INFO -     "branch": "mozilla-esr52", 
+14:53:58     INFO -     "revision": "a7a20deda4de9057e6f7e3cb8be4452f0b376fd3", 
+14:53:58     INFO -     "slavename": "bld-lion-r5-002", 
+14:53:58     INFO -     "builduid": "271b302eedcf469b86eedcfd435ce9d8", 
+14:53:58     INFO -     "repo_path": "releases/mozilla-esr52"
+14:53:58     INFO - }
+14:53:58     INFO - Copying /builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json to /builds/slave/m-esr52-m64-d-0000000000000000/build/buildprops.json
+14:53:58     INFO - Running command: ['/tools/buildbot/bin/python', 'mach', '--log-no-times', 'build', '-v'] in /builds/slave/m-esr52-m64-d-0000000000000000/build/src
+14:53:58     INFO - Copy/paste: /tools/buildbot/bin/python mach --log-no-times build -v
+14:53:58     INFO - Using env: {'Apple_PubSub_Socket_Render': '/tmp/launch-ONZaV4/Render',
+14:53:58     INFO -  'CCACHE_COMPRESS': '1',
+14:53:58     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:53:58     INFO -  'CCACHE_UMASK': '002',
+14:53:58     INFO -  'DISPLAY': '/tmp/launch-jDmy9v/org.x:0',
+14:53:58     INFO -  'ENABLE_RELEASE_PROMOTION': '1',
+14:53:58     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+14:53:58     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:53:58     INFO -  'HOME': '/Users/cltbld',
+14:53:58     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+14:53:58     INFO -  'LC_ALL': 'C',
+14:53:58     INFO -  'LOGNAME': 'cltbld',
+14:53:58     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-m64-d-0000000000000000/.mozbuild',
+14:53:58     INFO -  'MOZ_AUTOMATION': '1',
+14:53:58     INFO -  'MOZ_BUILD_DATE': '20180608145219',
+14:53:58     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:53:58     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:53:58     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:53:58     INFO -  'MOZ_SIGN_CMD': 'python /builds/slave/m-esr52-m64-d-0000000000000000/build/tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-m64-d-0000000000000000/build/signing_cache -t /builds/slave/m-esr52-m64-d-0000000000000000/token -n /builds/slave/m-esr52-m64-d-0000000000000000/nonce -c /builds/slave/m-esr52-m64-d-0000000000000000/build/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110',
+14:53:58     INFO -  'MOZ_SOURCE_REPO': 'https://hg.mozilla.org/releases/mozilla-esr52',
+14:53:58     INFO -  'MOZ_UPDATE_CHANNEL': 'default',
+14:53:58     INFO -  'PATH': '/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin',
+14:53:58     INFO -  'POST_UPLOAD_CMD': 'post_upload.py --tinderbox-builds-dir mozilla-esr52-macosx64-debug -p firefox -i 20180608145219 --revision a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 --release-to-tinderbox-dated-builds',
+14:53:58     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-m64-d-0000000000000000/buildprops.json',
+14:53:58     INFO -  'PWD': '/builds/slave/m-esr52-m64-d-0000000000000000',
+14:53:58     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+14:53:58     INFO -  'SHELL': '/bin/bash',
+14:53:58     INFO -  'SSH_AUTH_SOCK': '/tmp/launch-KWI2m5/Listeners',
+14:53:58     INFO -  'TINDERBOX_OUTPUT': '1',
+14:53:58     INFO -  'TMPDIR': '/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/',
+14:53:58     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:53:58     INFO -  'TOOLTOOL_HOME': '/builds',
+14:53:58     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+14:53:58     INFO -  'UPLOAD_HOST': 'upload.ffxbld.productdelivery.prod.mozaws.net',
+14:53:58     INFO -  'UPLOAD_SSH_KEY': '/Users/cltbld/.ssh/ffxbld_rsa',
+14:53:58     INFO -  'UPLOAD_TO_TEMP': '1',
+14:53:58     INFO -  'UPLOAD_USER': 'ffxbld',
+14:53:58     INFO -  'USER': 'cltbld',
+14:53:58     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+14:53:58     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+14:53:58     INFO -  'XPCOM_DEBUG_BREAK': 'stack-and-abort',
+14:53:58     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+14:53:58     INFO - Calling ['/tools/buildbot/bin/python', 'mach', '--log-no-times', 'build', '-v'] with output_timeout 2400
+14:54:00     INFO -  /usr/bin/make -f client.mk
+14:54:01     INFO -  (  echo 'export MOZ_AUTOMATION_BUILD_SYMBOLS=1';  echo 'export MOZ_AUTOMATION_L10N_CHECK=1';  echo 'export MOZ_AUTOMATION_PACKAGE=1';  echo 'export MOZ_AUTOMATION_PACKAGE_TESTS=1';  echo 'export MOZ_AUTOMATION_INSTALLER=0';  echo 'export MOZ_AUTOMATION_UPDATE_PACKAGING=0';  echo 'export MOZ_AUTOMATION_UPLOAD=1';  echo 'export MOZ_AUTOMATION_UPLOAD_SYMBOLS=0';  echo 'export MOZ_AUTOMATION_SDK=0'; ) > /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/.mozconfig.mk
+14:54:02     INFO -  /usr/bin/make -f /builds/slave/m-esr52-m64-d-0000000000000000/build/src/client.mk realbuild CREATE_MOZCONFIG_JSON=
+14:54:02     INFO -  Adding client.mk options from /builds/slave/m-esr52-m64-d-0000000000000000/build/src/.mozconfig:
+14:54:02     INFO -      AUTOCLOBBER=1
+14:54:02     INFO -      export MOZ_AUTOMATION_BUILD_SYMBOLS=1
+14:54:02     INFO -      export MOZ_AUTOMATION_L10N_CHECK=1
+14:54:02     INFO -      export MOZ_AUTOMATION_PACKAGE=1
+14:54:02     INFO -      export MOZ_AUTOMATION_PACKAGE_TESTS=1
+14:54:02     INFO -      export MOZ_AUTOMATION_INSTALLER=0
+14:54:02     INFO -      export MOZ_AUTOMATION_UPDATE_PACKAGING=0
+14:54:02     INFO -      export MOZ_AUTOMATION_UPLOAD=1
+14:54:02     INFO -      export MOZ_AUTOMATION_UPLOAD_SYMBOLS=0
+14:54:02     INFO -      export MOZ_AUTOMATION_SDK=0
+14:54:02     INFO -      MOZ_OBJDIR=/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox
+14:54:02     INFO -      OBJDIR=/builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox
+14:54:02     INFO -      FOUND_MOZCONFIG=/builds/slave/m-esr52-m64-d-0000000000000000/build/src/.mozconfig
+14:54:03     INFO -  /usr/bin/make -j8 -C /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox
+14:54:03     INFO -  /usr/bin/make recurse_pre-export
+14:54:03     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest dist/branding _build_manifests/install/dist_branding
+14:54:03     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest dist/idl _build_manifests/install/dist_idl
+14:54:03     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest dist/include _build_manifests/install/dist_include
+14:54:03     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest dist/public _build_manifests/install/dist_public
+14:54:03     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest dist/private _build_manifests/install/dist_private
+14:54:03     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest dist/sdk _build_manifests/install/dist_sdk
+14:54:03     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest dist/xpi-stage _build_manifests/install/dist_xpi-stage
+14:54:03     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest _tests _build_manifests/install/_tests
+14:54:04     INFO -  Elapsed: 0.02s; From dist/public: Kept 0 existing; Added/updated 0; Removed 0 files and 0 directories.
+14:54:04     INFO -  /builds/slave/m-esr52-m64-d-0000000000000000/build/src/obj-firefox/_virtualenv/bin/python -m mozbuild.action.process_install_manifest dist/bin _build_manifests/install/dist_bin
+14:54:04     INFO -  Elapsed: 0.12s; From dist/branding: Kept 2 existing; Added/updated 3; Removed 0 files and 0 directories.
+14:54:04     INFO -  Elapsed: 0.88s; From dist/sdk: Kept 11 existing; Added/updated 0; Removed 7 files and 1 directories.
+14:54:05     INFO -  Elapsed: 1.47s; From dist/private: Kept 0 existing; Added/updated 0; Removed 67 files and 2 directories.
+14:54:10     INFO -  Elapsed: 6.77s; From dist/xpi-stage: Kept 15 existing; Added/updated 0; Removed 847 files and 175 directories.
+14:54:11     INFO -  Elapsed: 6.96s; From dist/idl: Kept 1108 existing; Added/updated 0; Removed 0 files and 0 directories.
+14:54:17     INFO -  Elapsed: 13.11s; From dist/include: Kept 4965 existing; Added/updated 0; Removed 102 files and 2 directories.
+14:54:24     INFO -  Elapsed: 19.41s; From dist/bin: Kept 2164 existing; Added/updated 0; Removed 2667 files and 281 directories.
+
+command interrupted, attempting to kill
+process killed by signal 9
+program finished with exit code -1
+elapsedTime=279.201347
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+========= master_lag: 0.02 =========
+========= Finished '/tools/buildbot/bin/python scripts/scripts/fx_desktop_build.py ...' interrupted (results: 4, elapsed: 4 mins, 39 secs) (at 2018-06-08 14:57:18.597003) =========
+
+========= Started set props: buildid got_revision comments builduid stage_platform (results: 0, elapsed: 0 secs) (at 2018-06-08 14:57:18.597807) =========
+bash -c 'for file in `ls -1`; do cat $file; done'
+ in dir /builds/slave/m-esr52-m64-d-0000000000000000/properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'for file in `ls -1`; do cat $file; done']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-ONZaV4/Render
+  DISPLAY=/tmp/launch-jDmy9v/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/m-esr52-m64-d-0000000000000000/properties
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-KWI2m5/Listeners
+  TMPDIR=/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+buildid:20180608145219
+builduid:271b302eedcf469b86eedcfd435ce9d8
+comments:No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update
+got_revision:a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+stage_platform:macosx64-debug
+program finished with exit code 0
+elapsedTime=0.956987
+buildid: '20180608145219'
+got_revision: 'a7a20deda4de9057e6f7e3cb8be4452f0b376fd3'
+comments: 'No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update'
+builduid: '271b302eedcf469b86eedcfd435ce9d8'
+stage_platform: 'macosx64-debug'
+========= master_lag: 0.01 =========
+========= Finished set props: buildid got_revision comments builduid stage_platform (results: 0, elapsed: 0 secs) (at 2018-06-08 14:57:19.569440) =========
+
+========= Started 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:57:19.569770) =========
+rm -f oauth.txt
+ in dir /builds/slave/m-esr52-m64-d-0000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'oauth.txt']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-ONZaV4/Render
+  DISPLAY=/tmp/launch-jDmy9v/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/m-esr52-m64-d-0000000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-KWI2m5/Listeners
+  TMPDIR=/var/folders/kx/0sqd_gns68b5f5st5c6330lm00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.212640
+========= master_lag: 0.25 =========
+========= Finished 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:57:20.032443) =========
+
+========= Started reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 14:57:20.032813) =========
+========= Finished reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 14:57:20.033118) =========
+
+========= Total master_lag: 0.42 =========
+

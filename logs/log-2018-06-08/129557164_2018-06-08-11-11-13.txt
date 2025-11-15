@@ -1,0 +1,323 @@
+builder: comm-esr52-linux64-periodicupdate
+slave: bld-linux64-spot-326
+starttime: 1528452673.61
+results: success (0)
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:13.611367) =========
+master: http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:13.611819) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:13.612100) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:13.671117) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:13.671431) =========
+rm -rf scripts properties
+ in dir /builds/slave/c-esr52-l64-periodicupdate-000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-326.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/c-esr52-l64-periodicupdate-000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.003638
+========= master_lag: 0.05 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:13.722231) =========
+
+========= Started 'hg clone ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 03:11:13.722552) =========
+hg clone https://hg.mozilla.org/build/tools scripts
+ in dir /builds/slave/c-esr52-l64-periodicupdate-000/. (timeout 1320 secs)
+ watching logfiles {}
+ argv: ['hg', 'clone', 'https://hg.mozilla.org/build/tools', 'scripts']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-326.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/c-esr52-l64-periodicupdate-000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+applying clone bundle from https://s3-us-west-2.amazonaws.com/moz-hg-bundles-us-west-2/build/tools/88b450a68f2444542486da1421f85f3c56225d37.packed1.hg
+2199 files to transfer, 31.1 MB of data
+transferred 31.1 MB in 0.6 seconds (49.0 MB/sec)
+finished applying clone bundle
+searching for changes
+no changes found
+updating to branch default
+1057 files updated, 0 files merged, 0 files removed, 0 files unresolved
+program finished with exit code 0
+elapsedTime=2.448911
+========= master_lag: 0.01 =========
+========= Finished 'hg clone ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 03:11:16.179364) =========
+
+========= Started 'hg update ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:16.179744) =========
+hg update -C -r default
+ in dir /builds/slave/c-esr52-l64-periodicupdate-000/scripts (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['hg', 'update', '-C', '-r', 'default']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-326.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/c-esr52-l64-periodicupdate-000/scripts
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+program finished with exit code 0
+elapsedTime=0.810118
+========= master_lag: 0.02 =========
+========= Finished 'hg update ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:17.010380) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:17.010720) =========
+hg id -i
+ in dir /builds/slave/c-esr52-l64-periodicupdate-000/scripts (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['hg', 'id', '-i']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-326.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/c-esr52-l64-periodicupdate-000/scripts
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+88b450a68f24
+program finished with exit code 0
+elapsedTime=0.636649
+script_repo_revision: '88b450a68f24'
+========= master_lag: 0.01 =========
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:17.656897) =========
+
+========= Started 'bash scripts/scripts/periodic_file_updates/periodic_file_updates.sh ...' (results: 0, elapsed: 48 secs) (at 2018-06-08 03:11:17.657257) =========
+bash scripts/scripts/periodic_file_updates/periodic_file_updates.sh -b releases/comm-esr52 -p thunderbird -u tbirdbld -k '~cltbld/.ssh/tbirdbld_dsa' -a --blocklist --use-ftp-builds
+ in dir /builds/slave/c-esr52-l64-periodicupdate-000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', 'scripts/scripts/periodic_file_updates/periodic_file_updates.sh', '-b', 'releases/comm-esr52', '-p', 'thunderbird', '-u', 'tbirdbld', '-k', '~cltbld/.ssh/tbirdbld_dsa', '-a', '--blocklist', '--use-ftp-builds']
+ environment:
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_HASHDIR=
+  CCACHE_UMASK=002
+  DISPLAY=:2
+  G_BROKEN_FILENAMES=1
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-326.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LC_ALL=C
+  LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=objdir-tb
+  MOZ_SCM_LEVEL=3
+  PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+  PROPERTIES_FILE=/builds/slave/c-esr52-l64-periodicupdate-000/buildprops.json
+  PWD=/builds/slave/c-esr52-l64-periodicupdate-000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TINDERBOX_OUTPUT=1
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+2018-06-08 03:11:17 URL:https://hg.mozilla.org/releases/comm-esr52/raw-file/default/mail/config/version.txt [5/5] -> "version.txt" [1]
+INFO: parsed version is 52.0
+INFO: wget -nv -O blocklist_amo.xml https://blocklist.addons.mozilla.org/blocklist/3/%7B3550f703-e582-4d05-9a08-453d09bdfdc6%7D/52.0/Thunderbird/20090105024647/blocklist-sync/en-US/nightly/blocklist-sync/default/default/
+2018-06-08 03:11:18 URL:https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%7B3550f703-e582-4d05-9a08-453d09bdfdc6%7D/52.0/Thunderbird/20090105024647/blocklist-sync/en-US/nightly/blocklist-sync/default/default/ [308882/308882] -> "blocklist_amo.xml" [1]
+INFO: wget -nv -O blocklist_hg.xml https://hg.mozilla.org/releases/comm-esr52/raw-file/default/mail/app/blocklist.xml
+2018-06-08 03:11:19 URL:https://hg.mozilla.org/releases/comm-esr52/raw-file/default/mail/app/blocklist.xml [308499/308499] -> "blocklist_hg.xml" [1]
+INFO: diffing in-tree blocklist against the blocklist from AMO...
+INFO: AMO blocklist differs from the one in-tree.
+INFO: cloning from hg: scripts/scripts/periodic_file_updates/../../buildfarm/utils/hgtool.py --branch default https://hg.mozilla.org/releases/comm-esr52 comm-esr52
+Reporting hg version in use
+command: START
+command: hg -q version
+command: cwd: .
+command: output:
+Mercurial Distributed SCM (version 4.4.1)
+command: END (0.18s elapsed)
+
+Checking if share extension works
+command: START
+command: hg help share
+command: cwd: /builds/slave/c-esr52-l64-periodicupdate-000
+command: env: {'HGPLAIN': '1'}
+command: END (0.25s elapsed)
+
+Updating shared repo
+Reporting hg version in use
+command: START
+command: hg -q version
+command: cwd: .
+command: output:
+Mercurial Distributed SCM (version 4.4.1)
+command: END (0.18s elapsed)
+
+command: START
+command: hg clone --traceback -U https://hg.mozilla.org/releases/comm-esr52 /builds/hg-shared/releases/comm-esr52
+command: cwd: /builds/slave/c-esr52-l64-periodicupdate-000
+command: env: {'HGPLAIN': '1'}
+command: END (37.05s elapsed)
+
+command: output:
+requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 28241 changesets with 96689 changes to 15170 files (+405 heads)
+new changesets e4f4569d451a:ab662d7a658c
+
+Trying to share /builds/hg-shared/releases/comm-esr52 to /builds/slave/c-esr52-l64-periodicupdate-000/comm-esr52
+mkdir: /builds/slave/c-esr52-l64-periodicupdate-000/comm-esr52
+command: START
+command: hg share -U /builds/hg-shared/releases/comm-esr52 /builds/slave/c-esr52-l64-periodicupdate-000/comm-esr52
+command: cwd: /builds/slave/c-esr52-l64-periodicupdate-000
+command: output:
+command: END (0.24s elapsed)
+
+command: START
+command: hg branch
+command: cwd: /builds/slave/c-esr52-l64-periodicupdate-000/comm-esr52
+command: env: {'HGPLAIN': '1'}
+command: END (0.25s elapsed)
+
+command: output:
+default
+
+command: START
+command: hg update -C
+command: cwd: /builds/slave/c-esr52-l64-periodicupdate-000/comm-esr52
+command: output:
+8985 files updated, 0 files merged, 0 files removed, 0 files unresolved
+command: END (1.86s elapsed)
+
+command: START
+command: hg parent --template {node|short}
+command: cwd: /builds/slave/c-esr52-l64-periodicupdate-000/comm-esr52
+command: env: {'HGPLAIN': '1'}
+command: END (0.50s elapsed)
+
+command: output:
+ab662d7a658c
+Got revision ab662d7a658c
+INFO: pulling from hg: hg -R comm-esr52 pull
+pulling from https://hg.mozilla.org/releases/comm-esr52
+searching for changes
+no changes found
+INFO: updating to default: hg -R comm-esr52 update -C default
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+INFO: committing blocklist changes: hg -R comm-esr52 commit -u "tbirdbld" -m "No bug, Automated blocklist update from host bld-linux64-spot-326 - a=blocklist-update"
+INFO: hg commit succeeded for blocklist files.
+hg -R comm-esr52 push -e "ssh -l tbirdbld -i ~cltbld/.ssh/tbirdbld_dsa" ssh://hg.mozilla.org/releases/comm-esr52
+pushing to ssh://hg.mozilla.org/releases/comm-esr52
+searching for changes
+remote: adding changesets
+remote: adding manifests
+remote: adding file changes
+remote: added 1 changesets with 1 changes to 1 files
+remote: recorded push in pushlog
+remote: 
+remote: View your change here:
+remote:   https://hg.mozilla.org/releases/comm-esr52/rev/25c3e70855eb4943af097c66517b6a70f9118679
+remote: 
+remote: Follow the progress of your build on Treeherder:
+remote:   https://treeherder.mozilla.org/#/jobs?repo=comm-esr52&revision=25c3e70855eb4943af097c66517b6a70f9118679
+remote: recorded changegroup in replication log in 0.007s
+INFO: hg push succeeded.
+program finished with exit code 0
+elapsedTime=48.181186
+========= master_lag: 0.01 =========
+========= Finished 'bash scripts/scripts/periodic_file_updates/periodic_file_updates.sh ...' (results: 0, elapsed: 48 secs) (at 2018-06-08 03:12:05.850624) =========
+
+========= Started no change (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:05.851564) =========
+bash -c 'for file in `ls -1`; do cat $file; done'
+ in dir /builds/slave/c-esr52-l64-periodicupdate-000/properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'for file in `ls -1`; do cat $file; done']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-326.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/c-esr52-l64-periodicupdate-000/properties
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.005370
+
+========= master_lag: 0.04 =========
+========= Finished no change (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:05.901238) =========
+
+========= Total master_lag: 0.14 =========
+

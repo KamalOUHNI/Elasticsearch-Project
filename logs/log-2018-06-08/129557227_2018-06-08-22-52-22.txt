@@ -1,0 +1,2193 @@
+builder: mozilla-esr52-linux
+slave: bld-linux64-spot-303
+starttime: 1528494742.77
+results: cancelled (6)
+buildid: 20180608145219
+builduid: 271b302eedcf469b86eedcfd435ce9d8
+revision: a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:22.772938) =========
+master: http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:22.773358) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:22.773662) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:22.830890) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:22.831161) =========
+rm -rf scripts properties
+ in dir /builds/slave/m-esr52-lx-0000000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/m-esr52-lx-0000000000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.003590
+========= master_lag: 0.05 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:22.881957) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 12 secs) (at 2018-06-08 14:52:22.882273) =========
+bash -c 'python /tools/checkouts/build-tools/buildfarm/utils/archiver_client.py mozharness --repo releases/mozilla-esr52 --rev a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 --destination scripts --debug'
+ in dir /builds/slave/m-esr52-lx-0000000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python /tools/checkouts/build-tools/buildfarm/utils/archiver_client.py mozharness --repo releases/mozilla-esr52 --rev a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 --destination scripts --debug']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/m-esr52-lx-0000000000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+2018-06-08 14:52:22,930 truncating revision to first 12 chars
+2018-06-08 14:52:22,930 Setting DEBUG logging.
+2018-06-08 14:52:22,930 attempt 1/10
+2018-06-08 14:52:22,930 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/releases/mozilla-esr52/a7a20deda4de?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-08 14:52:23,713 attempt 1/10
+2018-06-08 14:52:24,603 current task status: no status available at this point. state: STARTED
+2018-06-08 14:52:24,603 sleeping for 10.00s (attempt 1/10)
+2018-06-08 14:52:34,613 attempt 2/10
+2018-06-08 14:52:35,349 current task status: Task completed! Check 's3_urls' for upload locations. state: SUCCESS
+2018-06-08 14:52:35,431 unpacking tar archive at: mozilla-esr52-a7a20deda4de/testing/mozharness/
+program finished with exit code 0
+elapsedTime=12.690629
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 12 secs) (at 2018-06-08 14:52:35.581679) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.582000) =========
+script_repo_revision: a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.582396) =========
+
+========= Started downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.582690) =========
+========= Finished downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.591610) =========
+
+========= Started remove old nonce (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.591885) =========
+rm -f nonce
+ in dir /builds/slave/m-esr52-lx-0000000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'nonce']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/m-esr52-lx-0000000000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.003065
+========= master_lag: 0.04 =========
+========= Finished remove old nonce (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.639935) =========
+
+========= Started downloading to token (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.640215) =========
+Slave: bld-linux64-spot-303
+IP: 10.132.54.8
+Duration: 25200
+URI: https://signing6.srv.releng.scl3.mozilla.com:9120/token
+========= Finished downloading to token (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.791147) =========
+
+========= Started set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.791538) =========
+bash -c pwd
+ in dir /tools/checkouts/build-tools (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'pwd']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/tools/checkouts/build-tools
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+/tools/checkouts/build-tools
+program finished with exit code 0
+elapsedTime=0.003928
+toolsdir: '/tools/checkouts/build-tools'
+========= master_lag: 0.05 =========
+========= Finished set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-08 14:52:35.840704) =========
+
+========= Started '/tools/buildbot/bin/python scripts/scripts/fx_desktop_build.py ...' interrupted (results: 4, elapsed: 4 mins, 38 secs) (at 2018-06-08 14:52:35.841001) =========
+/tools/buildbot/bin/python scripts/scripts/fx_desktop_build.py --config builds/releng_base_linux_32_builds.py --config balrog/production.py --branch mozilla-esr52 --build-pool production
+ in dir /builds/slave/m-esr52-lx-0000000000000000000/. (timeout 10800 secs) (maxTime 19800 secs)
+ watching logfiles {}
+ argv: ['/tools/buildbot/bin/python', 'scripts/scripts/fx_desktop_build.py', '--config', 'builds/releng_base_linux_32_builds.py', '--config', 'balrog/production.py', '--branch', 'mozilla-esr52', '--build-pool', 'production']
+ environment:
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_HASHDIR=
+  CCACHE_UMASK=002
+  DISPLAY=:2
+  G_BROKEN_FILENAMES=1
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LC_ALL=C
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=obj-firefox
+  MOZ_SIGNING_SERVERS=gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120
+  MOZ_SIGN_CMD=python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120
+  PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+  PROPERTIES_FILE=/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json
+  PWD=/builds/slave/m-esr52-lx-0000000000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TINDERBOX_OUTPUT=1
+  TMOUT=86400
+  TOOLTOOL_CACHE=/builds/tooltool_cache
+  TOOLTOOL_HOME=/builds
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+14:52:36     INFO - MultiFileLogger online at 20180608 14:52:36 in /builds/slave/m-esr52-lx-0000000000000000000
+14:52:36     INFO - Script was run with '--branch mozilla-esr52' and 'mozilla-esr52' matches a key in 'builds/branch_specifics.py'. Updating self.config with items from that key's value.
+14:52:36     INFO - Script was run with '--build-pool production' and 'production' matches a key in 'builds/build_pool_specifics.py'. Updating self.config with items from that key's value.
+14:52:36     INFO - The branch 'mozilla-esr52' has custom behavior for the platform 'linux'. Updating self.config with the following from 'platform_overrides' found in 'builds/branch_specifics.py':
+14:52:36     INFO - {'force_clobber': True,
+14:52:36     INFO -  'src_mozconfig': 'browser/config/mozconfigs/linux32/release'}
+14:52:36     INFO - To generate a config file based upon options passed and config files used, run script as before but extend options with "--dump-config"
+14:52:36     INFO - For a diff of where self.config got its items, run the script again as before but extend options with: "--dump-config-hierarchy"
+14:52:36     INFO - Both --dump-config and --dump-config-hierarchy don't actually run any actions.
+14:52:36     INFO - We are running this in buildbot, grab the build props
+14:52:36     INFO - Using buildbot properties:
+14:52:36     INFO - {
+14:52:36     INFO -     "project": "", 
+14:52:36     INFO -     "product": "firefox", 
+14:52:36     INFO -     "script_repo_revision": "production", 
+14:52:36     INFO -     "scheduler": "mozilla-esr52-firefox", 
+14:52:36     INFO -     "repository": "", 
+14:52:36     INFO -     "buildername": "Linux mozilla-esr52 build", 
+14:52:36     INFO -     "buildid": "20180608145219", 
+14:52:36     INFO -     "basedir": "/builds/slave/m-esr52-lx-0000000000000000000", 
+14:52:36     INFO -     "buildnumber": 182, 
+14:52:36     INFO -     "platform": "linux", 
+14:52:36     INFO -     "master": "http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/", 
+14:52:36     INFO -     "branch": "mozilla-esr52", 
+14:52:36     INFO -     "revision": "a7a20deda4de9057e6f7e3cb8be4452f0b376fd3", 
+14:52:36     INFO -     "slavename": "bld-linux64-spot-303", 
+14:52:36     INFO -     "builduid": "271b302eedcf469b86eedcfd435ce9d8", 
+14:52:36     INFO -     "repo_path": "releases/mozilla-esr52"
+14:52:36     INFO - }
+14:52:36     INFO - Setting buildbot property stage_platform to linux
+14:52:36     INFO - mkdir: /builds/slave/m-esr52-lx-0000000000000000000/properties
+14:52:36     INFO - Writing buildbot properties ['stage_platform'] to /builds/slave/m-esr52-lx-0000000000000000000/properties/stage_platform
+14:52:36     INFO - Writing to file /builds/slave/m-esr52-lx-0000000000000000000/properties/stage_platform
+14:52:36     INFO - Contents:
+14:52:36     INFO -  stage_platform:linux
+14:52:36  WARNING - Try message not found.
+14:52:36     INFO - Run as scripts/scripts/fx_desktop_build.py --config builds/releng_base_linux_32_builds.py --config balrog/production.py --branch mozilla-esr52 --build-pool production
+14:52:36     INFO - Determining buildid from buildbot properties
+14:52:36     INFO - Setting buildbot property buildid to 20180608145219
+14:52:36     INFO - Writing buildbot properties ['buildid'] to /builds/slave/m-esr52-lx-0000000000000000000/properties/buildid
+14:52:36     INFO - Writing to file /builds/slave/m-esr52-lx-0000000000000000000/properties/buildid
+14:52:36     INFO - Contents:
+14:52:36     INFO -  buildid:20180608145219
+14:52:36     INFO - Determining builduid from buildbot properties
+14:52:36     INFO - Setting buildbot property builduid to 271b302eedcf469b86eedcfd435ce9d8
+14:52:36     INFO - Writing buildbot properties ['builduid'] to /builds/slave/m-esr52-lx-0000000000000000000/properties/builduid
+14:52:36     INFO - Writing to file /builds/slave/m-esr52-lx-0000000000000000000/properties/builduid
+14:52:36     INFO - Contents:
+14:52:36     INFO -  builduid:271b302eedcf469b86eedcfd435ce9d8
+14:52:36     INFO - Release promotion update channel: esr
+14:52:36     INFO - Creating virtualenv /builds/slave/m-esr52-lx-0000000000000000000/build/venv
+14:52:36     INFO - mkdir: /builds/slave/m-esr52-lx-0000000000000000000/build
+14:52:36     INFO - Running command: ['/tools/buildbot/bin/python', '/builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/virtualenv/virtualenv.py', '--always-copy', '/builds/slave/m-esr52-lx-0000000000000000000/build/venv'] in /builds/slave/m-esr52-lx-0000000000000000000/build
+14:52:36     INFO - Copy/paste: /tools/buildbot/bin/python /builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/virtualenv/virtualenv.py --always-copy /builds/slave/m-esr52-lx-0000000000000000000/build/venv
+14:52:36     INFO - Using partial env: {'VIRTUALENV_NO_DOWNLOAD': '1'}
+14:52:36     INFO -  Using real prefix '/tools/python27'
+14:52:36     INFO -  Cannot find file lib (bad symlink)
+14:52:36     INFO -  New python executable in /builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/python
+14:52:38     INFO -  Installing setuptools, pip, wheel...done.
+14:52:38     INFO - Return code: 0
+14:52:38     INFO - Installing requests==2.8.1 into virtualenv /builds/slave/m-esr52-lx-0000000000000000000/build/venv
+14:52:38     INFO - retry: Calling run_command with args: [['/builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'requests==2.8.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b04f110>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b068030>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1ebebf0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1afe6928>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b130998>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b609d98>, 'level': 'critical'}], 'cwd': '/builds/slave/m-esr52-lx-0000000000000000000/build', 'env': {'MOZ_AUTOMATION': '1', 'LESSOPEN': '|/usr/bin/lesspipe.sh %s', 'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'MOZ_OBJDIR': 'obj-firefox', 'PATH': '/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin', 'DISPLAY': ':2', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'CCACHE_HASHDIR': '', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120', 'SHLVL': '1', 'G_BROKEN_FILENAMES': '1', 'HISTSIZE': '1000', 'HOME': '/home/cltbld', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'TINDERBOX_OUTPUT': '1', 'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120', 'LC_ALL': 'C', 'TOOLTOOL_HOME': '/builds', '_': '/tools/buildbot/bin/python', 'LD_LIBRARY_PATH': '/tools/gcc-4.3.3/installed/lib', 'MAIL': '/var/spool/mail/cltbld', 'HOSTNAME': 'bld-linux64-spot-303.build.releng.usw2.mozilla.com', 'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild', 'HISTCONTROL': 'ignoredups', 'PWD': '/builds/slave/m-esr52-lx-0000000000000000000', 'PROPERTIES_FILE': '/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json', 'CCACHE_DIR': '/builds/ccache', 'CCACHE_COMPRESS': '1', 'TOOLTOOL_CACHE': '/builds/tooltool_cache'}}, attempt #1
+14:52:38     INFO - Running command: ['/builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'requests==2.8.1'] in /builds/slave/m-esr52-lx-0000000000000000000/build
+14:52:38     INFO - Copy/paste: /builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org requests==2.8.1
+14:52:38     INFO - Using env: {'CCACHE_COMPRESS': '1',
+14:52:38     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:52:38     INFO -  'CCACHE_HASHDIR': '',
+14:52:38     INFO -  'CCACHE_UMASK': '002',
+14:52:38     INFO -  'DISPLAY': ':2',
+14:52:38     INFO -  'G_BROKEN_FILENAMES': '1',
+14:52:38     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:52:38     INFO -  'HISTCONTROL': 'ignoredups',
+14:52:38     INFO -  'HISTSIZE': '1000',
+14:52:38     INFO -  'HOME': '/home/cltbld',
+14:52:38     INFO -  'HOSTNAME': 'bld-linux64-spot-303.build.releng.usw2.mozilla.com',
+14:52:38     INFO -  'LANG': 'en_US.UTF-8',
+14:52:38     INFO -  'LC_ALL': 'C',
+14:52:38     INFO -  'LD_LIBRARY_PATH': '/tools/gcc-4.3.3/installed/lib',
+14:52:38     INFO -  'LESSOPEN': '|/usr/bin/lesspipe.sh %s',
+14:52:38     INFO -  'LOGNAME': 'cltbld',
+14:52:38     INFO -  'MAIL': '/var/spool/mail/cltbld',
+14:52:38     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild',
+14:52:38     INFO -  'MOZ_AUTOMATION': '1',
+14:52:38     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:52:38     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:52:38     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120',
+14:52:38     INFO -  'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120',
+14:52:38     INFO -  'PATH': '/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin',
+14:52:38     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json',
+14:52:38     INFO -  'PWD': '/builds/slave/m-esr52-lx-0000000000000000000',
+14:52:38     INFO -  'SHELL': '/bin/bash',
+14:52:38     INFO -  'SHLVL': '1',
+14:52:38     INFO -  'TERM': 'linux',
+14:52:38     INFO -  'TINDERBOX_OUTPUT': '1',
+14:52:38     INFO -  'TMOUT': '86400',
+14:52:38     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:52:38     INFO -  'TOOLTOOL_HOME': '/builds',
+14:52:38     INFO -  'USER': 'cltbld',
+14:52:38     INFO -  '_': '/tools/buildbot/bin/python'}
+14:52:38     INFO -  Ignoring indexes: https://pypi.python.org/simple
+14:52:38     INFO -  Collecting requests==2.8.1
+14:52:42     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/requests-2.8.1-py2.py3-none-any.whl (497kB)
+14:52:42     INFO -  Installing collected packages: requests
+14:52:42     INFO -  Successfully installed requests-2.8.1
+14:52:42     INFO - Return code: 0
+14:52:42     INFO - Installing PyHawk-with-a-single-extra-commit==0.1.5 into virtualenv /builds/slave/m-esr52-lx-0000000000000000000/build/venv
+14:52:42     INFO - retry: Calling run_command with args: [['/builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'PyHawk-with-a-single-extra-commit==0.1.5']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b04f110>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b068030>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1ebebf0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1afe6928>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b130998>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b609d98>, 'level': 'critical'}], 'cwd': '/builds/slave/m-esr52-lx-0000000000000000000/build', 'env': {'MOZ_AUTOMATION': '1', 'LESSOPEN': '|/usr/bin/lesspipe.sh %s', 'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'MOZ_OBJDIR': 'obj-firefox', 'PATH': '/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin', 'DISPLAY': ':2', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'CCACHE_HASHDIR': '', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120', 'SHLVL': '1', 'G_BROKEN_FILENAMES': '1', 'HISTSIZE': '1000', 'HOME': '/home/cltbld', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'TINDERBOX_OUTPUT': '1', 'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120', 'LC_ALL': 'C', 'TOOLTOOL_HOME': '/builds', '_': '/tools/buildbot/bin/python', 'LD_LIBRARY_PATH': '/tools/gcc-4.3.3/installed/lib', 'MAIL': '/var/spool/mail/cltbld', 'HOSTNAME': 'bld-linux64-spot-303.build.releng.usw2.mozilla.com', 'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild', 'HISTCONTROL': 'ignoredups', 'PWD': '/builds/slave/m-esr52-lx-0000000000000000000', 'PROPERTIES_FILE': '/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json', 'CCACHE_DIR': '/builds/ccache', 'CCACHE_COMPRESS': '1', 'TOOLTOOL_CACHE': '/builds/tooltool_cache'}}, attempt #1
+14:52:42     INFO - Running command: ['/builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'PyHawk-with-a-single-extra-commit==0.1.5'] in /builds/slave/m-esr52-lx-0000000000000000000/build
+14:52:42     INFO - Copy/paste: /builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org PyHawk-with-a-single-extra-commit==0.1.5
+14:52:42     INFO - Using env: {'CCACHE_COMPRESS': '1',
+14:52:42     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:52:42     INFO -  'CCACHE_HASHDIR': '',
+14:52:42     INFO -  'CCACHE_UMASK': '002',
+14:52:42     INFO -  'DISPLAY': ':2',
+14:52:42     INFO -  'G_BROKEN_FILENAMES': '1',
+14:52:42     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:52:42     INFO -  'HISTCONTROL': 'ignoredups',
+14:52:42     INFO -  'HISTSIZE': '1000',
+14:52:42     INFO -  'HOME': '/home/cltbld',
+14:52:42     INFO -  'HOSTNAME': 'bld-linux64-spot-303.build.releng.usw2.mozilla.com',
+14:52:42     INFO -  'LANG': 'en_US.UTF-8',
+14:52:42     INFO -  'LC_ALL': 'C',
+14:52:42     INFO -  'LD_LIBRARY_PATH': '/tools/gcc-4.3.3/installed/lib',
+14:52:42     INFO -  'LESSOPEN': '|/usr/bin/lesspipe.sh %s',
+14:52:42     INFO -  'LOGNAME': 'cltbld',
+14:52:42     INFO -  'MAIL': '/var/spool/mail/cltbld',
+14:52:42     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild',
+14:52:42     INFO -  'MOZ_AUTOMATION': '1',
+14:52:42     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:52:42     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:52:42     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120',
+14:52:42     INFO -  'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120',
+14:52:42     INFO -  'PATH': '/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin',
+14:52:42     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json',
+14:52:42     INFO -  'PWD': '/builds/slave/m-esr52-lx-0000000000000000000',
+14:52:42     INFO -  'SHELL': '/bin/bash',
+14:52:42     INFO -  'SHLVL': '1',
+14:52:42     INFO -  'TERM': 'linux',
+14:52:42     INFO -  'TINDERBOX_OUTPUT': '1',
+14:52:42     INFO -  'TMOUT': '86400',
+14:52:42     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:52:42     INFO -  'TOOLTOOL_HOME': '/builds',
+14:52:42     INFO -  'USER': 'cltbld',
+14:52:42     INFO -  '_': '/tools/buildbot/bin/python'}
+14:52:42     INFO -  Ignoring indexes: https://pypi.python.org/simple
+14:52:42     INFO -  Collecting PyHawk-with-a-single-extra-commit==0.1.5
+14:52:46     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/PyHawk-with-a-single-extra-commit-0.1.5.tar.gz
+14:52:46     INFO -  Building wheels for collected packages: PyHawk-with-a-single-extra-commit
+14:52:46     INFO -    Running setup.py bdist_wheel for PyHawk-with-a-single-extra-commit: started
+14:52:47     INFO -    Running setup.py bdist_wheel for PyHawk-with-a-single-extra-commit: finished with status 'done'
+14:52:47     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/8a/ce/86/25c218a399ef3cb799542a3059992080a879a63c68b4d1616e
+14:52:47     INFO -  Successfully built PyHawk-with-a-single-extra-commit
+14:52:47     INFO -  Installing collected packages: PyHawk-with-a-single-extra-commit
+14:52:47     INFO -  Successfully installed PyHawk-with-a-single-extra-commit-0.1.5
+14:52:47     INFO - Return code: 0
+14:52:47     INFO - Installing taskcluster==0.0.26 into virtualenv /builds/slave/m-esr52-lx-0000000000000000000/build/venv
+14:52:47     INFO - retry: Calling run_command with args: [['/builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'taskcluster==0.0.26']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b04f110>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b068030>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1ebebf0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1afe6928>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b130998>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x7fae1b609d98>, 'level': 'critical'}], 'cwd': '/builds/slave/m-esr52-lx-0000000000000000000/build', 'env': {'MOZ_AUTOMATION': '1', 'LESSOPEN': '|/usr/bin/lesspipe.sh %s', 'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'MOZ_OBJDIR': 'obj-firefox', 'PATH': '/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin', 'DISPLAY': ':2', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'CCACHE_HASHDIR': '', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120', 'SHLVL': '1', 'G_BROKEN_FILENAMES': '1', 'HISTSIZE': '1000', 'HOME': '/home/cltbld', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'TINDERBOX_OUTPUT': '1', 'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120', 'LC_ALL': 'C', 'TOOLTOOL_HOME': '/builds', '_': '/tools/buildbot/bin/python', 'LD_LIBRARY_PATH': '/tools/gcc-4.3.3/installed/lib', 'MAIL': '/var/spool/mail/cltbld', 'HOSTNAME': 'bld-linux64-spot-303.build.releng.usw2.mozilla.com', 'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild', 'HISTCONTROL': 'ignoredups', 'PWD': '/builds/slave/m-esr52-lx-0000000000000000000', 'PROPERTIES_FILE': '/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json', 'CCACHE_DIR': '/builds/ccache', 'CCACHE_COMPRESS': '1', 'TOOLTOOL_CACHE': '/builds/tooltool_cache'}}, attempt #1
+14:52:47     INFO - Running command: ['/builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'taskcluster==0.0.26'] in /builds/slave/m-esr52-lx-0000000000000000000/build
+14:52:47     INFO - Copy/paste: /builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org taskcluster==0.0.26
+14:52:47     INFO - Using env: {'CCACHE_COMPRESS': '1',
+14:52:47     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:52:47     INFO -  'CCACHE_HASHDIR': '',
+14:52:47     INFO -  'CCACHE_UMASK': '002',
+14:52:47     INFO -  'DISPLAY': ':2',
+14:52:47     INFO -  'G_BROKEN_FILENAMES': '1',
+14:52:47     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:52:47     INFO -  'HISTCONTROL': 'ignoredups',
+14:52:47     INFO -  'HISTSIZE': '1000',
+14:52:47     INFO -  'HOME': '/home/cltbld',
+14:52:47     INFO -  'HOSTNAME': 'bld-linux64-spot-303.build.releng.usw2.mozilla.com',
+14:52:47     INFO -  'LANG': 'en_US.UTF-8',
+14:52:47     INFO -  'LC_ALL': 'C',
+14:52:47     INFO -  'LD_LIBRARY_PATH': '/tools/gcc-4.3.3/installed/lib',
+14:52:47     INFO -  'LESSOPEN': '|/usr/bin/lesspipe.sh %s',
+14:52:47     INFO -  'LOGNAME': 'cltbld',
+14:52:47     INFO -  'MAIL': '/var/spool/mail/cltbld',
+14:52:47     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild',
+14:52:47     INFO -  'MOZ_AUTOMATION': '1',
+14:52:47     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:52:47     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:52:47     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120',
+14:52:47     INFO -  'MOZ_SIGN_CMD': 'python /tools/checkouts/build-tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /tools/checkouts/build-tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120',
+14:52:47     INFO -  'PATH': '/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin',
+14:52:47     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json',
+14:52:47     INFO -  'PWD': '/builds/slave/m-esr52-lx-0000000000000000000',
+14:52:47     INFO -  'SHELL': '/bin/bash',
+14:52:47     INFO -  'SHLVL': '1',
+14:52:47     INFO -  'TERM': 'linux',
+14:52:47     INFO -  'TINDERBOX_OUTPUT': '1',
+14:52:47     INFO -  'TMOUT': '86400',
+14:52:47     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:52:47     INFO -  'TOOLTOOL_HOME': '/builds',
+14:52:47     INFO -  'USER': 'cltbld',
+14:52:47     INFO -  '_': '/tools/buildbot/bin/python'}
+14:52:47     INFO -  Ignoring indexes: https://pypi.python.org/simple
+14:52:47     INFO -  Collecting taskcluster==0.0.26
+14:52:51     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/taskcluster-0.0.26.tar.gz
+14:52:51     INFO -  Collecting requests<=2.7.0,>=2.4.3 (from taskcluster==0.0.26)
+14:52:54     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/requests-2.7.0.tar.gz (451kB)
+14:52:55     INFO -  Requirement already satisfied (use --upgrade to upgrade): PyHawk_with_a_single_extra_commit==0.1.5 in ./venv/lib/python2.7/site-packages (from taskcluster==0.0.26)
+14:52:55     INFO -  Collecting slugid (from taskcluster==0.0.26)
+14:52:58     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/slugid-1.0.7.tar.gz
+14:52:58     INFO -  Building wheels for collected packages: taskcluster, requests, slugid
+14:52:58     INFO -    Running setup.py bdist_wheel for taskcluster: started
+14:52:58     INFO -    Running setup.py bdist_wheel for taskcluster: finished with status 'done'
+14:52:58     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/ee/0f/ec/cdb885a931db139c35f11f6b6c8b911ff2df6356f907dc343f
+14:52:58     INFO -    Running setup.py bdist_wheel for requests: started
+14:52:59     INFO -    Running setup.py bdist_wheel for requests: finished with status 'done'
+14:52:59     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/c8/71/2e/56ece26724f07ee3fb1c367f8fe978c6a915cc04b97cd1b0e1
+14:52:59     INFO -    Running setup.py bdist_wheel for slugid: started
+14:52:59     INFO -    Running setup.py bdist_wheel for slugid: finished with status 'done'
+14:52:59     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/5c/f9/c6/e7492d60755c9cc51f09871added4be65d0bcaef6ed767236e
+14:52:59     INFO -  Successfully built taskcluster requests slugid
+14:52:59     INFO -  Installing collected packages: requests, slugid, taskcluster
+14:52:59     INFO -    Found existing installation: requests 2.8.1
+14:52:59     INFO -      Uninstalling requests-2.8.1:
+14:52:59     INFO -        Successfully uninstalled requests-2.8.1
+14:52:59     INFO -  Successfully installed requests-2.7.0 slugid-1.0.7 taskcluster-0.0.26
+14:52:59     INFO - Return code: 0
+14:52:59     INFO - Done creating virtualenv /builds/slave/m-esr52-lx-0000000000000000000/build/venv.
+14:52:59     INFO - Getting output from command: ['/builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip', 'freeze']
+14:52:59     INFO - Copy/paste: /builds/slave/m-esr52-lx-0000000000000000000/build/venv/bin/pip freeze
+14:53:00     INFO - Reading from file tmpfile_stdout
+14:53:00     INFO - Reading from file tmpfile_stderr
+14:53:00     INFO - Current package versions:
+14:53:00     INFO -   PyHawk-with-a-single-extra-commit == 0.1.5
+14:53:00     INFO -   requests == 2.7.0
+14:53:00     INFO -   slugid == 1.0.7
+14:53:00     INFO -   taskcluster == 0.0.26
+14:53:00     INFO - Running pre-run listener: suppress_windows_modal_dialogs
+14:53:00     INFO - Dumping config to /builds/slave/m-esr52-lx-0000000000000000000/logs/localconfig.json.
+14:53:00     INFO - {'app_ini_path': '%(obj_dir)s/dist/bin/application.ini',
+14:53:00     INFO -  'append_to_log': False,
+14:53:00     INFO -  'balrog_credentials_file': 'oauth.txt',
+14:53:00     INFO -  'balrog_servers': ({'balrog_api_root': 'https://aus4-admin.mozilla.org/api',
+14:53:00     INFO -                      'balrog_usernames': {'Fennec': 'ffxbld',
+14:53:00     INFO -                                           'firefox': 'ffxbld',
+14:53:00     INFO -                                           'mobile': 'ffxbld',
+14:53:00     INFO -                                           'thunderbird': 'tbirdbld'},
+14:53:00     INFO -                      'ignore_failures': False,
+14:53:00     INFO -                      'url_replacements': (('http://archive.mozilla.org/pub',
+14:53:00     INFO -                                            'http://download.cdn.mozilla.net/pub'),)},),
+14:53:00     INFO -  'base_name': 'Linux_%(branch)s',
+14:53:00     INFO -  'base_work_dir': '/builds/slave/m-esr52-lx-0000000000000000000',
+14:53:00     INFO -  'branch': 'mozilla-esr52',
+14:53:00     INFO -  'branch_uses_per_checkin_strategy': True,
+14:53:00     INFO -  'build_pool': 'production',
+14:53:00     INFO -  'build_resources_path': '%(abs_src_dir)s/obj-firefox/.mozbuild/build_resources.json',
+14:53:00     INFO -  'buildbot_json_path': 'buildprops.json',
+14:53:00     INFO -  'check_test_env': {'MINIDUMP_SAVE_PATH': '%(base_work_dir)s/minidumps',
+14:53:00     INFO -                     'MINIDUMP_STACKWALK': '%(abs_tools_dir)s/breakpad/linux/minidump_stackwalk'},
+14:53:00     INFO -  'clobberer_url': 'https://api.pub.build.mozilla.org/clobberer/lastclobber',
+14:53:00     INFO -  'clone_by_revision': False,
+14:53:00     INFO -  'clone_upstream_url': 'https://hg.mozilla.org/mozilla-unified',
+14:53:00     INFO -  'clone_with_purge': False,
+14:53:00     INFO -  'config_files': ('builds/releng_base_linux_32_builds.py',
+14:53:00     INFO -                   'balrog/production.py',
+14:53:00     INFO -                   'builds/branch_specifics.py',
+14:53:00     INFO -                   'builds/build_pool_specifics.py'),
+14:53:00     INFO -  'debug_build': False,
+14:53:00     INFO -  'default_actions': ('clobber',
+14:53:00     INFO -                      'clone-tools',
+14:53:00     INFO -                      'checkout-sources',
+14:53:00     INFO -                      'setup-mock',
+14:53:00     INFO -                      'build',
+14:53:00     INFO -                      'upload-files',
+14:53:00     INFO -                      'sendchange',
+14:53:00     INFO -                      'check-test',
+14:53:00     INFO -                      'generate-build-stats',
+14:53:00     INFO -                      'update'),
+14:53:00     INFO -  'enable_ccache': True,
+14:53:00     INFO -  'enable_count_ctors': True,
+14:53:00     INFO -  'enable_release_promotion': True,
+14:53:00     INFO -  'enable_signing': True,
+14:53:00     INFO -  'enable_talos_sendchange': True,
+14:53:00     INFO -  'enable_unittest_sendchange': True,
+14:53:00     INFO -  'env': {'CCACHE_COMPRESS': '1',
+14:53:00     INFO -          'CCACHE_DIR': '/builds/ccache',
+14:53:00     INFO -          'CCACHE_UMASK': '002',
+14:53:00     INFO -          'DISPLAY': ':2',
+14:53:00     INFO -          'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:53:00     INFO -          'LC_ALL': 'C',
+14:53:00     INFO -          'LD_LIBRARY_PATH': '/tools/gcc-4.3.3/installed/lib',
+14:53:00     INFO -          'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild',
+14:53:00     INFO -          'MOZ_AUTOMATION': '1',
+14:53:00     INFO -          'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:53:00     INFO -          'MOZ_OBJDIR': 'obj-firefox',
+14:53:00     INFO -          'PATH': '/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin',
+14:53:00     INFO -          'TINDERBOX_OUTPUT': '1',
+14:53:00     INFO -          'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:53:00     INFO -          'TOOLTOOL_HOME': '/builds'},
+14:53:00     INFO -  'exes': {'buildbot': '/tools/buildbot/bin/buildbot'},
+14:53:00     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+14:53:00     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+14:53:00     INFO -  'force_clobber': True,
+14:53:00     INFO -  'graph_selector': '/server/collect.cgi',
+14:53:00     INFO -  'graph_server': 'graphs.mozilla.org',
+14:53:00     INFO -  'include_post_upload_builddir': False,
+14:53:00     INFO -  'is_automation': True,
+14:53:00     INFO -  'log_level': 'info',
+14:53:00     INFO -  'log_to_console': True,
+14:53:00     INFO -  'mock_files': (('/home/cltbld/.ssh', '/home/mock_mozilla/.ssh'),
+14:53:00     INFO -                 ('/home/cltbld/.hgrc', '/builds/.hgrc'),
+14:53:00     INFO -                 ('/home/cltbld/.boto', '/builds/.boto'),
+14:53:00     INFO -                 ('/builds/gapi.data', '/builds/gapi.data'),
+14:53:00     INFO -                 ('/builds/relengapi.tok', '/builds/relengapi.tok'),
+14:53:00     INFO -                 ('/tools/tooltool.py', '/builds/tooltool.py'),
+14:53:00     INFO -                 ('/builds/mozilla-desktop-geoloc-api.key',
+14:53:00     INFO -                  '/builds/mozilla-desktop-geoloc-api.key'),
+14:53:00     INFO -                 ('/builds/crash-stats-api.token',
+14:53:00     INFO -                  '/builds/crash-stats-api.token'),
+14:53:00     INFO -                 ('/builds/adjust-sdk.token', '/builds/adjust-sdk.token'),
+14:53:00     INFO -                 ('/builds/adjust-sdk-beta.token',
+14:53:00     INFO -                  '/builds/adjust-sdk-beta.token'),
+14:53:00     INFO -                 ('/usr/local/lib/hgext', '/usr/local/lib/hgext')),
+14:53:00     INFO -  'mock_mozilla_dir': '/builds/mock_mozilla',
+14:53:00     INFO -  'mock_packages': ('autoconf213',
+14:53:00     INFO -                    'python',
+14:53:00     INFO -                    'mozilla-python27',
+14:53:00     INFO -                    'zip',
+14:53:00     INFO -                    'mozilla-python27-mercurial',
+14:53:00     INFO -                    'git',
+14:53:00     INFO -                    'ccache',
+14:53:00     INFO -                    'perl-Test-Simple',
+14:53:00     INFO -                    'perl-Config-General',
+14:53:00     INFO -                    'yasm',
+14:53:00     INFO -                    'wget',
+14:53:00     INFO -                    'mpfr',
+14:53:00     INFO -                    'xorg-x11-font*',
+14:53:00     INFO -                    'imake',
+14:53:00     INFO -                    'gcc45_0moz3',
+14:53:00     INFO -                    'gcc454_0moz1',
+14:53:00     INFO -                    'gcc472_0moz1',
+14:53:00     INFO -                    'gcc473_0moz1',
+14:53:00     INFO -                    'yasm',
+14:53:00     INFO -                    'ccache',
+14:53:00     INFO -                    'valgrind',
+14:53:00     INFO -                    'glibc-static.i686',
+14:53:00     INFO -                    'libstdc++-static.i686',
+14:53:00     INFO -                    'gtk2-devel.i686',
+14:53:00     INFO -                    'libnotify-devel.i686',
+14:53:00     INFO -                    'alsa-lib-devel.i686',
+14:53:00     INFO -                    'libcurl-devel.i686',
+14:53:00     INFO -                    'wireless-tools-devel.i686',
+14:53:00     INFO -                    'libX11-devel.i686',
+14:53:00     INFO -                    'libXt-devel.i686',
+14:53:00     INFO -                    'mesa-libGL-devel.i686',
+14:53:00     INFO -                    'gnome-vfs2-devel.i686',
+14:53:00     INFO -                    'GConf2-devel.i686',
+14:53:00     INFO -                    'pulseaudio-libs-devel.i686',
+14:53:00     INFO -                    'gstreamer-devel.i686',
+14:53:00     INFO -                    'gstreamer-plugins-base-devel.i686',
+14:53:00     INFO -                    'glibc-devel.i686',
+14:53:00     INFO -                    'libgcc.i686',
+14:53:00     INFO -                    'libstdc++-devel.i686',
+14:53:00     INFO -                    'ORBit2-devel.i686',
+14:53:00     INFO -                    'atk-devel.i686',
+14:53:00     INFO -                    'cairo-devel.i686',
+14:53:00     INFO -                    'check-devel.i686',
+14:53:00     INFO -                    'dbus-devel.i686',
+14:53:00     INFO -                    'dbus-glib-devel.i686',
+14:53:00     INFO -                    'fontconfig-devel.i686',
+14:53:00     INFO -                    'glib2-devel.i686',
+14:53:00     INFO -                    'hal-devel.i686',
+14:53:00     INFO -                    'libICE-devel.i686',
+14:53:00     INFO -                    'libIDL-devel.i686',
+14:53:00     INFO -                    'libSM-devel.i686',
+14:53:00     INFO -                    'libXau-devel.i686',
+14:53:00     INFO -                    'libXcomposite-devel.i686',
+14:53:00     INFO -                    'libXcursor-devel.i686',
+14:53:00     INFO -                    'libXdamage-devel.i686',
+14:53:00     INFO -                    'libXdmcp-devel.i686',
+14:53:00     INFO -                    'libXext-devel.i686',
+14:53:00     INFO -                    'libXfixes-devel.i686',
+14:53:00     INFO -                    'libXft-devel.i686',
+14:53:00     INFO -                    'libXi-devel.i686',
+14:53:00     INFO -                    'libXinerama-devel.i686',
+14:53:00     INFO -                    'libXrandr-devel.i686',
+14:53:00     INFO -                    'libXrender-devel.i686',
+14:53:00     INFO -                    'libXxf86vm-devel.i686',
+14:53:00     INFO -                    'libdrm-devel.i686',
+14:53:00     INFO -                    'libidn-devel.i686',
+14:53:00     INFO -                    'libpng-devel.i686',
+14:53:00     INFO -                    'libxcb-devel.i686',
+14:53:00     INFO -                    'libxml2-devel.i686',
+14:53:00     INFO -                    'pango-devel.i686',
+14:53:00     INFO -                    'perl-devel.i686',
+14:53:00     INFO -                    'pixman-devel.i686',
+14:53:00     INFO -                    'zlib-devel.i686',
+14:53:00     INFO -                    'freetype-2.3.11-6.el6_1.8.i686',
+14:53:00     INFO -                    'freetype-devel-2.3.11-6.el6_1.8.i686',
+14:53:00     INFO -                    'freetype-2.3.11-6.el6_1.8.x86_64'),
+14:53:00     INFO -  'mock_target': 'mozilla-centos6-x86_64',
+14:53:00     INFO -  'nightly_build': False,
+14:53:00     INFO -  'nightly_promotion_branches': ('mozilla-central', 'mozilla-aurora'),
+14:53:00     INFO -  'objdir': 'obj-firefox',
+14:53:00     INFO -  'old_packages': ('%(objdir)s/dist/firefox-*',
+14:53:00     INFO -                   '%(objdir)s/dist/fennec*',
+14:53:00     INFO -                   '%(objdir)s/dist/seamonkey*',
+14:53:00     INFO -                   '%(objdir)s/dist/thunderbird*',
+14:53:00     INFO -                   '%(objdir)s/dist/install/sea/*.exe'),
+14:53:00     INFO -  'opt_config_files': (),
+14:53:00     INFO -  'periodic_clobber': 168,
+14:53:00     INFO -  'pgo_build': False,
+14:53:00     INFO -  'pgo_platforms': ('linux', 'linux64', 'win32', 'win64'),
+14:53:00     INFO -  'pip_index': False,
+14:53:00     INFO -  'platform': 'linux',
+14:53:00     INFO -  'platform_overrides': {'linux': {'force_clobber': True,
+14:53:00     INFO -                                   'src_mozconfig': 'browser/config/mozconfigs/linux32/release'},
+14:53:00     INFO -                         'linux-debug': {'update_channel': 'default'},
+14:53:00     INFO -                         'linux64': {'force_clobber': True,
+14:53:00     INFO -                                     'src_mozconfig': 'browser/config/mozconfigs/linux64/release'},
+14:53:00     INFO -                         'linux64-asan': {'update_channel': 'default'},
+14:53:00     INFO -                         'linux64-asan-debug': {'update_channel': 'default'},
+14:53:00     INFO -                         'linux64-cc': {'update_channel': 'default'},
+14:53:00     INFO -                         'linux64-debug': {'update_channel': 'default'},
+14:53:00     INFO -                         'linux64-st-an': {'update_channel': 'default'},
+14:53:00     INFO -                         'linux64-st-an-debug': {'update_channel': 'default'},
+14:53:00     INFO -                         'linux64-tsan': {'update_channel': 'default'},
+14:53:00     INFO -                         'macosx64': {'force_clobber': True,
+14:53:00     INFO -                                      'src_mozconfig': 'browser/config/mozconfigs/macosx-universal/release'},
+14:53:00     INFO -                         'macosx64-debug': {'update_channel': 'default'},
+14:53:00     INFO -                         'macosx64-st-an': {'update_channel': 'default'},
+14:53:00     INFO -                         'macosx64-st-an-debug': {'update_channel': 'default'},
+14:53:00     INFO -                         'win32': {'force_clobber': True,
+14:53:00     INFO -                                   'src_mozconfig': 'browser/config/mozconfigs/win32/release'},
+14:53:00     INFO -                         'win32-debug': {'update_channel': 'default'},
+14:53:00     INFO -                         'win64': {'force_clobber': True,
+14:53:00     INFO -                                   'src_mozconfig': 'browser/config/mozconfigs/win64/release'},
+14:53:00     INFO -                         'win64-debug': {'update_channel': 'default'}},
+14:53:00     INFO -  'platform_supports_post_upload_to_latest': True,
+14:53:00     INFO -  'publish_nightly_en_US_routes': True,
+14:53:00     INFO -  'release_to_try_builds': False,
+14:53:00     INFO -  'repo_base': 'https://hg.mozilla.org',
+14:53:00     INFO -  'repo_path': 'releases/mozilla-esr52',
+14:53:00     INFO -  'scm_level': 1,
+14:53:00     INFO -  'secret_files': ({'default': 'try-build-has-no-secrets',
+14:53:00     INFO -                    'filename': '/builds/gapi.data',
+14:53:00     INFO -                    'min_scm_level': 2,
+14:53:00     INFO -                    'secret_name': 'project/releng/gecko/build/level-%(scm-level)s/gapi.data'},
+14:53:00     INFO -                   {'default': 'try-build-has-no-secrets',
+14:53:00     INFO -                    'filename': '/builds/mozilla-desktop-geoloc-api.key',
+14:53:00     INFO -                    'min_scm_level': 2,
+14:53:00     INFO -                    'secret_name': 'project/releng/gecko/build/level-%(scm-level)s/mozilla-desktop-geoloc-api.key'},
+14:53:00     INFO -                   {'default': 'try-build-has-no-secrets',
+14:53:00     INFO -                    'filename': '/builds/adjust-sdk.token',
+14:53:00     INFO -                    'min_scm_level': 2,
+14:53:00     INFO -                    'secret_name': 'project/releng/gecko/build/level-%(scm-level)s/adjust-sdk.token'},
+14:53:00     INFO -                   {'default': 'try-build-has-no-secrets',
+14:53:00     INFO -                    'filename': '/builds/adjust-sdk-beta.token',
+14:53:00     INFO -                    'min_scm_level': 2,
+14:53:00     INFO -                    'secret_name': 'project/releng/gecko/build/level-%(scm-level)s/adjust-sdk-beta.token'}),
+14:53:00     INFO -  'sendchange_masters': ('buildbot-master81.build.mozilla.org:9301',),
+14:53:00     INFO -  'src_mozconfig': 'browser/config/mozconfigs/linux32/release',
+14:53:00     INFO -  'stage_platform': 'linux',
+14:53:00     INFO -  'stage_product': 'firefox',
+14:53:00     INFO -  'stage_server': 'upload.ffxbld.productdelivery.prod.mozaws.net',
+14:53:00     INFO -  'stage_ssh_key': 'ffxbld_rsa',
+14:53:00     INFO -  'stage_username': 'ffxbld',
+14:53:00     INFO -  'taskcluster_credentials_file': 'oauth.txt',
+14:53:00     INFO -  'taskcluster_index': 'index',
+14:53:00     INFO -  'tinderbox_build_dir': None,
+14:53:00     INFO -  'to_tinderbox_dated': True,
+14:53:00     INFO -  'tools_repo': 'https://hg.mozilla.org/build/tools',
+14:53:00     INFO -  'tooltool_bootstrap': 'setup.sh',
+14:53:00     INFO -  'tooltool_manifest_src': 'browser/config/tooltool-manifests/linux32/releng.manifest',
+14:53:00     INFO -  'tooltool_script': ('/builds/tooltool.py',),
+14:53:00     INFO -  'tooltool_url': 'https://api.pub.build.mozilla.org/tooltool/',
+14:53:00     INFO -  'update_channel': 'esr',
+14:53:00     INFO -  'upload_env': {'UPLOAD_HOST': '%(stage_server)s',
+14:53:00     INFO -                 'UPLOAD_SSH_KEY': '/home/mock_mozilla/.ssh/%(stage_ssh_key)s',
+14:53:00     INFO -                 'UPLOAD_TO_TEMP': '1',
+14:53:00     INFO -                 'UPLOAD_USER': '%(stage_username)s'},
+14:53:00     INFO -  'use_branch_in_symbols_extra_buildid': False,
+14:53:00     INFO -  'use_clobberer': True,
+14:53:00     INFO -  'vcs_share_base': '/builds/hg-shared',
+14:53:00     INFO -  'virtualenv_modules': ('requests==2.8.1',
+14:53:00     INFO -                         'PyHawk-with-a-single-extra-commit==0.1.5',
+14:53:00     INFO -                         'taskcluster==0.0.26'),
+14:53:00     INFO -  'virtualenv_path': 'venv',
+14:53:00     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+14:53:00     INFO -  'who': '',
+14:53:00     INFO -  'work_dir': 'build'}
+14:53:00     INFO - [mozharness: 2018-06-08 21:53:00.609666Z] Skipping get-secrets step.
+14:53:00     INFO - [mozharness: 2018-06-08 21:53:00.609883Z] Running clobber step.
+14:53:00     INFO - Running main action method: clobber
+14:53:00     INFO - Clobbering because our config forced us to
+14:53:00     INFO - rmtree: /builds/slave/m-esr52-lx-0000000000000000000/build
+14:53:00     INFO - retry: Calling rmtree with args: ('/builds/slave/m-esr52-lx-0000000000000000000/build',), kwargs: {}, attempt #1
+14:53:00     INFO - retry: Calling run_command with args: [['/builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/clobberer.py', '-s', 'scripts', '-s', 'logs', '-s', 'buildprops.json', '-s', 'token', '-s', 'oauth.txt', '-t', '168', 'https://api.pub.build.mozilla.org/clobberer/lastclobber', 'mozilla-esr52', 'Linux mozilla-esr52 build', 'm-esr52-lx-0000000000000000000', 'bld-linux64-spot-303', 'http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/']], kwargs: {'error_list': [{'substr': 'Error contacting server', 'explanation': 'Error contacting server for clobberer information.', 'level': 'error'}], 'cwd': '/builds/slave'}, attempt #1
+14:53:00     INFO - Running command: ['/builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/clobberer.py', '-s', 'scripts', '-s', 'logs', '-s', 'buildprops.json', '-s', 'token', '-s', 'oauth.txt', '-t', '168', 'https://api.pub.build.mozilla.org/clobberer/lastclobber', 'mozilla-esr52', 'Linux mozilla-esr52 build', 'm-esr52-lx-0000000000000000000', 'bld-linux64-spot-303', 'http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/'] in /builds/slave
+14:53:00     INFO - Copy/paste: /builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/clobberer.py -s scripts -s logs -s buildprops.json -s token -s oauth.txt -t 168 https://api.pub.build.mozilla.org/clobberer/lastclobber mozilla-esr52 "Linux mozilla-esr52 build" m-esr52-lx-0000000000000000000 bld-linux64-spot-303 http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/
+14:53:01     INFO -  Checking clobber URL: https://api.pub.build.mozilla.org/clobberer/lastclobber?master=http%3A%2F%2Fbuildbot-master73.bb.releng.usw2.mozilla.com%3A8001%2F&slave=bld-linux64-spot-303&builddir=m-esr52-lx-0000000000000000000&branch=mozilla-esr52&buildername=Linux+mozilla-esr52+build
+14:53:01     INFO -  m-esr52-lx-0000000000000000000:Our last clobber date:  2018-06-05 14:51:47
+14:53:01     INFO -  m-esr52-lx-0000000000000000000:Server clobber date:    2018-06-05 14:51:47
+14:53:01     INFO - Return code: 0
+14:53:01     INFO - [mozharness: 2018-06-08 21:53:01.481305Z] Finished clobber step (success)
+14:53:01     INFO - [mozharness: 2018-06-08 21:53:01.481528Z] Running clone-tools step.
+14:53:01     INFO - Running main action method: clone_tools
+14:53:01     INFO - retry: Calling _get_revision with args: (<mozharness.base.vcs.mercurial.MercurialVCS object at 0x7fae1b394a10>, '/builds/slave/m-esr52-lx-0000000000000000000/build/tools'), kwargs: {}, attempt #1
+14:53:01  WARNING - did not specify revision or branch; assuming "default"
+14:53:01     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', '--version']
+14:53:01     INFO - Copy/paste: hg --config ui.merge=internal:merge --version
+14:53:01     INFO -  Mercurial Distributed SCM (version 4.4.1)
+14:53:01     INFO -  (see https://mercurial-scm.org for more information)
+14:53:01     INFO -  Copyright (C) 2005-2017 Matt Mackall and others
+14:53:01     INFO -  This is free software; see the source for copying conditions. There is NO
+14:53:01     INFO -  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+14:53:01     INFO - Return code: 0
+14:53:01     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', 'debuginstall']
+14:53:01     INFO - Copy/paste: hg --config ui.merge=internal:merge debuginstall
+14:53:01     INFO -  checking encoding (ascii)...
+14:53:01     INFO -  checking Python executable (/tools/python27/bin/python2.7)
+14:53:01     INFO -  checking Python version (2.7.15)
+14:53:01     INFO -  checking Python lib (/tools/python27/lib/python2.7)...
+14:53:01     INFO -  checking Python security support (sni,tls1.0,tls1.1,tls1.2)
+14:53:01     INFO -  checking Mercurial version (4.4.1)
+14:53:01     INFO -  checking Mercurial custom build ()
+14:53:01     INFO -  checking module policy (c)
+14:53:01     INFO -  checking installed modules (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial)...
+14:53:01     INFO -  checking registered compression engines (bz2, bz2truncated, none, zlib, zstd)
+14:53:01     INFO -  checking available compression engines (bz2, bz2truncated, none, zlib, zstd)
+14:53:01     INFO -  checking available compression engines for wire protocol (zstd, zlib, bz2, none)
+14:53:01     INFO -  checking templates (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial/templates)...
+14:53:01     INFO -  checking default template (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial/templates/map-cmdline.default)
+14:53:01     INFO -  checking commit editor... (vi)
+14:53:01     INFO -  checking username (Mozilla Release Engineering <release@mozilla.com>)
+14:53:01     INFO -  no problems detected
+14:53:01     INFO - Return code: 0
+14:53:01     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', '--config', 'extensions.robustcheckout=/builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/robustcheckout.py', 'robustcheckout', 'https://hg.mozilla.org/build/tools', '/builds/slave/m-esr52-lx-0000000000000000000/build/tools', '--sharebase', '/builds/hg-shared', '--branch', 'default']
+14:53:01     INFO - Copy/paste: hg --config ui.merge=internal:merge --config extensions.robustcheckout=/builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/robustcheckout.py robustcheckout https://hg.mozilla.org/build/tools /builds/slave/m-esr52-lx-0000000000000000000/build/tools --sharebase /builds/hg-shared --branch default
+14:53:03     INFO -  ensuring https://hg.mozilla.org/build/tools@default is available at /builds/slave/m-esr52-lx-0000000000000000000/build/tools
+14:53:03     INFO -  (sharing from new pooled repository 7ae7fb134bf7aec6ec96a062ff47a69053dd2973)
+14:53:03     INFO -  applying clone bundle from https://s3-us-west-2.amazonaws.com/moz-hg-bundles-us-west-2/build/tools/88b450a68f2444542486da1421f85f3c56225d37.packed1.hg
+14:53:03     INFO -  2199 files to transfer, 31.1 MB of data
+14:53:03     INFO -  transferred 31.1 MB in 0.6 seconds (48.3 MB/sec)
+14:53:03     INFO -  finished applying clone bundle
+14:53:03     INFO -  searching for changes
+14:53:03     INFO -  adding changesets
+14:53:03     INFO -  adding manifests
+14:53:03     INFO -  adding file changes
+14:53:03     INFO -  added 1 changesets with 1 changes to 1 files
+14:53:04     INFO -  new changesets db9d67c3554f
+14:53:04     INFO -  searching for changes
+14:53:04     INFO -  no changes found
+14:53:04     INFO -  (pulling to obtain default)
+14:53:04     INFO -  (remote resolved default to db9d67c3554f2fa1e9d9f3090e072b44d23e5798; result is not deterministic)
+14:53:04     INFO -  (revision already present locally; not pulling)
+14:53:05     INFO -  
+14:53:05     INFO - updating [====>                                                     ]  100/1057
+14:53:05     INFO -                                                                                 
+14:53:05     INFO - 1057 files updated, 0 files merged, 0 files removed, 0 files unresolved
+14:53:05     INFO -  updated to db9d67c3554f2fa1e9d9f3090e072b44d23e5798
+14:53:05     INFO - Return code: 0
+14:53:05     INFO - [mozharness: 2018-06-08 21:53:05.154275Z] Finished clone-tools step (success)
+14:53:05     INFO - [mozharness: 2018-06-08 21:53:05.154497Z] Running checkout-sources step.
+14:53:05     INFO - Running main action method: checkout_sources
+14:53:05     INFO - Release promotion update channel: esr
+14:53:05     INFO - retry: Calling _get_revision with args: (<mozharness.base.vcs.mercurial.MercurialVCS object at 0x7fae1b394910>, '/builds/slave/m-esr52-lx-0000000000000000000/build/src'), kwargs: {}, attempt #1
+14:53:05     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', '--version']
+14:53:05     INFO - Copy/paste: hg --config ui.merge=internal:merge --version
+14:53:05     INFO -  Mercurial Distributed SCM (version 4.4.1)
+14:53:05     INFO -  (see https://mercurial-scm.org for more information)
+14:53:05     INFO -  Copyright (C) 2005-2017 Matt Mackall and others
+14:53:05     INFO -  This is free software; see the source for copying conditions. There is NO
+14:53:05     INFO -  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+14:53:05     INFO - Return code: 0
+14:53:05     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', 'debuginstall']
+14:53:05     INFO - Copy/paste: hg --config ui.merge=internal:merge debuginstall
+14:53:05     INFO -  checking encoding (ascii)...
+14:53:05     INFO -  checking Python executable (/tools/python27/bin/python2.7)
+14:53:05     INFO -  checking Python version (2.7.15)
+14:53:05     INFO -  checking Python lib (/tools/python27/lib/python2.7)...
+14:53:05     INFO -  checking Python security support (sni,tls1.0,tls1.1,tls1.2)
+14:53:05     INFO -  checking Mercurial version (4.4.1)
+14:53:05     INFO -  checking Mercurial custom build ()
+14:53:05     INFO -  checking module policy (c)
+14:53:05     INFO -  checking installed modules (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial)...
+14:53:05     INFO -  checking registered compression engines (bz2, bz2truncated, none, zlib, zstd)
+14:53:05     INFO -  checking available compression engines (bz2, bz2truncated, none, zlib, zstd)
+14:53:05     INFO -  checking available compression engines for wire protocol (zstd, zlib, bz2, none)
+14:53:05     INFO -  checking templates (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial/templates)...
+14:53:05     INFO -  checking default template (/tools/python27-mercurial/lib/python2.7/site-packages/mercurial/templates/map-cmdline.default)
+14:53:05     INFO -  checking commit editor... (vi)
+14:53:05     INFO -  checking username (Mozilla Release Engineering <release@mozilla.com>)
+14:53:05     INFO -  no problems detected
+14:53:05     INFO - Return code: 0
+14:53:05     INFO - Running command: ['hg', '--config', 'ui.merge=internal:merge', '--config', 'extensions.robustcheckout=/builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/robustcheckout.py', 'robustcheckout', 'https://hg.mozilla.org/releases/mozilla-esr52', '/builds/slave/m-esr52-lx-0000000000000000000/build/src', '--sharebase', '/builds/hg-shared', '--upstream', 'https://hg.mozilla.org/mozilla-unified', '--revision', 'a7a20deda4de9057e6f7e3cb8be4452f0b376fd3']
+14:53:05     INFO - Copy/paste: hg --config ui.merge=internal:merge --config extensions.robustcheckout=/builds/slave/m-esr52-lx-0000000000000000000/scripts/external_tools/robustcheckout.py robustcheckout https://hg.mozilla.org/releases/mozilla-esr52 /builds/slave/m-esr52-lx-0000000000000000000/build/src --sharebase /builds/hg-shared --upstream https://hg.mozilla.org/mozilla-unified --revision a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+14:53:11     INFO -  ensuring https://hg.mozilla.org/releases/mozilla-esr52@a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 is available at /builds/slave/m-esr52-lx-0000000000000000000/build/src
+14:53:11     INFO -  (cloning from upstream repo https://hg.mozilla.org/mozilla-unified)
+14:53:11     INFO -  (sharing from existing pooled repository 8ba995b74e18334ab3707f27e9eb8f4e37ba3d29)
+14:53:11     INFO -  searching for changes
+14:53:11     INFO -  no changes found
+14:53:11     INFO -  adding remote bookmark aurora
+14:53:11     INFO -  adding remote bookmark beta
+14:53:11     INFO -  adding remote bookmark central
+14:53:11     INFO -  adding remote bookmark esr10
+14:53:11     INFO -  adding remote bookmark esr17
+14:53:11     INFO -  adding remote bookmark esr24
+14:53:11     INFO -  adding remote bookmark esr31
+14:53:11     INFO -  adding remote bookmark esr38
+14:53:11     INFO -  adding remote bookmark esr45
+14:53:11     INFO -  adding remote bookmark esr52
+14:53:11     INFO -  adding remote bookmark esr60
+14:53:11     INFO -  adding remote bookmark fx-team
+14:53:11     INFO -  adding remote bookmark inbound
+14:53:11     INFO -  adding remote bookmark release
+14:53:11     INFO -  (pulling to obtain a7a20deda4de9057e6f7e3cb8be4452f0b376fd3)
+14:53:11     INFO -  searching for changes
+14:53:11     INFO -  adding changesets
+14:53:11     INFO -  adding manifests
+14:53:11     INFO -  adding file changes
+14:53:11     INFO -  added 3 changesets with 4 changes to 4 files
+14:53:13     INFO -  new changesets f5b7301d0b5f:a7a20deda4de
+14:53:13     INFO -  (warning: large working directory being used without fsmonitor enabled; enable fsmonitor to improve performance; see "hg help -e fsmonitor")
+14:53:39     INFO -  
+14:53:39     INFO - updating [                                                      ]    100/150984
+14:53:39     INFO - updating [=>                                                ]   6700/150984 22s
+14:53:39     INFO - updating [===>                                              ]  14100/150984 20s
+14:53:39     INFO - updating [=====>                                            ]  20000/150984 21s
+14:53:39     INFO - updating [========>                                         ]  27400/150984 19s
+14:53:39     INFO - updating [==========>                                       ]  35000/150984 17s
+14:53:39     INFO - updating [============>                                     ]  42000/150984 16s
+14:53:39     INFO - updating [===============>                                  ]  48600/150984 15s
+14:53:39     INFO - updating [=================>                                ]  54800/150984 15s
+14:53:39     INFO - updating [===================>                              ]  61200/150984 14s
+14:53:39     INFO - updating [=====================>                            ]  68400/150984 13s
+14:53:39     INFO - updating [========================>                         ]  76600/150984 11s
+14:53:39     INFO - updating [===========================>                      ]  85000/150984 10s
+14:53:39     INFO - updating [=============================>                    ]  92400/150984 09s
+14:53:39     INFO - updating [===============================>                  ]  98100/150984 08s
+14:53:39     INFO - updating [=================================>                ] 104200/150984 07s
+14:53:39     INFO - updating [===================================>              ] 110800/150984 06s
+14:53:39     INFO - updating [=====================================>            ] 115700/150984 06s
+14:53:39     INFO - updating [======================================>           ] 120700/150984 05s
+14:53:39     INFO - updating [========================================>         ] 125700/150984 04s
+14:53:39     INFO - updating [==========================================>       ] 131700/150984 03s
+14:53:39     INFO - updating [============================================>     ] 136600/150984 03s
+14:53:39     INFO - updating [==============================================>   ] 142600/150984 02s
+14:53:39     INFO - updating [================================================> ] 149019/150984 01s
+14:53:39     INFO -                                                                                 
+14:53:39     INFO - 150984 files updated, 0 files merged, 0 files removed, 0 files unresolved
+14:53:39     INFO -  updated to a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+14:53:39     INFO - Return code: 0
+14:53:39     INFO - Setting buildbot property comments to No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update
+14:53:39     INFO - Writing buildbot properties ['comments'] to /builds/slave/m-esr52-lx-0000000000000000000/properties/comments
+14:53:39     INFO - Writing to file /builds/slave/m-esr52-lx-0000000000000000000/properties/comments
+14:53:39     INFO - Contents:
+14:53:39     INFO -  comments:No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update
+14:53:39     INFO - Setting buildbot property got_revision to a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+14:53:39     INFO - Writing buildbot properties ['got_revision'] to /builds/slave/m-esr52-lx-0000000000000000000/properties/got_revision
+14:53:39     INFO - Writing to file /builds/slave/m-esr52-lx-0000000000000000000/properties/got_revision
+14:53:39     INFO - Contents:
+14:53:39     INFO -  got_revision:a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+14:53:39     INFO - [mozharness: 2018-06-08 21:53:39.991704Z] Finished checkout-sources step (success)
+14:53:39     INFO - [mozharness: 2018-06-08 21:53:39.991917Z] Running setup-mock step.
+14:53:39     INFO - Running main action method: setup_mock
+14:53:39     INFO - Getting output from command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--print-root-path']
+14:53:39     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --print-root-path
+14:53:40     INFO - Reading from file tmpfile_stdout
+14:53:40     INFO - Output received:
+14:53:40     INFO -  /builds/mock_mozilla/mozilla-centos6-x86_64/root/
+14:53:40     INFO - no previous package list found
+14:53:40     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--init']
+14:53:40     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --init
+14:53:40     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:53:40     INFO -  State Changed: init plugins
+14:53:40     INFO -  INFO: selinux disabled
+14:53:40     INFO -  State Changed: start
+14:53:40     INFO -  State Changed: lock buildroot
+14:53:40     INFO -  State Changed: clean
+14:53:40     INFO -  State Changed: unlock buildroot
+14:53:40     INFO -  State Changed: init
+14:53:40     INFO -  State Changed: lock buildroot
+14:53:40     INFO -  Mock Version: 1.0.3
+14:53:40     INFO -  INFO: Mock Version: 1.0.3
+14:53:40     INFO -  INFO: calling preinit hooks
+14:53:40     INFO -  INFO: enabled root cache
+14:53:40     INFO -  INFO: enabled yum cache
+14:53:40     INFO -  State Changed: cleaning yum metadata
+14:53:40     INFO -  INFO: enabled ccache
+14:53:40     INFO -  State Changed: running yum
+14:54:23     INFO -  State Changed: creating cache
+14:54:27     INFO -  State Changed: unlock buildroot
+14:54:27     INFO -  State Changed: end
+14:54:27     INFO - Return code: 0
+14:54:27     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--install', 'autoconf213', 'python', 'mozilla-python27', 'zip', 'mozilla-python27-mercurial', 'git', 'ccache', 'perl-Test-Simple', 'perl-Config-General', 'yasm', 'wget', 'mpfr', 'xorg-x11-font*', 'imake', 'gcc45_0moz3', 'gcc454_0moz1', 'gcc472_0moz1', 'gcc473_0moz1', 'yasm', 'ccache', 'valgrind', 'glibc-static.i686', 'libstdc++-static.i686', 'gtk2-devel.i686', 'libnotify-devel.i686', 'alsa-lib-devel.i686', 'libcurl-devel.i686', 'wireless-tools-devel.i686', 'libX11-devel.i686', 'libXt-devel.i686', 'mesa-libGL-devel.i686', 'gnome-vfs2-devel.i686', 'GConf2-devel.i686', 'pulseaudio-libs-devel.i686', 'gstreamer-devel.i686', 'gstreamer-plugins-base-devel.i686', 'glibc-devel.i686', 'libgcc.i686', 'libstdc++-devel.i686', 'ORBit2-devel.i686', 'atk-devel.i686', 'cairo-devel.i686', 'check-devel.i686', 'dbus-devel.i686', 'dbus-glib-devel.i686', 'fontconfig-devel.i686', 'glib2-devel.i686', 'hal-devel.i686', 'libICE-devel.i686', 'libIDL-devel.i686', 'libSM-devel.i686', 'libXau-devel.i686', 'libXcomposite-devel.i686', 'libXcursor-devel.i686', 'libXdamage-devel.i686', 'libXdmcp-devel.i686', 'libXext-devel.i686', 'libXfixes-devel.i686', 'libXft-devel.i686', 'libXi-devel.i686', 'libXinerama-devel.i686', 'libXrandr-devel.i686', 'libXrender-devel.i686', 'libXxf86vm-devel.i686', 'libdrm-devel.i686', 'libidn-devel.i686', 'libpng-devel.i686', 'libxcb-devel.i686', 'libxml2-devel.i686', 'pango-devel.i686', 'perl-devel.i686', 'pixman-devel.i686', 'zlib-devel.i686', 'freetype-2.3.11-6.el6_1.8.i686', 'freetype-devel-2.3.11-6.el6_1.8.i686', 'freetype-2.3.11-6.el6_1.8.x86_64']
+14:54:27     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --install autoconf213 python mozilla-python27 zip mozilla-python27-mercurial git ccache perl-Test-Simple perl-Config-General yasm wget mpfr xorg-x11-font* imake gcc45_0moz3 gcc454_0moz1 gcc472_0moz1 gcc473_0moz1 yasm ccache valgrind glibc-static.i686 libstdc++-static.i686 gtk2-devel.i686 libnotify-devel.i686 alsa-lib-devel.i686 libcurl-devel.i686 wireless-tools-devel.i686 libX11-devel.i686 libXt-devel.i686 mesa-libGL-devel.i686 gnome-vfs2-devel.i686 GConf2-devel.i686 pulseaudio-libs-devel.i686 gstreamer-devel.i686 gstreamer-plugins-base-devel.i686 glibc-devel.i686 libgcc.i686 libstdc++-devel.i686 ORBit2-devel.i686 atk-devel.i686 cairo-devel.i686 check-devel.i686 dbus-devel.i686 dbus-glib-devel.i686 fontconfig-devel.i686 glib2-devel.i686 hal-devel.i686 libICE-devel.i686 libIDL-devel.i686 libSM-devel.i686 libXau-devel.i686 libXcomposite-devel.i686 libXcursor-devel.i686 libXdamage-devel.i686 libXdmcp-devel.i686 libXext-devel.i686 libXfixes-devel.i686 libXft-devel.i686 libXi-devel.i686 libXinerama-devel.i686 libXrandr-devel.i686 libXrender-devel.i686 libXxf86vm-devel.i686 libdrm-devel.i686 libidn-devel.i686 libpng-devel.i686 libxcb-devel.i686 libxml2-devel.i686 pango-devel.i686 perl-devel.i686 pixman-devel.i686 zlib-devel.i686 freetype-2.3.11-6.el6_1.8.i686 freetype-devel-2.3.11-6.el6_1.8.i686 freetype-2.3.11-6.el6_1.8.x86_64
+14:54:27     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:54:27     INFO -  State Changed: init plugins
+14:54:27     INFO -  INFO: selinux disabled
+14:54:27     INFO -  State Changed: start
+14:54:27     INFO -  Mock Version: 1.0.3
+14:54:27     INFO -  INFO: Mock Version: 1.0.3
+14:54:27     INFO -  State Changed: lock buildroot
+14:54:27     INFO -  INFO: installing package(s): autoconf213 python mozilla-python27 zip mozilla-python27-mercurial git ccache perl-Test-Simple perl-Config-General yasm wget mpfr xorg-x11-font* imake gcc45_0moz3 gcc454_0moz1 gcc472_0moz1 gcc473_0moz1 yasm ccache valgrind glibc-static.i686 libstdc++-static.i686 gtk2-devel.i686 libnotify-devel.i686 alsa-lib-devel.i686 libcurl-devel.i686 wireless-tools-devel.i686 libX11-devel.i686 libXt-devel.i686 mesa-libGL-devel.i686 gnome-vfs2-devel.i686 GConf2-devel.i686 pulseaudio-libs-devel.i686 gstreamer-devel.i686 gstreamer-plugins-base-devel.i686 glibc-devel.i686 libgcc.i686 libstdc++-devel.i686 ORBit2-devel.i686 atk-devel.i686 cairo-devel.i686 check-devel.i686 dbus-devel.i686 dbus-glib-devel.i686 fontconfig-devel.i686 glib2-devel.i686 hal-devel.i686 libICE-devel.i686 libIDL-devel.i686 libSM-devel.i686 libXau-devel.i686 libXcomposite-devel.i686 libXcursor-devel.i686 libXdamage-devel.i686 libXdmcp-devel.i686 libXext-devel.i686 libXfixes-devel.i686 libXft-devel.i686 libXi-devel.i686 libXinerama-devel.i686 libXrandr-devel.i686 libXrender-devel.i686 libXxf86vm-devel.i686 libdrm-devel.i686 libidn-devel.i686 libpng-devel.i686 libxcb-devel.i686 libxml2-devel.i686 pango-devel.i686 perl-devel.i686 pixman-devel.i686 zlib-devel.i686 freetype-2.3.11-6.el6_1.8.i686 freetype-devel-2.3.11-6.el6_1.8.i686 freetype-2.3.11-6.el6_1.8.x86_64
+14:56:37     INFO -  INFO: Package python-2.6.6-29.el6.x86_64 already installed and latest version
+14:56:37     INFO -  Package mpfr-2.4.1-6.el6.x86_64 already installed and latest version
+14:56:37     INFO -  ================================================================================
+14:56:37     INFO -   Package                 Arch   Version             Repository             Size
+14:56:37     INFO -  ================================================================================
+14:56:37     INFO -  Installing:
+14:56:37     INFO -   GConf2-devel            i686   2.28.0-6.el6        centos6                91 k
+14:56:37     INFO -   ORBit2-devel            i686   2.14.17-3.1.el6     centos6               173 k
+14:56:37     INFO -   alsa-lib-devel          i686   1.0.22-3.el6        centos6               1.0 M
+14:56:37     INFO -   atk-devel               i686   1.28.0-2.el6        centos6               114 k
+14:56:37     INFO -   autoconf213             noarch 2.13-20.1.el6       centos6               164 k
+14:56:37     INFO -   cairo-devel             i686   1.8.8-3.1.el6       centos6               314 k
+14:56:37     INFO -   ccache                  x86_64 3.1.9-3moz0         releng-centos6-x86_64 151 k
+14:56:37     INFO -   check-devel             i686   0.9.8-1.1.el6       centos6                17 k
+14:56:37     INFO -   dbus-devel              i686   1:1.2.24-5.el6_1    centos6                46 k
+14:56:37     INFO -   dbus-glib-devel         i686   0.86-5.el6          centos6                59 k
+14:56:37     INFO -   fontconfig-devel        i686   2.8.0-3.el6         centos6               209 k
+14:56:37     INFO -   freetype                i686   2.3.11-6.el6_1.8    centos6-updates       362 k
+14:56:37     INFO -   freetype                x86_64 2.3.11-6.el6_1.8    centos6-updates       358 k
+14:56:37     INFO -   freetype-devel          i686   2.3.11-6.el6_1.8    centos6-updates       364 k
+14:56:37     INFO -   gcc454_0moz1            x86_64 4.5.4-0moz1         releng-centos6-x86_64  19 M
+14:56:37     INFO -   gcc45_0moz3             x86_64 4.5.2-0moz3_mock_centos6
+14:56:37     INFO -                                                      releng-centos6-x86_64  19 M
+14:56:37     INFO -   gcc472_0moz1            x86_64 4.7.2-0moz1         releng-centos6-x86_64  27 M
+14:56:37     INFO -   gcc473_0moz1            x86_64 4.7.3-0moz1         releng-centos6-x86_64  27 M
+14:56:37     INFO -   git                     x86_64 1.7.1-2.el6_0.1     centos6               4.6 M
+14:56:37     INFO -   glib2-devel             i686   2.22.5-6.el6        centos6               1.3 M
+14:56:37     INFO -   glibc-devel             i686   2.12-1.47.el6_2.5   centos6-updates       967 k
+14:56:37     INFO -   glibc-static            i686   2.12-1.47.el6_2.5   centos6-updates       1.1 M
+14:56:37     INFO -   gnome-vfs2-devel        i686   2.24.2-6.el6        centos6               233 k
+14:56:37     INFO -   gstreamer-devel         i686   0.10.29-1.el6       centos6               169 k
+14:56:37     INFO -   gstreamer-plugins-base-devel
+14:56:37     INFO -                           i686   0.10.29-1.el6       centos6                85 k
+14:56:37     INFO -   gtk2-devel              i686   2.18.9-6.el6.centos centos6               2.4 M
+14:56:37     INFO -   hal-devel               i686   0.5.14-11.el6       centos6                41 k
+14:56:37     INFO -   imake                   x86_64 1.0.2-11.el6        centos6               262 k
+14:56:37     INFO -   libICE-devel            i686   1.0.6-1.el6         centos6                15 k
+14:56:37     INFO -   libIDL-devel            i686   0.8.13-2.1.el6      centos6                20 k
+14:56:37     INFO -   libSM-devel             i686   1.1.0-7.1.el6       centos6                12 k
+14:56:37     INFO -   libX11-devel            i686   1.3-2.el6           centos6               1.0 M
+14:56:37     INFO -   libXau-devel            i686   1.0.5-1.el6         centos6                13 k
+14:56:37     INFO -   libXcomposite-devel     i686   0.4.1-2.el6         centos6                14 k
+14:56:37     INFO -   libXcursor-devel        i686   1.1.10-2.el6        centos6                21 k
+14:56:37     INFO -   libXdamage-devel        i686   1.1.2-1.el6         centos6               8.7 k
+14:56:37     INFO -   libXdmcp-devel          i686   1.0.3-1.el6         centos6               9.6 k
+14:56:37     INFO -   libXext-devel           i686   1.1-3.el6           centos6                78 k
+14:56:37     INFO -   libXfixes-devel         i686   4.0.4-1.el6         centos6                11 k
+14:56:37     INFO -   libXft-devel            i686   2.1.13-4.1.el6      centos6                18 k
+14:56:37     INFO -   libXi-devel             i686   1.3-3.el6           centos6                93 k
+14:56:37     INFO -   libXinerama-devel       i686   1.1-1.el6           centos6                12 k
+14:56:37     INFO -   libXrandr-devel         i686   1.3.0-4.el6         centos6                19 k
+14:56:37     INFO -   libXrender-devel        i686   0.9.5-1.el6         centos6                15 k
+14:56:37     INFO -   libXt-devel             i686   1.0.7-1.el6         centos6               326 k
+14:56:37     INFO -   libXxf86vm-devel        i686   1.1.0-1.el6         centos6                17 k
+14:56:37     INFO -   libcurl-devel           i686   7.19.7-26.el6_1.2   centos6               243 k
+14:56:37     INFO -   libdrm-devel            i686   2.4.25-2.el6        centos6                65 k
+14:56:37     INFO -   libgcc                  i686   4.4.6-3.el6         centos6               110 k
+14:56:37     INFO -   libidn-devel            i686   1.18-2.el6          centos6               137 k
+14:56:37     INFO -   libnotify-devel         i686   0.5.0-1.el6         centos6                24 k
+14:56:37     INFO -   libpng-devel            i686   2:1.2.46-2.el6_2    centos6-updates       112 k
+14:56:37     INFO -   libstdc++-devel         i686   4.4.6-3.el6         centos6               1.5 M
+14:56:37     INFO -   libxcb-devel            i686   1.5-1.el6           centos6               139 k
+14:56:37     INFO -   libxml2-devel           i686   2.7.6-4.el6_2.4     centos6-updates       1.1 M
+14:56:37     INFO -   mesa-libGL-devel        i686   7.11-3.el6          centos6               494 k
+14:56:37     INFO -   mozilla-python27        x86_64 2.7.7-1.el6         releng-centos6-x86_64  11 M
+14:56:37     INFO -   mozilla-python27-mercurial
+14:56:37     INFO -                           x86_64 3.9.1-1.el6         custom-mercurial      2.3 M
+14:56:37     INFO -   pango-devel             i686   1.28.1-3.el6_0.5.1.centos
+14:56:37     INFO -                                                      centos6-updates       278 k
+14:56:37     INFO -   perl-Config-General     noarch 2.44-1.el6          centos6                68 k
+14:56:37     INFO -   perl-Test-Simple        x86_64 0.92-119.el6_1.1    centos6               110 k
+14:56:37     INFO -   perl-devel              i686   4:5.10.1-119.el6_1.1
+14:56:37     INFO -                                                      centos6               420 k
+14:56:37     INFO -   pixman-devel            i686   0.18.4-1.el6_0.1    centos6                15 k
+14:56:37     INFO -   pulseaudio-libs-devel   i686   0.9.21-13.el6       centos6               297 k
+14:56:37     INFO -   valgrind                x86_64 1:3.10.0-1          custom-valgrind        16 M
+14:56:37     INFO -   wget                    x86_64 1.15-1.el6          releng-centos6-x86_64 626 k
+14:56:37     INFO -   wireless-tools-devel    i686   1:29-5.1.1.el6      centos6                26 k
+14:56:37     INFO -   xorg-x11-font-utils     x86_64 1:7.2-11.el6        centos6                75 k
+14:56:37     INFO -   xorg-x11-fonts-100dpi   noarch 7.2-9.1.el6         centos6               3.1 M
+14:56:37     INFO -   xorg-x11-fonts-75dpi    noarch 7.2-9.1.el6         centos6               2.8 M
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-1-100dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               1.1 M
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-1-75dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               932 k
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-14-100dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               1.0 M
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-14-75dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               905 k
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-15-100dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               1.1 M
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-15-75dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               932 k
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-2-100dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               1.0 M
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-2-75dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               901 k
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-9-100dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               1.1 M
+14:56:37     INFO -   xorg-x11-fonts-ISO8859-9-75dpi
+14:56:37     INFO -                           noarch 7.2-9.1.el6         centos6               930 k
+14:56:37     INFO -   xorg-x11-fonts-Type1    noarch 7.2-9.1.el6         centos6               520 k
+14:56:37     INFO -   xorg-x11-fonts-cyrillic noarch 7.2-9.1.el6         centos6               395 k
+14:56:37     INFO -   xorg-x11-fonts-ethiopic noarch 7.2-9.1.el6         centos6               150 k
+14:56:37     INFO -   xorg-x11-fonts-misc     noarch 7.2-9.1.el6         centos6               5.8 M
+14:56:37     INFO -   yasm                    x86_64 1.1.0-1             releng-centos6-x86_64 811 k
+14:56:37     INFO -   zip                     x86_64 3.0-1.el6           centos6               260 k
+14:56:37     INFO -   zlib-devel              i686   1.2.3-27.el6        centos6                44 k
+14:56:37     INFO -  Installing for dependencies:
+14:56:37     INFO -   ConsoleKit              x86_64 0.4.1-3.el6         centos6                82 k
+14:56:37     INFO -   ConsoleKit-libs         x86_64 0.4.1-3.el6         centos6                17 k
+14:56:37     INFO -   GConf2                  i686   2.28.0-6.el6        centos6               961 k
+14:56:37     INFO -   GConf2                  x86_64 2.28.0-6.el6        centos6               964 k
+14:56:37     INFO -   ORBit2                  i686   2.14.17-3.1.el6     centos6               162 k
+14:56:37     INFO -   ORBit2                  x86_64 2.14.17-3.1.el6     centos6               168 k
+14:56:37     INFO -   acl                     x86_64 2.2.49-6.el6        centos6                75 k
+14:56:37     INFO -   alsa-lib                i686   1.0.22-3.el6        centos6               369 k
+14:56:37     INFO -   alsa-lib                x86_64 1.0.22-3.el6        centos6               370 k
+14:56:37     INFO -   apr                     x86_64 1.3.9-3.el6_1.2     centos6               123 k
+14:56:37     INFO -   apr-util                x86_64 1.3.9-3.el6_0.1     centos6                87 k
+14:56:37     INFO -   atk                     i686   1.28.0-2.el6        centos6               190 k
+14:56:37     INFO -   atk                     x86_64 1.28.0-2.el6        centos6               191 k
+14:56:37     INFO -   audit-libs              i686   2.1.3-3.el6         centos6                59 k
+14:56:37     INFO -   autoconf                noarch 2.63-5.1.el6        centos6               781 k
+14:56:37     INFO -   automake                noarch 1.11.1-1.2.el6      centos6               550 k
+14:56:37     INFO -   avahi                   x86_64 0.6.25-11.el6       centos6               217 k
+14:56:37     INFO -   avahi-glib              i686   0.6.25-11.el6       centos6                20 k
+14:56:37     INFO -   avahi-glib              x86_64 0.6.25-11.el6       centos6                20 k
+14:56:37     INFO -   avahi-libs              i686   0.6.25-11.el6       centos6                54 k
+14:56:37     INFO -   avahi-libs              x86_64 0.6.25-11.el6       centos6                54 k
+14:56:37     INFO -   bzip2-libs              i686   1.0.5-7.el6_0       centos6                36 k
+14:56:37     INFO -   cairo                   i686   1.8.8-3.1.el6       centos6               319 k
+14:56:37     INFO -   cairo                   x86_64 1.8.8-3.1.el6       centos6               309 k
+14:56:37     INFO -   cdparanoia-libs         i686   10.2-5.1.el6        centos6                45 k
+14:56:37     INFO -   cdparanoia-libs         x86_64 10.2-5.1.el6        centos6                47 k
+14:56:37     INFO -   centos-indexhtml        noarch 6-1.el6.centos      centos6                70 k
+14:56:37     INFO -   check                   i686   0.9.8-1.1.el6       centos6                91 k
+14:56:37     INFO -   check                   x86_64 0.9.8-1.1.el6       centos6                91 k
+14:56:37     INFO -   cracklib                i686   2.8.16-4.el6        centos6                70 k
+14:56:37     INFO -   crda                    x86_64 1.1.1_2010.11.22-1.el6
+14:56:37     INFO -                                                      centos6                23 k
+14:56:37     INFO -   cryptsetup-luks         x86_64 1.2.0-6.el6         centos6                94 k
+14:56:37     INFO -   cryptsetup-luks-libs    x86_64 1.2.0-6.el6         centos6                50 k
+14:56:37     INFO -   cups-libs               i686   1:1.4.2-44.el6      centos6               324 k
+14:56:37     INFO -   cups-libs               x86_64 1:1.4.2-44.el6      centos6               315 k
+14:56:37     INFO -   cyrus-sasl-lib          i686   2.1.23-13.el6       centos6               135 k
+14:56:37     INFO -   dash                    x86_64 0.5.5.1-3.1.el6     centos6                74 k
+14:56:37     INFO -   db4                     i686   4.7.25-16.el6       centos6               580 k
+14:56:37     INFO -   dbus                    x86_64 1:1.2.24-5.el6_1    centos6               207 k
+14:56:37     INFO -   dbus-glib               i686   0.86-5.el6          centos6               170 k
+14:56:37     INFO -   dbus-glib               x86_64 0.86-5.el6          centos6               170 k
+14:56:37     INFO -   dbus-libs               i686   1:1.2.24-5.el6_1    centos6               128 k
+14:56:37     INFO -   device-mapper           x86_64 1.02.66-6.el6       centos6               126 k
+14:56:37     INFO -   device-mapper-libs      x86_64 1.02.66-6.el6       centos6               137 k
+14:56:37     INFO -   dmidecode               x86_64 1:2.11-2.el6        centos6                71 k
+14:56:37     INFO -   docbook-dtds            noarch 1.0-51.el6          centos6               274 k
+14:56:37     INFO -   docbook-style-dsssl     noarch 1.79-10.el6         centos6               277 k
+14:56:37     INFO -   docbook-style-xsl       noarch 1.75.2-6.el6        centos6               2.6 M
+14:56:37     INFO -   docbook-utils           noarch 0.6.14-24.el6       centos6                69 k
+14:56:37     INFO -   dracut                  noarch 004-256.el6_2.1     centos6-updates       110 k
+14:56:37     INFO -   dracut-kernel           noarch 004-256.el6_2.1     centos6-updates        20 k
+14:56:37     INFO -   eggdbus                 i686   0.6-3.el6           centos6                91 k
+14:56:37     INFO -   eggdbus                 x86_64 0.6-3.el6           centos6                91 k
+14:56:37     INFO -   expat                   i686   2.0.1-9.1.el6       centos6                78 k
+14:56:37     INFO -   fipscheck               x86_64 1.2.0-7.el6         centos6                14 k
+14:56:37     INFO -   fipscheck-lib           x86_64 1.2.0-7.el6         centos6               8.3 k
+14:56:37     INFO -   flac                    i686   1.2.1-6.1.el6       centos6               253 k
+14:56:37     INFO -   flac                    x86_64 1.2.1-6.1.el6       centos6               243 k
+14:56:37     INFO -   fontconfig              i686   2.8.0-3.el6         centos6               186 k
+14:56:37     INFO -   fontconfig              x86_64 2.8.0-3.el6         centos6               186 k
+14:56:37     INFO -   gamin                   i686   0.1.10-9.el6        centos6               120 k
+14:56:37     INFO -   glib2                   i686   2.22.5-6.el6        centos6               1.1 M
+14:56:37     INFO -   glibc                   i686   2.12-1.47.el6_2.5   centos6-updates       4.3 M
+14:56:37     INFO -   gnome-vfs2              i686   2.24.2-6.el6        centos6               733 k
+14:56:37     INFO -   gnome-vfs2              x86_64 2.24.2-6.el6        centos6               739 k
+14:56:37     INFO -   gnutls                  i686   2.8.5-4.el6         centos6               336 k
+14:56:37     INFO -   gnutls                  x86_64 2.8.5-4.el6         centos6               343 k
+14:56:37     INFO -   grubby                  x86_64 7.0.15-2.el6        centos6                42 k
+14:56:37     INFO -   gstreamer               i686   0.10.29-1.el6       centos6               753 k
+14:56:37     INFO -   gstreamer               x86_64 0.10.29-1.el6       centos6               764 k
+14:56:37     INFO -   gstreamer-plugins-base  i686   0.10.29-1.el6       centos6               929 k
+14:56:37     INFO -   gstreamer-plugins-base  x86_64 0.10.29-1.el6       centos6               942 k
+14:56:37     INFO -   gstreamer-tools         x86_64 0.10.29-1.el6       centos6                23 k
+14:56:37     INFO -   gtk-doc                 noarch 1.11-5.1.el6        centos6               129 k
+14:56:37     INFO -   gtk2                    i686   2.18.9-6.el6.centos centos6               3.2 M
+14:56:37     INFO -   gtk2                    x86_64 2.18.9-6.el6.centos centos6               3.3 M
+14:56:37     INFO -   hal                     x86_64 0.5.14-11.el6       centos6               375 k
+14:56:37     INFO -   hal-info                noarch 20090716-3.1.el6    centos6                56 k
+14:56:37     INFO -   hal-libs                i686   0.5.14-11.el6       centos6                67 k
+14:56:37     INFO -   hal-libs                x86_64 0.5.14-11.el6       centos6                69 k
+14:56:37     INFO -   hdparm                  x86_64 9.16-3.4.el6        centos6                72 k
+14:56:37     INFO -   hicolor-icon-theme      noarch 0.11-1.1.el6        centos6                40 k
+14:56:37     INFO -   indent                  x86_64 2.2.10-5.1.el6      centos6               115 k
+14:56:37     INFO -   iso-codes               noarch 3.16-2.el6          centos6               2.4 M
+14:56:37     INFO -   iw                      x86_64 0.9.17-4.el6        centos6                35 k
+14:56:37     INFO -   jasper-libs             i686   1.900.1-15.el6_1.1  centos6-updates       136 k
+14:56:37     INFO -   jasper-libs             x86_64 1.900.1-15.el6_1.1  centos6-updates       136 k
+14:56:37     INFO -   kbd                     x86_64 1.15-11.el6         centos6               264 k
+14:56:37     INFO -   kbd-misc                noarch 1.15-11.el6         centos6               923 k
+14:56:37     INFO -   kernel                  x86_64 2.6.32-220.7.1.el6  centos6-updates        24 M
+14:56:37     INFO -   kernel-firmware         noarch 2.6.32-220.7.1.el6  centos6-updates       6.2 M
+14:56:37     INFO -   keyutils-libs           i686   1.4-3.el6           centos6                20 k
+14:56:37     INFO -   krb5-libs               i686   1.9-22.el6_2.1      centos6-updates       716 k
+14:56:37     INFO -   libICE                  i686   1.0.6-1.el6         centos6                52 k
+14:56:37     INFO -   libICE                  x86_64 1.0.6-1.el6         centos6                53 k
+14:56:37     INFO -   libIDL                  i686   0.8.13-2.1.el6      centos6                81 k
+14:56:37     INFO -   libIDL                  x86_64 0.8.13-2.1.el6      centos6                83 k
+14:56:37     INFO -   libSM                   i686   1.1.0-7.1.el6       centos6                26 k
+14:56:37     INFO -   libSM                   x86_64 1.1.0-7.1.el6       centos6                26 k
+14:56:37     INFO -   libX11                  i686   1.3-2.el6           centos6               585 k
+14:56:37     INFO -   libX11                  x86_64 1.3-2.el6           centos6               582 k
+14:56:37     INFO -   libX11-common           noarch 1.3-2.el6           centos6               188 k
+14:56:37     INFO -   libXau                  i686   1.0.5-1.el6         centos6                22 k
+14:56:37     INFO -   libXau                  x86_64 1.0.5-1.el6         centos6                22 k
+14:56:37     INFO -   libXcomposite           i686   0.4.1-2.el6         centos6                17 k
+14:56:37     INFO -   libXcomposite           x86_64 0.4.1-2.el6         centos6                17 k
+14:56:37     INFO -   libXcursor              i686   1.1.10-2.el6        centos6                32 k
+14:56:37     INFO -   libXcursor              x86_64 1.1.10-2.el6        centos6                32 k
+14:56:37     INFO -   libXdamage              i686   1.1.2-1.el6         centos6                16 k
+14:56:37     INFO -   libXdamage              x86_64 1.1.2-1.el6         centos6                16 k
+14:56:37     INFO -   libXdmcp                i686   1.0.3-1.el6         centos6                22 k
+14:56:37     INFO -   libXdmcp                x86_64 1.0.3-1.el6         centos6                22 k
+14:56:37     INFO -   libXext                 i686   1.1-3.el6           centos6                33 k
+14:56:37     INFO -   libXext                 x86_64 1.1-3.el6           centos6                33 k
+14:56:37     INFO -   libXfixes               i686   4.0.4-1.el6         centos6                19 k
+14:56:37     INFO -   libXfixes               x86_64 4.0.4-1.el6         centos6                19 k
+14:56:37     INFO -   libXfont                x86_64 1.4.1-2.el6_1       centos6               128 k
+14:56:37     INFO -   libXft                  i686   2.1.13-4.1.el6      centos6                48 k
+14:56:37     INFO -   libXft                  x86_64 2.1.13-4.1.el6      centos6                49 k
+14:56:37     INFO -   libXi                   i686   1.3-3.el6           centos6                32 k
+14:56:37     INFO -   libXi                   x86_64 1.3-3.el6           centos6                32 k
+14:56:37     INFO -   libXinerama             i686   1.1-1.el6           centos6                15 k
+14:56:37     INFO -   libXinerama             x86_64 1.1-1.el6           centos6                15 k
+14:56:37     INFO -   libXrandr               i686   1.3.0-4.el6         centos6                29 k
+14:56:37     INFO -   libXrandr               x86_64 1.3.0-4.el6         centos6                30 k
+14:56:37     INFO -   libXrender              i686   0.9.5-1.el6         centos6                26 k
+14:56:37     INFO -   libXrender              x86_64 0.9.5-1.el6         centos6                27 k
+14:56:37     INFO -   libXres                 x86_64 1.0.4-1.el6         centos6                15 k
+14:56:37     INFO -   libXt                   i686   1.0.7-1.el6         centos6               168 k
+14:56:37     INFO -   libXtst                 i686   1.0.99.2-3.el6      centos6                22 k
+14:56:37     INFO -   libXtst                 x86_64 1.0.99.2-3.el6      centos6                22 k
+14:56:37     INFO -   libXv                   i686   1.0.5-1.el6         centos6                20 k
+14:56:37     INFO -   libXv                   x86_64 1.0.5-1.el6         centos6                21 k
+14:56:37     INFO -   libXxf86vm              i686   1.1.0-1.el6         centos6                18 k
+14:56:37     INFO -   libacl                  i686   2.2.49-6.el6        centos6                24 k
+14:56:37     INFO -   libasyncns              i686   0.8-1.1.el6         centos6                24 k
+14:56:37     INFO -   libasyncns              x86_64 0.8-1.1.el6         centos6                24 k
+14:56:37     INFO -   libattr                 i686   2.4.44-7.el6        centos6                15 k
+14:56:37     INFO -   libcanberra             x86_64 0.22-1.el6.centos   centos6                66 k
+14:56:37     INFO -   libcanberra-gtk2        x86_64 0.22-1.el6.centos   centos6                26 k
+14:56:37     INFO -   libcap-ng               x86_64 0.6.4-3.el6_0.1     centos6                21 k
+14:56:37     INFO -   libcom_err              i686   1.41.12-11.el6      centos6                36 k
+14:56:37     INFO -   libcurl                 i686   7.19.7-26.el6_1.2   centos6               169 k
+14:56:37     INFO -   libdaemon               x86_64 0.14-1.el6          centos6                28 k
+14:56:37     INFO -   libdrm                  i686   2.4.25-2.el6        centos6                66 k
+14:56:37     INFO -   libdrm                  x86_64 2.4.25-2.el6        centos6                65 k
+14:56:37     INFO -   libedit                 x86_64 2.11-4.20080712cvs.1.el6
+14:56:37     INFO -                                                      centos6                74 k
+14:56:37     INFO -   libfontenc              x86_64 1.0.5-2.el6         centos6                24 k
+14:56:37     INFO -   libgcrypt               i686   1.4.5-9.el6         centos6               228 k
+14:56:37     INFO -   libgcrypt               x86_64 1.4.5-9.el6         centos6               228 k
+14:56:37     INFO -   libgpg-error            i686   1.7-4.el6           centos6                59 k
+14:56:37     INFO -   libgpg-error            x86_64 1.7-4.el6           centos6                59 k
+14:56:37     INFO -   libgudev1               i686   147-2.40.el6        centos6                59 k
+14:56:37     INFO -   libgudev1               x86_64 147-2.40.el6        centos6                59 k
+14:56:37     INFO -   libidn                  i686   1.18-2.el6          centos6               205 k
+14:56:37     INFO -   libjpeg                 i686   6b-46.el6           centos6               133 k
+14:56:37     INFO -   libjpeg                 x86_64 6b-46.el6           centos6               134 k
+14:56:37     INFO -   libnl                   x86_64 1.1-14.el6          centos6               121 k
+14:56:37     INFO -   libnotify               i686   0.5.0-1.el6         centos6                35 k
+14:56:37     INFO -   libogg                  i686   2:1.1.4-2.1.el6     centos6                22 k
+14:56:37     INFO -   libogg                  x86_64 2:1.1.4-2.1.el6     centos6                21 k
+14:56:37     INFO -   liboil                  i686   0.3.16-4.1.el6      centos6               120 k
+14:56:37     INFO -   liboil                  x86_64 0.3.16-4.1.el6      centos6               121 k
+14:56:37     INFO -   libpng                  i686   2:1.2.46-2.el6_2    centos6-updates       184 k
+14:56:37     INFO -   libpng                  x86_64 2:1.2.46-2.el6_2    centos6-updates       181 k
+14:56:37     INFO -   libproxy                x86_64 0.3.0-2.el6         centos6                39 k
+14:56:37     INFO -   libproxy-bin            x86_64 0.3.0-2.el6         centos6               8.1 k
+14:56:37     INFO -   libproxy-python         x86_64 0.3.0-2.el6         centos6               8.2 k
+14:56:37     INFO -   libselinux              i686   2.0.94-5.2.el6      centos6               107 k
+14:56:37     INFO -   libsndfile              i686   1.0.20-5.el6        centos6               245 k
+14:56:37     INFO -   libsndfile              x86_64 1.0.20-5.el6        centos6               233 k
+14:56:37     INFO -   libssh2                 i686   1.2.2-7.el6_1.1     centos6                75 k
+14:56:37     INFO -   libstdc++               i686   4.4.6-3.el6         centos6               298 k
+14:56:37     INFO -   libtasn1                i686   2.3-3.el6           centos6               239 k
+14:56:37     INFO -   libtasn1                x86_64 2.3-3.el6           centos6               238 k
+14:56:37     INFO -   libtdb                  x86_64 1.2.1-3.el6         centos6                28 k
+14:56:37     INFO -   libthai                 i686   0.1.12-3.el6        centos6               183 k
+14:56:37     INFO -   libthai                 x86_64 0.1.12-3.el6        centos6               183 k
+14:56:37     INFO -   libtheora               i686   1:1.1.0-2.el6       centos6               131 k
+14:56:37     INFO -   libtheora               x86_64 1:1.1.0-2.el6       centos6               129 k
+14:56:37     INFO -   libtiff                 i686   3.9.4-1.el6_0.3     centos6               338 k
+14:56:37     INFO -   libtiff                 x86_64 3.9.4-1.el6_0.3     centos6               342 k
+14:56:37     INFO -   libtool-ltdl            x86_64 2.2.6-15.5.el6      centos6                44 k
+14:56:37     INFO -   libudev                 i686   147-2.40.el6        centos6                76 k
+14:56:37     INFO -   libudev                 x86_64 147-2.40.el6        centos6                74 k
+14:56:37     INFO -   libuuid                 i686   2.17.2-12.4.el6     centos6                65 k
+14:56:37     INFO -   libvisual               i686   0.4.0-9.1.el6       centos6               135 k
+14:56:37     INFO -   libvisual               x86_64 0.4.0-9.1.el6       centos6               135 k
+14:56:37     INFO -   libvorbis               i686   1:1.2.3-4.el6_2.1   centos6-updates       157 k
+14:56:37     INFO -   libvorbis               x86_64 1:1.2.3-4.el6_2.1   centos6-updates       168 k
+14:56:37     INFO -   libwnck                 x86_64 2.28.0-3.el6        centos6               334 k
+14:56:37     INFO -   libxcb                  i686   1.5-1.el6           centos6               104 k
+14:56:37     INFO -   libxcb                  x86_64 1.5-1.el6           centos6               100 k
+14:56:37     INFO -   libxml2                 i686   2.7.6-4.el6_2.4     centos6-updates       795 k
+14:56:37     INFO -   libxml2                 x86_64 2.7.6-4.el6_2.4     centos6-updates       795 k
+14:56:37     INFO -   libxslt                 x86_64 1.1.26-2.el6        centos6               450 k
+14:56:37     INFO -   lynx                    x86_64 2.8.6-27.el6        centos6               1.3 M
+14:56:37     INFO -   m4                      x86_64 1.4.13-5.el6        centos6               278 k
+14:56:37     INFO -   mesa-dri-drivers        i686   7.11-3.el6          centos6                12 M
+14:56:37     INFO -   mesa-libGL              i686   7.11-3.el6          centos6               161 k
+14:56:37     INFO -   mozilla-git             x86_64 1.7.9.4-3.el6       releng-centos6-x86_64 3.8 M
+14:56:37     INFO -   ncurses-libs            i686   5.7-3.20090208.el6  centos6               251 k
+14:56:37     INFO -   neon                    x86_64 0.29.3-1.2.el6      centos6               119 k
+14:56:37     INFO -   notification-daemon     x86_64 0.5.0-1.el6         centos6                69 k
+14:56:37     INFO -   nspr                    i686   4.9.2-1.el6         releng-centos6-x86_64 114 k
+14:56:37     INFO -   nss                     i686   3.13.1-7.el6_2      centos6-updates       763 k
+14:56:37     INFO -   nss-softokn             i686   3.12.9-11.el6       centos6               172 k
+14:56:37     INFO -   nss-softokn-freebl      i686   3.12.9-11.el6       centos6               116 k
+14:56:37     INFO -   nss-util                i686   3.13.1-3.el6_2      centos6-updates        52 k
+14:56:37     INFO -   openjade                x86_64 1.3.2-36.el6        centos6               817 k
+14:56:37     INFO -   openldap                i686   2.4.23-20.el6       centos6               260 k
+14:56:37     INFO -   opensp                  x86_64 1.5.2-12.1.el6      centos6               872 k
+14:56:37     INFO -   openssh                 x86_64 5.3p1-70.el6_2.2    centos6-updates       235 k
+14:56:37     INFO -   openssh-clients         x86_64 5.3p1-70.el6_2.2    centos6-updates       357 k
+14:56:37     INFO -   openssl                 i686   1.0.0-20.el6_2.2    centos6-updates       1.4 M
+14:56:37     INFO -   pakchois                x86_64 0.4-3.2.el6         centos6                21 k
+14:56:37     INFO -   pam                     i686   1.1.1-10.el6        centos6               656 k
+14:56:37     INFO -   pango                   i686   1.28.1-3.el6_0.5.1.centos
+14:56:37     INFO -                                                      centos6-updates       350 k
+14:56:37     INFO -   pango                   x86_64 1.28.1-3.el6_0.5.1.centos
+14:56:37     INFO -                                                      centos6-updates       350 k
+14:56:37     INFO -   pciutils-libs           x86_64 3.1.4-11.el6        centos6                34 k
+14:56:37     INFO -   perl-DBI                x86_64 1.609-4.el6         centos6               705 k
+14:56:37     INFO -   perl-ExtUtils-MakeMaker x86_64 6.55-119.el6_1.1    centos6               290 k
+14:56:37     INFO -   perl-ExtUtils-ParseXS   x86_64 1:2.2003.0-119.el6_1.1
+14:56:37     INFO -                                                      centos6                42 k
+14:56:37     INFO -   perl-Git                noarch 1.7.1-2.el6_0.1     centos6                28 k
+14:56:37     INFO -   perl-SGMLSpm            noarch 1.03ii-21.el6       centos6                26 k
+14:56:37     INFO -   perl-Test-Harness       x86_64 3.17-119.el6_1.1    centos6               229 k
+14:56:37     INFO -   perl-URI                noarch 1.40-2.el6          centos6               117 k
+14:56:37     INFO -   pixman                  i686   0.18.4-1.el6_0.1    centos6               154 k
+14:56:37     INFO -   pixman                  x86_64 0.18.4-1.el6_0.1    centos6               146 k
+14:56:37     INFO -   plymouth                x86_64 0.8.3-24.el6.centos centos6                89 k
+14:56:37     INFO -   plymouth-core-libs      x86_64 0.8.3-24.el6.centos centos6                88 k
+14:56:37     INFO -   plymouth-scripts        x86_64 0.8.3-24.el6.centos centos6                31 k
+14:56:37     INFO -   pm-utils                x86_64 1.2.5-9.el6         centos6               108 k
+14:56:37     INFO -   polkit                  i686   0.96-2.el6_0.1      centos6               157 k
+14:56:37     INFO -   polkit                  x86_64 0.96-2.el6_0.1      centos6               158 k
+14:56:37     INFO -   pulseaudio-libs         i686   0.9.21-13.el6       centos6               453 k
+14:56:37     INFO -   pulseaudio-libs         x86_64 0.9.21-13.el6       centos6               462 k
+14:56:37     INFO -   pulseaudio-libs-glib2   i686   0.9.21-13.el6       centos6                23 k
+14:56:37     INFO -   pulseaudio-libs-glib2   x86_64 0.9.21-13.el6       centos6                23 k
+14:56:37     INFO -   pulseaudio-libs-zeroconf
+14:56:37     INFO -                           i686   0.9.21-13.el6       centos6                27 k
+14:56:37     INFO -   pulseaudio-libs-zeroconf
+14:56:37     INFO -                           x86_64 0.9.21-13.el6       centos6                27 k
+14:56:37     INFO -   rarian                  x86_64 0.8.1-5.1.el6       centos6                97 k
+14:56:37     INFO -   rarian-compat           x86_64 0.8.1-5.1.el6       centos6                61 k
+14:56:37     INFO -   readline                i686   6.0-3.el6           centos6               176 k
+14:56:37     INFO -   redhat-logos            noarch 60.0.14-10.el6.centos
+14:56:37     INFO -                                                      centos6                10 M
+14:56:37     INFO -   rsync                   x86_64 3.0.6-5.el6_0.1     centos6               335 k
+14:56:37     INFO -   sgml-common             noarch 0.6.3-32.el6        centos6                43 k
+14:56:37     INFO -   shared-mime-info        x86_64 0.70-4.el6          centos6               209 k
+14:56:37     INFO -   sound-theme-freedesktop noarch 0.7-3.el6           centos6               388 k
+14:56:37     INFO -   sqlite                  i686   3.6.20-1.el6        centos6               307 k
+14:56:37     INFO -   startup-notification    x86_64 0.10-2.1.el6        centos6                37 k
+14:56:37     INFO -   subversion              x86_64 1.6.11-2.el6_1.4    centos6               2.3 M
+14:56:37     INFO -   subversion-perl         x86_64 1.6.11-2.el6_1.4    centos6               796 k
+14:56:37     INFO -   tcl                     x86_64 1:8.5.7-6.el6       centos6               1.9 M
+14:56:37     INFO -   tcp_wrappers-libs       i686   7.6-57.el6          centos6                62 k
+14:56:37     INFO -   tcp_wrappers-libs       x86_64 7.6-57.el6          centos6                62 k
+14:56:37     INFO -   tk                      x86_64 1:8.5.7-5.el6       centos6               1.4 M
+14:56:37     INFO -   ttmkfdir                x86_64 3.0.9-32.1.el6      centos6                43 k
+14:56:37     INFO -   wireless-tools          i686   1:29-5.1.1.el6      centos6                92 k
+14:56:37     INFO -   wireless-tools          x86_64 1:29-5.1.1.el6      centos6                94 k
+14:56:37     INFO -   xcb-util                x86_64 0.3.6-1.el6         centos6                38 k
+14:56:37     INFO -   xml-common              noarch 0.6.3-32.el6        centos6               9.5 k
+14:56:37     INFO -   xorg-x11-proto-devel    noarch 7.6-13.el6          centos6               303 k
+14:56:37     INFO -   zlib                    i686   1.2.3-27.el6        centos6                72 k
+14:56:37     INFO -  Transaction Summary
+14:56:37     INFO -  ================================================================================
+14:56:37     INFO -  Install     351 Package(s)
+14:56:37     INFO -  Total download size: 294 M
+14:56:37     INFO -  Installed size: 993 M
+14:56:37     INFO -  Installed:
+14:56:37     INFO -    GConf2-devel.i686 0:2.28.0-6.el6
+14:56:37     INFO -    ORBit2-devel.i686 0:2.14.17-3.1.el6
+14:56:37     INFO -    alsa-lib-devel.i686 0:1.0.22-3.el6
+14:56:37     INFO -    atk-devel.i686 0:1.28.0-2.el6
+14:56:37     INFO -    autoconf213.noarch 0:2.13-20.1.el6
+14:56:37     INFO -    cairo-devel.i686 0:1.8.8-3.1.el6
+14:56:37     INFO -    ccache.x86_64 0:3.1.9-3moz0
+14:56:37     INFO -    check-devel.i686 0:0.9.8-1.1.el6
+14:56:37     INFO -    dbus-devel.i686 1:1.2.24-5.el6_1
+14:56:37     INFO -    dbus-glib-devel.i686 0:0.86-5.el6
+14:56:37     INFO -    fontconfig-devel.i686 0:2.8.0-3.el6
+14:56:37     INFO -    freetype.i686 0:2.3.11-6.el6_1.8
+14:56:37     INFO -    freetype.x86_64 0:2.3.11-6.el6_1.8
+14:56:37     INFO -    freetype-devel.i686 0:2.3.11-6.el6_1.8
+14:56:37     INFO -    gcc454_0moz1.x86_64 0:4.5.4-0moz1
+14:56:37     INFO -    gcc45_0moz3.x86_64 0:4.5.2-0moz3_mock_centos6
+14:56:37     INFO -    gcc472_0moz1.x86_64 0:4.7.2-0moz1
+14:56:37     INFO -    gcc473_0moz1.x86_64 0:4.7.3-0moz1
+14:56:37     INFO -    git.x86_64 0:1.7.1-2.el6_0.1
+14:56:37     INFO -    glib2-devel.i686 0:2.22.5-6.el6
+14:56:37     INFO -    glibc-devel.i686 0:2.12-1.47.el6_2.5
+14:56:37     INFO -    glibc-static.i686 0:2.12-1.47.el6_2.5
+14:56:37     INFO -    gnome-vfs2-devel.i686 0:2.24.2-6.el6
+14:56:37     INFO -    gstreamer-devel.i686 0:0.10.29-1.el6
+14:56:37     INFO -    gstreamer-plugins-base-devel.i686 0:0.10.29-1.el6
+14:56:37     INFO -    gtk2-devel.i686 0:2.18.9-6.el6.centos
+14:56:37     INFO -    hal-devel.i686 0:0.5.14-11.el6
+14:56:37     INFO -    imake.x86_64 0:1.0.2-11.el6
+14:56:37     INFO -    libICE-devel.i686 0:1.0.6-1.el6
+14:56:37     INFO -    libIDL-devel.i686 0:0.8.13-2.1.el6
+14:56:37     INFO -    libSM-devel.i686 0:1.1.0-7.1.el6
+14:56:37     INFO -    libX11-devel.i686 0:1.3-2.el6
+14:56:37     INFO -    libXau-devel.i686 0:1.0.5-1.el6
+14:56:37     INFO -    libXcomposite-devel.i686 0:0.4.1-2.el6
+14:56:37     INFO -    libXcursor-devel.i686 0:1.1.10-2.el6
+14:56:37     INFO -    libXdamage-devel.i686 0:1.1.2-1.el6
+14:56:37     INFO -    libXdmcp-devel.i686 0:1.0.3-1.el6
+14:56:37     INFO -    libXext-devel.i686 0:1.1-3.el6
+14:56:37     INFO -    libXfixes-devel.i686 0:4.0.4-1.el6
+14:56:37     INFO -    libXft-devel.i686 0:2.1.13-4.1.el6
+14:56:37     INFO -    libXi-devel.i686 0:1.3-3.el6
+14:56:37     INFO -    libXinerama-devel.i686 0:1.1-1.el6
+14:56:37     INFO -    libXrandr-devel.i686 0:1.3.0-4.el6
+14:56:37     INFO -    libXrender-devel.i686 0:0.9.5-1.el6
+14:56:37     INFO -    libXt-devel.i686 0:1.0.7-1.el6
+14:56:37     INFO -    libXxf86vm-devel.i686 0:1.1.0-1.el6
+14:56:37     INFO -    libcurl-devel.i686 0:7.19.7-26.el6_1.2
+14:56:37     INFO -    libdrm-devel.i686 0:2.4.25-2.el6
+14:56:37     INFO -    libgcc.i686 0:4.4.6-3.el6
+14:56:37     INFO -    libidn-devel.i686 0:1.18-2.el6
+14:56:37     INFO -    libnotify-devel.i686 0:0.5.0-1.el6
+14:56:37     INFO -    libpng-devel.i686 2:1.2.46-2.el6_2
+14:56:37     INFO -    libstdc++-devel.i686 0:4.4.6-3.el6
+14:56:37     INFO -    libxcb-devel.i686 0:1.5-1.el6
+14:56:37     INFO -    libxml2-devel.i686 0:2.7.6-4.el6_2.4
+14:56:37     INFO -    mesa-libGL-devel.i686 0:7.11-3.el6
+14:56:37     INFO -    mozilla-python27.x86_64 0:2.7.7-1.el6
+14:56:37     INFO -    mozilla-python27-mercurial.x86_64 0:3.9.1-1.el6
+14:56:37     INFO -    pango-devel.i686 0:1.28.1-3.el6_0.5.1.centos
+14:56:37     INFO -    perl-Config-General.noarch 0:2.44-1.el6
+14:56:37     INFO -    perl-Test-Simple.x86_64 0:0.92-119.el6_1.1
+14:56:37     INFO -    perl-devel.i686 4:5.10.1-119.el6_1.1
+14:56:37     INFO -    pixman-devel.i686 0:0.18.4-1.el6_0.1
+14:56:37     INFO -    pulseaudio-libs-devel.i686 0:0.9.21-13.el6
+14:56:37     INFO -    valgrind.x86_64 1:3.10.0-1
+14:56:37     INFO -    wget.x86_64 0:1.15-1.el6
+14:56:37     INFO -    wireless-tools-devel.i686 1:29-5.1.1.el6
+14:56:37     INFO -    xorg-x11-font-utils.x86_64 1:7.2-11.el6
+14:56:37     INFO -    xorg-x11-fonts-100dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-75dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-1-100dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-1-75dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-14-100dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-14-75dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-15-100dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-15-75dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-2-100dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-2-75dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-9-100dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ISO8859-9-75dpi.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-Type1.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-cyrillic.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-ethiopic.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    xorg-x11-fonts-misc.noarch 0:7.2-9.1.el6
+14:56:37     INFO -    yasm.x86_64 0:1.1.0-1
+14:56:37     INFO -    zip.x86_64 0:3.0-1.el6
+14:56:37     INFO -    zlib-devel.i686 0:1.2.3-27.el6
+14:56:37     INFO -  Dependency Installed:
+14:56:37     INFO -    ConsoleKit.x86_64 0:0.4.1-3.el6
+14:56:37     INFO -    ConsoleKit-libs.x86_64 0:0.4.1-3.el6
+14:56:37     INFO -    GConf2.i686 0:2.28.0-6.el6
+14:56:37     INFO -    GConf2.x86_64 0:2.28.0-6.el6
+14:56:37     INFO -    ORBit2.i686 0:2.14.17-3.1.el6
+14:56:37     INFO -    ORBit2.x86_64 0:2.14.17-3.1.el6
+14:56:37     INFO -    acl.x86_64 0:2.2.49-6.el6
+14:56:37     INFO -    alsa-lib.i686 0:1.0.22-3.el6
+14:56:37     INFO -    alsa-lib.x86_64 0:1.0.22-3.el6
+14:56:37     INFO -    apr.x86_64 0:1.3.9-3.el6_1.2
+14:56:37     INFO -    apr-util.x86_64 0:1.3.9-3.el6_0.1
+14:56:37     INFO -    atk.i686 0:1.28.0-2.el6
+14:56:37     INFO -    atk.x86_64 0:1.28.0-2.el6
+14:56:37     INFO -    audit-libs.i686 0:2.1.3-3.el6
+14:56:37     INFO -    autoconf.noarch 0:2.63-5.1.el6
+14:56:37     INFO -    automake.noarch 0:1.11.1-1.2.el6
+14:56:37     INFO -    avahi.x86_64 0:0.6.25-11.el6
+14:56:37     INFO -    avahi-glib.i686 0:0.6.25-11.el6
+14:56:37     INFO -    avahi-glib.x86_64 0:0.6.25-11.el6
+14:56:37     INFO -    avahi-libs.i686 0:0.6.25-11.el6
+14:56:37     INFO -    avahi-libs.x86_64 0:0.6.25-11.el6
+14:56:37     INFO -    bzip2-libs.i686 0:1.0.5-7.el6_0
+14:56:37     INFO -    cairo.i686 0:1.8.8-3.1.el6
+14:56:37     INFO -    cairo.x86_64 0:1.8.8-3.1.el6
+14:56:37     INFO -    cdparanoia-libs.i686 0:10.2-5.1.el6
+14:56:37     INFO -    cdparanoia-libs.x86_64 0:10.2-5.1.el6
+14:56:37     INFO -    centos-indexhtml.noarch 0:6-1.el6.centos
+14:56:37     INFO -    check.i686 0:0.9.8-1.1.el6
+14:56:37     INFO -    check.x86_64 0:0.9.8-1.1.el6
+14:56:37     INFO -    cracklib.i686 0:2.8.16-4.el6
+14:56:37     INFO -    crda.x86_64 0:1.1.1_2010.11.22-1.el6
+14:56:37     INFO -    cryptsetup-luks.x86_64 0:1.2.0-6.el6
+14:56:37     INFO -    cryptsetup-luks-libs.x86_64 0:1.2.0-6.el6
+14:56:37     INFO -    cups-libs.i686 1:1.4.2-44.el6
+14:56:37     INFO -    cups-libs.x86_64 1:1.4.2-44.el6
+14:56:37     INFO -    cyrus-sasl-lib.i686 0:2.1.23-13.el6
+14:56:37     INFO -    dash.x86_64 0:0.5.5.1-3.1.el6
+14:56:37     INFO -    db4.i686 0:4.7.25-16.el6
+14:56:37     INFO -    dbus.x86_64 1:1.2.24-5.el6_1
+14:56:37     INFO -    dbus-glib.i686 0:0.86-5.el6
+14:56:37     INFO -    dbus-glib.x86_64 0:0.86-5.el6
+14:56:37     INFO -    dbus-libs.i686 1:1.2.24-5.el6_1
+14:56:37     INFO -    device-mapper.x86_64 0:1.02.66-6.el6
+14:56:37     INFO -    device-mapper-libs.x86_64 0:1.02.66-6.el6
+14:56:37     INFO -    dmidecode.x86_64 1:2.11-2.el6
+14:56:37     INFO -    docbook-dtds.noarch 0:1.0-51.el6
+14:56:37     INFO -    docbook-style-dsssl.noarch 0:1.79-10.el6
+14:56:37     INFO -    docbook-style-xsl.noarch 0:1.75.2-6.el6
+14:56:37     INFO -    docbook-utils.noarch 0:0.6.14-24.el6
+14:56:37     INFO -    dracut.noarch 0:004-256.el6_2.1
+14:56:37     INFO -    dracut-kernel.noarch 0:004-256.el6_2.1
+14:56:37     INFO -    eggdbus.i686 0:0.6-3.el6
+14:56:37     INFO -    eggdbus.x86_64 0:0.6-3.el6
+14:56:37     INFO -    expat.i686 0:2.0.1-9.1.el6
+14:56:37     INFO -    fipscheck.x86_64 0:1.2.0-7.el6
+14:56:37     INFO -    fipscheck-lib.x86_64 0:1.2.0-7.el6
+14:56:37     INFO -    flac.i686 0:1.2.1-6.1.el6
+14:56:37     INFO -    flac.x86_64 0:1.2.1-6.1.el6
+14:56:37     INFO -    fontconfig.i686 0:2.8.0-3.el6
+14:56:37     INFO -    fontconfig.x86_64 0:2.8.0-3.el6
+14:56:37     INFO -    gamin.i686 0:0.1.10-9.el6
+14:56:37     INFO -    glib2.i686 0:2.22.5-6.el6
+14:56:37     INFO -    glibc.i686 0:2.12-1.47.el6_2.5
+14:56:37     INFO -    gnome-vfs2.i686 0:2.24.2-6.el6
+14:56:37     INFO -    gnome-vfs2.x86_64 0:2.24.2-6.el6
+14:56:37     INFO -    gnutls.i686 0:2.8.5-4.el6
+14:56:37     INFO -    gnutls.x86_64 0:2.8.5-4.el6
+14:56:37     INFO -    grubby.x86_64 0:7.0.15-2.el6
+14:56:37     INFO -    gstreamer.i686 0:0.10.29-1.el6
+14:56:37     INFO -    gstreamer.x86_64 0:0.10.29-1.el6
+14:56:37     INFO -    gstreamer-plugins-base.i686 0:0.10.29-1.el6
+14:56:37     INFO -    gstreamer-plugins-base.x86_64 0:0.10.29-1.el6
+14:56:37     INFO -    gstreamer-tools.x86_64 0:0.10.29-1.el6
+14:56:37     INFO -    gtk-doc.noarch 0:1.11-5.1.el6
+14:56:37     INFO -    gtk2.i686 0:2.18.9-6.el6.centos
+14:56:37     INFO -    gtk2.x86_64 0:2.18.9-6.el6.centos
+14:56:37     INFO -    hal.x86_64 0:0.5.14-11.el6
+14:56:37     INFO -    hal-info.noarch 0:20090716-3.1.el6
+14:56:37     INFO -    hal-libs.i686 0:0.5.14-11.el6
+14:56:37     INFO -    hal-libs.x86_64 0:0.5.14-11.el6
+14:56:37     INFO -    hdparm.x86_64 0:9.16-3.4.el6
+14:56:37     INFO -    hicolor-icon-theme.noarch 0:0.11-1.1.el6
+14:56:37     INFO -    indent.x86_64 0:2.2.10-5.1.el6
+14:56:37     INFO -    iso-codes.noarch 0:3.16-2.el6
+14:56:37     INFO -    iw.x86_64 0:0.9.17-4.el6
+14:56:37     INFO -    jasper-libs.i686 0:1.900.1-15.el6_1.1
+14:56:37     INFO -    jasper-libs.x86_64 0:1.900.1-15.el6_1.1
+14:56:37     INFO -    kbd.x86_64 0:1.15-11.el6
+14:56:37     INFO -    kbd-misc.noarch 0:1.15-11.el6
+14:56:37     INFO -    kernel.x86_64 0:2.6.32-220.7.1.el6
+14:56:37     INFO -    kernel-firmware.noarch 0:2.6.32-220.7.1.el6
+14:56:37     INFO -    keyutils-libs.i686 0:1.4-3.el6
+14:56:37     INFO -    krb5-libs.i686 0:1.9-22.el6_2.1
+14:56:37     INFO -    libICE.i686 0:1.0.6-1.el6
+14:56:37     INFO -    libICE.x86_64 0:1.0.6-1.el6
+14:56:37     INFO -    libIDL.i686 0:0.8.13-2.1.el6
+14:56:37     INFO -    libIDL.x86_64 0:0.8.13-2.1.el6
+14:56:37     INFO -    libSM.i686 0:1.1.0-7.1.el6
+14:56:37     INFO -    libSM.x86_64 0:1.1.0-7.1.el6
+14:56:37     INFO -    libX11.i686 0:1.3-2.el6
+14:56:37     INFO -    libX11.x86_64 0:1.3-2.el6
+14:56:37     INFO -    libX11-common.noarch 0:1.3-2.el6
+14:56:37     INFO -    libXau.i686 0:1.0.5-1.el6
+14:56:37     INFO -    libXau.x86_64 0:1.0.5-1.el6
+14:56:37     INFO -    libXcomposite.i686 0:0.4.1-2.el6
+14:56:37     INFO -    libXcomposite.x86_64 0:0.4.1-2.el6
+14:56:37     INFO -    libXcursor.i686 0:1.1.10-2.el6
+14:56:37     INFO -    libXcursor.x86_64 0:1.1.10-2.el6
+14:56:37     INFO -    libXdamage.i686 0:1.1.2-1.el6
+14:56:37     INFO -    libXdamage.x86_64 0:1.1.2-1.el6
+14:56:37     INFO -    libXdmcp.i686 0:1.0.3-1.el6
+14:56:37     INFO -    libXdmcp.x86_64 0:1.0.3-1.el6
+14:56:37     INFO -    libXext.i686 0:1.1-3.el6
+14:56:37     INFO -    libXext.x86_64 0:1.1-3.el6
+14:56:37     INFO -    libXfixes.i686 0:4.0.4-1.el6
+14:56:37     INFO -    libXfixes.x86_64 0:4.0.4-1.el6
+14:56:37     INFO -    libXfont.x86_64 0:1.4.1-2.el6_1
+14:56:37     INFO -    libXft.i686 0:2.1.13-4.1.el6
+14:56:37     INFO -    libXft.x86_64 0:2.1.13-4.1.el6
+14:56:37     INFO -    libXi.i686 0:1.3-3.el6
+14:56:37     INFO -    libXi.x86_64 0:1.3-3.el6
+14:56:37     INFO -    libXinerama.i686 0:1.1-1.el6
+14:56:37     INFO -    libXinerama.x86_64 0:1.1-1.el6
+14:56:37     INFO -    libXrandr.i686 0:1.3.0-4.el6
+14:56:37     INFO -    libXrandr.x86_64 0:1.3.0-4.el6
+14:56:37     INFO -    libXrender.i686 0:0.9.5-1.el6
+14:56:37     INFO -    libXrender.x86_64 0:0.9.5-1.el6
+14:56:37     INFO -    libXres.x86_64 0:1.0.4-1.el6
+14:56:37     INFO -    libXt.i686 0:1.0.7-1.el6
+14:56:37     INFO -    libXtst.i686 0:1.0.99.2-3.el6
+14:56:37     INFO -    libXtst.x86_64 0:1.0.99.2-3.el6
+14:56:37     INFO -    libXv.i686 0:1.0.5-1.el6
+14:56:37     INFO -    libXv.x86_64 0:1.0.5-1.el6
+14:56:37     INFO -    libXxf86vm.i686 0:1.1.0-1.el6
+14:56:37     INFO -    libacl.i686 0:2.2.49-6.el6
+14:56:37     INFO -    libasyncns.i686 0:0.8-1.1.el6
+14:56:37     INFO -    libasyncns.x86_64 0:0.8-1.1.el6
+14:56:37     INFO -    libattr.i686 0:2.4.44-7.el6
+14:56:37     INFO -    libcanberra.x86_64 0:0.22-1.el6.centos
+14:56:37     INFO -    libcanberra-gtk2.x86_64 0:0.22-1.el6.centos
+14:56:37     INFO -    libcap-ng.x86_64 0:0.6.4-3.el6_0.1
+14:56:37     INFO -    libcom_err.i686 0:1.41.12-11.el6
+14:56:37     INFO -    libcurl.i686 0:7.19.7-26.el6_1.2
+14:56:37     INFO -    libdaemon.x86_64 0:0.14-1.el6
+14:56:37     INFO -    libdrm.i686 0:2.4.25-2.el6
+14:56:37     INFO -    libdrm.x86_64 0:2.4.25-2.el6
+14:56:37     INFO -    libedit.x86_64 0:2.11-4.20080712cvs.1.el6
+14:56:37     INFO -    libfontenc.x86_64 0:1.0.5-2.el6
+14:56:37     INFO -    libgcrypt.i686 0:1.4.5-9.el6
+14:56:37     INFO -    libgcrypt.x86_64 0:1.4.5-9.el6
+14:56:37     INFO -    libgpg-error.i686 0:1.7-4.el6
+14:56:37     INFO -    libgpg-error.x86_64 0:1.7-4.el6
+14:56:37     INFO -    libgudev1.i686 0:147-2.40.el6
+14:56:37     INFO -    libgudev1.x86_64 0:147-2.40.el6
+14:56:37     INFO -    libidn.i686 0:1.18-2.el6
+14:56:37     INFO -    libjpeg.i686 0:6b-46.el6
+14:56:37     INFO -    libjpeg.x86_64 0:6b-46.el6
+14:56:37     INFO -    libnl.x86_64 0:1.1-14.el6
+14:56:37     INFO -    libnotify.i686 0:0.5.0-1.el6
+14:56:37     INFO -    libogg.i686 2:1.1.4-2.1.el6
+14:56:37     INFO -    libogg.x86_64 2:1.1.4-2.1.el6
+14:56:37     INFO -    liboil.i686 0:0.3.16-4.1.el6
+14:56:37     INFO -    liboil.x86_64 0:0.3.16-4.1.el6
+14:56:37     INFO -    libpng.i686 2:1.2.46-2.el6_2
+14:56:37     INFO -    libpng.x86_64 2:1.2.46-2.el6_2
+14:56:37     INFO -    libproxy.x86_64 0:0.3.0-2.el6
+14:56:37     INFO -    libproxy-bin.x86_64 0:0.3.0-2.el6
+14:56:37     INFO -    libproxy-python.x86_64 0:0.3.0-2.el6
+14:56:37     INFO -    libselinux.i686 0:2.0.94-5.2.el6
+14:56:37     INFO -    libsndfile.i686 0:1.0.20-5.el6
+14:56:37     INFO -    libsndfile.x86_64 0:1.0.20-5.el6
+14:56:37     INFO -    libssh2.i686 0:1.2.2-7.el6_1.1
+14:56:37     INFO -    libstdc++.i686 0:4.4.6-3.el6
+14:56:37     INFO -    libtasn1.i686 0:2.3-3.el6
+14:56:37     INFO -    libtasn1.x86_64 0:2.3-3.el6
+14:56:37     INFO -    libtdb.x86_64 0:1.2.1-3.el6
+14:56:37     INFO -    libthai.i686 0:0.1.12-3.el6
+14:56:37     INFO -    libthai.x86_64 0:0.1.12-3.el6
+14:56:37     INFO -    libtheora.i686 1:1.1.0-2.el6
+14:56:37     INFO -    libtheora.x86_64 1:1.1.0-2.el6
+14:56:37     INFO -    libtiff.i686 0:3.9.4-1.el6_0.3
+14:56:37     INFO -    libtiff.x86_64 0:3.9.4-1.el6_0.3
+14:56:37     INFO -    libtool-ltdl.x86_64 0:2.2.6-15.5.el6
+14:56:37     INFO -    libudev.i686 0:147-2.40.el6
+14:56:37     INFO -    libudev.x86_64 0:147-2.40.el6
+14:56:37     INFO -    libuuid.i686 0:2.17.2-12.4.el6
+14:56:37     INFO -    libvisual.i686 0:0.4.0-9.1.el6
+14:56:37     INFO -    libvisual.x86_64 0:0.4.0-9.1.el6
+14:56:37     INFO -    libvorbis.i686 1:1.2.3-4.el6_2.1
+14:56:37     INFO -    libvorbis.x86_64 1:1.2.3-4.el6_2.1
+14:56:37     INFO -    libwnck.x86_64 0:2.28.0-3.el6
+14:56:37     INFO -    libxcb.i686 0:1.5-1.el6
+14:56:37     INFO -    libxcb.x86_64 0:1.5-1.el6
+14:56:37     INFO -    libxml2.i686 0:2.7.6-4.el6_2.4
+14:56:37     INFO -    libxml2.x86_64 0:2.7.6-4.el6_2.4
+14:56:37     INFO -    libxslt.x86_64 0:1.1.26-2.el6
+14:56:37     INFO -    lynx.x86_64 0:2.8.6-27.el6
+14:56:37     INFO -    m4.x86_64 0:1.4.13-5.el6
+14:56:37     INFO -    mesa-dri-drivers.i686 0:7.11-3.el6
+14:56:37     INFO -    mesa-libGL.i686 0:7.11-3.el6
+14:56:37     INFO -    mozilla-git.x86_64 0:1.7.9.4-3.el6
+14:56:38     INFO -    ncurses-libs.i686 0:5.7-3.20090208.el6
+14:56:38     INFO -    neon.x86_64 0:0.29.3-1.2.el6
+14:56:38     INFO -    notification-daemon.x86_64 0:0.5.0-1.el6
+14:56:38     INFO -    nspr.i686 0:4.9.2-1.el6
+14:56:38     INFO -    nss.i686 0:3.13.1-7.el6_2
+14:56:38     INFO -    nss-softokn.i686 0:3.12.9-11.el6
+14:56:38     INFO -    nss-softokn-freebl.i686 0:3.12.9-11.el6
+14:56:38     INFO -    nss-util.i686 0:3.13.1-3.el6_2
+14:56:38     INFO -    openjade.x86_64 0:1.3.2-36.el6
+14:56:38     INFO -    openldap.i686 0:2.4.23-20.el6
+14:56:38     INFO -    opensp.x86_64 0:1.5.2-12.1.el6
+14:56:38     INFO -    openssh.x86_64 0:5.3p1-70.el6_2.2
+14:56:38     INFO -    openssh-clients.x86_64 0:5.3p1-70.el6_2.2
+14:56:38     INFO -    openssl.i686 0:1.0.0-20.el6_2.2
+14:56:38     INFO -    pakchois.x86_64 0:0.4-3.2.el6
+14:56:38     INFO -    pam.i686 0:1.1.1-10.el6
+14:56:38     INFO -    pango.i686 0:1.28.1-3.el6_0.5.1.centos
+14:56:38     INFO -    pango.x86_64 0:1.28.1-3.el6_0.5.1.centos
+14:56:38     INFO -    pciutils-libs.x86_64 0:3.1.4-11.el6
+14:56:38     INFO -    perl-DBI.x86_64 0:1.609-4.el6
+14:56:38     INFO -    perl-ExtUtils-MakeMaker.x86_64 0:6.55-119.el6_1.1
+14:56:38     INFO -    perl-ExtUtils-ParseXS.x86_64 1:2.2003.0-119.el6_1.1
+14:56:38     INFO -    perl-Git.noarch 0:1.7.1-2.el6_0.1
+14:56:38     INFO -    perl-SGMLSpm.noarch 0:1.03ii-21.el6
+14:56:38     INFO -    perl-Test-Harness.x86_64 0:3.17-119.el6_1.1
+14:56:38     INFO -    perl-URI.noarch 0:1.40-2.el6
+14:56:38     INFO -    pixman.i686 0:0.18.4-1.el6_0.1
+14:56:38     INFO -    pixman.x86_64 0:0.18.4-1.el6_0.1
+14:56:38     INFO -    plymouth.x86_64 0:0.8.3-24.el6.centos
+14:56:38     INFO -    plymouth-core-libs.x86_64 0:0.8.3-24.el6.centos
+14:56:38     INFO -    plymouth-scripts.x86_64 0:0.8.3-24.el6.centos
+14:56:38     INFO -    pm-utils.x86_64 0:1.2.5-9.el6
+14:56:38     INFO -    polkit.i686 0:0.96-2.el6_0.1
+14:56:38     INFO -    polkit.x86_64 0:0.96-2.el6_0.1
+14:56:38     INFO -    pulseaudio-libs.i686 0:0.9.21-13.el6
+14:56:38     INFO -    pulseaudio-libs.x86_64 0:0.9.21-13.el6
+14:56:38     INFO -    pulseaudio-libs-glib2.i686 0:0.9.21-13.el6
+14:56:38     INFO -    pulseaudio-libs-glib2.x86_64 0:0.9.21-13.el6
+14:56:38     INFO -    pulseaudio-libs-zeroconf.i686 0:0.9.21-13.el6
+14:56:38     INFO -    pulseaudio-libs-zeroconf.x86_64 0:0.9.21-13.el6
+14:56:38     INFO -    rarian.x86_64 0:0.8.1-5.1.el6
+14:56:38     INFO -    rarian-compat.x86_64 0:0.8.1-5.1.el6
+14:56:38     INFO -    readline.i686 0:6.0-3.el6
+14:56:38     INFO -    redhat-logos.noarch 0:60.0.14-10.el6.centos
+14:56:38     INFO -    rsync.x86_64 0:3.0.6-5.el6_0.1
+14:56:38     INFO -    sgml-common.noarch 0:0.6.3-32.el6
+14:56:38     INFO -    shared-mime-info.x86_64 0:0.70-4.el6
+14:56:38     INFO -    sound-theme-freedesktop.noarch 0:0.7-3.el6
+14:56:38     INFO -    sqlite.i686 0:3.6.20-1.el6
+14:56:38     INFO -    startup-notification.x86_64 0:0.10-2.1.el6
+14:56:38     INFO -    subversion.x86_64 0:1.6.11-2.el6_1.4
+14:56:38     INFO -    subversion-perl.x86_64 0:1.6.11-2.el6_1.4
+14:56:38     INFO -    tcl.x86_64 1:8.5.7-6.el6
+14:56:38     INFO -    tcp_wrappers-libs.i686 0:7.6-57.el6
+14:56:38     INFO -    tcp_wrappers-libs.x86_64 0:7.6-57.el6
+14:56:38     INFO -    tk.x86_64 1:8.5.7-5.el6
+14:56:38     INFO -    ttmkfdir.x86_64 0:3.0.9-32.1.el6
+14:56:38     INFO -    wireless-tools.i686 1:29-5.1.1.el6
+14:56:38     INFO -    wireless-tools.x86_64 1:29-5.1.1.el6
+14:56:38     INFO -    xcb-util.x86_64 0:0.3.6-1.el6
+14:56:38     INFO -    xml-common.noarch 0:0.6.3-32.el6
+14:56:38     INFO -    xorg-x11-proto-devel.noarch 0:7.6-13.el6
+14:56:38     INFO -    zlib.i686 0:1.2.3-27.el6
+14:56:38     INFO -  State Changed: unlock buildroot
+14:56:38     INFO -  State Changed: end
+14:56:38     INFO - Return code: 0
+14:56:38     INFO - Writing to file /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/package_list.hash
+14:56:38     INFO - Contents:
+14:56:38     INFO -  dac2aef9c51dc197fc53d9796ae8f73fdada143a
+14:56:38     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/home/cltbld/.ssh', '/home/mock_mozilla/.ssh']
+14:56:38     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /home/cltbld/.ssh /home/mock_mozilla/.ssh
+14:56:38     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:38     INFO -  State Changed: init plugins
+14:56:38     INFO -  INFO: selinux disabled
+14:56:38     INFO -  State Changed: start
+14:56:38     INFO -  State Changed: lock buildroot
+14:56:38     INFO -  Mock Version: 1.0.3
+14:56:38     INFO -  INFO: Mock Version: 1.0.3
+14:56:38     INFO -  INFO: copying /home/cltbld/.ssh to /builds/mock_mozilla/mozilla-centos6-x86_64/root/home/mock_mozilla/.ssh
+14:56:38     INFO -  State Changed: unlock buildroot
+14:56:38     INFO -  State Changed: end
+14:56:38     INFO - Return code: 0
+14:56:38     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /home/mock_mozilla/.ssh']
+14:56:38     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /home/mock_mozilla/.ssh"
+14:56:38     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:38     INFO -  State Changed: init plugins
+14:56:38     INFO -  INFO: selinux disabled
+14:56:38     INFO -  State Changed: start
+14:56:38     INFO -  State Changed: lock buildroot
+14:56:38     INFO -  State Changed: shell
+14:56:38     INFO -  State Changed: unlock buildroot
+14:56:38     INFO - Return code: 0
+14:56:38     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/home/cltbld/.hgrc', '/builds/.hgrc']
+14:56:38     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /home/cltbld/.hgrc /builds/.hgrc
+14:56:38     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:38     INFO -  State Changed: init plugins
+14:56:38     INFO -  INFO: selinux disabled
+14:56:38     INFO -  State Changed: start
+14:56:38     INFO -  State Changed: lock buildroot
+14:56:38     INFO -  Mock Version: 1.0.3
+14:56:38     INFO -  INFO: Mock Version: 1.0.3
+14:56:38     INFO -  INFO: copying /home/cltbld/.hgrc to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/.hgrc
+14:56:38     INFO -  State Changed: unlock buildroot
+14:56:38     INFO -  State Changed: end
+14:56:38     INFO - Return code: 0
+14:56:38     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/.hgrc']
+14:56:38     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/.hgrc"
+14:56:38     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:38     INFO -  State Changed: init plugins
+14:56:38     INFO -  INFO: selinux disabled
+14:56:38     INFO -  State Changed: start
+14:56:38     INFO -  State Changed: lock buildroot
+14:56:38     INFO -  State Changed: shell
+14:56:38     INFO -  State Changed: unlock buildroot
+14:56:38     INFO - Return code: 0
+14:56:38     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/home/cltbld/.boto', '/builds/.boto']
+14:56:38     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /home/cltbld/.boto /builds/.boto
+14:56:38     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:38     INFO -  State Changed: init plugins
+14:56:38     INFO -  INFO: selinux disabled
+14:56:38     INFO -  State Changed: start
+14:56:38     INFO -  State Changed: lock buildroot
+14:56:38     INFO -  Mock Version: 1.0.3
+14:56:38     INFO -  INFO: Mock Version: 1.0.3
+14:56:38     INFO -  INFO: copying /home/cltbld/.boto to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/.boto
+14:56:38     INFO -  State Changed: unlock buildroot
+14:56:38     INFO -  State Changed: end
+14:56:38     INFO - Return code: 0
+14:56:38     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/.boto']
+14:56:38     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/.boto"
+14:56:39     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:39     INFO -  State Changed: init plugins
+14:56:39     INFO -  INFO: selinux disabled
+14:56:39     INFO -  State Changed: start
+14:56:39     INFO -  State Changed: lock buildroot
+14:56:39     INFO -  State Changed: shell
+14:56:39     INFO -  State Changed: unlock buildroot
+14:56:39     INFO - Return code: 0
+14:56:39     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/builds/gapi.data', '/builds/gapi.data']
+14:56:39     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /builds/gapi.data /builds/gapi.data
+14:56:39     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:39     INFO -  State Changed: init plugins
+14:56:39     INFO -  INFO: selinux disabled
+14:56:39     INFO -  State Changed: start
+14:56:39     INFO -  State Changed: lock buildroot
+14:56:39     INFO -  Mock Version: 1.0.3
+14:56:39     INFO -  INFO: Mock Version: 1.0.3
+14:56:39     INFO -  INFO: copying /builds/gapi.data to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/gapi.data
+14:56:39     INFO -  State Changed: unlock buildroot
+14:56:39     INFO -  State Changed: end
+14:56:39     INFO - Return code: 0
+14:56:39     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/gapi.data']
+14:56:39     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/gapi.data"
+14:56:39     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:39     INFO -  State Changed: init plugins
+14:56:39     INFO -  INFO: selinux disabled
+14:56:39     INFO -  State Changed: start
+14:56:39     INFO -  State Changed: lock buildroot
+14:56:39     INFO -  State Changed: shell
+14:56:39     INFO -  State Changed: unlock buildroot
+14:56:39     INFO - Return code: 0
+14:56:39     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/builds/relengapi.tok', '/builds/relengapi.tok']
+14:56:39     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /builds/relengapi.tok /builds/relengapi.tok
+14:56:39     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:39     INFO -  State Changed: init plugins
+14:56:39     INFO -  INFO: selinux disabled
+14:56:39     INFO -  State Changed: start
+14:56:39     INFO -  State Changed: lock buildroot
+14:56:39     INFO -  Mock Version: 1.0.3
+14:56:39     INFO -  INFO: Mock Version: 1.0.3
+14:56:39     INFO -  INFO: copying /builds/relengapi.tok to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/relengapi.tok
+14:56:39     INFO -  State Changed: unlock buildroot
+14:56:39     INFO -  State Changed: end
+14:56:39     INFO - Return code: 0
+14:56:39     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/relengapi.tok']
+14:56:39     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/relengapi.tok"
+14:56:39     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:39     INFO -  State Changed: init plugins
+14:56:39     INFO -  INFO: selinux disabled
+14:56:39     INFO -  State Changed: start
+14:56:39     INFO -  State Changed: lock buildroot
+14:56:39     INFO -  State Changed: shell
+14:56:40     INFO -  State Changed: unlock buildroot
+14:56:40     INFO - Return code: 0
+14:56:40     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/tools/tooltool.py', '/builds/tooltool.py']
+14:56:40     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /tools/tooltool.py /builds/tooltool.py
+14:56:40     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:40     INFO -  State Changed: init plugins
+14:56:40     INFO -  INFO: selinux disabled
+14:56:40     INFO -  State Changed: start
+14:56:40     INFO -  State Changed: lock buildroot
+14:56:40     INFO -  Mock Version: 1.0.3
+14:56:40     INFO -  INFO: Mock Version: 1.0.3
+14:56:40     INFO -  INFO: copying /tools/tooltool.py to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/tooltool.py
+14:56:40     INFO -  State Changed: unlock buildroot
+14:56:40     INFO -  State Changed: end
+14:56:40     INFO - Return code: 0
+14:56:40     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/tooltool.py']
+14:56:40     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/tooltool.py"
+14:56:40     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:40     INFO -  State Changed: init plugins
+14:56:40     INFO -  INFO: selinux disabled
+14:56:40     INFO -  State Changed: start
+14:56:40     INFO -  State Changed: lock buildroot
+14:56:40     INFO -  State Changed: shell
+14:56:40     INFO -  State Changed: unlock buildroot
+14:56:40     INFO - Return code: 0
+14:56:40     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/builds/mozilla-desktop-geoloc-api.key', '/builds/mozilla-desktop-geoloc-api.key']
+14:56:40     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /builds/mozilla-desktop-geoloc-api.key /builds/mozilla-desktop-geoloc-api.key
+14:56:40     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:40     INFO -  State Changed: init plugins
+14:56:40     INFO -  INFO: selinux disabled
+14:56:40     INFO -  State Changed: start
+14:56:40     INFO -  State Changed: lock buildroot
+14:56:40     INFO -  Mock Version: 1.0.3
+14:56:40     INFO -  INFO: Mock Version: 1.0.3
+14:56:40     INFO -  INFO: copying /builds/mozilla-desktop-geoloc-api.key to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/mozilla-desktop-geoloc-api.key
+14:56:40     INFO -  State Changed: unlock buildroot
+14:56:40     INFO -  State Changed: end
+14:56:40     INFO - Return code: 0
+14:56:40     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/mozilla-desktop-geoloc-api.key']
+14:56:40     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/mozilla-desktop-geoloc-api.key"
+14:56:40     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:40     INFO -  State Changed: init plugins
+14:56:40     INFO -  INFO: selinux disabled
+14:56:40     INFO -  State Changed: start
+14:56:40     INFO -  State Changed: lock buildroot
+14:56:40     INFO -  State Changed: shell
+14:56:40     INFO -  State Changed: unlock buildroot
+14:56:40     INFO - Return code: 0
+14:56:40     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/builds/crash-stats-api.token', '/builds/crash-stats-api.token']
+14:56:40     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /builds/crash-stats-api.token /builds/crash-stats-api.token
+14:56:40     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:40     INFO -  State Changed: init plugins
+14:56:40     INFO -  INFO: selinux disabled
+14:56:40     INFO -  State Changed: start
+14:56:40     INFO -  State Changed: lock buildroot
+14:56:40     INFO -  Mock Version: 1.0.3
+14:56:40     INFO -  INFO: Mock Version: 1.0.3
+14:56:40     INFO -  INFO: copying /builds/crash-stats-api.token to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/crash-stats-api.token
+14:56:40     INFO -  State Changed: unlock buildroot
+14:56:40     INFO -  State Changed: end
+14:56:40     INFO - Return code: 0
+14:56:40     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/crash-stats-api.token']
+14:56:40     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/crash-stats-api.token"
+14:56:41     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:41     INFO -  State Changed: init plugins
+14:56:41     INFO -  INFO: selinux disabled
+14:56:41     INFO -  State Changed: start
+14:56:41     INFO -  State Changed: lock buildroot
+14:56:41     INFO -  State Changed: shell
+14:56:41     INFO -  State Changed: unlock buildroot
+14:56:41     INFO - Return code: 0
+14:56:41     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/builds/adjust-sdk.token', '/builds/adjust-sdk.token']
+14:56:41     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /builds/adjust-sdk.token /builds/adjust-sdk.token
+14:56:41     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:41     INFO -  State Changed: init plugins
+14:56:41     INFO -  INFO: selinux disabled
+14:56:41     INFO -  State Changed: start
+14:56:41     INFO -  State Changed: lock buildroot
+14:56:41     INFO -  Mock Version: 1.0.3
+14:56:41     INFO -  INFO: Mock Version: 1.0.3
+14:56:41     INFO -  INFO: copying /builds/adjust-sdk.token to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/adjust-sdk.token
+14:56:41     INFO -  State Changed: unlock buildroot
+14:56:41     INFO -  State Changed: end
+14:56:41     INFO - Return code: 0
+14:56:41     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/adjust-sdk.token']
+14:56:41     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/adjust-sdk.token"
+14:56:41     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:41     INFO -  State Changed: init plugins
+14:56:41     INFO -  INFO: selinux disabled
+14:56:41     INFO -  State Changed: start
+14:56:41     INFO -  State Changed: lock buildroot
+14:56:41     INFO -  State Changed: shell
+14:56:41     INFO -  State Changed: unlock buildroot
+14:56:41     INFO - Return code: 0
+14:56:41     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/builds/adjust-sdk-beta.token', '/builds/adjust-sdk-beta.token']
+14:56:41     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /builds/adjust-sdk-beta.token /builds/adjust-sdk-beta.token
+14:56:41     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:41     INFO -  State Changed: init plugins
+14:56:41     INFO -  INFO: selinux disabled
+14:56:41     INFO -  State Changed: start
+14:56:41     INFO -  State Changed: lock buildroot
+14:56:41     INFO -  Mock Version: 1.0.3
+14:56:41     INFO -  INFO: Mock Version: 1.0.3
+14:56:41     INFO -  INFO: copying /builds/adjust-sdk-beta.token to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/adjust-sdk-beta.token
+14:56:41     INFO -  State Changed: unlock buildroot
+14:56:41     INFO -  State Changed: end
+14:56:41     INFO - Return code: 0
+14:56:41     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /builds/adjust-sdk-beta.token']
+14:56:41     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /builds/adjust-sdk-beta.token"
+14:56:41     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:41     INFO -  State Changed: init plugins
+14:56:41     INFO -  INFO: selinux disabled
+14:56:41     INFO -  State Changed: start
+14:56:41     INFO -  State Changed: lock buildroot
+14:56:41     INFO -  State Changed: shell
+14:56:42     INFO -  State Changed: unlock buildroot
+14:56:42     INFO - Return code: 0
+14:56:42     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '--unpriv', '/usr/local/lib/hgext', '/usr/local/lib/hgext']
+14:56:42     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --copyin --unpriv /usr/local/lib/hgext /usr/local/lib/hgext
+14:56:42     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:42     INFO -  State Changed: init plugins
+14:56:42     INFO -  INFO: selinux disabled
+14:56:42     INFO -  State Changed: start
+14:56:42     INFO -  State Changed: lock buildroot
+14:56:42     INFO -  Mock Version: 1.0.3
+14:56:42     INFO -  INFO: Mock Version: 1.0.3
+14:56:42     INFO -  INFO: copying /usr/local/lib/hgext to /builds/mock_mozilla/mozilla-centos6-x86_64/root/usr/local/lib/hgext
+14:56:42     INFO -  State Changed: unlock buildroot
+14:56:42     INFO -  State Changed: end
+14:56:42     INFO - Return code: 0
+14:56:42     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--shell', 'chown -R mock_mozilla /usr/local/lib/hgext']
+14:56:42     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 --shell "chown -R mock_mozilla /usr/local/lib/hgext"
+14:56:42     INFO -  INFO: mock_mozilla.py version 1.0.3 starting...
+14:56:42     INFO -  State Changed: init plugins
+14:56:42     INFO -  INFO: selinux disabled
+14:56:42     INFO -  State Changed: start
+14:56:42     INFO -  State Changed: lock buildroot
+14:56:42     INFO -  State Changed: shell
+14:56:42     INFO -  State Changed: unlock buildroot
+14:56:42     INFO - Return code: 0
+14:56:42     INFO - [mozharness: 2018-06-08 21:56:42.454342Z] Finished setup-mock step (success)
+14:56:42     INFO - [mozharness: 2018-06-08 21:56:42.454565Z] Running build step.
+14:56:42     INFO - Running main action method: build
+14:56:42     INFO - Release promotion update channel: esr
+14:56:42     INFO - Running command: ['ccache', '-z'] in /builds/slave/m-esr52-lx-0000000000000000000
+14:56:42     INFO - Copy/paste: ccache -z
+14:56:42     INFO - Using env: {'CCACHE_COMPRESS': '1',
+14:56:42     INFO -  'CCACHE_DIR': '/builds/ccache',
+14:56:42     INFO -  'CCACHE_HASHDIR': '',
+14:56:42     INFO -  'CCACHE_UMASK': '002',
+14:56:42     INFO -  'DISPLAY': ':2',
+14:56:42     INFO -  'ENABLE_RELEASE_PROMOTION': '1',
+14:56:42     INFO -  'G_BROKEN_FILENAMES': '1',
+14:56:42     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+14:56:42     INFO -  'HISTCONTROL': 'ignoredups',
+14:56:42     INFO -  'HISTSIZE': '1000',
+14:56:42     INFO -  'HOME': '/home/cltbld',
+14:56:42     INFO -  'HOSTNAME': 'bld-linux64-spot-303.build.releng.usw2.mozilla.com',
+14:56:42     INFO -  'LANG': 'en_US.UTF-8',
+14:56:42     INFO -  'LC_ALL': 'C',
+14:56:42     INFO -  'LD_LIBRARY_PATH': '/tools/gcc-4.3.3/installed/lib',
+14:56:42     INFO -  'LESSOPEN': '|/usr/bin/lesspipe.sh %s',
+14:56:42     INFO -  'LOGNAME': 'cltbld',
+14:56:42     INFO -  'MAIL': '/var/spool/mail/cltbld',
+14:56:42     INFO -  'MOZBUILD_STATE_PATH': '/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild',
+14:56:42     INFO -  'MOZ_AUTOMATION': '1',
+14:56:42     INFO -  'MOZ_BUILD_DATE': '20180608145219',
+14:56:42     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+14:56:42     INFO -  'MOZ_OBJDIR': 'obj-firefox',
+14:56:42     INFO -  'MOZ_PGO': '1',
+14:56:42     INFO -  'MOZ_SIGNING_SERVERS': 'gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120',
+14:56:42     INFO -  'MOZ_SIGN_CMD': 'python /builds/slave/m-esr52-lx-0000000000000000000/build/tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/build/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /builds/slave/m-esr52-lx-0000000000000000000/build/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120',
+14:56:42     INFO -  'MOZ_SOURCE_REPO': 'https://hg.mozilla.org/releases/mozilla-esr52',
+14:56:42     INFO -  'MOZ_UPDATE_CHANNEL': 'esr',
+14:56:42     INFO -  'PATH': '/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin',
+14:56:42     INFO -  'PROPERTIES_FILE': '/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json',
+14:56:42     INFO -  'PWD': '/builds/slave/m-esr52-lx-0000000000000000000',
+14:56:42     INFO -  'SHELL': '/bin/bash',
+14:56:42     INFO -  'SHLVL': '1',
+14:56:42     INFO -  'TERM': 'linux',
+14:56:42     INFO -  'TINDERBOX_OUTPUT': '1',
+14:56:42     INFO -  'TMOUT': '86400',
+14:56:42     INFO -  'TOOLTOOL_CACHE': '/builds/tooltool_cache',
+14:56:42     INFO -  'TOOLTOOL_HOME': '/builds',
+14:56:42     INFO -  'USER': 'cltbld',
+14:56:42     INFO -  '_': '/tools/buildbot/bin/python'}
+14:56:42     INFO -  Statistics cleared
+14:56:42     INFO - Return code: 0
+14:56:42     INFO - removing old packages...
+14:56:42     INFO - There wasn't any old packages to remove.
+14:56:42     INFO - Using in-tree mozconfig
+14:56:42     INFO - Reading from file /builds/slave/m-esr52-lx-0000000000000000000/build/src/browser/config/mozconfigs/linux32/release
+14:56:42     INFO - Contents:
+14:56:42     INFO -  # This make file should be identical to the beta mozconfig, apart from the
+14:56:42     INFO -  # safeguard below
+14:56:42     INFO -  MOZ_AUTOMATION_SDK=${MOZ_AUTOMATION_SDK-1}
+14:56:42     INFO -  
+14:56:42     INFO -  if [ -n "$ENABLE_RELEASE_PROMOTION" ]; then
+14:56:42     INFO -    MOZ_AUTOMATION_UPLOAD_SYMBOLS=${MOZ_AUTOMATION_UPLOAD_SYMBOLS-1}
+14:56:42     INFO -    MOZ_AUTOMATION_UPDATE_PACKAGING=1
+14:56:42     INFO -  fi
+14:56:42     INFO -  
+14:56:42     INFO -  . "$topsrcdir/browser/config/mozconfigs/linux32/common-opt"
+14:56:42     INFO -  
+14:56:42     INFO -  ac_add_options --enable-official-branding
+14:56:42     INFO -  ac_add_options --enable-verify-mar
+14:56:42     INFO -  
+14:56:42     INFO -  mk_add_options MOZ_PGO=1
+14:56:42     INFO -  
+14:56:42     INFO -  # safeguard against someone forgetting to re-set EARLY_BETA_OR_EARLIER in
+14:56:42     INFO -  # defines.sh during the beta cycle
+14:56:42     INFO -  export BUILDING_RELEASE=1
+14:56:42     INFO -  
+14:56:42     INFO -  . "$topsrcdir/build/mozconfig.rust"
+14:56:42     INFO -  . "$topsrcdir/build/mozconfig.common.override"
+14:56:42     INFO - mozconfig content:
+14:56:42     INFO - # This make file should be identical to the beta mozconfig, apart from the
+14:56:42     INFO - # safeguard below
+14:56:42     INFO - MOZ_AUTOMATION_SDK=${MOZ_AUTOMATION_SDK-1}
+14:56:42     INFO - 
+14:56:42     INFO - if [ -n "$ENABLE_RELEASE_PROMOTION" ]; then
+14:56:42     INFO -   MOZ_AUTOMATION_UPLOAD_SYMBOLS=${MOZ_AUTOMATION_UPLOAD_SYMBOLS-1}
+14:56:42     INFO -   MOZ_AUTOMATION_UPDATE_PACKAGING=1
+14:56:42     INFO - fi
+14:56:42     INFO - 
+14:56:42     INFO - . "$topsrcdir/browser/config/mozconfigs/linux32/common-opt"
+14:56:42     INFO - 
+14:56:42     INFO - ac_add_options --enable-official-branding
+14:56:42     INFO - ac_add_options --enable-verify-mar
+14:56:42     INFO - 
+14:56:42     INFO - mk_add_options MOZ_PGO=1
+14:56:42     INFO - 
+14:56:42     INFO - # safeguard against someone forgetting to re-set EARLY_BETA_OR_EARLIER in
+14:56:42     INFO - # defines.sh during the beta cycle
+14:56:42     INFO - export BUILDING_RELEASE=1
+14:56:42     INFO - 
+14:56:42     INFO - . "$topsrcdir/build/mozconfig.rust"
+14:56:42     INFO - . "$topsrcdir/build/mozconfig.common.override"
+14:56:42     INFO - Copying /builds/slave/m-esr52-lx-0000000000000000000/build/src/browser/config/mozconfigs/linux32/release to /builds/slave/m-esr52-lx-0000000000000000000/build/src/.mozconfig
+14:56:42     INFO - ['sh', '/builds/slave/m-esr52-lx-0000000000000000000/build/tools/scripts/tooltool/tooltool_wrapper.sh', '/builds/slave/m-esr52-lx-0000000000000000000/build/src/browser/config/tooltool-manifests/linux32/releng.manifest', 'https://api.pub.build.mozilla.org/tooltool/', 'setup.sh', '/builds/tooltool.py', '--authentication-file', '/builds/relengapi.tok', '-c', '/builds/tooltool_cache']
+14:56:42     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '-q', '--cwd', '/builds/slave/m-esr52-lx-0000000000000000000/build/src', '--unpriv', '--shell', 'sh /builds/slave/m-esr52-lx-0000000000000000000/build/tools/scripts/tooltool/tooltool_wrapper.sh /builds/slave/m-esr52-lx-0000000000000000000/build/src/browser/config/tooltool-manifests/linux32/releng.manifest https://api.pub.build.mozilla.org/tooltool/ setup.sh /builds/tooltool.py --authentication-file /builds/relengapi.tok -c /builds/tooltool_cache'] in /builds/slave/m-esr52-lx-0000000000000000000/build/src
+14:56:42     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 -q --cwd /builds/slave/m-esr52-lx-0000000000000000000/build/src --unpriv --shell "sh /builds/slave/m-esr52-lx-0000000000000000000/build/tools/scripts/tooltool/tooltool_wrapper.sh /builds/slave/m-esr52-lx-0000000000000000000/build/src/browser/config/tooltool-manifests/linux32/releng.manifest https://api.pub.build.mozilla.org/tooltool/ setup.sh /builds/tooltool.py --authentication-file /builds/relengapi.tok -c /builds/tooltool_cache"
+14:56:42     INFO -  /builds/slave/m-esr52-lx-0000000000000000000/build/src/browser/config/tooltool-manifests/linux32/releng.manifest content
+14:56:42     INFO -  =======================================================
+14:56:42     INFO -  [
+14:56:42     INFO -  {
+14:56:42     INFO -  "version": "gcc 4.8.5 + PR64905",
+14:56:42     INFO -  "size": 80160264,
+14:56:42     INFO -  "digest": "c1a9dc9da289b8528874d16300b9d13a997cec99195bb0bc46ff665216d8535d6d6cb5af6b4b1f2749af6815dab12e703fdb3849014e5c23a70eff351a0baf4e",
+14:56:42     INFO -  "algorithm": "sha512",
+14:56:42     INFO -  "filename": "gcc.tar.xz",
+14:56:42     INFO -  "unpack": true
+14:56:42     INFO -  },
+14:56:42     INFO -  {
+14:56:42     INFO -  "size": 11189216,
+14:56:42     INFO -  "digest": "18bc52b0599b1308b667e282abb45f47597bfc98a5140cfcab8da71dacf89dd76d0dee22a04ce26fe7ad1f04e2d6596991f9e5b01fd2aaaab5542965f596b0e6",
+14:56:42     INFO -  "algorithm": "sha512",
+14:56:42     INFO -  "filename": "gtk3.tar.xz",
+14:56:42     INFO -  "setup": "setup.sh",
+14:56:42     INFO -  "unpack": true
+14:56:42     INFO -  },
+14:56:42     INFO -  {
+14:56:42     INFO -  "version": "rustc 1.13.0 (2c6933acc 2016-11-07) repack x86_64+i586",
+14:56:42     INFO -  "size": 68921028,
+14:56:42     INFO -  "digest": "9a9ceccc02d4be445ffa64617683419a4f47990b1f2689980ac8db13d6369435ef4af1a3714d77377fb7b3b0ec213856ab7144ff22cbe0881d49aed44d82c0fc",
+14:56:42     INFO -  "algorithm": "sha512",
+14:56:42     INFO -  "filename": "rustc.tar.xz",
+14:56:42     INFO -  "unpack": true
+14:56:42     INFO -  },
+14:56:42     INFO -  {
+14:56:42     INFO -  "version": "cargo 0.13.0-nightly (eca9e15 2016-11-01) repack",
+14:56:42     INFO -  "size": 3027932,
+14:56:42     INFO -  "digest": "a5c99eeb12b3b9b49632c259c762e34ec13cf72dadf90a0608b8ab1dc66b36cb114c5b45f71d326e12d31d9e88a41b029e6a728ca64cef392c0a8d211c2fe191",
+14:56:42     INFO -  "algorithm": "sha512",
+14:56:42     INFO -  "filename": "cargo.tar.xz",
+14:56:42     INFO -  "unpack": true
+14:56:42     INFO -  },
+14:56:42     INFO -  {
+14:56:42     INFO -  "size": 167175,
+14:56:42     INFO -  "digest": "0b71a936edf5bd70cf274aaa5d7abc8f77fe8e7b5593a208f805cc9436fac646b9c4f0b43c2b10de63ff3da671497d35536077ecbc72dba7f8159a38b580f831",
+14:56:42     INFO -  "algorithm": "sha512",
+14:56:42     INFO -  "filename": "sccache.tar.bz2",
+14:56:42     INFO -  "unpack": true
+14:56:42     INFO -  }
+14:56:42     INFO -  ]
+14:56:42     INFO -  =======================================================
+14:56:42     INFO -  Fetching...
+14:56:42     INFO -  Executing: ['/builds/tooltool.py', '--authentication-file', '/builds/relengapi.tok', '-c', '/builds/tooltool_cache', '--url', 'https://api.pub.build.mozilla.org/tooltool/', '--overwrite', '-m', '/builds/slave/m-esr52-lx-0000000000000000000/build/src/browser/config/tooltool-manifests/linux32/releng.manifest', 'fetch']
+14:56:42     INFO -  INFO - File gcc.tar.xz retrieved from local cache /builds/tooltool_cache
+14:56:43     INFO -  INFO - File gtk3.tar.xz not present in local cache folder /builds/tooltool_cache
+14:56:43     INFO -  INFO - Attempting to fetch from 'https://api.pub.build.mozilla.org/tooltool/'...
+14:56:44     INFO -  INFO - File gtk3.tar.xz fetched from https://api.pub.build.mozilla.org/tooltool/ as /builds/slave/m-esr52-lx-0000000000000000000/build/src/tmps6kzOD
+14:56:44     INFO -  INFO - File rustc.tar.xz not present in local cache folder /builds/tooltool_cache
+14:56:44     INFO -  INFO - Attempting to fetch from 'https://api.pub.build.mozilla.org/tooltool/'...
+14:56:47     INFO -  INFO - File rustc.tar.xz fetched from https://api.pub.build.mozilla.org/tooltool/ as /builds/slave/m-esr52-lx-0000000000000000000/build/src/tmpFEXfC2
+14:56:47     INFO -  INFO - File cargo.tar.xz not present in local cache folder /builds/tooltool_cache
+14:56:47     INFO -  INFO - Attempting to fetch from 'https://api.pub.build.mozilla.org/tooltool/'...
+14:56:48     INFO -  INFO - File cargo.tar.xz fetched from https://api.pub.build.mozilla.org/tooltool/ as /builds/slave/m-esr52-lx-0000000000000000000/build/src/tmp2u4KlV
+14:56:48     INFO -  INFO - File sccache.tar.bz2 not present in local cache folder /builds/tooltool_cache
+14:56:48     INFO -  INFO - Attempting to fetch from 'https://api.pub.build.mozilla.org/tooltool/'...
+14:56:49     INFO -  INFO - File sccache.tar.bz2 fetched from https://api.pub.build.mozilla.org/tooltool/ as /builds/slave/m-esr52-lx-0000000000000000000/build/src/tmpfYR0Ux
+14:56:49     INFO -  INFO - File integrity verified, renaming tmps6kzOD to gtk3.tar.xz
+14:56:49     INFO -  INFO - Updating local cache /builds/tooltool_cache...
+14:56:49     INFO -  INFO - Local cache /builds/tooltool_cache updated with gtk3.tar.xz
+14:56:49     INFO -  INFO - File integrity verified, renaming tmpFEXfC2 to rustc.tar.xz
+14:56:49     INFO -  INFO - Updating local cache /builds/tooltool_cache...
+14:56:50     INFO -  INFO - Local cache /builds/tooltool_cache updated with rustc.tar.xz
+14:56:50     INFO -  INFO - File integrity verified, renaming tmp2u4KlV to cargo.tar.xz
+14:56:50     INFO -  INFO - Updating local cache /builds/tooltool_cache...
+14:56:50     INFO -  INFO - Local cache /builds/tooltool_cache updated with cargo.tar.xz
+14:56:50     INFO -  INFO - File integrity verified, renaming tmpfYR0Ux to sccache.tar.bz2
+14:56:50     INFO -  INFO - Updating local cache /builds/tooltool_cache...
+14:56:50     INFO -  INFO - Local cache /builds/tooltool_cache updated with sccache.tar.bz2
+14:56:50     INFO -  INFO - untarring "gcc.tar.xz"
+14:56:58     INFO -  INFO - untarring "gtk3.tar.xz"
+14:57:03     INFO -  INFO - untarring "rustc.tar.xz"
+14:57:09     INFO -  INFO - untarring "cargo.tar.xz"
+14:57:10     INFO -  INFO - untarring "sccache.tar.bz2"
+14:57:10     INFO - Return code: 0
+14:57:10     INFO - Release promotion update channel: esr
+14:57:10     INFO - mkdir: /builds/slave/m-esr52-lx-0000000000000000000/.mozbuild
+14:57:10     INFO - Release promotion update channel: esr
+14:57:10     INFO - Using buildbot properties:
+14:57:10     INFO - {
+14:57:10     INFO -     "project": "", 
+14:57:10     INFO -     "product": "firefox", 
+14:57:10     INFO -     "script_repo_revision": "production", 
+14:57:10     INFO -     "scheduler": "mozilla-esr52-firefox", 
+14:57:10     INFO -     "repository": "", 
+14:57:10     INFO -     "buildername": "Linux mozilla-esr52 build", 
+14:57:10     INFO -     "buildid": "20180608145219", 
+14:57:10     INFO -     "basedir": "/builds/slave/m-esr52-lx-0000000000000000000", 
+14:57:10     INFO -     "buildnumber": 182, 
+14:57:10     INFO -     "platform": "linux", 
+14:57:10     INFO -     "master": "http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/", 
+14:57:10     INFO -     "branch": "mozilla-esr52", 
+14:57:10     INFO -     "revision": "a7a20deda4de9057e6f7e3cb8be4452f0b376fd3", 
+14:57:10     INFO -     "slavename": "bld-linux64-spot-303", 
+14:57:10     INFO -     "builduid": "271b302eedcf469b86eedcfd435ce9d8", 
+14:57:10     INFO -     "repo_path": "releases/mozilla-esr52"
+14:57:10     INFO - }
+14:57:10     INFO - Copying /builds/slave/m-esr52-lx-0000000000000000000/buildprops.json to /builds/slave/m-esr52-lx-0000000000000000000/build/buildprops.json
+14:57:10     INFO - Running command: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '-q', '--cwd', '/builds/slave/m-esr52-lx-0000000000000000000/build/src', '--unpriv', '--shell', '/usr/bin/env MOZ_AUTOMATION=1 "LESSOPEN=|/usr/bin/lesspipe.sh %s" TMOUT=86400 LOGNAME=cltbld USER=cltbld MOZ_OBJDIR=obj-firefox PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin DISPLAY=:2 CCACHE_UMASK=002 LANG=en_US.UTF-8 CCACHE_HASHDIR= TERM=linux SHELL=/bin/bash MOZ_SIGNING_SERVERS=gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120 SHLVL=1 MOZ_PGO=1 G_BROKEN_FILENAMES=1 HISTSIZE=1000 UPLOAD_USER=ffxbld HG_SHARE_BASE_DIR=/builds/hg-shared MOZ_SOURCE_REPO=https://hg.mozilla.org/releases/mozilla-esr52 CCACHE_DIR=/builds/ccache UPLOAD_HOST=upload.ffxbld.productdelivery.prod.mozaws.net MOZ_BUILD_DATE=20180608145219 ENABLE_RELEASE_PROMOTION=1 UPLOAD_SSH_KEY=/home/mock_mozilla/.ssh/ffxbld_rsa TINDERBOX_OUTPUT=1 "MOZ_SIGN_CMD=python /builds/slave/m-esr52-lx-0000000000000000000/build/tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/build/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /builds/slave/m-esr52-lx-0000000000000000000/build/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120" LC_ALL=C TOOLTOOL_HOME=/builds UPLOAD_TO_TEMP=1 _=/tools/buildbot/bin/python LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib MAIL=/var/spool/mail/cltbld MOZ_UPDATE_CHANNEL=esr HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com MOZBUILD_STATE_PATH=/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild HISTCONTROL=ignoredups PWD=/builds/slave/m-esr52-lx-0000000000000000000 PROPERTIES_FILE=/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json "POST_UPLOAD_CMD=post_upload.py --tinderbox-builds-dir mozilla-esr52-linux -p firefox -i 20180608145219 --revision a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 --release-to-tinderbox-dated-builds" MOZ_CRASHREPORTER_NO_REPORT=1 CCACHE_COMPRESS=1 TOOLTOOL_CACHE=/builds/tooltool_cache python2.7 mach --log-no-times build -v'] in /builds/slave/m-esr52-lx-0000000000000000000/build/src
+14:57:10     INFO - Copy/paste: mock_mozilla -r mozilla-centos6-x86_64 -q --cwd /builds/slave/m-esr52-lx-0000000000000000000/build/src --unpriv --shell "/usr/bin/env MOZ_AUTOMATION=1 \"LESSOPEN=|/usr/bin/lesspipe.sh %s\" TMOUT=86400 LOGNAME=cltbld USER=cltbld MOZ_OBJDIR=obj-firefox PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin DISPLAY=:2 CCACHE_UMASK=002 LANG=en_US.UTF-8 CCACHE_HASHDIR= TERM=linux SHELL=/bin/bash MOZ_SIGNING_SERVERS=gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120 SHLVL=1 MOZ_PGO=1 G_BROKEN_FILENAMES=1 HISTSIZE=1000 UPLOAD_USER=ffxbld HG_SHARE_BASE_DIR=/builds/hg-shared MOZ_SOURCE_REPO=https://hg.mozilla.org/releases/mozilla-esr52 CCACHE_DIR=/builds/ccache UPLOAD_HOST=upload.ffxbld.productdelivery.prod.mozaws.net MOZ_BUILD_DATE=20180608145219 ENABLE_RELEASE_PROMOTION=1 UPLOAD_SSH_KEY=/home/mock_mozilla/.ssh/ffxbld_rsa TINDERBOX_OUTPUT=1 \"MOZ_SIGN_CMD=python /builds/slave/m-esr52-lx-0000000000000000000/build/tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/build/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /builds/slave/m-esr52-lx-0000000000000000000/build/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120\" LC_ALL=C TOOLTOOL_HOME=/builds UPLOAD_TO_TEMP=1 _=/tools/buildbot/bin/python LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib MAIL=/var/spool/mail/cltbld MOZ_UPDATE_CHANNEL=esr HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com MOZBUILD_STATE_PATH=/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild HISTCONTROL=ignoredups PWD=/builds/slave/m-esr52-lx-0000000000000000000 PROPERTIES_FILE=/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json \"POST_UPLOAD_CMD=post_upload.py --tinderbox-builds-dir mozilla-esr52-linux -p firefox -i 20180608145219 --revision a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 --release-to-tinderbox-dated-builds\" MOZ_CRASHREPORTER_NO_REPORT=1 CCACHE_COMPRESS=1 TOOLTOOL_CACHE=/builds/tooltool_cache python2.7 mach --log-no-times build -v"
+14:57:10     INFO - Calling ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '-q', '--cwd', '/builds/slave/m-esr52-lx-0000000000000000000/build/src', '--unpriv', '--shell', '/usr/bin/env MOZ_AUTOMATION=1 "LESSOPEN=|/usr/bin/lesspipe.sh %s" TMOUT=86400 LOGNAME=cltbld USER=cltbld MOZ_OBJDIR=obj-firefox PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin DISPLAY=:2 CCACHE_UMASK=002 LANG=en_US.UTF-8 CCACHE_HASHDIR= TERM=linux SHELL=/bin/bash MOZ_SIGNING_SERVERS=gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120 SHLVL=1 MOZ_PGO=1 G_BROKEN_FILENAMES=1 HISTSIZE=1000 UPLOAD_USER=ffxbld HG_SHARE_BASE_DIR=/builds/hg-shared MOZ_SOURCE_REPO=https://hg.mozilla.org/releases/mozilla-esr52 CCACHE_DIR=/builds/ccache UPLOAD_HOST=upload.ffxbld.productdelivery.prod.mozaws.net MOZ_BUILD_DATE=20180608145219 ENABLE_RELEASE_PROMOTION=1 UPLOAD_SSH_KEY=/home/mock_mozilla/.ssh/ffxbld_rsa TINDERBOX_OUTPUT=1 "MOZ_SIGN_CMD=python /builds/slave/m-esr52-lx-0000000000000000000/build/tools/release/signing/signtool.py --cachedir /builds/slave/m-esr52-lx-0000000000000000000/build/signing_cache -t /builds/slave/m-esr52-lx-0000000000000000000/token -n /builds/slave/m-esr52-lx-0000000000000000000/nonce -c /builds/slave/m-esr52-lx-0000000000000000000/build/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9120 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9120 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9120" LC_ALL=C TOOLTOOL_HOME=/builds UPLOAD_TO_TEMP=1 _=/tools/buildbot/bin/python LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib MAIL=/var/spool/mail/cltbld MOZ_UPDATE_CHANNEL=esr HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com MOZBUILD_STATE_PATH=/builds/slave/m-esr52-lx-0000000000000000000/.mozbuild HISTCONTROL=ignoredups PWD=/builds/slave/m-esr52-lx-0000000000000000000 PROPERTIES_FILE=/builds/slave/m-esr52-lx-0000000000000000000/buildprops.json "POST_UPLOAD_CMD=post_upload.py --tinderbox-builds-dir mozilla-esr52-linux -p firefox -i 20180608145219 --revision a7a20deda4de9057e6f7e3cb8be4452f0b376fd3 --release-to-tinderbox-dated-builds" MOZ_CRASHREPORTER_NO_REPORT=1 CCACHE_COMPRESS=1 TOOLTOOL_CACHE=/builds/tooltool_cache python2.7 mach --log-no-times build -v'] with output_timeout 2400
+14:57:11     INFO -  /usr/bin/gmake -f client.mk -s configure
+14:57:11     INFO -  client.mk:204: /builds/slave/m-esr52-lx-0000000000000000000/build/src/obj-firefox/.mozconfig.mk: No such file or directory
+14:57:12     INFO -  Clobber not needed.
+14:57:13     INFO -  Generating /builds/slave/m-esr52-lx-0000000000000000000/build/src/configure
+14:57:13     INFO -  Generating /builds/slave/m-esr52-lx-0000000000000000000/build/src/js/src/configure
+14:57:13     INFO -  cd /builds/slave/m-esr52-lx-0000000000000000000/build/src/obj-firefox
+14:57:13     INFO -  /builds/slave/m-esr52-lx-0000000000000000000/build/src/configure
+14:57:13     INFO -  Creating Python environment
+
+command interrupted, attempting to kill
+process killed by signal 9
+program finished with exit code -1
+elapsedTime=278.606706
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+========= master_lag: 0.03 =========
+========= Finished '/tools/buildbot/bin/python scripts/scripts/fx_desktop_build.py ...' interrupted (results: 4, elapsed: 4 mins, 38 secs) (at 2018-06-08 14:57:14.482220) =========
+
+========= Started set props: buildid got_revision comments builduid stage_platform (results: 0, elapsed: 0 secs) (at 2018-06-08 14:57:14.486010) =========
+bash -c 'for file in `ls -1`; do cat $file; done'
+ in dir /builds/slave/m-esr52-lx-0000000000000000000/properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'for file in `ls -1`; do cat $file; done']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/m-esr52-lx-0000000000000000000/properties
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+buildid:20180608145219
+builduid:271b302eedcf469b86eedcfd435ce9d8
+comments:No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update
+got_revision:a7a20deda4de9057e6f7e3cb8be4452f0b376fd3
+stage_platform:linux
+program finished with exit code 0
+elapsedTime=0.008438
+buildid: '20180608145219'
+got_revision: 'a7a20deda4de9057e6f7e3cb8be4452f0b376fd3'
+comments: 'No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update'
+builduid: '271b302eedcf469b86eedcfd435ce9d8'
+stage_platform: 'linux'
+========= master_lag: 0.05 =========
+========= Finished set props: buildid got_revision comments builduid stage_platform (results: 0, elapsed: 0 secs) (at 2018-06-08 14:57:14.548386) =========
+
+========= Started 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:57:14.548728) =========
+rm -f oauth.txt
+ in dir /builds/slave/m-esr52-lx-0000000000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'oauth.txt']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-303.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/m-esr52-lx-0000000000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.003403
+========= master_lag: 0.05 =========
+========= Finished 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 14:57:14.598028) =========
+
+========= Started reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 14:57:14.598324) =========
+========= Finished reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 14:57:14.598574) =========
+
+========= Total master_lag: 0.28 =========
+

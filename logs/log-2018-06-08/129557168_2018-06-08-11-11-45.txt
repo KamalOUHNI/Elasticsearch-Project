@@ -1,0 +1,1995 @@
+builder: comm-beta-linux64-debug
+slave: bld-linux64-spot-302
+starttime: 1528452705.14
+results: failure (2)
+buildid: 20180608031119
+builduid: 963cc241f8fb4f75928d595a47df9e11
+revision: 380090a32fb14e4cce126d78ed29d5eba7ab8790
+
+========= Started set props: basedir (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:45.144491) =========
+bash -c pwd
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'pwd']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+/builds/slave/tb-c-beta-l64-d-00000000000000
+program finished with exit code 0
+elapsedTime=0.004825
+basedir: '/builds/slave/tb-c-beta-l64-d-00000000000000'
+========= master_lag: 0.05 =========
+========= Finished set props: basedir (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:45.199906) =========
+
+========= Started set props: hashType (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:45.200198) =========
+hashType: sha512
+========= Finished set props: hashType (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:45.200546) =========
+
+========= Started set props: builddir (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:45.200850) =========
+bash -c 'basename "$PWD"'
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'basename "$PWD"']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+tb-c-beta-l64-d-00000000000000
+program finished with exit code 0
+elapsedTime=0.004556
+builddir: 'tb-c-beta-l64-d-00000000000000'
+========= master_lag: 0.01 =========
+========= Finished set props: builddir (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:45.214353) =========
+
+========= Started clobber build tools (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:45.214663) =========
+rm -rf tools
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'tools']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.002703
+========= master_lag: 0.05 =========
+========= Finished clobber build tools (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:45.262910) =========
+
+========= Started clone build tools (results: 0, elapsed: 2 secs) (at 2018-06-08 03:11:45.263189) =========
+hg clone https://hg.mozilla.org/build/tools tools
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/. (timeout 1320 secs)
+ watching logfiles {}
+ argv: ['hg', 'clone', 'https://hg.mozilla.org/build/tools', 'tools']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+applying clone bundle from https://s3-us-west-2.amazonaws.com/moz-hg-bundles-us-west-2/build/tools/88b450a68f2444542486da1421f85f3c56225d37.packed1.hg
+2199 files to transfer, 31.1 MB of data
+transferred 31.1 MB in 0.7 seconds (44.9 MB/sec)
+finished applying clone bundle
+searching for changes
+no changes found
+updating to branch default
+1057 files updated, 0 files merged, 0 files removed, 0 files unresolved
+program finished with exit code 0
+elapsedTime=2.537028
+========= master_lag: 0.01 =========
+========= Finished clone build tools (results: 0, elapsed: 2 secs) (at 2018-06-08 03:11:47.808364) =========
+
+========= Started set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:47.808727) =========
+bash -c pwd
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/tools (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'pwd']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/tools
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+/builds/slave/tb-c-beta-l64-d-00000000000000/tools
+program finished with exit code 0
+elapsedTime=0.003932
+toolsdir: '/builds/slave/tb-c-beta-l64-d-00000000000000/tools'
+========= master_lag: 0.05 =========
+========= Finished set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:47.858709) =========
+
+========= Started set props: aws_ami_id aws_instance_id placement/availability_zone aws_instance_type (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:47.859005) =========
+python tools/buildfarm/maintenance/get_instance_metadata.py
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['python', 'tools/buildfarm/maintenance/get_instance_metadata.py']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+{"aws_ami_id": "ami-f515548d", "aws_instance_id": "i-0fbc8806c452ae65a", "placement/availability_zone": "us-west-2c", "aws_instance_type": "r3.2xlarge"}
+program finished with exit code 0
+elapsedTime=0.012323
+aws_ami_id: u'ami-f515548d'
+aws_instance_id: u'i-0fbc8806c452ae65a'
+placement/availability_zone: u'us-west-2c'
+aws_instance_type: u'r3.2xlarge'
+========= master_lag: 0.04 =========
+========= Finished set props: aws_ami_id aws_instance_id placement/availability_zone aws_instance_type (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:47.908881) =========
+
+========= Started checking clobber times (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:47.909184) =========
+python tb-c-beta-l64-d-00000000000000/tools/clobberer/clobberer.py -s tools -t 168 https://api.pub.build.mozilla.org/clobberer/lastclobber comm-beta 'TB Linux x86-64 comm-beta leak test build' tb-c-beta-l64-d-00000000000000 bld-linux64-spot-302 http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/.. (timeout 3600 secs)
+ watching logfiles {}
+ argv: ['python', 'tb-c-beta-l64-d-00000000000000/tools/clobberer/clobberer.py', '-s', 'tools', '-t', '168', 'https://api.pub.build.mozilla.org/clobberer/lastclobber', 'comm-beta', 'TB Linux x86-64 comm-beta leak test build', 'tb-c-beta-l64-d-00000000000000', 'bld-linux64-spot-302', u'http://buildbot-master73.bb.releng.usw2.mozilla.com:8001/']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+2018-06-08 03:11:47,961 - Entering legacy mode.
+2018-06-08 03:11:48,749 - tb-c-beta-l64-d-00000000000000:Our last clobber date: 1969-12-31 16:00:00
+2018-06-08 03:11:48,749 - tb-c-beta-l64-d-00000000000000:Server clobber date:   2018-05-07 15:00:49
+2018-06-08 03:11:48,750 - tb-c-beta-l64-d-00000000000000:Server is forcing a clobber, initiated by clokep@gmail.com
+2018-06-08 03:11:48,750 - tb-c-beta-l64-d-00000000000000:Clobbering...
+2018-06-08 03:11:48,750 - Skipping tools
+program finished with exit code 0
+elapsedTime=0.834548
+========= master_lag: 0.01 =========
+========= Finished checking clobber times (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:48.753494) =========
+
+========= Started set props: purge_actual purge_target (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:48.753854) =========
+python tools/buildfarm/maintenance/purge_builds.py -s 10 -n info -n 'rel-*:10d' -n 'tb-rel-*:10d' .. /mock/users/cltbld/home/cltbld/build
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/. (timeout 3600 secs)
+ watching logfiles {}
+ argv: ['python', 'tools/buildfarm/maintenance/purge_builds.py', '-s', '10', '-n', 'info', '-n', 'rel-*:10d', '-n', 'tb-rel-*:10d', '..', '/mock/users/cltbld/home/cltbld/build']
+ environment:
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_HASHDIR=
+  CCACHE_UMASK=002
+  DISPLAY=:2
+  G_BROKEN_FILENAMES=1
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LC_ALL=C
+  LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TINDERBOX_OUTPUT=1
+  TMOUT=86400
+  USER=cltbld
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  _=/tools/buildbot/bin/python
+ using PTY: False
+177.16 GB of space available
+program finished with exit code 0
+elapsedTime=0.032532
+purge_actual: '177.16GB'
+purge_target: '10GB'
+========= master_lag: 0.02 =========
+========= Finished set props: purge_actual purge_target (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:48.804159) =========
+
+========= Started mock-tgt mozilla-centos6-x86_64 (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:48.804463) =========
+sh -c 'rm -f /builds/mock_mozilla/mozilla-centos6-x86_64/buildroot.lock; mock_mozilla -r mozilla-centos6-x86_64 --orphanskill'
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: sh -c 'rm -f /builds/mock_mozilla/mozilla-centos6-x86_64/buildroot.lock; mock_mozilla -r mozilla-centos6-x86_64 --orphanskill'
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: end
+program finished with exit code 0
+elapsedTime=0.163587
+========= master_lag: 0.01 =========
+========= Finished mock-tgt mozilla-centos6-x86_64 (results: 0, elapsed: 0 secs) (at 2018-06-08 03:11:48.976768) =========
+
+========= Started mock-tgt mozilla-centos6-x86_64 (results: 0, elapsed: 45 secs) (at 2018-06-08 03:11:48.977109) =========
+mock_mozilla -r mozilla-centos6-x86_64 --init
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: mock_mozilla -r mozilla-centos6-x86_64 --init
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: clean
+State Changed: unlock buildroot
+State Changed: init
+State Changed: lock buildroot
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+INFO: calling preinit hooks
+INFO: enabled root cache
+INFO: enabled yum cache
+State Changed: cleaning yum metadata
+INFO: enabled ccache
+State Changed: running yum
+State Changed: creating cache
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=45.651106
+========= master_lag: 0.01 =========
+========= Finished mock-tgt mozilla-centos6-x86_64 (results: 0, elapsed: 45 secs) (at 2018-06-08 03:12:34.639983) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:34.640346) =========
+mock_mozilla -r mozilla-centos6-x86_64 --copyin /home/cltbld/.ssh /home/mock_mozilla/.ssh
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '/home/cltbld/.ssh', '/home/mock_mozilla/.ssh']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+INFO: copying /home/cltbld/.ssh to /builds/mock_mozilla/mozilla-centos6-x86_64/root/home/mock_mozilla/.ssh
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=0.155018
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:34.804055) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:34.804368) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd / --shell '/usr/bin/env  chown -R mock_mozilla /home/mock_mozilla/.ssh'
+ in dir / (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/', '--shell', '/usr/bin/env  chown -R mock_mozilla /home/mock_mozilla/.ssh']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.257033
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.070497) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.070864) =========
+mock_mozilla -r mozilla-centos6-x86_64 --copyin /home/cltbld/.hgrc /builds/.hgrc
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '/home/cltbld/.hgrc', '/builds/.hgrc']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+INFO: copying /home/cltbld/.hgrc to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/.hgrc
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=0.147531
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.227322) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.227677) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd / --shell '/usr/bin/env  chown -R mock_mozilla /builds/.hgrc'
+ in dir / (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/', '--shell', '/usr/bin/env  chown -R mock_mozilla /builds/.hgrc']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.257736
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.494274) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.494589) =========
+mock_mozilla -r mozilla-centos6-x86_64 --copyin /home/cltbld/.boto /builds/.boto
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '/home/cltbld/.boto', '/builds/.boto']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+INFO: copying /home/cltbld/.boto to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/.boto
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=0.152314
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.656191) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.656526) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd / --shell '/usr/bin/env  chown -R mock_mozilla /builds/.boto'
+ in dir / (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/', '--shell', '/usr/bin/env  chown -R mock_mozilla /builds/.boto']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.259831
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.925236) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:35.925557) =========
+mock_mozilla -r mozilla-centos6-x86_64 --copyin /tools/tooltool.py /builds/tooltool.py
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '/tools/tooltool.py', '/builds/tooltool.py']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+INFO: copying /tools/tooltool.py to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/tooltool.py
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=0.156804
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.091140) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.091451) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd / --shell '/usr/bin/env  chown -R mock_mozilla /builds/tooltool.py'
+ in dir / (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/', '--shell', '/usr/bin/env  chown -R mock_mozilla /builds/tooltool.py']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.258885
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.358996) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.359311) =========
+mock_mozilla -r mozilla-centos6-x86_64 --copyin /builds/crash-stats-api.token /builds/crash-stats-api.token
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '/builds/crash-stats-api.token', '/builds/crash-stats-api.token']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+INFO: copying /builds/crash-stats-api.token to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/crash-stats-api.token
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=0.151050
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.519138) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.519447) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd / --shell '/usr/bin/env  chown -R mock_mozilla /builds/crash-stats-api.token'
+ in dir / (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/', '--shell', '/usr/bin/env  chown -R mock_mozilla /builds/crash-stats-api.token']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.256817
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.785543) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.785930) =========
+mock_mozilla -r mozilla-centos6-x86_64 --copyin /usr/local/lib/hgext /usr/local/lib/hgext
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '/usr/local/lib/hgext', '/usr/local/lib/hgext']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+INFO: copying /usr/local/lib/hgext to /builds/mock_mozilla/mozilla-centos6-x86_64/root/usr/local/lib/hgext
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=0.147396
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.942557) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:36.942922) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd / --shell '/usr/bin/env  chown -R mock_mozilla /usr/local/lib/hgext'
+ in dir / (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/', '--shell', '/usr/bin/env  chown -R mock_mozilla /usr/local/lib/hgext']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.256402
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:37.208461) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:37.208831) =========
+mock_mozilla -r mozilla-centos6-x86_64 --copyin /builds/relengapi.tok /builds/relengapi.tok
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--copyin', '/builds/relengapi.tok', '/builds/relengapi.tok']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+INFO: copying /builds/relengapi.tok to /builds/mock_mozilla/mozilla-centos6-x86_64/root/builds/relengapi.tok
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=0.150529
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:37.368303) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:37.368667) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd / --shell '/usr/bin/env  chown -R mock_mozilla /builds/relengapi.tok'
+ in dir / (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/', '--shell', '/usr/bin/env  chown -R mock_mozilla /builds/relengapi.tok']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.258614
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:37.636419) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:37.636794) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd / --unpriv --shell '/usr/bin/env  mkdir -p /builds/slave/tb-c-beta-l64-d-00000000000000/build'
+ in dir / (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/', '--unpriv', '--shell', '/usr/bin/env  mkdir -p /builds/slave/tb-c-beta-l64-d-00000000000000/build']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.254458
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:12:37.900440) =========
+
+========= Started mock-install autoconf213 python zip mozilla-python27-mercurial git ccache glibc-static libstdc++-static perl-Test-Simple perl-Config-General gtk2-devel libnotify-devel yasm alsa-lib-devel libcurl-devel wireless-tools-devel libX11-devel libXt-devel mesa-libGL-devel gnome-vfs2-devel GConf2-devel wget mpfr xorg-x11-font* imake gcc45_0moz3 gcc454_0moz1 gcc472_0moz1 gcc473_0moz1 yasm ccache pulseaudio-libs-devel freetype-2.3.11-6.el6_1.8.x86_64 freetype-devel-2.3.11-6.el6_1.8.x86_64 gstreamer-devel gstreamer-plugins-base-devel (results: 0, elapsed: 1 mins, 55 secs) (at 2018-06-08 03:12:37.900838) =========
+mock_mozilla -r mozilla-centos6-x86_64 --install autoconf213 python zip mozilla-python27-mercurial git ccache glibc-static libstdc++-static perl-Test-Simple perl-Config-General gtk2-devel libnotify-devel yasm alsa-lib-devel libcurl-devel wireless-tools-devel libX11-devel libXt-devel mesa-libGL-devel gnome-vfs2-devel GConf2-devel wget mpfr xorg-x11-font* imake gcc45_0moz3 gcc454_0moz1 gcc472_0moz1 gcc473_0moz1 yasm ccache pulseaudio-libs-devel freetype-2.3.11-6.el6_1.8.x86_64 freetype-devel-2.3.11-6.el6_1.8.x86_64 gstreamer-devel gstreamer-plugins-base-devel
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 2700 secs)
+ watching logfiles {}
+ argv: mock_mozilla -r mozilla-centos6-x86_64 --install autoconf213 python zip mozilla-python27-mercurial git ccache glibc-static libstdc++-static perl-Test-Simple perl-Config-General gtk2-devel libnotify-devel yasm alsa-lib-devel libcurl-devel wireless-tools-devel libX11-devel libXt-devel mesa-libGL-devel gnome-vfs2-devel GConf2-devel wget mpfr xorg-x11-font* imake gcc45_0moz3 gcc454_0moz1 gcc472_0moz1 gcc473_0moz1 yasm ccache pulseaudio-libs-devel freetype-2.3.11-6.el6_1.8.x86_64 freetype-devel-2.3.11-6.el6_1.8.x86_64 gstreamer-devel gstreamer-plugins-base-devel
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+Mock Version: 1.0.3
+INFO: Mock Version: 1.0.3
+State Changed: lock buildroot
+INFO: installing package(s): autoconf213 python zip mozilla-python27-mercurial git ccache glibc-static libstdc++-static perl-Test-Simple perl-Config-General gtk2-devel libnotify-devel yasm alsa-lib-devel libcurl-devel wireless-tools-devel libX11-devel libXt-devel mesa-libGL-devel gnome-vfs2-devel GConf2-devel wget mpfr xorg-x11-font* imake gcc45_0moz3 gcc454_0moz1 gcc472_0moz1 gcc473_0moz1 yasm ccache pulseaudio-libs-devel freetype-2.3.11-6.el6_1.8.x86_64 freetype-devel-2.3.11-6.el6_1.8.x86_64 gstreamer-devel gstreamer-plugins-base-devel
+INFO: Package python-2.6.6-29.el6.x86_64 already installed and latest version
+Package mpfr-2.4.1-6.el6.x86_64 already installed and latest version
+
+================================================================================
+ Package                 Arch   Version             Repository             Size
+================================================================================
+Installing:
+ GConf2-devel            x86_64 2.28.0-6.el6        centos6                91 k
+ alsa-lib-devel          x86_64 1.0.22-3.el6        centos6               1.0 M
+ autoconf213             noarch 2.13-20.1.el6       centos6               164 k
+ ccache                  x86_64 3.1.9-3moz0         releng-centos6-x86_64 151 k
+ freetype                x86_64 2.3.11-6.el6_1.8    centos6-updates       358 k
+ freetype-devel          x86_64 2.3.11-6.el6_1.8    centos6-updates       364 k
+ gcc454_0moz1            x86_64 4.5.4-0moz1         releng-centos6-x86_64  19 M
+ gcc45_0moz3             x86_64 4.5.2-0moz3_mock_centos6
+                                                    releng-centos6-x86_64  19 M
+ gcc472_0moz1            x86_64 4.7.2-0moz1         releng-centos6-x86_64  27 M
+ gcc473_0moz1            x86_64 4.7.3-0moz1         releng-centos6-x86_64  27 M
+ git                     x86_64 1.7.1-2.el6_0.1     centos6               4.6 M
+ glibc-static            x86_64 2.12-1.47.el6_2.5   centos6-updates       1.4 M
+ gnome-vfs2-devel        x86_64 2.24.2-6.el6        centos6               233 k
+ gstreamer-devel         x86_64 0.10.29-1.el6       centos6               169 k
+ gstreamer-plugins-base-devel
+                         x86_64 0.10.29-1.el6       centos6                85 k
+ gtk2-devel              x86_64 2.18.9-6.el6.centos centos6               2.4 M
+ imake                   x86_64 1.0.2-11.el6        centos6               262 k
+ libX11-devel            x86_64 1.3-2.el6           centos6               1.0 M
+ libXt-devel             x86_64 1.0.7-1.el6         centos6               326 k
+ libcurl-devel           x86_64 7.19.7-26.el6_1.2   centos6               243 k
+ libnotify-devel         x86_64 0.5.0-1.el6         centos6                24 k
+ mesa-libGL-devel        x86_64 7.11-3.el6          centos6               494 k
+ mozilla-python27-mercurial
+                         x86_64 3.9.1-1.el6         custom-mercurial      2.3 M
+ perl-Config-General     noarch 2.44-1.el6          centos6                68 k
+ perl-Test-Simple        x86_64 0.92-119.el6_1.1    centos6               110 k
+ pulseaudio-libs-devel   x86_64 0.9.21-13.el6       centos6               297 k
+ wget                    x86_64 1.15-1.el6          releng-centos6-x86_64 626 k
+ wireless-tools-devel    x86_64 1:29-5.1.1.el6      centos6                26 k
+ xorg-x11-font-utils     x86_64 1:7.2-11.el6        centos6                75 k
+ xorg-x11-fonts-100dpi   noarch 7.2-9.1.el6         centos6               3.1 M
+ xorg-x11-fonts-75dpi    noarch 7.2-9.1.el6         centos6               2.8 M
+ xorg-x11-fonts-ISO8859-1-100dpi
+                         noarch 7.2-9.1.el6         centos6               1.1 M
+ xorg-x11-fonts-ISO8859-1-75dpi
+                         noarch 7.2-9.1.el6         centos6               932 k
+ xorg-x11-fonts-ISO8859-14-100dpi
+                         noarch 7.2-9.1.el6         centos6               1.0 M
+ xorg-x11-fonts-ISO8859-14-75dpi
+                         noarch 7.2-9.1.el6         centos6               905 k
+ xorg-x11-fonts-ISO8859-15-100dpi
+                         noarch 7.2-9.1.el6         centos6               1.1 M
+ xorg-x11-fonts-ISO8859-15-75dpi
+                         noarch 7.2-9.1.el6         centos6               932 k
+ xorg-x11-fonts-ISO8859-2-100dpi
+                         noarch 7.2-9.1.el6         centos6               1.0 M
+ xorg-x11-fonts-ISO8859-2-75dpi
+                         noarch 7.2-9.1.el6         centos6               901 k
+ xorg-x11-fonts-ISO8859-9-100dpi
+                         noarch 7.2-9.1.el6         centos6               1.1 M
+ xorg-x11-fonts-ISO8859-9-75dpi
+                         noarch 7.2-9.1.el6         centos6               930 k
+ xorg-x11-fonts-Type1    noarch 7.2-9.1.el6         centos6               520 k
+ xorg-x11-fonts-cyrillic noarch 7.2-9.1.el6         centos6               395 k
+ xorg-x11-fonts-ethiopic noarch 7.2-9.1.el6         centos6               150 k
+ xorg-x11-fonts-misc     noarch 7.2-9.1.el6         centos6               5.8 M
+ yasm                    x86_64 1.1.0-1             releng-centos6-x86_64 811 k
+ zip                     x86_64 3.0-1.el6           centos6               260 k
+Installing for dependencies:
+ ConsoleKit              x86_64 0.4.1-3.el6         centos6                82 k
+ ConsoleKit-libs         x86_64 0.4.1-3.el6         centos6                17 k
+ GConf2                  x86_64 2.28.0-6.el6        centos6               964 k
+ ORBit2                  x86_64 2.14.17-3.1.el6     centos6               168 k
+ ORBit2-devel            x86_64 2.14.17-3.1.el6     centos6               173 k
+ acl                     x86_64 2.2.49-6.el6        centos6                75 k
+ alsa-lib                x86_64 1.0.22-3.el6        centos6               370 k
+ apr                     x86_64 1.3.9-3.el6_1.2     centos6               123 k
+ apr-util                x86_64 1.3.9-3.el6_0.1     centos6                87 k
+ atk                     x86_64 1.28.0-2.el6        centos6               191 k
+ atk-devel               x86_64 1.28.0-2.el6        centos6               114 k
+ autoconf                noarch 2.63-5.1.el6        centos6               781 k
+ automake                noarch 1.11.1-1.2.el6      centos6               550 k
+ avahi                   x86_64 0.6.25-11.el6       centos6               217 k
+ avahi-glib              x86_64 0.6.25-11.el6       centos6                20 k
+ avahi-libs              x86_64 0.6.25-11.el6       centos6                54 k
+ cairo                   x86_64 1.8.8-3.1.el6       centos6               309 k
+ cairo-devel             x86_64 1.8.8-3.1.el6       centos6               314 k
+ cdparanoia-libs         x86_64 10.2-5.1.el6        centos6                47 k
+ centos-indexhtml        noarch 6-1.el6.centos      centos6                70 k
+ check                   x86_64 0.9.8-1.1.el6       centos6                91 k
+ check-devel             x86_64 0.9.8-1.1.el6       centos6                17 k
+ crda                    x86_64 1.1.1_2010.11.22-1.el6
+                                                    centos6                23 k
+ cryptsetup-luks         x86_64 1.2.0-6.el6         centos6                94 k
+ cryptsetup-luks-libs    x86_64 1.2.0-6.el6         centos6                50 k
+ cups-libs               x86_64 1:1.4.2-44.el6      centos6               315 k
+ dash                    x86_64 0.5.5.1-3.1.el6     centos6                74 k
+ dbus                    x86_64 1:1.2.24-5.el6_1    centos6               207 k
+ dbus-devel              x86_64 1:1.2.24-5.el6_1    centos6                46 k
+ dbus-glib               x86_64 0.86-5.el6          centos6               170 k
+ dbus-glib-devel         x86_64 0.86-5.el6          centos6                58 k
+ device-mapper           x86_64 1.02.66-6.el6       centos6               126 k
+ device-mapper-libs      x86_64 1.02.66-6.el6       centos6               137 k
+ dmidecode               x86_64 1:2.11-2.el6        centos6                71 k
+ docbook-dtds            noarch 1.0-51.el6          centos6               274 k
+ docbook-style-dsssl     noarch 1.79-10.el6         centos6               277 k
+ docbook-style-xsl       noarch 1.75.2-6.el6        centos6               2.6 M
+ docbook-utils           noarch 0.6.14-24.el6       centos6                69 k
+ dracut                  noarch 004-256.el6_2.1     centos6-updates       110 k
+ dracut-kernel           noarch 004-256.el6_2.1     centos6-updates        20 k
+ eggdbus                 x86_64 0.6-3.el6           centos6                91 k
+ fipscheck               x86_64 1.2.0-7.el6         centos6                14 k
+ fipscheck-lib           x86_64 1.2.0-7.el6         centos6               8.3 k
+ flac                    x86_64 1.2.1-6.1.el6       centos6               243 k
+ fontconfig              x86_64 2.8.0-3.el6         centos6               186 k
+ fontconfig-devel        x86_64 2.8.0-3.el6         centos6               209 k
+ glib2-devel             x86_64 2.22.5-6.el6        centos6               1.3 M
+ glibc                   i686   2.12-1.47.el6_2.5   centos6-updates       4.3 M
+ gnome-vfs2              x86_64 2.24.2-6.el6        centos6               739 k
+ gnutls                  x86_64 2.8.5-4.el6         centos6               343 k
+ grubby                  x86_64 7.0.15-2.el6        centos6                42 k
+ gstreamer               x86_64 0.10.29-1.el6       centos6               764 k
+ gstreamer-plugins-base  x86_64 0.10.29-1.el6       centos6               942 k
+ gstreamer-tools         x86_64 0.10.29-1.el6       centos6                23 k
+ gtk-doc                 noarch 1.11-5.1.el6        centos6               129 k
+ gtk2                    x86_64 2.18.9-6.el6.centos centos6               3.3 M
+ hal                     x86_64 0.5.14-11.el6       centos6               375 k
+ hal-devel               x86_64 0.5.14-11.el6       centos6                41 k
+ hal-info                noarch 20090716-3.1.el6    centos6                56 k
+ hal-libs                x86_64 0.5.14-11.el6       centos6                69 k
+ hdparm                  x86_64 9.16-3.4.el6        centos6                72 k
+ hicolor-icon-theme      noarch 0.11-1.1.el6        centos6                40 k
+ indent                  x86_64 2.2.10-5.1.el6      centos6               115 k
+ iso-codes               noarch 3.16-2.el6          centos6               2.4 M
+ iw                      x86_64 0.9.17-4.el6        centos6                35 k
+ jasper-libs             x86_64 1.900.1-15.el6_1.1  centos6-updates       136 k
+ kbd                     x86_64 1.15-11.el6         centos6               264 k
+ kbd-misc                noarch 1.15-11.el6         centos6               923 k
+ kernel                  x86_64 2.6.32-220.7.1.el6  centos6-updates        24 M
+ kernel-firmware         noarch 2.6.32-220.7.1.el6  centos6-updates       6.2 M
+ libICE                  x86_64 1.0.6-1.el6         centos6                53 k
+ libICE-devel            x86_64 1.0.6-1.el6         centos6                15 k
+ libIDL                  x86_64 0.8.13-2.1.el6      centos6                83 k
+ libIDL-devel            x86_64 0.8.13-2.1.el6      centos6                20 k
+ libSM                   x86_64 1.1.0-7.1.el6       centos6                26 k
+ libSM-devel             x86_64 1.1.0-7.1.el6       centos6                12 k
+ libX11                  x86_64 1.3-2.el6           centos6               582 k
+ libX11-common           noarch 1.3-2.el6           centos6               188 k
+ libXau                  x86_64 1.0.5-1.el6         centos6                22 k
+ libXau-devel            x86_64 1.0.5-1.el6         centos6                13 k
+ libXcomposite           x86_64 0.4.1-2.el6         centos6                17 k
+ libXcomposite-devel     x86_64 0.4.1-2.el6         centos6                14 k
+ libXcursor              x86_64 1.1.10-2.el6        centos6                32 k
+ libXcursor-devel        x86_64 1.1.10-2.el6        centos6                21 k
+ libXdamage              x86_64 1.1.2-1.el6         centos6                16 k
+ libXdamage-devel        x86_64 1.1.2-1.el6         centos6               8.7 k
+ libXdmcp                x86_64 1.0.3-1.el6         centos6                22 k
+ libXdmcp-devel          x86_64 1.0.3-1.el6         centos6               9.6 k
+ libXext                 x86_64 1.1-3.el6           centos6                33 k
+ libXext-devel           x86_64 1.1-3.el6           centos6                78 k
+ libXfixes               x86_64 4.0.4-1.el6         centos6                19 k
+ libXfixes-devel         x86_64 4.0.4-1.el6         centos6                11 k
+ libXfont                x86_64 1.4.1-2.el6_1       centos6               128 k
+ libXft                  x86_64 2.1.13-4.1.el6      centos6                49 k
+ libXft-devel            x86_64 2.1.13-4.1.el6      centos6                18 k
+ libXi                   x86_64 1.3-3.el6           centos6                32 k
+ libXi-devel             x86_64 1.3-3.el6           centos6                93 k
+ libXinerama             x86_64 1.1-1.el6           centos6                15 k
+ libXinerama-devel       x86_64 1.1-1.el6           centos6                12 k
+ libXrandr               x86_64 1.3.0-4.el6         centos6                30 k
+ libXrandr-devel         x86_64 1.3.0-4.el6         centos6                19 k
+ libXrender              x86_64 0.9.5-1.el6         centos6                27 k
+ libXrender-devel        x86_64 0.9.5-1.el6         centos6                15 k
+ libXres                 x86_64 1.0.4-1.el6         centos6                15 k
+ libXt                   x86_64 1.0.7-1.el6         centos6               174 k
+ libXtst                 x86_64 1.0.99.2-3.el6      centos6                22 k
+ libXv                   x86_64 1.0.5-1.el6         centos6                21 k
+ libXxf86vm              x86_64 1.1.0-1.el6         centos6                18 k
+ libXxf86vm-devel        x86_64 1.1.0-1.el6         centos6                17 k
+ libasyncns              x86_64 0.8-1.1.el6         centos6                24 k
+ libcanberra             x86_64 0.22-1.el6.centos   centos6                66 k
+ libcanberra-gtk2        x86_64 0.22-1.el6.centos   centos6                26 k
+ libcap-ng               x86_64 0.6.4-3.el6_0.1     centos6                21 k
+ libdaemon               x86_64 0.14-1.el6          centos6                28 k
+ libdrm                  x86_64 2.4.25-2.el6        centos6                65 k
+ libdrm-devel            x86_64 2.4.25-2.el6        centos6                65 k
+ libedit                 x86_64 2.11-4.20080712cvs.1.el6
+                                                    centos6                74 k
+ libfontenc              x86_64 1.0.5-2.el6         centos6                24 k
+ libgcrypt               x86_64 1.4.5-9.el6         centos6               228 k
+ libgpg-error            x86_64 1.7-4.el6           centos6                59 k
+ libgudev1               x86_64 147-2.40.el6        centos6                59 k
+ libidn-devel            x86_64 1.18-2.el6          centos6               137 k
+ libjpeg                 x86_64 6b-46.el6           centos6               134 k
+ libnl                   x86_64 1.1-14.el6          centos6               121 k
+ libnotify               x86_64 0.5.0-1.el6         centos6                35 k
+ libogg                  x86_64 2:1.1.4-2.1.el6     centos6                21 k
+ liboil                  x86_64 0.3.16-4.1.el6      centos6               121 k
+ libpng                  x86_64 2:1.2.46-2.el6_2    centos6-updates       181 k
+ libpng-devel            x86_64 2:1.2.46-2.el6_2    centos6-updates       112 k
+ libproxy                x86_64 0.3.0-2.el6         centos6                39 k
+ libproxy-bin            x86_64 0.3.0-2.el6         centos6               8.1 k
+ libproxy-python         x86_64 0.3.0-2.el6         centos6               8.2 k
+ libsndfile              x86_64 1.0.20-5.el6        centos6               233 k
+ libtasn1                x86_64 2.3-3.el6           centos6               238 k
+ libtdb                  x86_64 1.2.1-3.el6         centos6                28 k
+ libthai                 x86_64 0.1.12-3.el6        centos6               183 k
+ libtheora               x86_64 1:1.1.0-2.el6       centos6               129 k
+ libtiff                 x86_64 3.9.4-1.el6_0.3     centos6               342 k
+ libtool-ltdl            x86_64 2.2.6-15.5.el6      centos6                44 k
+ libudev                 x86_64 147-2.40.el6        centos6                74 k
+ libvisual               x86_64 0.4.0-9.1.el6       centos6               135 k
+ libvorbis               x86_64 1:1.2.3-4.el6_2.1   centos6-updates       168 k
+ libwnck                 x86_64 2.28.0-3.el6        centos6               334 k
+ libxcb                  x86_64 1.5-1.el6           centos6               100 k
+ libxcb-devel            x86_64 1.5-1.el6           centos6               139 k
+ libxml2                 x86_64 2.7.6-4.el6_2.4     centos6-updates       795 k
+ libxml2-devel           x86_64 2.7.6-4.el6_2.4     centos6-updates       1.1 M
+ libxslt                 x86_64 1.1.26-2.el6        centos6               450 k
+ lynx                    x86_64 2.8.6-27.el6        centos6               1.3 M
+ m4                      x86_64 1.4.13-5.el6        centos6               278 k
+ mesa-dri-drivers        x86_64 7.11-3.el6          centos6                11 M
+ mesa-libGL              x86_64 7.11-3.el6          centos6               145 k
+ mozilla-git             x86_64 1.7.9.4-3.el6       releng-centos6-x86_64 3.8 M
+ mozilla-python27        x86_64 2.7.7-1.el6         releng-centos6-x86_64  11 M
+ neon                    x86_64 0.29.3-1.2.el6      centos6               119 k
+ notification-daemon     x86_64 0.5.0-1.el6         centos6                69 k
+ nss-softokn-freebl      i686   3.12.9-11.el6       centos6               116 k
+ openjade                x86_64 1.3.2-36.el6        centos6               817 k
+ opensp                  x86_64 1.5.2-12.1.el6      centos6               872 k
+ openssh                 x86_64 5.3p1-70.el6_2.2    centos6-updates       235 k
+ openssh-clients         x86_64 5.3p1-70.el6_2.2    centos6-updates       357 k
+ pakchois                x86_64 0.4-3.2.el6         centos6                21 k
+ pango                   x86_64 1.28.1-3.el6_0.5.1.centos
+                                                    centos6-updates       350 k
+ pango-devel             x86_64 1.28.1-3.el6_0.5.1.centos
+                                                    centos6-updates       278 k
+ pciutils-libs           x86_64 3.1.4-11.el6        centos6                34 k
+ perl-DBI                x86_64 1.609-4.el6         centos6               705 k
+ perl-ExtUtils-MakeMaker x86_64 6.55-119.el6_1.1    centos6               290 k
+ perl-ExtUtils-ParseXS   x86_64 1:2.2003.0-119.el6_1.1
+                                                    centos6                42 k
+ perl-Git                noarch 1.7.1-2.el6_0.1     centos6                28 k
+ perl-SGMLSpm            noarch 1.03ii-21.el6       centos6                26 k
+ perl-Test-Harness       x86_64 3.17-119.el6_1.1    centos6               229 k
+ perl-URI                noarch 1.40-2.el6          centos6               117 k
+ perl-devel              x86_64 4:5.10.1-119.el6_1.1
+                                                    centos6               420 k
+ pixman                  x86_64 0.18.4-1.el6_0.1    centos6               146 k
+ pixman-devel            x86_64 0.18.4-1.el6_0.1    centos6                15 k
+ plymouth                x86_64 0.8.3-24.el6.centos centos6                89 k
+ plymouth-core-libs      x86_64 0.8.3-24.el6.centos centos6                88 k
+ plymouth-scripts        x86_64 0.8.3-24.el6.centos centos6                31 k
+ pm-utils                x86_64 1.2.5-9.el6         centos6               108 k
+ polkit                  x86_64 0.96-2.el6_0.1      centos6               158 k
+ pulseaudio-libs         x86_64 0.9.21-13.el6       centos6               462 k
+ pulseaudio-libs-glib2   x86_64 0.9.21-13.el6       centos6                23 k
+ pulseaudio-libs-zeroconf
+                         x86_64 0.9.21-13.el6       centos6                27 k
+ rarian                  x86_64 0.8.1-5.1.el6       centos6                97 k
+ rarian-compat           x86_64 0.8.1-5.1.el6       centos6                61 k
+ redhat-logos            noarch 60.0.14-10.el6.centos
+                                                    centos6                10 M
+ rsync                   x86_64 3.0.6-5.el6_0.1     centos6               335 k
+ sgml-common             noarch 0.6.3-32.el6        centos6                43 k
+ shared-mime-info        x86_64 0.70-4.el6          centos6               209 k
+ sound-theme-freedesktop noarch 0.7-3.el6           centos6               388 k
+ startup-notification    x86_64 0.10-2.1.el6        centos6                37 k
+ subversion              x86_64 1.6.11-2.el6_1.4    centos6               2.3 M
+ subversion-perl         x86_64 1.6.11-2.el6_1.4    centos6               796 k
+ tcl                     x86_64 1:8.5.7-6.el6       centos6               1.9 M
+ tcp_wrappers-libs       x86_64 7.6-57.el6          centos6                62 k
+ tk                      x86_64 1:8.5.7-5.el6       centos6               1.4 M
+ ttmkfdir                x86_64 3.0.9-32.1.el6      centos6                43 k
+ wireless-tools          x86_64 1:29-5.1.1.el6      centos6                94 k
+ xcb-util                x86_64 0.3.6-1.el6         centos6                38 k
+ xml-common              noarch 0.6.3-32.el6        centos6               9.5 k
+ xorg-x11-proto-devel    noarch 7.6-13.el6          centos6               303 k
+ zlib-devel              x86_64 1.2.3-27.el6        centos6                44 k
+
+Transaction Summary
+================================================================================
+Install     249 Package(s)
+
+Total download size: 250 M
+Installed size: 853 M
+
+Installed:
+  GConf2-devel.x86_64 0:2.28.0-6.el6                                            
+  alsa-lib-devel.x86_64 0:1.0.22-3.el6                                          
+  autoconf213.noarch 0:2.13-20.1.el6                                            
+  ccache.x86_64 0:3.1.9-3moz0                                                   
+  freetype.x86_64 0:2.3.11-6.el6_1.8                                            
+  freetype-devel.x86_64 0:2.3.11-6.el6_1.8                                      
+  gcc454_0moz1.x86_64 0:4.5.4-0moz1                                             
+  gcc45_0moz3.x86_64 0:4.5.2-0moz3_mock_centos6                                 
+  gcc472_0moz1.x86_64 0:4.7.2-0moz1                                             
+  gcc473_0moz1.x86_64 0:4.7.3-0moz1                                             
+  git.x86_64 0:1.7.1-2.el6_0.1                                                  
+  glibc-static.x86_64 0:2.12-1.47.el6_2.5                                       
+  gnome-vfs2-devel.x86_64 0:2.24.2-6.el6                                        
+  gstreamer-devel.x86_64 0:0.10.29-1.el6                                        
+  gstreamer-plugins-base-devel.x86_64 0:0.10.29-1.el6                           
+  gtk2-devel.x86_64 0:2.18.9-6.el6.centos                                       
+  imake.x86_64 0:1.0.2-11.el6                                                   
+  libX11-devel.x86_64 0:1.3-2.el6                                               
+  libXt-devel.x86_64 0:1.0.7-1.el6                                              
+  libcurl-devel.x86_64 0:7.19.7-26.el6_1.2                                      
+  libnotify-devel.x86_64 0:0.5.0-1.el6                                          
+  mesa-libGL-devel.x86_64 0:7.11-3.el6                                          
+  mozilla-python27-mercurial.x86_64 0:3.9.1-1.el6                               
+  perl-Config-General.noarch 0:2.44-1.el6                                       
+  perl-Test-Simple.x86_64 0:0.92-119.el6_1.1                                    
+  pulseaudio-libs-devel.x86_64 0:0.9.21-13.el6                                  
+  wget.x86_64 0:1.15-1.el6                                                      
+  wireless-tools-devel.x86_64 1:29-5.1.1.el6                                    
+  xorg-x11-font-utils.x86_64 1:7.2-11.el6                                       
+  xorg-x11-fonts-100dpi.noarch 0:7.2-9.1.el6                                    
+  xorg-x11-fonts-75dpi.noarch 0:7.2-9.1.el6                                     
+  xorg-x11-fonts-ISO8859-1-100dpi.noarch 0:7.2-9.1.el6                          
+  xorg-x11-fonts-ISO8859-1-75dpi.noarch 0:7.2-9.1.el6                           
+  xorg-x11-fonts-ISO8859-14-100dpi.noarch 0:7.2-9.1.el6                         
+  xorg-x11-fonts-ISO8859-14-75dpi.noarch 0:7.2-9.1.el6                          
+  xorg-x11-fonts-ISO8859-15-100dpi.noarch 0:7.2-9.1.el6                         
+  xorg-x11-fonts-ISO8859-15-75dpi.noarch 0:7.2-9.1.el6                          
+  xorg-x11-fonts-ISO8859-2-100dpi.noarch 0:7.2-9.1.el6                          
+  xorg-x11-fonts-ISO8859-2-75dpi.noarch 0:7.2-9.1.el6                           
+  xorg-x11-fonts-ISO8859-9-100dpi.noarch 0:7.2-9.1.el6                          
+  xorg-x11-fonts-ISO8859-9-75dpi.noarch 0:7.2-9.1.el6                           
+  xorg-x11-fonts-Type1.noarch 0:7.2-9.1.el6                                     
+  xorg-x11-fonts-cyrillic.noarch 0:7.2-9.1.el6                                  
+  xorg-x11-fonts-ethiopic.noarch 0:7.2-9.1.el6                                  
+  xorg-x11-fonts-misc.noarch 0:7.2-9.1.el6                                      
+  yasm.x86_64 0:1.1.0-1                                                         
+  zip.x86_64 0:3.0-1.el6                                                        
+
+Dependency Installed:
+  ConsoleKit.x86_64 0:0.4.1-3.el6                                               
+  ConsoleKit-libs.x86_64 0:0.4.1-3.el6                                          
+  GConf2.x86_64 0:2.28.0-6.el6                                                  
+  ORBit2.x86_64 0:2.14.17-3.1.el6                                               
+  ORBit2-devel.x86_64 0:2.14.17-3.1.el6                                         
+  acl.x86_64 0:2.2.49-6.el6                                                     
+  alsa-lib.x86_64 0:1.0.22-3.el6                                                
+  apr.x86_64 0:1.3.9-3.el6_1.2                                                  
+  apr-util.x86_64 0:1.3.9-3.el6_0.1                                             
+  atk.x86_64 0:1.28.0-2.el6                                                     
+  atk-devel.x86_64 0:1.28.0-2.el6                                               
+  autoconf.noarch 0:2.63-5.1.el6                                                
+  automake.noarch 0:1.11.1-1.2.el6                                              
+  avahi.x86_64 0:0.6.25-11.el6                                                  
+  avahi-glib.x86_64 0:0.6.25-11.el6                                             
+  avahi-libs.x86_64 0:0.6.25-11.el6                                             
+  cairo.x86_64 0:1.8.8-3.1.el6                                                  
+  cairo-devel.x86_64 0:1.8.8-3.1.el6                                            
+  cdparanoia-libs.x86_64 0:10.2-5.1.el6                                         
+  centos-indexhtml.noarch 0:6-1.el6.centos                                      
+  check.x86_64 0:0.9.8-1.1.el6                                                  
+  check-devel.x86_64 0:0.9.8-1.1.el6                                            
+  crda.x86_64 0:1.1.1_2010.11.22-1.el6                                          
+  cryptsetup-luks.x86_64 0:1.2.0-6.el6                                          
+  cryptsetup-luks-libs.x86_64 0:1.2.0-6.el6                                     
+  cups-libs.x86_64 1:1.4.2-44.el6                                               
+  dash.x86_64 0:0.5.5.1-3.1.el6                                                 
+  dbus.x86_64 1:1.2.24-5.el6_1                                                  
+  dbus-devel.x86_64 1:1.2.24-5.el6_1                                            
+  dbus-glib.x86_64 0:0.86-5.el6                                                 
+  dbus-glib-devel.x86_64 0:0.86-5.el6                                           
+  device-mapper.x86_64 0:1.02.66-6.el6                                          
+  device-mapper-libs.x86_64 0:1.02.66-6.el6                                     
+  dmidecode.x86_64 1:2.11-2.el6                                                 
+  docbook-dtds.noarch 0:1.0-51.el6                                              
+  docbook-style-dsssl.noarch 0:1.79-10.el6                                      
+  docbook-style-xsl.noarch 0:1.75.2-6.el6                                       
+  docbook-utils.noarch 0:0.6.14-24.el6                                          
+  dracut.noarch 0:004-256.el6_2.1                                               
+  dracut-kernel.noarch 0:004-256.el6_2.1                                        
+  eggdbus.x86_64 0:0.6-3.el6                                                    
+  fipscheck.x86_64 0:1.2.0-7.el6                                                
+  fipscheck-lib.x86_64 0:1.2.0-7.el6                                            
+  flac.x86_64 0:1.2.1-6.1.el6                                                   
+  fontconfig.x86_64 0:2.8.0-3.el6                                               
+  fontconfig-devel.x86_64 0:2.8.0-3.el6                                         
+  glib2-devel.x86_64 0:2.22.5-6.el6                                             
+  glibc.i686 0:2.12-1.47.el6_2.5                                                
+  gnome-vfs2.x86_64 0:2.24.2-6.el6                                              
+  gnutls.x86_64 0:2.8.5-4.el6                                                   
+  grubby.x86_64 0:7.0.15-2.el6                                                  
+  gstreamer.x86_64 0:0.10.29-1.el6                                              
+  gstreamer-plugins-base.x86_64 0:0.10.29-1.el6                                 
+  gstreamer-tools.x86_64 0:0.10.29-1.el6                                        
+  gtk-doc.noarch 0:1.11-5.1.el6                                                 
+  gtk2.x86_64 0:2.18.9-6.el6.centos                                             
+  hal.x86_64 0:0.5.14-11.el6                                                    
+  hal-devel.x86_64 0:0.5.14-11.el6                                              
+  hal-info.noarch 0:20090716-3.1.el6                                            
+  hal-libs.x86_64 0:0.5.14-11.el6                                               
+  hdparm.x86_64 0:9.16-3.4.el6                                                  
+  hicolor-icon-theme.noarch 0:0.11-1.1.el6                                      
+  indent.x86_64 0:2.2.10-5.1.el6                                                
+  iso-codes.noarch 0:3.16-2.el6                                                 
+  iw.x86_64 0:0.9.17-4.el6                                                      
+  jasper-libs.x86_64 0:1.900.1-15.el6_1.1                                       
+  kbd.x86_64 0:1.15-11.el6                                                      
+  kbd-misc.noarch 0:1.15-11.el6                                                 
+  kernel.x86_64 0:2.6.32-220.7.1.el6                                            
+  kernel-firmware.noarch 0:2.6.32-220.7.1.el6                                   
+  libICE.x86_64 0:1.0.6-1.el6                                                   
+  libICE-devel.x86_64 0:1.0.6-1.el6                                             
+  libIDL.x86_64 0:0.8.13-2.1.el6                                                
+  libIDL-devel.x86_64 0:0.8.13-2.1.el6                                          
+  libSM.x86_64 0:1.1.0-7.1.el6                                                  
+  libSM-devel.x86_64 0:1.1.0-7.1.el6                                            
+  libX11.x86_64 0:1.3-2.el6                                                     
+  libX11-common.noarch 0:1.3-2.el6                                              
+  libXau.x86_64 0:1.0.5-1.el6                                                   
+  libXau-devel.x86_64 0:1.0.5-1.el6                                             
+  libXcomposite.x86_64 0:0.4.1-2.el6                                            
+  libXcomposite-devel.x86_64 0:0.4.1-2.el6                                      
+  libXcursor.x86_64 0:1.1.10-2.el6                                              
+  libXcursor-devel.x86_64 0:1.1.10-2.el6                                        
+  libXdamage.x86_64 0:1.1.2-1.el6                                               
+  libXdamage-devel.x86_64 0:1.1.2-1.el6                                         
+  libXdmcp.x86_64 0:1.0.3-1.el6                                                 
+  libXdmcp-devel.x86_64 0:1.0.3-1.el6                                           
+  libXext.x86_64 0:1.1-3.el6                                                    
+  libXext-devel.x86_64 0:1.1-3.el6                                              
+  libXfixes.x86_64 0:4.0.4-1.el6                                                
+  libXfixes-devel.x86_64 0:4.0.4-1.el6                                          
+  libXfont.x86_64 0:1.4.1-2.el6_1                                               
+  libXft.x86_64 0:2.1.13-4.1.el6                                                
+  libXft-devel.x86_64 0:2.1.13-4.1.el6                                          
+  libXi.x86_64 0:1.3-3.el6                                                      
+  libXi-devel.x86_64 0:1.3-3.el6                                                
+  libXinerama.x86_64 0:1.1-1.el6                                                
+  libXinerama-devel.x86_64 0:1.1-1.el6                                          
+  libXrandr.x86_64 0:1.3.0-4.el6                                                
+  libXrandr-devel.x86_64 0:1.3.0-4.el6                                          
+  libXrender.x86_64 0:0.9.5-1.el6                                               
+  libXrender-devel.x86_64 0:0.9.5-1.el6                                         
+  libXres.x86_64 0:1.0.4-1.el6                                                  
+  libXt.x86_64 0:1.0.7-1.el6                                                    
+  libXtst.x86_64 0:1.0.99.2-3.el6                                               
+  libXv.x86_64 0:1.0.5-1.el6                                                    
+  libXxf86vm.x86_64 0:1.1.0-1.el6                                               
+  libXxf86vm-devel.x86_64 0:1.1.0-1.el6                                         
+  libasyncns.x86_64 0:0.8-1.1.el6                                               
+  libcanberra.x86_64 0:0.22-1.el6.centos                                        
+  libcanberra-gtk2.x86_64 0:0.22-1.el6.centos                                   
+  libcap-ng.x86_64 0:0.6.4-3.el6_0.1                                            
+  libdaemon.x86_64 0:0.14-1.el6                                                 
+  libdrm.x86_64 0:2.4.25-2.el6                                                  
+  libdrm-devel.x86_64 0:2.4.25-2.el6                                            
+  libedit.x86_64 0:2.11-4.20080712cvs.1.el6                                     
+  libfontenc.x86_64 0:1.0.5-2.el6                                               
+  libgcrypt.x86_64 0:1.4.5-9.el6                                                
+  libgpg-error.x86_64 0:1.7-4.el6                                               
+  libgudev1.x86_64 0:147-2.40.el6                                               
+  libidn-devel.x86_64 0:1.18-2.el6                                              
+  libjpeg.x86_64 0:6b-46.el6                                                    
+  libnl.x86_64 0:1.1-14.el6                                                     
+  libnotify.x86_64 0:0.5.0-1.el6                                                
+  libogg.x86_64 2:1.1.4-2.1.el6                                                 
+  liboil.x86_64 0:0.3.16-4.1.el6                                                
+  libpng.x86_64 2:1.2.46-2.el6_2                                                
+  libpng-devel.x86_64 2:1.2.46-2.el6_2                                          
+  libproxy.x86_64 0:0.3.0-2.el6                                                 
+  libproxy-bin.x86_64 0:0.3.0-2.el6                                             
+  libproxy-python.x86_64 0:0.3.0-2.el6                                          
+  libsndfile.x86_64 0:1.0.20-5.el6                                              
+  libtasn1.x86_64 0:2.3-3.el6                                                   
+  libtdb.x86_64 0:1.2.1-3.el6                                                   
+  libthai.x86_64 0:0.1.12-3.el6                                                 
+  libtheora.x86_64 1:1.1.0-2.el6                                                
+  libtiff.x86_64 0:3.9.4-1.el6_0.3                                              
+  libtool-ltdl.x86_64 0:2.2.6-15.5.el6                                          
+  libudev.x86_64 0:147-2.40.el6                                                 
+  libvisual.x86_64 0:0.4.0-9.1.el6                                              
+  libvorbis.x86_64 1:1.2.3-4.el6_2.1                                            
+  libwnck.x86_64 0:2.28.0-3.el6                                                 
+  libxcb.x86_64 0:1.5-1.el6                                                     
+  libxcb-devel.x86_64 0:1.5-1.el6                                               
+  libxml2.x86_64 0:2.7.6-4.el6_2.4                                              
+  libxml2-devel.x86_64 0:2.7.6-4.el6_2.4                                        
+  libxslt.x86_64 0:1.1.26-2.el6                                                 
+  lynx.x86_64 0:2.8.6-27.el6                                                    
+  m4.x86_64 0:1.4.13-5.el6                                                      
+  mesa-dri-drivers.x86_64 0:7.11-3.el6                                          
+  mesa-libGL.x86_64 0:7.11-3.el6                                                
+  mozilla-git.x86_64 0:1.7.9.4-3.el6                                            
+  mozilla-python27.x86_64 0:2.7.7-1.el6                                         
+  neon.x86_64 0:0.29.3-1.2.el6                                                  
+  notification-daemon.x86_64 0:0.5.0-1.el6                                      
+  nss-softokn-freebl.i686 0:3.12.9-11.el6                                       
+  openjade.x86_64 0:1.3.2-36.el6                                                
+  opensp.x86_64 0:1.5.2-12.1.el6                                                
+  openssh.x86_64 0:5.3p1-70.el6_2.2                                             
+  openssh-clients.x86_64 0:5.3p1-70.el6_2.2                                     
+  pakchois.x86_64 0:0.4-3.2.el6                                                 
+  pango.x86_64 0:1.28.1-3.el6_0.5.1.centos                                      
+  pango-devel.x86_64 0:1.28.1-3.el6_0.5.1.centos                                
+  pciutils-libs.x86_64 0:3.1.4-11.el6                                           
+  perl-DBI.x86_64 0:1.609-4.el6                                                 
+  perl-ExtUtils-MakeMaker.x86_64 0:6.55-119.el6_1.1                             
+  perl-ExtUtils-ParseXS.x86_64 1:2.2003.0-119.el6_1.1                           
+  perl-Git.noarch 0:1.7.1-2.el6_0.1                                             
+  perl-SGMLSpm.noarch 0:1.03ii-21.el6                                           
+  perl-Test-Harness.x86_64 0:3.17-119.el6_1.1                                   
+  perl-URI.noarch 0:1.40-2.el6                                                  
+  perl-devel.x86_64 4:5.10.1-119.el6_1.1                                        
+  pixman.x86_64 0:0.18.4-1.el6_0.1                                              
+  pixman-devel.x86_64 0:0.18.4-1.el6_0.1                                        
+  plymouth.x86_64 0:0.8.3-24.el6.centos                                         
+  plymouth-core-libs.x86_64 0:0.8.3-24.el6.centos                               
+  plymouth-scripts.x86_64 0:0.8.3-24.el6.centos                                 
+  pm-utils.x86_64 0:1.2.5-9.el6                                                 
+  polkit.x86_64 0:0.96-2.el6_0.1                                                
+  pulseaudio-libs.x86_64 0:0.9.21-13.el6                                        
+  pulseaudio-libs-glib2.x86_64 0:0.9.21-13.el6                                  
+  pulseaudio-libs-zeroconf.x86_64 0:0.9.21-13.el6                               
+  rarian.x86_64 0:0.8.1-5.1.el6                                                 
+  rarian-compat.x86_64 0:0.8.1-5.1.el6                                          
+  redhat-logos.noarch 0:60.0.14-10.el6.centos                                   
+  rsync.x86_64 0:3.0.6-5.el6_0.1                                                
+  sgml-common.noarch 0:0.6.3-32.el6                                             
+  shared-mime-info.x86_64 0:0.70-4.el6                                          
+  sound-theme-freedesktop.noarch 0:0.7-3.el6                                    
+  startup-notification.x86_64 0:0.10-2.1.el6                                    
+  subversion.x86_64 0:1.6.11-2.el6_1.4                                          
+  subversion-perl.x86_64 0:1.6.11-2.el6_1.4                                     
+  tcl.x86_64 1:8.5.7-6.el6                                                      
+  tcp_wrappers-libs.x86_64 0:7.6-57.el6                                         
+  tk.x86_64 1:8.5.7-5.el6                                                       
+  ttmkfdir.x86_64 0:3.0.9-32.1.el6                                              
+  wireless-tools.x86_64 1:29-5.1.1.el6                                          
+  xcb-util.x86_64 0:0.3.6-1.el6                                                 
+  xml-common.noarch 0:0.6.3-32.el6                                              
+  xorg-x11-proto-devel.noarch 0:7.6-13.el6                                      
+  zlib-devel.x86_64 0:1.2.3-27.el6                                              
+
+
+State Changed: unlock buildroot
+State Changed: end
+program finished with exit code 0
+elapsedTime=115.218551
+========= master_lag: 0.01 =========
+========= Finished mock-install autoconf213 python zip mozilla-python27-mercurial git ccache glibc-static libstdc++-static perl-Test-Simple perl-Config-General gtk2-devel libnotify-devel yasm alsa-lib-devel libcurl-devel wireless-tools-devel libX11-devel libXt-devel mesa-libGL-devel gnome-vfs2-devel GConf2-devel wget mpfr xorg-x11-font* imake gcc45_0moz3 gcc454_0moz1 gcc472_0moz1 gcc473_0moz1 yasm ccache pulseaudio-libs-devel freetype-2.3.11-6.el6_1.8.x86_64 freetype-devel-2.3.11-6.el6_1.8.x86_64 gstreamer-devel gstreamer-plugins-base-devel (results: 0, elapsed: 1 mins, 55 secs) (at 2018-06-08 03:14:33.129078) =========
+
+========= Started set_buildids (results: 0, elapsed: 0 secs) (at 2018-06-08 03:14:33.133165) =========
+========= Finished set_buildids (results: 0, elapsed: 0 secs) (at 2018-06-08 03:14:33.133292) =========
+
+========= Started 'ccache -z' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:14:33.133578) =========
+ccache -z
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['ccache', '-z']
+ environment:
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_HASHDIR=
+  CCACHE_UMASK=002
+  DISPLAY=:2
+  G_BROKEN_FILENAMES=1
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LC_ALL=C
+  LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TINDERBOX_OUTPUT=1
+  TMOUT=86400
+  USER=cltbld
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  _=/tools/buildbot/bin/python
+ using PTY: False
+Statistics cleared
+program finished with exit code 0
+elapsedTime=0.082165
+========= master_lag: 0.01 =========
+========= Finished 'ccache -z' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:14:33.225297) =========
+
+========= Started delete old package (results: 0, elapsed: 0 secs) (at 2018-06-08 03:14:33.225650) =========
+rm -rf objdir-tb/dist/firefox-* objdir-tb/dist/fennec* objdir-tb/dist/seamonkey* objdir-tb/dist/thunderbird* objdir-tb/dist/install/sea/*.exe 
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: rm -rf objdir-tb/dist/firefox-* objdir-tb/dist/fennec* objdir-tb/dist/seamonkey* objdir-tb/dist/thunderbird* objdir-tb/dist/install/sea/*.exe 
+ environment:
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_HASHDIR=
+  CCACHE_UMASK=002
+  DISPLAY=:2
+  G_BROKEN_FILENAMES=1
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LC_ALL=C
+  LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TINDERBOX_OUTPUT=1
+  TMOUT=86400
+  USER=cltbld
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.003371
+========= master_lag: 0.05 =========
+========= Finished delete old package (results: 0, elapsed: 0 secs) (at 2018-06-08 03:14:33.275104) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 03:14:33.275431) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 03:14:33.288575) =========
+
+========= Started 'python /builds/slave/tb-c-beta-l64-d-00000000000000/tools/buildfarm/utils/retry.py ...' (results: 0, elapsed: 44 secs) (at 2018-06-08 03:14:33.288920) =========
+python /builds/slave/tb-c-beta-l64-d-00000000000000/tools/buildfarm/utils/retry.py -s 1 -r 5 -t 3660 python /builds/slave/tb-c-beta-l64-d-00000000000000/tools/buildfarm/utils/hgtool.py https://hg.mozilla.org/releases/comm-beta build
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/. (timeout 3720 secs)
+ watching logfiles {}
+ argv: ['python', '/builds/slave/tb-c-beta-l64-d-00000000000000/tools/buildfarm/utils/retry.py', '-s', '1', '-r', '5', '-t', '3660', 'python', '/builds/slave/tb-c-beta-l64-d-00000000000000/tools/buildfarm/utils/hgtool.py', 'https://hg.mozilla.org/releases/comm-beta', 'build']
+ environment:
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_HASHDIR=
+  CCACHE_UMASK=002
+  DISPLAY=:2
+  G_BROKEN_FILENAMES=1
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LC_ALL=C
+  LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+  PROPERTIES_FILE=buildprops.json
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TINDERBOX_OUTPUT=1
+  TMOUT=86400
+  USER=cltbld
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  _=/tools/buildbot/bin/python
+ using PTY: False
+Executing: ['python', '/builds/slave/tb-c-beta-l64-d-00000000000000/tools/buildfarm/utils/hgtool.py', 'https://hg.mozilla.org/releases/comm-beta', 'build']
+Reporting hg version in use
+command: START
+command: hg -q version
+command: cwd: .
+command: output:
+Mercurial Distributed SCM (version 4.4.1)
+command: END (0.18s elapsed)
+
+Checking if share extension works
+command: START
+command: hg help share
+command: cwd: /builds/slave/tb-c-beta-l64-d-00000000000000
+command: env: {'HGPLAIN': '1'}
+command: END (0.25s elapsed)
+
+/builds/slave/tb-c-beta-l64-d-00000000000000/build doesn't appear to be a valid hg directory; clobbering
+Updating shared repo
+Reporting hg version in use
+command: START
+command: hg -q version
+command: cwd: .
+command: output:
+Mercurial Distributed SCM (version 4.4.1)
+command: END (0.18s elapsed)
+
+command: START
+command: hg clone --traceback -U https://hg.mozilla.org/releases/comm-beta /builds/hg-shared/releases/comm-beta
+command: cwd: /builds/slave/tb-c-beta-l64-d-00000000000000
+command: env: {'HGPLAIN': '1'}
+command: END (40.82s elapsed)
+
+command: output:
+requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 31147 changesets with 112634 changes to 16181 files (+342 heads)
+new changesets e4f4569d451a:380090a32fb1
+
+Trying to share /builds/hg-shared/releases/comm-beta to /builds/slave/tb-c-beta-l64-d-00000000000000/build
+mkdir: /builds/slave/tb-c-beta-l64-d-00000000000000/build
+command: START
+command: hg share -U /builds/hg-shared/releases/comm-beta /builds/slave/tb-c-beta-l64-d-00000000000000/build
+command: cwd: /builds/slave/tb-c-beta-l64-d-00000000000000
+command: output:
+command: END (0.24s elapsed)
+
+command: START
+command: hg update -C -r 380090a32fb14e4cce126d78ed29d5eba7ab8790
+command: cwd: /builds/slave/tb-c-beta-l64-d-00000000000000/build
+command: output:
+9127 files updated, 0 files merged, 0 files removed, 0 files unresolved
+command: END (1.87s elapsed)
+
+command: START
+command: hg parent --template {node|short}
+command: cwd: /builds/slave/tb-c-beta-l64-d-00000000000000/build
+command: env: {'HGPLAIN': '1'}
+command: END (0.50s elapsed)
+
+command: output:
+380090a32fb1
+Got revision 380090a32fb1
+program finished with exit code 0
+elapsedTime=44.363493
+========= master_lag: 0.01 =========
+========= Finished 'python /builds/slave/tb-c-beta-l64-d-00000000000000/tools/buildfarm/utils/retry.py ...' (results: 0, elapsed: 44 secs) (at 2018-06-08 03:15:17.660371) =========
+
+========= Started set props: got_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:17.660761) =========
+hg parent '--template={node}'
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['hg', 'parent', '--template={node}']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+380090a32fb14e4cce126d78ed29d5eba7ab8790program finished with exit code 0
+elapsedTime=0.264746
+got_revision: '380090a32fb14e4cce126d78ed29d5eba7ab8790'
+========= master_lag: 0.01 =========
+========= Finished set props: got_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:17.934841) =========
+
+========= Started set props: comments (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:17.935150) =========
+comments: No bug, Automated blocklist update from host bld-linux64-spot-326 - a=blocklist-update
+========= Finished set props: comments (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:17.935540) =========
+
+========= Started got mozconfig (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:17.935863) =========
+cp mail/config/mozconfigs/linux64/debug .mozconfig
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['cp', 'mail/config/mozconfigs/linux64/debug', '.mozconfig']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.005656
+========= master_lag: 0.04 =========
+========= Finished got mozconfig (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:17.984934) =========
+
+========= Started 'cat .mozconfig' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:17.985240) =========
+cat .mozconfig
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['cat', '.mozconfig']
+ environment:
+  CCACHE_HASHDIR=
+  G_BROKEN_FILENAMES=1
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  PATH=/usr/local/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  _=/tools/buildbot/bin/python
+ using PTY: False
+. "$topsrcdir/build/unix/mozconfig.linux"
+. "$topsrcdir/build/mozconfig.stylo"
+. "$topsrcdir/comm/mail/config/mozconfigs/common"
+
+ac_add_options --enable-debug
+
+# Needed to enable breakpad in application.ini
+export MOZILLA_OFFICIAL=1
+
+# For NSS symbols
+export MOZ_DEBUG_SYMBOLS=1
+
+# Disable checking that add-ons are signed by the trusted root
+MOZ_ADDON_SIGNING=0
+# Disable enforcing that add-ons are signed by the trusted root
+MOZ_REQUIRE_ADDON_SIGNING=0
+
+# Package js shell
+export MOZ_PACKAGE_JSSHELL=1
+
+. "$topsrcdir/comm/build/mozconfig.sccache"
+program finished with exit code 0
+elapsedTime=0.003400
+========= master_lag: 0.05 =========
+========= Finished 'cat .mozconfig' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:18.035370) =========
+
+========= Started 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:18.035712) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd /builds/slave/tb-c-beta-l64-d-00000000000000/build --unpriv --shell '/usr/bin/env HG_SHARE_BASE_DIR="/builds/hg-shared" XPCOM_DEBUG_BREAK="stack-and-abort" LC_ALL="C" CCACHE_DIR="/builds/ccache" MOZ_AUTOMATION="1" MOZ_SCM_LEVEL="3" DISPLAY=":2" PATH="/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin" TINDERBOX_OUTPUT="1" MOZ_OBJDIR="/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb" MOZ_CRASHREPORTER_NO_REPORT="1" CCACHE_COMPRESS="1" LD_LIBRARY_PATH="/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin" CCACHE_UMASK="002" sh '"'"'/builds/slave/tb-c-beta-l64-d-00000000000000/tools/scripts/tooltool/tooltool_wrapper.sh'"'"' mail/config/tooltool-manifests/linux64/releng.manifest https://api.pub.build.mozilla.org/tooltool/ setup.sh /builds/tooltool.py --authentication-file /builds/relengapi.tok'
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/builds/slave/tb-c-beta-l64-d-00000000000000/build', '--unpriv', '--shell', '/usr/bin/env HG_SHARE_BASE_DIR="/builds/hg-shared" XPCOM_DEBUG_BREAK="stack-and-abort" LC_ALL="C" CCACHE_DIR="/builds/ccache" MOZ_AUTOMATION="1" MOZ_SCM_LEVEL="3" DISPLAY=":2" PATH="/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin" TINDERBOX_OUTPUT="1" MOZ_OBJDIR="/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb" MOZ_CRASHREPORTER_NO_REPORT="1" CCACHE_COMPRESS="1" LD_LIBRARY_PATH="/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin" CCACHE_UMASK="002" sh \'/builds/slave/tb-c-beta-l64-d-00000000000000/tools/scripts/tooltool/tooltool_wrapper.sh\' mail/config/tooltool-manifests/linux64/releng.manifest https://api.pub.build.mozilla.org/tooltool/ setup.sh /builds/tooltool.py --authentication-file /builds/relengapi.tok']
+ environment:
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_HASHDIR=
+  CCACHE_UMASK=002
+  DISPLAY=:2
+  G_BROKEN_FILENAMES=1
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LC_ALL=C
+  LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TINDERBOX_OUTPUT=1
+  TMOUT=86400
+  USER=cltbld
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+mail/config/tooltool-manifests/linux64/releng.manifest doesn't exist, skipping...
+State Changed: unlock buildroot
+program finished with exit code 0
+elapsedTime=0.266508
+========= master_lag: 0.01 =========
+========= Finished 'mock_mozilla -r ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 03:15:18.313077) =========
+
+========= Started compile failed (results: 2, elapsed: 0 secs) (at 2018-06-08 03:15:18.313395) =========
+mock_mozilla -r mozilla-centos6-x86_64 --cwd /builds/slave/tb-c-beta-l64-d-00000000000000/build --unpriv --shell '/usr/bin/env HG_SHARE_BASE_DIR="/builds/hg-shared" XPCOM_DEBUG_BREAK="stack-and-abort" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_AUTOMATION="1" MOZ_OBJDIR="/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb" TOOLTOOL_DIR="/builds/slave/tb-c-beta-l64-d-00000000000000/build" MOZ_SCM_LEVEL="3" LD_LIBRARY_PATH="/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin" PATH="/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin" TINDERBOX_OUTPUT="1" CCACHE_DIR="/builds/ccache" LC_ALL="C" CCACHE_COMPRESS="1" DISPLAY=":2" CCACHE_UMASK="002" make -f client.mk build '"'"'MOZ_BUILD_DATE=20180608031119'"'"''
+ in dir /builds/slave/tb-c-beta-l64-d-00000000000000/build (timeout 10800 secs) (maxTime 19800 secs)
+ watching logfiles {}
+ argv: ['mock_mozilla', '-r', 'mozilla-centos6-x86_64', '--cwd', '/builds/slave/tb-c-beta-l64-d-00000000000000/build', '--unpriv', '--shell', u'/usr/bin/env HG_SHARE_BASE_DIR="/builds/hg-shared" XPCOM_DEBUG_BREAK="stack-and-abort" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_AUTOMATION="1" MOZ_OBJDIR="/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb" TOOLTOOL_DIR="/builds/slave/tb-c-beta-l64-d-00000000000000/build" MOZ_SCM_LEVEL="3" LD_LIBRARY_PATH="/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin" PATH="/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin" TINDERBOX_OUTPUT="1" CCACHE_DIR="/builds/ccache" LC_ALL="C" CCACHE_COMPRESS="1" DISPLAY=":2" CCACHE_UMASK="002" make -f client.mk build \'MOZ_BUILD_DATE=20180608031119\'']
+ environment:
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_HASHDIR=
+  CCACHE_UMASK=002
+  DISPLAY=:2
+  G_BROKEN_FILENAMES=1
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HOME=/home/cltbld
+  HOSTNAME=bld-linux64-spot-302.build.releng.usw2.mozilla.com
+  LANG=en_US.UTF-8
+  LC_ALL=C
+  LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin
+  LESSOPEN=|/usr/bin/lesspipe.sh %s
+  LOGNAME=cltbld
+  MAIL=/var/spool/mail/cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  PATH=/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+  PWD=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TINDERBOX_OUTPUT=1
+  TMOUT=86400
+  TOOLTOOL_DIR=/builds/slave/tb-c-beta-l64-d-00000000000000/build
+  USER=cltbld
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  _=/tools/buildbot/bin/python
+ using PTY: False
+INFO: mock_mozilla.py version 1.0.3 starting...
+State Changed: init plugins
+INFO: selinux disabled
+State Changed: start
+State Changed: lock buildroot
+State Changed: shell
+/builds/slave/tb-c-beta-l64-d-00000000000000/build/.mozconfig: line 3: /builds/slave/tb-c-beta-l64-d-00000000000000/build/comm/mail/config/mozconfigs/common: No such file or directory
+client.mk:203: /builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb/.mozconfig.mk: No such file or directory
+mkdir -p '/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb/'
+(  echo "export MOZ_AUTOMATION_BUILD_SYMBOLS=1";  echo "export MOZ_AUTOMATION_L10N_CHECK=1";  echo "export MOZ_AUTOMATION_PACKAGE=1";  echo "export MOZ_AUTOMATION_PACKAGE_TESTS=1";  echo "export MOZ_AUTOMATION_INSTALLER=0";  echo "export MOZ_AUTOMATION_UPDATE_PACKAGING=0";  echo "export MOZ_AUTOMATION_PACKAGE_GENERATED_SOURCES=1";  echo "export MOZ_AUTOMATION_UPLOAD=1";  echo "export PATH=/builds/slave/tb-c-beta-l64-d-00000000000000/build/gcc/bin:/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin";  echo "export LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin"; ) > /builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb/.mozconfig.mk
+/builds/slave/tb-c-beta-l64-d-00000000000000/build/.mozconfig: line 3: /builds/slave/tb-c-beta-l64-d-00000000000000/build/comm/mail/config/mozconfigs/common: No such file or directory
+Adding client.mk options from :
+    AUTOCLOBBER=1
+    export MOZ_AUTOMATION_BUILD_SYMBOLS=1
+    export MOZ_AUTOMATION_L10N_CHECK=1
+    export MOZ_AUTOMATION_PACKAGE=1
+    export MOZ_AUTOMATION_PACKAGE_TESTS=1
+    export MOZ_AUTOMATION_INSTALLER=0
+    export MOZ_AUTOMATION_UPDATE_PACKAGING=0
+    export MOZ_AUTOMATION_PACKAGE_GENERATED_SOURCES=1
+    export MOZ_AUTOMATION_UPLOAD=1
+    export PATH=/builds/slave/tb-c-beta-l64-d-00000000000000/build/gcc/bin:/tools/buildbot/bin:/usr/local/bin:/usr/lib64/ccache:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/tools/git/bin:/tools/python27/bin:/tools/python27-mercurial/bin:/home/cltbld/bin
+    export LD_LIBRARY_PATH=/tools/gcc-4.3.3/installed/lib64:objdir-tb/mozilla/dist/bin
+make[1]: Entering directory `/builds/slave/tb-c-beta-l64-d-00000000000000/build'
+make[1]: Leaving directory `/builds/slave/tb-c-beta-l64-d-00000000000000/build'
+make[1]: *** No rule to make target `/builds/slave/tb-c-beta-l64-d-00000000000000/build/mozilla/aclocal.m4', needed by `/builds/slave/tb-c-beta-l64-d-00000000000000/build/configure'.  Stop.
+make: *** [/builds/slave/tb-c-beta-l64-d-00000000000000/build/objdir-tb/Makefile] Error 2
+State Changed: unlock buildroot
+program finished with exit code 2
+elapsedTime=0.601743
+========= master_lag: 0.01 =========
+========= Finished compile failed (results: 2, elapsed: 0 secs) (at 2018-06-08 03:15:18.927276) =========
+
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Started maybe rebooting skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 03:15:18.928190) =========
+========= Finished maybe rebooting skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 03:15:18.928572) =========
+
+========= Total master_lag: 0.58 =========
+

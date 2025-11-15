@@ -1,0 +1,799 @@
+builder: try-win64-debug
+slave: y-2008-spot-001
+starttime: 1528630108.37
+results: warnings (1)
+builduid: 3321053f84ba47f297c4c68f30eea2b9
+revision: 9844050ba50b527a8079e6a6c8291e2830e4e723
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:28.372865) =========
+master: http://buildbot-master75.bb.releng.use1.mozilla.com:8101/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:28.373330) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:28.373629) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:28.822289) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 1 secs) (at 2018-06-10 04:28:28.822665) =========
+'bash' '-c' 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py'
+ in dir c:\builds\moz2_slave\try-w64-d-00000000000000000000\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld\AppData\Roaming
+  APR_ICONV_PATH=c:/mozilla-build/svn-win32-1.6.3/iconv
+  BUILDBOT_PATH=C:\mozilla-build\buildbotve
+  CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=Y-2008-SPOT-001
+  COMSPEC=C:\Windows\system32\cmd.exe
+  CVS_RSH=ssh
+  DXSDK_DIR=C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+  EDITOR=emacs.exe
+  FP_NO_HOST_CHECK=NO
+  GIT_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/git-shared
+  HG_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/hg-shared
+  HOME=c:/Users/cltbld
+  HOMEDRIVE=C:
+  HOMEPATH=\
+  HOSTTYPE=i686
+  IDLEIZER_HALT_ON_IDLE=true
+  INPUTRC=C:/mozilla-build/msys/etc/inputrc
+  LOCALAPPDATA=C:\Users\cltbld\AppData\Local
+  LOG="c:\runner\buildbot-startup.log"
+  LOGNAME=cltbld
+  LOGONSERVER=\\Y-2008-SPOT-001
+  MACHTYPE=i686-pc-msys
+  MAKE_MODE=unix
+  MOZBUILDDIR=C:\mozilla-build
+  MOZILLABUILD=C:\mozilla-build
+  MOZ_TOOLS=C:\mozilla-build\moztools-x64
+  MSYSTEM=MINGW32
+  NUMBER_OF_PROCESSORS=16
+  OLDPWD=c:/Users/cltbld
+  OS=Windows_NT
+  OSTYPE=msys
+  OS_VERSION=2008
+  PATH=C:\mozilla-build\msys\local\bin;c:\mozilla-build\wget;c:\mozilla-build\7zip;c:\mozilla-build\blat261\full;c:\mozilla-build\python;c:\mozilla-build\svn-win32-1.6.3\bin;c:\mozilla-build\upx203w;c:\mozilla-build\emacs-24.3\bin;c:\mozilla-build\info-zip;c:\mozilla-build\nsis-2.46u;c:\mozilla-build\nsis-3.0a2;c:\mozilla-build\wix-351728;c:\mozilla-build\hg;c:\mozilla-build\python\Scripts;c:\mozilla-build\kdiff3;c:\mozilla-build\yasm;c:\mozilla-build\mozmake;.;C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;c:\Program Files (x86)\Puppet Labs\Puppet\puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\facter\bin;c:\Program Files (x86)\Puppet Labs\Puppet\hiera\bin;c:\Program Files (x86)\Puppet Labs\Puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\ruby\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\tools\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Amazon\cfn-bootstrap\;c:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files (x86)\Puppet Labs\Puppet\bin;C:\mozilla-build\msys\bin;c:\mozilla-build\python27\scripts;c:\mozilla-build\wget;c:\mozilla-build\info-zip;c:\mozilla-build;c:\mozilla-build\vim\vim72;c:\mozilla-build\python27;c:\ProgramData\chocolatey\bin;.;c:\opt\runner;c:\mozilla-build\buildbotve;c:\mozilla-build\python27;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;C:\mozilla-build\msys\local\bin;.;C:\mozilla-build\msys\local\bin;c:\mozilla-build\moztools-x64\bin;c:\mozilla-build\vim\vim72
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=3e04
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PS1=\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ 
+  PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\
+  PUBLIC=C:\Users\Public
+  PWD=c:/Users/cltbld
+  RUNNER_CONFIG_CMD=C:\opt\runner\Scripts\python2.7.exe C:\opt\runner\Scripts\runner-script.py -c c:\opt\runner\runner.cfg
+  SHELL=C:/mozilla-build/msys/bin/sh
+  SHLVL=1
+  SSH_AGENT_PID=1352
+  SSH_AUTH_SOCK=C:/Users/cltbld/AppData/Local/Temp/ssh-rIbAtf1636/agent.1636
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\Windows
+  TEMP=C:/Users/cltbld/AppData/Local/Temp
+  TERM=cygwin
+  TMP=C:/Users/cltbld/AppData/Local/Temp
+  USERDOMAIN=Y-2008-SPOT-001
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld
+  VS100COMNTOOLS=c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+  VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+  WINDIR=C:\Windows
+  WINDOWS_TRACING_FLAGS=3
+  WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log
+  WIX_351728_PATH=c:/mozilla-build/wix-351728
+  _=C:\mozilla-build\buildbotve\Scripts\python
+ using PTY: False
+--2018-06-10 04:28:27--  https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py
+Resolving hg.mozilla.org (hg.mozilla.org)... 63.245.215.25, 63.245.215.102
+Connecting to hg.mozilla.org (hg.mozilla.org)|63.245.215.25|:443... connected.
+HTTP request sent, awaiting response... 200 Script output follows
+Length: 12179 (12K) [text/x-python]
+Saving to: 'archiver_client.py'
+
+     0K .......... .                                          100% 40.0K=0.3s
+
+2018-06-10 04:28:28 (40.0 KB/s) - 'archiver_client.py' saved [12179/12179]
+
+program finished with exit code 0
+elapsedTime=1.975000
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 1 secs) (at 2018-06-10 04:28:30.808150) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 3 secs) (at 2018-06-10 04:28:30.809162) =========
+'rm' '-rf' 'scripts' 'properties'
+ in dir c:\builds\moz2_slave\try-w64-d-00000000000000000000\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld\AppData\Roaming
+  APR_ICONV_PATH=c:/mozilla-build/svn-win32-1.6.3/iconv
+  BUILDBOT_PATH=C:\mozilla-build\buildbotve
+  CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=Y-2008-SPOT-001
+  COMSPEC=C:\Windows\system32\cmd.exe
+  CVS_RSH=ssh
+  DXSDK_DIR=C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+  EDITOR=emacs.exe
+  FP_NO_HOST_CHECK=NO
+  GIT_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/git-shared
+  HG_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/hg-shared
+  HOME=c:/Users/cltbld
+  HOMEDRIVE=C:
+  HOMEPATH=\
+  HOSTTYPE=i686
+  IDLEIZER_HALT_ON_IDLE=true
+  INPUTRC=C:/mozilla-build/msys/etc/inputrc
+  LOCALAPPDATA=C:\Users\cltbld\AppData\Local
+  LOG="c:\runner\buildbot-startup.log"
+  LOGNAME=cltbld
+  LOGONSERVER=\\Y-2008-SPOT-001
+  MACHTYPE=i686-pc-msys
+  MAKE_MODE=unix
+  MOZBUILDDIR=C:\mozilla-build
+  MOZILLABUILD=C:\mozilla-build
+  MOZ_TOOLS=C:\mozilla-build\moztools-x64
+  MSYSTEM=MINGW32
+  NUMBER_OF_PROCESSORS=16
+  OLDPWD=c:/Users/cltbld
+  OS=Windows_NT
+  OSTYPE=msys
+  OS_VERSION=2008
+  PATH=C:\mozilla-build\msys\local\bin;c:\mozilla-build\wget;c:\mozilla-build\7zip;c:\mozilla-build\blat261\full;c:\mozilla-build\python;c:\mozilla-build\svn-win32-1.6.3\bin;c:\mozilla-build\upx203w;c:\mozilla-build\emacs-24.3\bin;c:\mozilla-build\info-zip;c:\mozilla-build\nsis-2.46u;c:\mozilla-build\nsis-3.0a2;c:\mozilla-build\wix-351728;c:\mozilla-build\hg;c:\mozilla-build\python\Scripts;c:\mozilla-build\kdiff3;c:\mozilla-build\yasm;c:\mozilla-build\mozmake;.;C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;c:\Program Files (x86)\Puppet Labs\Puppet\puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\facter\bin;c:\Program Files (x86)\Puppet Labs\Puppet\hiera\bin;c:\Program Files (x86)\Puppet Labs\Puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\ruby\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\tools\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Amazon\cfn-bootstrap\;c:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files (x86)\Puppet Labs\Puppet\bin;C:\mozilla-build\msys\bin;c:\mozilla-build\python27\scripts;c:\mozilla-build\wget;c:\mozilla-build\info-zip;c:\mozilla-build;c:\mozilla-build\vim\vim72;c:\mozilla-build\python27;c:\ProgramData\chocolatey\bin;.;c:\opt\runner;c:\mozilla-build\buildbotve;c:\mozilla-build\python27;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;C:\mozilla-build\msys\local\bin;.;C:\mozilla-build\msys\local\bin;c:\mozilla-build\moztools-x64\bin;c:\mozilla-build\vim\vim72
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=3e04
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PS1=\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ 
+  PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\
+  PUBLIC=C:\Users\Public
+  PWD=c:/Users/cltbld
+  RUNNER_CONFIG_CMD=C:\opt\runner\Scripts\python2.7.exe C:\opt\runner\Scripts\runner-script.py -c c:\opt\runner\runner.cfg
+  SHELL=C:/mozilla-build/msys/bin/sh
+  SHLVL=1
+  SSH_AGENT_PID=1352
+  SSH_AUTH_SOCK=C:/Users/cltbld/AppData/Local/Temp/ssh-rIbAtf1636/agent.1636
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\Windows
+  TEMP=C:/Users/cltbld/AppData/Local/Temp
+  TERM=cygwin
+  TMP=C:/Users/cltbld/AppData/Local/Temp
+  USERDOMAIN=Y-2008-SPOT-001
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld
+  VS100COMNTOOLS=c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+  VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+  WINDIR=C:\Windows
+  WINDOWS_TRACING_FLAGS=3
+  WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log
+  WIX_351728_PATH=c:/mozilla-build/wix-351728
+  _=C:\mozilla-build\buildbotve\Scripts\python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=3.307000
+========= master_lag: 0.02 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 3 secs) (at 2018-06-10 04:28:34.131799) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 15 secs) (at 2018-06-10 04:28:34.132673) =========
+'bash' '-c' u'python archiver_client.py mozharness --repo try --rev 9844050ba50b527a8079e6a6c8291e2830e4e723 --destination scripts --debug'
+ in dir c:\builds\moz2_slave\try-w64-d-00000000000000000000\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python archiver_client.py mozharness --repo try --rev 9844050ba50b527a8079e6a6c8291e2830e4e723 --destination scripts --debug']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld\AppData\Roaming
+  APR_ICONV_PATH=c:/mozilla-build/svn-win32-1.6.3/iconv
+  BUILDBOT_PATH=C:\mozilla-build\buildbotve
+  CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=Y-2008-SPOT-001
+  COMSPEC=C:\Windows\system32\cmd.exe
+  CVS_RSH=ssh
+  DXSDK_DIR=C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+  EDITOR=emacs.exe
+  FP_NO_HOST_CHECK=NO
+  GIT_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/git-shared
+  HG_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/hg-shared
+  HOME=c:/Users/cltbld
+  HOMEDRIVE=C:
+  HOMEPATH=\
+  HOSTTYPE=i686
+  IDLEIZER_HALT_ON_IDLE=true
+  INPUTRC=C:/mozilla-build/msys/etc/inputrc
+  LOCALAPPDATA=C:\Users\cltbld\AppData\Local
+  LOG="c:\runner\buildbot-startup.log"
+  LOGNAME=cltbld
+  LOGONSERVER=\\Y-2008-SPOT-001
+  MACHTYPE=i686-pc-msys
+  MAKE_MODE=unix
+  MOZBUILDDIR=C:\mozilla-build
+  MOZILLABUILD=C:\mozilla-build
+  MOZ_TOOLS=C:\mozilla-build\moztools-x64
+  MSYSTEM=MINGW32
+  NUMBER_OF_PROCESSORS=16
+  OLDPWD=c:/Users/cltbld
+  OS=Windows_NT
+  OSTYPE=msys
+  OS_VERSION=2008
+  PATH=C:\mozilla-build\msys\local\bin;c:\mozilla-build\wget;c:\mozilla-build\7zip;c:\mozilla-build\blat261\full;c:\mozilla-build\python;c:\mozilla-build\svn-win32-1.6.3\bin;c:\mozilla-build\upx203w;c:\mozilla-build\emacs-24.3\bin;c:\mozilla-build\info-zip;c:\mozilla-build\nsis-2.46u;c:\mozilla-build\nsis-3.0a2;c:\mozilla-build\wix-351728;c:\mozilla-build\hg;c:\mozilla-build\python\Scripts;c:\mozilla-build\kdiff3;c:\mozilla-build\yasm;c:\mozilla-build\mozmake;.;C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;c:\Program Files (x86)\Puppet Labs\Puppet\puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\facter\bin;c:\Program Files (x86)\Puppet Labs\Puppet\hiera\bin;c:\Program Files (x86)\Puppet Labs\Puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\ruby\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\tools\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Amazon\cfn-bootstrap\;c:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files (x86)\Puppet Labs\Puppet\bin;C:\mozilla-build\msys\bin;c:\mozilla-build\python27\scripts;c:\mozilla-build\wget;c:\mozilla-build\info-zip;c:\mozilla-build;c:\mozilla-build\vim\vim72;c:\mozilla-build\python27;c:\ProgramData\chocolatey\bin;.;c:\opt\runner;c:\mozilla-build\buildbotve;c:\mozilla-build\python27;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;C:\mozilla-build\msys\local\bin;.;C:\mozilla-build\msys\local\bin;c:\mozilla-build\moztools-x64\bin;c:\mozilla-build\vim\vim72
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=3e04
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PS1=\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ 
+  PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\
+  PUBLIC=C:\Users\Public
+  PWD=c:/Users/cltbld
+  RUNNER_CONFIG_CMD=C:\opt\runner\Scripts\python2.7.exe C:\opt\runner\Scripts\runner-script.py -c c:\opt\runner\runner.cfg
+  SHELL=C:/mozilla-build/msys/bin/sh
+  SHLVL=1
+  SSH_AGENT_PID=1352
+  SSH_AUTH_SOCK=C:/Users/cltbld/AppData/Local/Temp/ssh-rIbAtf1636/agent.1636
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\Windows
+  TEMP=C:/Users/cltbld/AppData/Local/Temp
+  TERM=cygwin
+  TMP=C:/Users/cltbld/AppData/Local/Temp
+  USERDOMAIN=Y-2008-SPOT-001
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld
+  VS100COMNTOOLS=c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+  VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+  WINDIR=C:\Windows
+  WINDOWS_TRACING_FLAGS=3
+  WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log
+  WIX_351728_PATH=c:/mozilla-build/wix-351728
+  _=C:\mozilla-build\buildbotve\Scripts\python
+ using PTY: False
+2018-06-10 04:28:31,967 truncating revision to first 12 chars
+2018-06-10 04:28:31,967 Setting DEBUG logging.
+2018-06-10 04:28:31,967 attempt 1/10
+2018-06-10 04:28:31,967 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/try/9844050ba50b?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-10 04:28:33,171 attempt 1/10
+2018-06-10 04:28:34,134 current task status: no status available at this point. state: STARTED
+2018-06-10 04:28:34,135 sleeping for 10.00s (attempt 1/10)
+2018-06-10 04:28:44,135 attempt 2/10
+2018-06-10 04:28:44,914 current task status: Task completed! Check 's3_urls' for upload locations. state: SUCCESS
+2018-06-10 04:28:45,710 unpacking tar archive at: try-9844050ba50b/testing/mozharness/
+2018-06-10 04:28:45,871 skipping symlink on windows: configs/single_locale/linux32.py
+2018-06-10 04:28:45,871 skipping symlink on windows: configs/single_locale/linux32_devedition.py
+program finished with exit code 0
+elapsedTime=15.360000
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 15 secs) (at 2018-06-10 04:28:49.504753) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:49.505785) =========
+script_repo_revision: 9844050ba50b527a8079e6a6c8291e2830e4e723
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:49.506205) =========
+
+========= Started downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:49.506497) =========
+========= Finished downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:49.513784) =========
+
+========= Started remove old nonce (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:49.514055) =========
+'rm' '-f' 'nonce'
+ in dir c:\builds\moz2_slave\try-w64-d-00000000000000000000\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'nonce']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld\AppData\Roaming
+  APR_ICONV_PATH=c:/mozilla-build/svn-win32-1.6.3/iconv
+  BUILDBOT_PATH=C:\mozilla-build\buildbotve
+  CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=Y-2008-SPOT-001
+  COMSPEC=C:\Windows\system32\cmd.exe
+  CVS_RSH=ssh
+  DXSDK_DIR=C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+  EDITOR=emacs.exe
+  FP_NO_HOST_CHECK=NO
+  GIT_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/git-shared
+  HG_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/hg-shared
+  HOME=c:/Users/cltbld
+  HOMEDRIVE=C:
+  HOMEPATH=\
+  HOSTTYPE=i686
+  IDLEIZER_HALT_ON_IDLE=true
+  INPUTRC=C:/mozilla-build/msys/etc/inputrc
+  LOCALAPPDATA=C:\Users\cltbld\AppData\Local
+  LOG="c:\runner\buildbot-startup.log"
+  LOGNAME=cltbld
+  LOGONSERVER=\\Y-2008-SPOT-001
+  MACHTYPE=i686-pc-msys
+  MAKE_MODE=unix
+  MOZBUILDDIR=C:\mozilla-build
+  MOZILLABUILD=C:\mozilla-build
+  MOZ_TOOLS=C:\mozilla-build\moztools-x64
+  MSYSTEM=MINGW32
+  NUMBER_OF_PROCESSORS=16
+  OLDPWD=c:/Users/cltbld
+  OS=Windows_NT
+  OSTYPE=msys
+  OS_VERSION=2008
+  PATH=C:\mozilla-build\msys\local\bin;c:\mozilla-build\wget;c:\mozilla-build\7zip;c:\mozilla-build\blat261\full;c:\mozilla-build\python;c:\mozilla-build\svn-win32-1.6.3\bin;c:\mozilla-build\upx203w;c:\mozilla-build\emacs-24.3\bin;c:\mozilla-build\info-zip;c:\mozilla-build\nsis-2.46u;c:\mozilla-build\nsis-3.0a2;c:\mozilla-build\wix-351728;c:\mozilla-build\hg;c:\mozilla-build\python\Scripts;c:\mozilla-build\kdiff3;c:\mozilla-build\yasm;c:\mozilla-build\mozmake;.;C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;c:\Program Files (x86)\Puppet Labs\Puppet\puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\facter\bin;c:\Program Files (x86)\Puppet Labs\Puppet\hiera\bin;c:\Program Files (x86)\Puppet Labs\Puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\ruby\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\tools\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Amazon\cfn-bootstrap\;c:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files (x86)\Puppet Labs\Puppet\bin;C:\mozilla-build\msys\bin;c:\mozilla-build\python27\scripts;c:\mozilla-build\wget;c:\mozilla-build\info-zip;c:\mozilla-build;c:\mozilla-build\vim\vim72;c:\mozilla-build\python27;c:\ProgramData\chocolatey\bin;.;c:\opt\runner;c:\mozilla-build\buildbotve;c:\mozilla-build\python27;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;C:\mozilla-build\msys\local\bin;.;C:\mozilla-build\msys\local\bin;c:\mozilla-build\moztools-x64\bin;c:\mozilla-build\vim\vim72
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=3e04
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PS1=\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ 
+  PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\
+  PUBLIC=C:\Users\Public
+  PWD=c:/Users/cltbld
+  RUNNER_CONFIG_CMD=C:\opt\runner\Scripts\python2.7.exe C:\opt\runner\Scripts\runner-script.py -c c:\opt\runner\runner.cfg
+  SHELL=C:/mozilla-build/msys/bin/sh
+  SHLVL=1
+  SSH_AGENT_PID=1352
+  SSH_AUTH_SOCK=C:/Users/cltbld/AppData/Local/Temp/ssh-rIbAtf1636/agent.1636
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\Windows
+  TEMP=C:/Users/cltbld/AppData/Local/Temp
+  TERM=cygwin
+  TMP=C:/Users/cltbld/AppData/Local/Temp
+  USERDOMAIN=Y-2008-SPOT-001
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld
+  VS100COMNTOOLS=c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+  VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+  WINDIR=C:\Windows
+  WINDOWS_TRACING_FLAGS=3
+  WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log
+  WIX_351728_PATH=c:/mozilla-build/wix-351728
+  _=C:\mozilla-build\buildbotve\Scripts\python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.108000
+========= master_lag: 0.01 =========
+========= Finished remove old nonce (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:49.628119) =========
+
+========= Started downloading to token (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:49.629068) =========
+Slave: y-2008-spot-001
+IP: 10.134.67.111
+Duration: 25200
+URI: https://mac-v2-signing1.srv.releng.scl3.mozilla.com:9110/token
+========= Finished downloading to token (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:50.093195) =========
+
+========= Started set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:50.093630) =========
+'bash' '-c' 'pwd'
+ in dir c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'pwd']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld\AppData\Roaming
+  APR_ICONV_PATH=c:/mozilla-build/svn-win32-1.6.3/iconv
+  BUILDBOT_PATH=C:\mozilla-build\buildbotve
+  CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=Y-2008-SPOT-001
+  COMSPEC=C:\Windows\system32\cmd.exe
+  CVS_RSH=ssh
+  DXSDK_DIR=C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+  EDITOR=emacs.exe
+  FP_NO_HOST_CHECK=NO
+  GIT_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/git-shared
+  HG_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/hg-shared
+  HOME=c:/Users/cltbld
+  HOMEDRIVE=C:
+  HOMEPATH=\
+  HOSTTYPE=i686
+  IDLEIZER_HALT_ON_IDLE=true
+  INPUTRC=C:/mozilla-build/msys/etc/inputrc
+  LOCALAPPDATA=C:\Users\cltbld\AppData\Local
+  LOG="c:\runner\buildbot-startup.log"
+  LOGNAME=cltbld
+  LOGONSERVER=\\Y-2008-SPOT-001
+  MACHTYPE=i686-pc-msys
+  MAKE_MODE=unix
+  MOZBUILDDIR=C:\mozilla-build
+  MOZILLABUILD=C:\mozilla-build
+  MOZ_TOOLS=C:\mozilla-build\moztools-x64
+  MSYSTEM=MINGW32
+  NUMBER_OF_PROCESSORS=16
+  OLDPWD=c:/Users/cltbld
+  OS=Windows_NT
+  OSTYPE=msys
+  OS_VERSION=2008
+  PATH=C:\mozilla-build\msys\local\bin;c:\mozilla-build\wget;c:\mozilla-build\7zip;c:\mozilla-build\blat261\full;c:\mozilla-build\python;c:\mozilla-build\svn-win32-1.6.3\bin;c:\mozilla-build\upx203w;c:\mozilla-build\emacs-24.3\bin;c:\mozilla-build\info-zip;c:\mozilla-build\nsis-2.46u;c:\mozilla-build\nsis-3.0a2;c:\mozilla-build\wix-351728;c:\mozilla-build\hg;c:\mozilla-build\python\Scripts;c:\mozilla-build\kdiff3;c:\mozilla-build\yasm;c:\mozilla-build\mozmake;.;C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;c:\Program Files (x86)\Puppet Labs\Puppet\puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\facter\bin;c:\Program Files (x86)\Puppet Labs\Puppet\hiera\bin;c:\Program Files (x86)\Puppet Labs\Puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\ruby\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\tools\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Amazon\cfn-bootstrap\;c:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files (x86)\Puppet Labs\Puppet\bin;C:\mozilla-build\msys\bin;c:\mozilla-build\python27\scripts;c:\mozilla-build\wget;c:\mozilla-build\info-zip;c:\mozilla-build;c:\mozilla-build\vim\vim72;c:\mozilla-build\python27;c:\ProgramData\chocolatey\bin;.;c:\opt\runner;c:\mozilla-build\buildbotve;c:\mozilla-build\python27;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;C:\mozilla-build\msys\local\bin;.;C:\mozilla-build\msys\local\bin;c:\mozilla-build\moztools-x64\bin;c:\mozilla-build\vim\vim72
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=3e04
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PS1=\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ 
+  PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\
+  PUBLIC=C:\Users\Public
+  PWD=c:/Users/cltbld
+  RUNNER_CONFIG_CMD=C:\opt\runner\Scripts\python2.7.exe C:\opt\runner\Scripts\runner-script.py -c c:\opt\runner\runner.cfg
+  SHELL=C:/mozilla-build/msys/bin/sh
+  SHLVL=1
+  SSH_AGENT_PID=1352
+  SSH_AUTH_SOCK=C:/Users/cltbld/AppData/Local/Temp/ssh-rIbAtf1636/agent.1636
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\Windows
+  TEMP=C:/Users/cltbld/AppData/Local/Temp
+  TERM=cygwin
+  TMP=C:/Users/cltbld/AppData/Local/Temp
+  USERDOMAIN=Y-2008-SPOT-001
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld
+  VS100COMNTOOLS=c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+  VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+  WINDIR=C:\Windows
+  WINDOWS_TRACING_FLAGS=3
+  WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log
+  WIX_351728_PATH=c:/mozilla-build/wix-351728
+  _=C:\mozilla-build\buildbotve\Scripts\python
+ using PTY: False
+/c/builds/moz2_slave/try-w64-d-00000000000000000000/scripts
+program finished with exit code 0
+elapsedTime=0.107000
+toolsdir: '/c/builds/moz2_slave/try-w64-d-00000000000000000000/scripts'
+========= master_lag: 0.01 =========
+========= Finished set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:50.208186) =========
+
+========= Started 'c:/mozilla-build/python27/python -u ...' warnings (results: 1, elapsed: 0 secs) (at 2018-06-10 04:28:50.209246) =========
+'c:/mozilla-build/python27/python' '-u' 'scripts/scripts/fx_desktop_build.py' '--config' 'builds/releng_base_windows_64_builds.py' '--custom-build-variant-cfg' 'debug' '--config' 'balrog/production.py' '--branch' 'try' '--build-pool' 'production'
+ in dir c:\builds\moz2_slave\try-w64-d-00000000000000000000\. (timeout 10800 secs) (maxTime 27000 secs)
+ watching logfiles {}
+ argv: ['c:/mozilla-build/python27/python', '-u', 'scripts/scripts/fx_desktop_build.py', '--config', 'builds/releng_base_windows_64_builds.py', '--custom-build-variant-cfg', 'debug', '--config', 'balrog/production.py', '--branch', 'try', '--build-pool', 'production']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld\AppData\Roaming
+  APR_ICONV_PATH=c:/mozilla-build/svn-win32-1.6.3/iconv
+  BINSCOPE=C:\Program Files (x86)\Microsoft\SDL BinScope\BinScope.exe
+  BUILDBOT_PATH=C:\mozilla-build\buildbotve
+  CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=Y-2008-SPOT-001
+  COMSPEC=C:\Windows\system32\cmd.exe
+  CVS_RSH=ssh
+  DXSDK_DIR=C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+  EDITOR=emacs.exe
+  FP_NO_HOST_CHECK=NO
+  GIT_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/git-shared
+  HG_SHARE_BASE_DIR=c:/builds/hg-shared
+  HOME=c:/Users/cltbld
+  HOMEDRIVE=C:
+  HOMEPATH=\
+  HOSTTYPE=i686
+  IDLEIZER_HALT_ON_IDLE=true
+  INPUTRC=C:/mozilla-build/msys/etc/inputrc
+  LOCALAPPDATA=C:\Users\cltbld\AppData\Local
+  LOG="c:\runner\buildbot-startup.log"
+  LOGNAME=cltbld
+  LOGONSERVER=\\Y-2008-SPOT-001
+  MACHTYPE=i686-pc-msys
+  MAKE_MODE=unix
+  MOZBUILDDIR=C:\mozilla-build
+  MOZILLABUILD=C:\mozilla-build
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=obj-firefox
+  MOZ_SIGNING_SERVERS=gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110,gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110,macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  MOZ_SIGN_CMD=python /c/builds/moz2_slave/try-w64-d-00000000000000000000/scripts/release/signing/signtool.py --cachedir /c/builds/moz2_slave/try-w64-d-00000000000000000000/signing_cache -t /c/builds/moz2_slave/try-w64-d-00000000000000000000/token -n /c/builds/moz2_slave/try-w64-d-00000000000000000000/nonce -c /c/builds/moz2_slave/try-w64-d-00000000000000000000/scripts/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  MOZ_TOOLS=C:\mozilla-build\moztools-x64
+  MSYSTEM=MINGW32
+  NUMBER_OF_PROCESSORS=16
+  OLDPWD=c:/Users/cltbld
+  OS=Windows_NT
+  OSTYPE=msys
+  OS_VERSION=2008
+  PATH=C:\mozilla-build\nsis-3.0b1;C:\mozilla-build\nsis-2.46u;C:\mozilla-build\python27;C:\mozilla-build\buildbotve\scripts;C:\mozilla-build\msys\local\bin;c:\mozilla-build\wget;c:\mozilla-build\7zip;c:\mozilla-build\blat261\full;c:\mozilla-build\python;c:\mozilla-build\svn-win32-1.6.3\bin;c:\mozilla-build\upx203w;c:\mozilla-build\emacs-24.3\bin;c:\mozilla-build\info-zip;c:\mozilla-build\nsis-2.46u;c:\mozilla-build\nsis-3.0a2;c:\mozilla-build\wix-351728;c:\mozilla-build\hg;c:\mozilla-build\python\Scripts;c:\mozilla-build\kdiff3;c:\mozilla-build\yasm;c:\mozilla-build\mozmake;.;C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;c:\Program Files (x86)\Puppet Labs\Puppet\puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\facter\bin;c:\Program Files (x86)\Puppet Labs\Puppet\hiera\bin;c:\Program Files (x86)\Puppet Labs\Puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\ruby\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\tools\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Amazon\cfn-bootstrap\;c:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files (x86)\Puppet Labs\Puppet\bin;C:\mozilla-build\msys\bin;c:\mozilla-build\python27\scripts;c:\mozilla-build\wget;c:\mozilla-build\info-zip;c:\mozilla-build;c:\mozilla-build\vim\vim72;c:\mozilla-build\python27;c:\ProgramData\chocolatey\bin;.;c:\opt\runner;c:\mozilla-build\buildbotve;c:\mozilla-build\python27;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;C:\mozilla-build\msys\local\bin;.;C:\mozilla-build\msys\local\bin;c:\mozilla-build\moztools-x64\bin;c:\mozilla-build\vim\vim72
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=3e04
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PROPERTIES_FILE=/c/builds/moz2_slave/try-w64-d-00000000000000000000/buildprops.json
+  PS1=\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ 
+  PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\
+  PUBLIC=C:\Users\Public
+  PWD=c:/Users/cltbld
+  RUNNER_CONFIG_CMD=C:\opt\runner\Scripts\python2.7.exe C:\opt\runner\Scripts\runner-script.py -c c:\opt\runner\runner.cfg
+  SHELL=C:/mozilla-build/msys/bin/sh
+  SHLVL=1
+  SSH_AGENT_PID=1352
+  SSH_AUTH_SOCK=C:/Users/cltbld/AppData/Local/Temp/ssh-rIbAtf1636/agent.1636
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\Windows
+  TEMP=C:/Users/cltbld/AppData/Local/Temp
+  TERM=cygwin
+  TINDERBOX_OUTPUT=1
+  TMP=C:/Users/cltbld/AppData/Local/Temp
+  TOOLTOOL_CACHE=/c/builds/tooltool_cache
+  TOOLTOOL_HOME=/c/builds
+  USERDOMAIN=Y-2008-SPOT-001
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld
+  VS100COMNTOOLS=c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+  VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+  WINDIR=C:\Windows
+  WINDOWS_TRACING_FLAGS=3
+  WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log
+  WIX_351728_PATH=c:/mozilla-build/wix-351728
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  _=C:\mozilla-build\buildbotve\Scripts\python
+ using PTY: False
+Traceback (most recent call last):
+  File "scripts/scripts/fx_desktop_build.py", line 241, in <module>
+    fx_desktop_build = FxDesktopBuild()
+  File "scripts/scripts/fx_desktop_build.py", line 89, in __init__
+    super(FxDesktopBuild, self).__init__(**buildscript_kwargs)
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\mozilla\building\buildbase.py", line 678, in __init__
+    super(BuildScript, self).__init__(**kwargs)
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\base\python.py", line 93, in __init__
+    super(VirtualenvMixin, self).__init__(*args, **kwargs)
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\base\vcs\vcsbase.py", line 123, in __init__
+    super(VCSScript, self).__init__(**kwargs)
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\base\script.py", line 1820, in __init__
+    rw_config = ConfigClass(config_options=config_options, **kwargs)
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\base\config.py", line 266, in __init__
+    self.parse_args(args=option_args)
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\base\config.py", line 499, in parse_args
+    options.config_files + options.opt_config_files, options=options
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\mozilla\building\buildbase.py", line 364, in get_cfgs_from_files
+    options)
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\base\config.py", line 458, in get_cfgs_from_files
+    (cf, parse_config_file(cf, search_path=config_paths + [DEFAULT_CONFIG_PATH]))
+  File "c:\builds\moz2_slave\try-w64-d-00000000000000000000\scripts\mozharness\base\config.py", line 156, in parse_config_file
+    raise IOError("Can't find %s in %s!" % (file_name, search_path))
+IOError: Can't find builds/releng_base_windows_64_builds.py in ['.', 'c:\\builds\\moz2_slave\\try-w64-d-00000000000000000000\\scripts\\configs']!
+program finished with exit code 1
+elapsedTime=0.521000
+========= master_lag: 0.01 =========
+========= Finished 'c:/mozilla-build/python27/python -u ...' warnings (results: 1, elapsed: 0 secs) (at 2018-06-10 04:28:50.739470) =========
+
+========= Started no change (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:50.740574) =========
+'bash' '-c' 'for file in `ls -1`; do cat $file; done'
+ in dir c:\builds\moz2_slave\try-w64-d-00000000000000000000\properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'for file in `ls -1`; do cat $file; done']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld\AppData\Roaming
+  APR_ICONV_PATH=c:/mozilla-build/svn-win32-1.6.3/iconv
+  BUILDBOT_PATH=C:\mozilla-build\buildbotve
+  CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=Y-2008-SPOT-001
+  COMSPEC=C:\Windows\system32\cmd.exe
+  CVS_RSH=ssh
+  DXSDK_DIR=C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+  EDITOR=emacs.exe
+  FP_NO_HOST_CHECK=NO
+  GIT_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/git-shared
+  HG_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/hg-shared
+  HOME=c:/Users/cltbld
+  HOMEDRIVE=C:
+  HOMEPATH=\
+  HOSTTYPE=i686
+  IDLEIZER_HALT_ON_IDLE=true
+  INPUTRC=C:/mozilla-build/msys/etc/inputrc
+  LOCALAPPDATA=C:\Users\cltbld\AppData\Local
+  LOG="c:\runner\buildbot-startup.log"
+  LOGNAME=cltbld
+  LOGONSERVER=\\Y-2008-SPOT-001
+  MACHTYPE=i686-pc-msys
+  MAKE_MODE=unix
+  MOZBUILDDIR=C:\mozilla-build
+  MOZILLABUILD=C:\mozilla-build
+  MOZ_TOOLS=C:\mozilla-build\moztools-x64
+  MSYSTEM=MINGW32
+  NUMBER_OF_PROCESSORS=16
+  OLDPWD=c:/Users/cltbld
+  OS=Windows_NT
+  OSTYPE=msys
+  OS_VERSION=2008
+  PATH=C:\mozilla-build\msys\local\bin;c:\mozilla-build\wget;c:\mozilla-build\7zip;c:\mozilla-build\blat261\full;c:\mozilla-build\python;c:\mozilla-build\svn-win32-1.6.3\bin;c:\mozilla-build\upx203w;c:\mozilla-build\emacs-24.3\bin;c:\mozilla-build\info-zip;c:\mozilla-build\nsis-2.46u;c:\mozilla-build\nsis-3.0a2;c:\mozilla-build\wix-351728;c:\mozilla-build\hg;c:\mozilla-build\python\Scripts;c:\mozilla-build\kdiff3;c:\mozilla-build\yasm;c:\mozilla-build\mozmake;.;C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;c:\Program Files (x86)\Puppet Labs\Puppet\puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\facter\bin;c:\Program Files (x86)\Puppet Labs\Puppet\hiera\bin;c:\Program Files (x86)\Puppet Labs\Puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\ruby\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\tools\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Amazon\cfn-bootstrap\;c:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files (x86)\Puppet Labs\Puppet\bin;C:\mozilla-build\msys\bin;c:\mozilla-build\python27\scripts;c:\mozilla-build\wget;c:\mozilla-build\info-zip;c:\mozilla-build;c:\mozilla-build\vim\vim72;c:\mozilla-build\python27;c:\ProgramData\chocolatey\bin;.;c:\opt\runner;c:\mozilla-build\buildbotve;c:\mozilla-build\python27;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;C:\mozilla-build\msys\local\bin;.;C:\mozilla-build\msys\local\bin;c:\mozilla-build\moztools-x64\bin;c:\mozilla-build\vim\vim72
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=3e04
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PS1=\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ 
+  PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\
+  PUBLIC=C:\Users\Public
+  PWD=c:/Users/cltbld
+  RUNNER_CONFIG_CMD=C:\opt\runner\Scripts\python2.7.exe C:\opt\runner\Scripts\runner-script.py -c c:\opt\runner\runner.cfg
+  SHELL=C:/mozilla-build/msys/bin/sh
+  SHLVL=1
+  SSH_AGENT_PID=1352
+  SSH_AUTH_SOCK=C:/Users/cltbld/AppData/Local/Temp/ssh-rIbAtf1636/agent.1636
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\Windows
+  TEMP=C:/Users/cltbld/AppData/Local/Temp
+  TERM=cygwin
+  TMP=C:/Users/cltbld/AppData/Local/Temp
+  USERDOMAIN=Y-2008-SPOT-001
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld
+  VS100COMNTOOLS=c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+  VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+  WINDIR=C:\Windows
+  WINDOWS_TRACING_FLAGS=3
+  WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log
+  WIX_351728_PATH=c:/mozilla-build/wix-351728
+  _=C:\mozilla-build\buildbotve\Scripts\python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.107000
+
+========= master_lag: 0.01 =========
+========= Finished no change (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:50.854690) =========
+
+========= Started 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:50.855656) =========
+'rm' '-f' 'oauth.txt'
+ in dir c:\builds\moz2_slave\try-w64-d-00000000000000000000\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'oauth.txt']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld\AppData\Roaming
+  APR_ICONV_PATH=c:/mozilla-build/svn-win32-1.6.3/iconv
+  BUILDBOT_PATH=C:\mozilla-build\buildbotve
+  CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=Y-2008-SPOT-001
+  COMSPEC=C:\Windows\system32\cmd.exe
+  CVS_RSH=ssh
+  DXSDK_DIR=C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+  EDITOR=emacs.exe
+  FP_NO_HOST_CHECK=NO
+  GIT_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/git-shared
+  HG_SHARE_BASE_DIR=C:/mozilla-build/msys/builds/hg-shared
+  HOME=c:/Users/cltbld
+  HOMEDRIVE=C:
+  HOMEPATH=\
+  HOSTTYPE=i686
+  IDLEIZER_HALT_ON_IDLE=true
+  INPUTRC=C:/mozilla-build/msys/etc/inputrc
+  LOCALAPPDATA=C:\Users\cltbld\AppData\Local
+  LOG="c:\runner\buildbot-startup.log"
+  LOGNAME=cltbld
+  LOGONSERVER=\\Y-2008-SPOT-001
+  MACHTYPE=i686-pc-msys
+  MAKE_MODE=unix
+  MOZBUILDDIR=C:\mozilla-build
+  MOZILLABUILD=C:\mozilla-build
+  MOZ_TOOLS=C:\mozilla-build\moztools-x64
+  MSYSTEM=MINGW32
+  NUMBER_OF_PROCESSORS=16
+  OLDPWD=c:/Users/cltbld
+  OS=Windows_NT
+  OSTYPE=msys
+  OS_VERSION=2008
+  PATH=C:\mozilla-build\msys\local\bin;c:\mozilla-build\wget;c:\mozilla-build\7zip;c:\mozilla-build\blat261\full;c:\mozilla-build\python;c:\mozilla-build\svn-win32-1.6.3\bin;c:\mozilla-build\upx203w;c:\mozilla-build\emacs-24.3\bin;c:\mozilla-build\info-zip;c:\mozilla-build\nsis-2.46u;c:\mozilla-build\nsis-3.0a2;c:\mozilla-build\wix-351728;c:\mozilla-build\hg;c:\mozilla-build\python\Scripts;c:\mozilla-build\kdiff3;c:\mozilla-build\yasm;c:\mozilla-build\mozmake;.;C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;c:\Program Files (x86)\Puppet Labs\Puppet\puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\facter\bin;c:\Program Files (x86)\Puppet Labs\Puppet\hiera\bin;c:\Program Files (x86)\Puppet Labs\Puppet\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\ruby\bin;c:\Program Files (x86)\Puppet Labs\Puppet\sys\tools\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Amazon\cfn-bootstrap\;c:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;c:\Program Files (x86)\Puppet Labs\Puppet\bin;C:\mozilla-build\msys\bin;c:\mozilla-build\python27\scripts;c:\mozilla-build\wget;c:\mozilla-build\info-zip;c:\mozilla-build;c:\mozilla-build\vim\vim72;c:\mozilla-build\python27;c:\ProgramData\chocolatey\bin;.;c:\opt\runner;c:\mozilla-build\buildbotve;c:\mozilla-build\python27;C:\mozilla-build\msys\mingw\bin;C:\mozilla-build\msys\bin;C:\mozilla-build\msys\local\bin;.;C:\mozilla-build\msys\local\bin;c:\mozilla-build\moztools-x64\bin;c:\mozilla-build\vim\vim72
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=3e04
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PS1=\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ 
+  PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\
+  PUBLIC=C:\Users\Public
+  PWD=c:/Users/cltbld
+  RUNNER_CONFIG_CMD=C:\opt\runner\Scripts\python2.7.exe C:\opt\runner\Scripts\runner-script.py -c c:\opt\runner\runner.cfg
+  SHELL=C:/mozilla-build/msys/bin/sh
+  SHLVL=1
+  SSH_AGENT_PID=1352
+  SSH_AUTH_SOCK=C:/Users/cltbld/AppData/Local/Temp/ssh-rIbAtf1636/agent.1636
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\Windows
+  TEMP=C:/Users/cltbld/AppData/Local/Temp
+  TERM=cygwin
+  TMP=C:/Users/cltbld/AppData/Local/Temp
+  USERDOMAIN=Y-2008-SPOT-001
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld
+  VS100COMNTOOLS=c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+  VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+  WINDIR=C:\Windows
+  WINDOWS_TRACING_FLAGS=3
+  WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log
+  WIX_351728_PATH=c:/mozilla-build/wix-351728
+  _=C:\mozilla-build\buildbotve\Scripts\python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.107000
+========= master_lag: 0.01 =========
+========= Finished 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:50.969231) =========
+
+========= Started reboot slave lost (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:50.970197) =========
+
+========= Finished reboot slave lost (results: 0, elapsed: 0 secs) (at 2018-06-10 04:28:51.256184) =========
+
+========= Total master_lag: 0.07 =========
+

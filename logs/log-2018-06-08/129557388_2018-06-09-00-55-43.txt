@@ -1,0 +1,689 @@
+builder: mozilla-esr52_yosemite_r7-debug_test-jsreftest
+slave: t-yosemite-r7-0013
+starttime: 1528502143.68
+results: cancelled (6)
+buildid: 20180608150819
+builduid: b298b373e93d4f8dbf92436c9ed838a2
+revision: cbfdf01aac455e0591471201c96b89dee98190b5
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:43.683400) =========
+master: http://buildbot-master106.bb.releng.scl3.mozilla.com:8201/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:43.683951) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:43.684236) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:43.696243) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:43.696548) =========
+bash -c 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.fI2g1MlB33/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners
+  TMPDIR=/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+--2018-06-08 16:55:43--  https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py
+Resolving hg.mozilla.org... 63.245.215.102, 63.245.215.25
+Connecting to hg.mozilla.org|63.245.215.102|:443... connected.
+HTTP request sent, awaiting response... 200 Script output follows
+Length: 12179 (12K) [text/x-python]
+Saving to: 'archiver_client.py'
+
+     0K .......... .                                          100% 31.4M=0s
+
+2018-06-08 16:55:44 (31.4 MB/s) - 'archiver_client.py' saved [12179/12179]
+
+program finished with exit code 0
+elapsedTime=0.441022
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:44.148656) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:44.148997) =========
+rm -rf scripts properties
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.fI2g1MlB33/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners
+  TMPDIR=/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.021612
+========= master_lag: 0.03 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:44.197846) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 16:55:44.198236) =========
+bash -c 'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.fI2g1MlB33/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners
+  TMPDIR=/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+2018-06-08 16:55:44,248 truncating revision to first 12 chars
+2018-06-08 16:55:44,249 Setting DEBUG logging.
+2018-06-08 16:55:44,249 attempt 1/10
+2018-06-08 16:55:44,249 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/releases/mozilla-esr52/cbfdf01aac45?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-08 16:55:46,082 unpacking tar archive at: mozilla-esr52-cbfdf01aac45/testing/mozharness/
+program finished with exit code 0
+elapsedTime=2.222908
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 16:55:46.433343) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:46.433717) =========
+script_repo_revision: cbfdf01aac455e0591471201c96b89dee98190b5
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:46.434140) =========
+
+========= Started downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:46.434427) =========
+========= Finished downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 16:55:46.443337) =========
+
+========= Started '/tools/buildbot/bin/python -u ...' interrupted (results: 4, elapsed: 41 secs) (at 2018-06-08 16:55:46.443845) =========
+/tools/buildbot/bin/python -u scripts/scripts/desktop_unittest.py --cfg unittests/mac_unittest.py --reftest-suite jsreftest --blob-upload-branch mozilla-esr52 --download-symbols true
+ in dir /builds/slave/test/. (timeout 1800 secs) (maxTime 7200 secs)
+ watching logfiles {}
+ argv: ['/tools/buildbot/bin/python', '-u', 'scripts/scripts/desktop_unittest.py', '--cfg', 'unittests/mac_unittest.py', '--reftest-suite', 'jsreftest', '--blob-upload-branch', 'mozilla-esr52', '--download-symbols', 'true']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.fI2g1MlB33/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  MOZ_HIDE_RESULTS_TABLE=1
+  MOZ_NODE_PATH=/usr/local/bin/node
+  MOZ_NO_REMOTE=1
+  NO_EM_RESTART=1
+  NO_FAIL_ON_TEST_ERRORS=1
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PROPERTIES_FILE=/builds/slave/test/buildprops.json
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners
+  TMPDIR=/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=warn
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+16:55:46     INFO - MultiFileLogger online at 20180608 16:55:46 in /builds/slave/test
+16:55:46     INFO - Run as scripts/scripts/desktop_unittest.py --cfg unittests/mac_unittest.py --reftest-suite jsreftest --blob-upload-branch mozilla-esr52 --download-symbols true
+16:55:46     INFO - Dumping config to /builds/slave/test/logs/localconfig.json.
+16:55:46     INFO - {'all_cppunittest_suites': {'cppunittest': ('tests/cppunittest',)},
+16:55:46     INFO -  'all_gtest_suites': {'gtest': ()},
+16:55:46     INFO -  'all_jittest_suites': {'jittest': ()},
+16:55:46     INFO -  'all_mochitest_suites': {'a11y': ('--flavor=a11y',),
+16:55:46     INFO -                           'browser-chrome': ('--flavor=browser',),
+16:55:46     INFO -                           'browser-chrome-addons': ('--flavor=browser',
+16:55:46     INFO -                                                     '--chunk-by-runtime',
+16:55:46     INFO -                                                     '--tag=addons'),
+16:55:46     INFO -                           'browser-chrome-chunked': ('--flavor=browser',
+16:55:46     INFO -                                                      '--chunk-by-runtime'),
+16:55:46     INFO -                           'browser-chrome-clipboard': ('--flavor=browser',
+16:55:46     INFO -                                                        '--subsuite=clipboard'),
+16:55:46     INFO -                           'browser-chrome-gpu': ('--flavor=browser',
+16:55:46     INFO -                                                  '--subsuite=gpu'),
+16:55:46     INFO -                           'browser-chrome-screenshots': ('--flavor=browser',
+16:55:46     INFO -                                                          '--subsuite=screenshots'),
+16:55:46     INFO -                           'chrome': ('--flavor=chrome',),
+16:55:46     INFO -                           'chrome-chunked': ('--flavor=chrome',
+16:55:46     INFO -                                              '--chunk-by-dir=4'),
+16:55:46     INFO -                           'chrome-clipboard': ('--flavor=chrome',
+16:55:46     INFO -                                                '--subsuite=clipboard'),
+16:55:46     INFO -                           'chrome-gpu': ('--flavor=chrome', '--subsuite=gpu'),
+16:55:46     INFO -                           'jetpack-addon': ('--flavor=jetpack-addon',),
+16:55:46     INFO -                           'jetpack-package': ('--flavor=jetpack-package',),
+16:55:46     INFO -                           'jetpack-package-clipboard': ('--flavor=jetpack-package',
+16:55:46     INFO -                                                         '--subsuite=clipboard'),
+16:55:46     INFO -                           'mochitest-devtools-chrome': ('--flavor=browser',
+16:55:46     INFO -                                                         '--subsuite=devtools'),
+16:55:46     INFO -                           'mochitest-devtools-chrome-chunked': ('--flavor=browser',
+16:55:46     INFO -                                                                 '--subsuite=devtools',
+16:55:46     INFO -                                                                 '--chunk-by-runtime'),
+16:55:46     INFO -                           'mochitest-gl': ('--subsuite=webgl',),
+16:55:46     INFO -                           'mochitest-media': ('--subsuite=media',),
+16:55:46     INFO -                           'plain': (),
+16:55:46     INFO -                           'plain-chunked': ('--chunk-by-dir=4',),
+16:55:46     INFO -                           'plain-clipboard': ('--subsuite=clipboard',),
+16:55:46     INFO -                           'plain-gpu': ('--subsuite=gpu',)},
+16:55:46     INFO -  'all_mozbase_suites': {'mozbase': ()},
+16:55:46     INFO -  'all_reftest_suites': {'crashtest': {'options': ('--suite=crashtest',),
+16:55:46     INFO -                                       'tests': ('tests/reftest/tests/testing/crashtest/crashtests.list',)},
+16:55:46     INFO -                         'jsreftest': {'options': ('--extra-profile-file=tests/jsreftest/tests/user.js',),
+16:55:46     INFO -                                       'tests': ('tests/jsreftest/tests/jstests.list',)},
+16:55:46     INFO -                         'reftest': {'options': ('--suite=reftest',),
+16:55:46     INFO -                                     'tests': ('tests/reftest/tests/layout/reftests/reftest.list',)}},
+16:55:46     INFO -  'all_xpcshell_suites': {'xpcshell': {'options': ('--xpcshell=%(abs_app_dir)s/xpcshell',
+16:55:46     INFO -                                                   '--manifest=tests/xpcshell/tests/xpcshell.ini'),
+16:55:46     INFO -                                       'tests': ()},
+16:55:46     INFO -                          'xpcshell-addons': {'options': ('--xpcshell=%(abs_app_dir)s/xpcshell',
+16:55:46     INFO -                                                          '--tag=addons',
+16:55:46     INFO -                                                          '--manifest=tests/xpcshell/tests/xpcshell.ini'),
+16:55:46     INFO -                                              'tests': ()}},
+16:55:46     INFO -  'allow_software_gl_layers': False,
+16:55:46     INFO -  'append_to_log': False,
+16:55:46     INFO -  'base_work_dir': '/builds/slave/test',
+16:55:46     INFO -  'blob_upload_branch': 'mozilla-esr52',
+16:55:46     INFO -  'blob_uploader_auth_file': '/builds/slave/test/oauth.txt',
+16:55:46     INFO -  'buildbot_json_path': 'buildprops.json',
+16:55:46     INFO -  'buildbot_max_log_size': 52428800,
+16:55:46     INFO -  'code_coverage': False,
+16:55:46     INFO -  'config_files': ('unittests/mac_unittest.py',),
+16:55:46     INFO -  'default_blob_upload_servers': ('https://blobupload.elasticbeanstalk.com',),
+16:55:46     INFO -  'download_minidump_stackwalk': True,
+16:55:46     INFO -  'download_nodejs': True,
+16:55:46     INFO -  'download_symbols': 'true',
+16:55:46     INFO -  'e10s': False,
+16:55:46     INFO -  'exe_suffix': '',
+16:55:46     INFO -  'exes': {'python': '/tools/buildbot/bin/python',
+16:55:46     INFO -           'tooltool.py': '/tools/tooltool.py',
+16:55:46     INFO -           'virtualenv': ('/tools/buildbot/bin/python',
+16:55:46     INFO -                          '/tools/misc-python/virtualenv.py')},
+16:55:46     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+16:55:46     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+16:55:46     INFO -  'installer_path': '/builds/slave/test/installer.dmg',
+16:55:46     INFO -  'log_level': 'info',
+16:55:46     INFO -  'log_to_console': True,
+16:55:46     INFO -  'minidump_save_path': '%(abs_work_dir)s/../minidumps',
+16:55:46     INFO -  'minidump_stackwalk_path': 'macosx64-minidump_stackwalk',
+16:55:46     INFO -  'minidump_tooltool_manifest_path': 'config/tooltool-manifests/macosx64/releng.manifest',
+16:55:46     INFO -  'minimum_tests_zip_dirs': ('bin/*',
+16:55:46     INFO -                             'certs/*',
+16:55:46     INFO -                             'config/*',
+16:55:46     INFO -                             'mach',
+16:55:46     INFO -                             'marionette/*',
+16:55:46     INFO -                             'modules/*',
+16:55:46     INFO -                             'mozbase/*',
+16:55:46     INFO -                             'tools/*'),
+16:55:46     INFO -  'no_random': False,
+16:55:46     INFO -  'nodejs_path': 'node-osx/bin/node',
+16:55:46     INFO -  'nodejs_tooltool_manifest_path': 'config/tooltool-manifests/macosx64/nodejs.manifest',
+16:55:46     INFO -  'opt_config_files': (),
+16:55:46     INFO -  'pip_index': False,
+16:55:46     INFO -  'preflight_run_cmd_suites': ({'architectures': ('32bit', '64bit'),
+16:55:46     INFO -                                'cmd': ('xset', 's', 'off', 's', 'reset'),
+16:55:46     INFO -                                'enabled': False,
+16:55:46     INFO -                                'halt_on_failure': False,
+16:55:46     INFO -                                'name': 'disable_screen_saver'},
+16:55:46     INFO -                               {'architectures': ('32bit',),
+16:55:46     INFO -                                'cmd': ('python',
+16:55:46     INFO -                                        '../scripts/external_tools/mouse_and_screen_resolution.py',
+16:55:46     INFO -                                        '--configuration-file',
+16:55:46     INFO -                                        '../scripts/external_tools/machine-configuration.json'),
+16:55:46     INFO -                                'enabled': False,
+16:55:46     INFO -                                'halt_on_failure': True,
+16:55:46     INFO -                                'name': 'run mouse & screen adjustment script'}),
+16:55:46     INFO -  'require_test_zip': True,
+16:55:46     INFO -  'run_all_suites': False,
+16:55:46     INFO -  'run_cmd_checks_enabled': True,
+16:55:46     INFO -  'run_file_names': {'cppunittest': 'runcppunittests.py',
+16:55:46     INFO -                     'gtest': 'rungtests.py',
+16:55:46     INFO -                     'jittest': 'jit_test.py',
+16:55:46     INFO -                     'mochitest': 'runtests.py',
+16:55:46     INFO -                     'mozbase': 'test.py',
+16:55:46     INFO -                     'mozmill': 'runtestlist.py',
+16:55:46     INFO -                     'reftest': 'runreftest.py',
+16:55:46     INFO -                     'xpcshell': 'runxpcshelltests.py'},
+16:55:46     INFO -  'specific_tests_zip_dirs': {'cppunittest': ('cppunittest/*',),
+16:55:46     INFO -                              'gtest': ('gtest/*',),
+16:55:46     INFO -                              'jittest': ('jit-test/*',),
+16:55:46     INFO -                              'mochitest': ('mochitest/*',),
+16:55:46     INFO -                              'mozbase': ('mozbase/*',),
+16:55:46     INFO -                              'mozmill': ('mozmill/*',),
+16:55:46     INFO -                              'reftest': ('reftest/*', 'jsreftest/*'),
+16:55:46     INFO -                              'xpcshell': ('xpcshell/*',)},
+16:55:46     INFO -  'specified_reftest_suites': ('jsreftest',),
+16:55:46     INFO -  'strict_content_sandbox': False,
+16:55:46     INFO -  'suite_definitions': {'cppunittest': {'options': ('--symbols-path=%(symbols_path)s',
+16:55:46     INFO -                                                    '--xre-path=%(abs_res_dir)s'),
+16:55:46     INFO -                                        'run_filename': 'runcppunittests.py',
+16:55:46     INFO -                                        'testsdir': 'cppunittest'},
+16:55:46     INFO -                        'gtest': {'options': ('--xre-path=%(abs_res_dir)s',
+16:55:46     INFO -                                              '--cwd=%(gtest_dir)s',
+16:55:46     INFO -                                              '--symbols-path=%(symbols_path)s',
+16:55:46     INFO -                                              '--utility-path=tests/bin',
+16:55:46     INFO -                                              '%(binary_path)s'),
+16:55:46     INFO -                                  'run_filename': 'rungtests.py'},
+16:55:46     INFO -                        'jittest': {'options': ('tests/bin/js',
+16:55:46     INFO -                                                '--no-slow',
+16:55:46     INFO -                                                '--no-progress',
+16:55:46     INFO -                                                '--format=automation',
+16:55:46     INFO -                                                '--jitflags=all',
+16:55:46     INFO -                                                '--timeout=970'),
+16:55:46     INFO -                                    'run_filename': 'jit_test.py',
+16:55:46     INFO -                                    'run_timeout': 1000,
+16:55:46     INFO -                                    'testsdir': 'jit-test/jit-test'},
+16:55:46     INFO -                        'mochitest': {'options': ('--appname=%(binary_path)s',
+16:55:46     INFO -                                                  '--utility-path=tests/bin',
+16:55:46     INFO -                                                  '--extra-profile-file=tests/bin/plugins',
+16:55:46     INFO -                                                  '--symbols-path=%(symbols_path)s',
+16:55:46     INFO -                                                  '--certificate-path=tests/certs',
+16:55:46     INFO -                                                  '--quiet',
+16:55:46     INFO -                                                  '--log-raw=%(raw_log_file)s',
+16:55:46     INFO -                                                  '--log-errorsummary=%(error_summary_file)s',
+16:55:46     INFO -                                                  '--screenshot-on-fail',
+16:55:46     INFO -                                                  '--cleanup-crashes'),
+16:55:46     INFO -                                      'run_filename': 'runtests.py',
+16:55:46     INFO -                                      'testsdir': 'mochitest'},
+16:55:46     INFO -                        'mozbase': {'options': ('-b', '%(binary_path)s'),
+16:55:46     INFO -                                    'run_filename': 'test.py',
+16:55:46     INFO -                                    'testsdir': 'mozbase'},
+16:55:46     INFO -                        'mozmill': {'options': ('--binary=%(binary_path)s',
+16:55:46     INFO -                                                '--testing-modules-dir=test/modules',
+16:55:46     INFO -                                                '--plugins-path=%(test_plugin_path)s',
+16:55:46     INFO -                                                '--symbols-path=%(symbols_path)s'),
+16:55:46     INFO -                                    'run_filename': 'runtestlist.py',
+16:55:46     INFO -                                    'testsdir': 'mozmill'},
+16:55:46     INFO -                        'reftest': {'options': ('--appname=%(binary_path)s',
+16:55:46     INFO -                                                '--utility-path=tests/bin',
+16:55:46     INFO -                                                '--extra-profile-file=tests/bin/plugins',
+16:55:46     INFO -                                                '--symbols-path=%(symbols_path)s',
+16:55:46     INFO -                                                '--log-raw=%(raw_log_file)s',
+16:55:46     INFO -                                                '--log-errorsummary=%(error_summary_file)s',
+16:55:46     INFO -                                                '--cleanup-crashes'),
+16:55:46     INFO -                                    'run_filename': 'runreftest.py',
+16:55:46     INFO -                                    'testsdir': 'reftest'},
+16:55:46     INFO -                        'xpcshell': {'options': ('--symbols-path=%(symbols_path)s',
+16:55:46     INFO -                                                 '--test-plugin-path=%(test_plugin_path)s',
+16:55:46     INFO -                                                 '--log-raw=%(raw_log_file)s',
+16:55:46     INFO -                                                 '--log-errorsummary=%(error_summary_file)s',
+16:55:46     INFO -                                                 '--utility-path=tests/bin'),
+16:55:46     INFO -                                     'run_filename': 'runxpcshelltests.py',
+16:55:46     INFO -                                     'testsdir': 'xpcshell'}},
+16:55:46     INFO -  'tooltool_cache': '/builds/tooltool_cache',
+16:55:46     INFO -  'unstructured_flavors': {'cppunittest': (),
+16:55:46     INFO -                           'gtest': (),
+16:55:46     INFO -                           'jittest': (),
+16:55:46     INFO -                           'mochitest': ('jetpack',),
+16:55:46     INFO -                           'mozbase': (),
+16:55:46     INFO -                           'mozmill': (),
+16:55:46     INFO -                           'xpcshell': ()},
+16:55:46     INFO -  'vcs_output_timeout': 1000,
+16:55:46     INFO -  'virtualenv_modules': ('six==1.10.0', 'vcversioner==2.16.0.0'),
+16:55:46     INFO -  'virtualenv_path': 'venv',
+16:55:46     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+16:55:46     INFO -  'work_dir': 'build',
+16:55:46     INFO -  'xpcshell_name': 'xpcshell'}
+16:55:46     INFO - [mozharness: 2018-06-08 23:55:46.644204Z] Running clobber step.
+16:55:46     INFO - Running pre-action listener: _resource_record_pre_action
+16:55:46     INFO - Running main action method: clobber
+16:55:46     INFO - rmtree: /builds/slave/test/build
+16:55:46     INFO - retry: Calling rmtree with args: ('/builds/slave/test/build',), kwargs: {}, attempt #1
+16:55:48     INFO - Running post-action listener: _resource_record_post_action
+16:55:48     INFO - [mozharness: 2018-06-08 23:55:48.394079Z] Finished clobber step (success)
+16:55:48     INFO - [mozharness: 2018-06-08 23:55:48.394320Z] Running read-buildbot-config step.
+16:55:48     INFO - Running pre-action listener: _resource_record_pre_action
+16:55:48     INFO - Running main action method: read_buildbot_config
+16:55:48     INFO - Using buildbot properties:
+16:55:48     INFO - {
+16:55:48     INFO -     "project": "", 
+16:55:48     INFO -     "product": "firefox", 
+16:55:48     INFO -     "script_repo_revision": "production", 
+16:55:48     INFO -     "scheduler": "tests-mozilla-esr52-yosemite_r7-debug-unittest", 
+16:55:48     INFO -     "repository": "", 
+16:55:48     INFO -     "buildername": "Rev7 MacOSX Yosemite 10.10.5 mozilla-esr52 debug test jsreftest", 
+16:55:48     INFO -     "buildid": "20180608150819", 
+16:55:48     INFO -     "pgo_build": "False", 
+16:55:48     INFO -     "basedir": "/builds/slave/test", 
+16:55:48     INFO -     "buildnumber": 124, 
+16:55:48     INFO -     "slavename": "t-yosemite-r7-0013", 
+16:55:48     INFO -     "master": "http://buildbot-master106.bb.releng.scl3.mozilla.com:8201/", 
+16:55:48     INFO -     "platform": "macosx64", 
+16:55:48     INFO -     "branch": "mozilla-esr52", 
+16:55:48     INFO -     "revision": "cbfdf01aac455e0591471201c96b89dee98190b5", 
+16:55:48     INFO -     "repo_path": "releases/mozilla-esr52", 
+16:55:48     INFO -     "moz_repo_path": "", 
+16:55:48     INFO -     "stage_platform": "macosx64", 
+16:55:48     INFO -     "builduid": "b298b373e93d4f8dbf92436c9ed838a2", 
+16:55:48     INFO -     "slavebuilddir": "test"
+16:55:48     INFO - }
+16:55:48     INFO - Found installer url https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg.
+16:55:48     INFO - Found a test packages url https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.test_packages.json.
+16:55:48     INFO - Running post-action listener: _resource_record_post_action
+16:55:48     INFO - [mozharness: 2018-06-08 23:55:48.400204Z] Finished read-buildbot-config step (success)
+16:55:48     INFO - [mozharness: 2018-06-08 23:55:48.400411Z] Running download-and-extract step.
+16:55:48     INFO - Running pre-action listener: _pre_download_and_extract
+16:55:48  WARNING - Try message not found.
+16:55:48     INFO - Running pre-action listener: _resource_record_pre_action
+16:55:48     INFO - Running main action method: download_and_extract
+16:55:48     INFO - mkdir: /builds/slave/test/build/tests
+16:55:48     INFO - Downloading https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.test_packages.json to /builds/slave/test/build/firefox-52.8.2.en-US.mac64.test_packages.json
+16:55:48     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.test_packages.json', 'file_name': '/builds/slave/test/build/firefox-52.8.2.en-US.mac64.test_packages.json'}, attempt #1
+16:55:49     INFO - Downloaded 1235 bytes.
+16:55:49     INFO - Reading from file /builds/slave/test/build/firefox-52.8.2.en-US.mac64.test_packages.json
+16:55:49     INFO - Using the following test package requirements:
+16:55:49     INFO - {u'common': [u'firefox-52.8.2.en-US.mac64.common.tests.zip'],
+16:55:49     INFO -  u'cppunittest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:55:49     INFO -                   u'firefox-52.8.2.en-US.mac64.cppunittest.tests.zip'],
+16:55:49     INFO -  u'gtest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:55:49     INFO -             u'firefox-52.8.2.en-US.mac64.gtest.tests.zip'],
+16:55:49     INFO -  u'jittest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:55:49     INFO -               u'jsshell-mac64.zip'],
+16:55:49     INFO -  u'mochitest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:55:49     INFO -                 u'firefox-52.8.2.en-US.mac64.mochitest.tests.zip'],
+16:55:49     INFO -  u'mozbase': [u'firefox-52.8.2.en-US.mac64.common.tests.zip'],
+16:55:49     INFO -  u'reftest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:55:49     INFO -               u'firefox-52.8.2.en-US.mac64.reftest.tests.zip'],
+16:55:49     INFO -  u'talos': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:55:49     INFO -             u'firefox-52.8.2.en-US.mac64.talos.tests.zip'],
+16:55:49     INFO -  u'web-platform': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:55:49     INFO -                    u'firefox-52.8.2.en-US.mac64.web-platform.tests.zip'],
+16:55:49     INFO -  u'xpcshell': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:55:49     INFO -                u'firefox-52.8.2.en-US.mac64.xpcshell.tests.zip']}
+16:55:49     INFO - Downloading packages: [u'firefox-52.8.2.en-US.mac64.common.tests.zip', u'firefox-52.8.2.en-US.mac64.reftest.tests.zip'] for test suite category: reftest
+16:55:49     INFO - Adding 'mozinfo.json' for extraction from common.tests zip file
+16:55:49     INFO - Downloading and extracting to /builds/slave/test/build/tests these dirs bin/*, certs/*, config/*, mach, marionette/*, modules/*, mozbase/*, tools/*, reftest/*, jsreftest/*, mozinfo.json from https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.common.tests.zip
+16:55:49     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.common.tests.zip'}, attempt #1
+16:55:49     INFO - Fetch https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.common.tests.zip into memory
+16:55:50     INFO - Http code: 200
+16:55:50     INFO - via: 1.1 11512f00e812993b9daa35c376d7cb20.cloudfront.net (CloudFront)
+16:55:50     INFO - x-amz-cf-id: jkk9Of4di4IVD2wACE47-MkIMLhtjsrcyhJiDxLvGKbyjKvZ2g2tnA==
+16:55:50     INFO - x-amz-version-id: 6Jp1IEhXNpFL3rVBw5YlstF2WLb650Xv
+16:55:50     INFO - Expected file size: 16096421
+16:55:50     INFO - Obtained file size: 16096421
+16:55:54     INFO - Downloading and extracting to /builds/slave/test/build/tests these dirs bin/*, certs/*, config/*, mach, marionette/*, modules/*, mozbase/*, tools/*, reftest/*, jsreftest/*, mozinfo.json from https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.reftest.tests.zip
+16:55:54     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.reftest.tests.zip'}, attempt #1
+16:55:54     INFO - Fetch https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.reftest.tests.zip into memory
+16:55:54     INFO - Http code: 200
+16:55:54     INFO - via: 1.1 f46e4d7bc5419470a70eb57aa9c935c8.cloudfront.net (CloudFront)
+16:55:54     INFO - x-amz-cf-id: fVVM1TJYlY9XPcmOQNTwDBg5ogGknjtqLoukOZaya567IeTOuQRAtw==
+16:55:54     INFO - x-amz-version-id: P8tSYtSjqcsNzVI2F3OrbAUtbtQZZO_g
+16:55:55     INFO - Expected file size: 38488386
+16:55:55     INFO - Obtained file size: 38488386
+16:56:07     INFO - Downloading https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg to /builds/slave/test/installer.dmg
+16:56:07     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg', 'file_name': '/builds/slave/test/installer.dmg'}, attempt #1
+16:56:09     INFO - Downloaded 75547823 bytes.
+16:56:09     INFO - Setting buildbot property build_url to https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg
+16:56:09     INFO - mkdir: /builds/slave/test/properties
+16:56:09     INFO - Writing buildbot properties ['build_url'] to /builds/slave/test/properties/build_url
+16:56:09     INFO - Writing to file /builds/slave/test/properties/build_url
+16:56:09     INFO - Contents:
+16:56:09     INFO -  build_url:https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg
+16:56:09     INFO - retry: Calling query_symbols_url with args: (), kwargs: {'raise_on_failure': True}, attempt #1
+16:56:10     INFO - Setting buildbot property symbols_url to https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip
+16:56:10     INFO - Writing buildbot properties ['symbols_url'] to /builds/slave/test/properties/symbols_url
+16:56:10     INFO - Writing to file /builds/slave/test/properties/symbols_url
+16:56:10     INFO - Contents:
+16:56:10     INFO -  symbols_url:https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip
+16:56:10     INFO - Downloading and extracting to /builds/slave/test/build/symbols these dirs * from https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip
+16:56:10     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip'}, attempt #1
+16:56:10     INFO - Fetch https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip into memory
+16:56:10     INFO - Http code: 200
+16:56:10     INFO - via: 1.1 f0ef92e52918ab5129ebd66f2f633cbb.cloudfront.net (CloudFront)
+16:56:10     INFO - x-amz-cf-id: GJnvsusu5Vgh8RVhO0maXB91AfjMDzWvjy0iThZ_lMu_2HJVJvBrvA==
+16:56:10     INFO - x-amz-version-id: HNa.r95BIoILYL6amTtvim2q2nxeiEvj
+16:56:13     INFO - Expected file size: 137465258
+16:56:13     INFO - Obtained file size: 137465258
+16:56:17     INFO - Running post-action listener: _resource_record_post_action
+16:56:17     INFO - Running post-action listener: set_extra_try_arguments
+16:56:17     INFO - [mozharness: 2018-06-08 23:56:17.820945Z] Finished download-and-extract step (success)
+16:56:17     INFO - [mozharness: 2018-06-08 23:56:17.821091Z] Running create-virtualenv step.
+16:56:17     INFO - Running pre-action listener: _install_mozbase
+16:56:17     INFO - Running pre-action listener: _pre_create_virtualenv
+16:56:17     INFO - Running pre-action listener: _resource_record_pre_action
+16:56:17     INFO - Running main action method: create_virtualenv
+16:56:17     INFO - Creating virtualenv /builds/slave/test/build/venv
+16:56:17     INFO - Running command: ['/tools/buildbot/bin/python', '/builds/slave/test/scripts/external_tools/virtualenv/virtualenv.py', '--always-copy', '/builds/slave/test/build/venv'] in /builds/slave/test/build
+16:56:17     INFO - Copy/paste: /tools/buildbot/bin/python /builds/slave/test/scripts/external_tools/virtualenv/virtualenv.py --always-copy /builds/slave/test/build/venv
+16:56:17     INFO - Using partial env: {'VIRTUALENV_NO_DOWNLOAD': '1'}
+16:56:18     INFO -  Using real prefix '/tools/python27'
+16:56:18     INFO -  New python executable in /builds/slave/test/build/venv/bin/python
+16:56:20     INFO -  Installing setuptools, pip, wheel...done.
+16:56:20     INFO - Return code: 0
+16:56:20     INFO - Installing six==1.10.0 into virtualenv /builds/slave/test/build/venv
+16:56:20     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'six==1.10.0']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1098d1170>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x109973960>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f8e9ac2e5b0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1098641d0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10983f108>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x109859030>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.fI2g1MlB33/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:56:20     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'six==1.10.0'] in /builds/slave/test/build
+16:56:20     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org six==1.10.0
+16:56:20     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.fI2g1MlB33/Render',
+16:56:20     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:56:20     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:56:20     INFO -  'HOME': '/Users/cltbld',
+16:56:20     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:56:20     INFO -  'LOGNAME': 'cltbld',
+16:56:20     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:56:20     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:56:20     INFO -  'MOZ_NO_REMOTE': '1',
+16:56:20     INFO -  'NO_EM_RESTART': '1',
+16:56:20     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:56:20     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:56:20     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:56:20     INFO -  'PWD': '/builds/slave/test',
+16:56:20     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:56:20     INFO -  'SHELL': '/bin/bash',
+16:56:20     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners',
+16:56:20     INFO -  'TMPDIR': '/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/',
+16:56:20     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:56:20     INFO -  'USER': 'cltbld',
+16:56:20     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:56:20     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:56:20     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:56:20     INFO -  'XPC_FLAGS': '0x0',
+16:56:20     INFO -  'XPC_SERVICE_NAME': '0',
+16:56:20     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:56:20     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:56:20     INFO -  Collecting six==1.10.0
+16:56:20     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:56:20     INFO -    SNIMissingWarning
+16:56:20     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:56:20     INFO -    InsecurePlatformWarning
+16:56:21     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:56:21     INFO -    InsecurePlatformWarning
+16:56:23     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/six-1.10.0-py2.py3-none-any.whl
+16:56:23     INFO -  Installing collected packages: six
+16:56:23     INFO -  Successfully installed six-1.10.0
+16:56:23     INFO - Return code: 0
+16:56:23     INFO - Installing vcversioner==2.16.0.0 into virtualenv /builds/slave/test/build/venv
+16:56:23     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'vcversioner==2.16.0.0']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1098d1170>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x109973960>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f8e9ac2e5b0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1098641d0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10983f108>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x109859030>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.fI2g1MlB33/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:56:23     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'vcversioner==2.16.0.0'] in /builds/slave/test/build
+16:56:23     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org vcversioner==2.16.0.0
+16:56:23     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.fI2g1MlB33/Render',
+16:56:23     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:56:23     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:56:23     INFO -  'HOME': '/Users/cltbld',
+16:56:23     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:56:23     INFO -  'LOGNAME': 'cltbld',
+16:56:23     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:56:23     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:56:23     INFO -  'MOZ_NO_REMOTE': '1',
+16:56:23     INFO -  'NO_EM_RESTART': '1',
+16:56:23     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:56:23     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:56:23     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:56:23     INFO -  'PWD': '/builds/slave/test',
+16:56:23     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:56:23     INFO -  'SHELL': '/bin/bash',
+16:56:23     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners',
+16:56:23     INFO -  'TMPDIR': '/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/',
+16:56:23     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:56:23     INFO -  'USER': 'cltbld',
+16:56:23     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:56:23     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:56:23     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:56:23     INFO -  'XPC_FLAGS': '0x0',
+16:56:23     INFO -  'XPC_SERVICE_NAME': '0',
+16:56:23     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:56:23     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:56:23     INFO -  Collecting vcversioner==2.16.0.0
+16:56:23     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:56:23     INFO -    SNIMissingWarning
+16:56:23     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:56:23     INFO -    InsecurePlatformWarning
+16:56:24     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:56:24     INFO -    InsecurePlatformWarning
+16:56:26     INFO -  Installing collected packages: vcversioner
+16:56:26     INFO -  Successfully installed vcversioner-2.16.0.0
+16:56:26     INFO - Return code: 0
+16:56:26     INFO - Installing psutil>=3.1.1 into virtualenv /builds/slave/test/build/venv
+16:56:26     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'psutil>=3.1.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1098d1170>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x109973960>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f8e9ac2e5b0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1098641d0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10983f108>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x109859030>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.fI2g1MlB33/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:56:26     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'psutil>=3.1.1'] in /builds/slave/test/build
+16:56:26     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org psutil>=3.1.1
+16:56:26     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.fI2g1MlB33/Render',
+16:56:26     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:56:26     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:56:26     INFO -  'HOME': '/Users/cltbld',
+16:56:26     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:56:26     INFO -  'LOGNAME': 'cltbld',
+16:56:26     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:56:26     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:56:26     INFO -  'MOZ_NO_REMOTE': '1',
+16:56:26     INFO -  'NO_EM_RESTART': '1',
+16:56:26     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:56:26     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:56:26     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:56:26     INFO -  'PWD': '/builds/slave/test',
+16:56:26     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:56:26     INFO -  'SHELL': '/bin/bash',
+16:56:26     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners',
+16:56:26     INFO -  'TMPDIR': '/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/',
+16:56:26     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:56:26     INFO -  'USER': 'cltbld',
+16:56:26     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:56:26     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:56:26     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:56:26     INFO -  'XPC_FLAGS': '0x0',
+16:56:26     INFO -  'XPC_SERVICE_NAME': '0',
+16:56:26     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:56:27     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:56:27     INFO -  Collecting psutil>=3.1.1
+16:56:27     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:56:27     INFO -    SNIMissingWarning
+16:56:27     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:56:27     INFO -    InsecurePlatformWarning
+16:56:27     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:56:27     INFO -    InsecurePlatformWarning
+
+command interrupted, attempting to kill
+process killed by signal 9
+program finished with exit code -1
+elapsedTime=41.746351
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+========= master_lag: 0.02 =========
+========= Finished '/tools/buildbot/bin/python -u ...' interrupted (results: 4, elapsed: 41 secs) (at 2018-06-08 16:56:28.206175) =========
+
+========= Started set props: build_url symbols_url (results: 0, elapsed: 0 secs) (at 2018-06-08 16:56:28.209657) =========
+bash -c 'for file in `ls -1`; do cat $file; done'
+ in dir /builds/slave/test/properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'for file in `ls -1`; do cat $file; done']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.fI2g1MlB33/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/test/properties
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners
+  TMPDIR=/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+build_url:https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg
+symbols_url:https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip
+program finished with exit code 0
+elapsedTime=0.011350
+build_url: 'https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg'
+symbols_url: 'https://queue.taskcluster.net/v1/task/cbf86eh2SwWGC1LFFrbavg/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip'
+========= master_lag: 0.01 =========
+========= Finished set props: build_url symbols_url (results: 0, elapsed: 0 secs) (at 2018-06-08 16:56:28.231726) =========
+
+========= Started 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:56:28.232027) =========
+rm -f oauth.txt
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'oauth.txt']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.fI2g1MlB33/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.cvSaSZ33JH/Listeners
+  TMPDIR=/var/folders/75/xwd2hg7960376pprztd7lypw00000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.004982
+========= master_lag: 0.04 =========
+========= Finished 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:56:28.280384) =========
+
+========= Started reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 16:56:28.280731) =========
+========= Finished reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 16:56:28.280986) =========
+
+========= Total master_lag: 0.12 =========
+

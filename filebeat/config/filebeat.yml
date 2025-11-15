@@ -1,0 +1,42 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      # Compatible Windows et Linux
+      - /logs/log-*/*.txt
+    
+    # Configuration optimisée
+    scan_frequency: 10s
+    close_inactive: 5m
+    close_eof: false
+    
+    # Champs additionnels
+    fields:
+      service: firefox-build
+      environment: production
+    fields_under_root: true
+    
+    # Multi-line pour gérer les logs complexes
+    multiline.type: pattern
+    multiline.pattern: '^(builder:|slave:|starttime:|results:|buildid:|builduid:|revision:|=========)'
+    multiline.negate: true
+    multiline.match: after
+    multiline.max_lines: 500
+
+# Configuration de sortie vers Logstash
+output.logstash:
+  hosts: ["logstash:5044"]
+  worker: 1
+
+# Logging
+logging.level: info
+logging.to_files: false
+logging.to_stderr: true
+
+# Processeurs
+processors:
+  - add_host_metadata:
+      when.not.contains.tags: forwarded
+  - drop_fields:
+      fields: ["agent.ephemeral_id", "agent.id", "ecs.version"]
+      ignore_missing: true

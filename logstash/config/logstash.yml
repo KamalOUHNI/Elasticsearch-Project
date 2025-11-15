@@ -1,0 +1,11 @@
+http.host: "0.0.0.0"
+xpack.monitoring.elasticsearch.hosts: ["http://elasticsearch:9200"]
+xpack.monitoring.enabled: true
+
+# Optimisations pour éviter les crashes
+pipeline.workers: 2
+pipeline.batch.size: 125
+pipeline.batch.delay: 50
+
+# Configuration des logs
+log.level: info

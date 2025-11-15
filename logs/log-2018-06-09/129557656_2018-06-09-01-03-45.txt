@@ -1,0 +1,33 @@
+builder: mozilla-esr52_win8_64_test_pgo-mochitest-gpu
+slave: t-w864-ix-057
+starttime: 1528502625.86
+results: retry (5)
+buildid: 20180608150819
+builduid: b298b373e93d4f8dbf92436c9ed838a2
+revision: cbfdf01aac455e0591471201c96b89dee98190b5
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:45.862932) =========
+master: http://buildbot-master111.bb.releng.scl3.mozilla.com:8201/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:45.863386) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:45.863665) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:45.879445) =========
+
+========= Started 'bash -c ...' interrupted (results: 5, elapsed: 0 secs) (at 2018-06-08 17:03:45.879825) =========
+
+remoteFailed: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion.
+]
+[Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion.
+]
+========= Finished 'bash -c ...' interrupted (results: 5, elapsed: 0 secs) (at 2018-06-08 17:03:45.990138) =========
+
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Total master_lag: 0.00 =========
+

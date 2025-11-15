@@ -1,0 +1,517 @@
+builder: mozilla-esr52_ubuntu64_vm_test_pgo-mochitest-e10s-devtools-chrome-6
+slave: tst-linux64-spot-009
+starttime: 1528502534.89
+results: cancelled (6)
+buildid: 20180608150819
+builduid: b298b373e93d4f8dbf92436c9ed838a2
+revision: cbfdf01aac455e0591471201c96b89dee98190b5
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:14.889471) =========
+master: http://buildbot-master52.bb.releng.use1.mozilla.com:8201/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:14.890146) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:14.890636) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:15.048509) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:15.048897) =========
+bash -c 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502525.482170-1589430190
+  _=/tools/buildbot/bin/python
+ using PTY: False
+--2018-06-08 17:02:15--  https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py
+Resolving hg.mozilla.org (hg.mozilla.org)... 63.245.215.102, 63.245.215.25
+Connecting to hg.mozilla.org (hg.mozilla.org)|63.245.215.102|:443... connected.
+HTTP request sent, awaiting response... 200 Script output follows
+Length: 12179 (12K) [text/x-python]
+Saving to: `archiver_client.py'
+
+     0K .......... .                                          100%  170K=0.07s
+
+2018-06-08 17:02:15 (170 KB/s) - `archiver_client.py' saved [12179/12179]
+
+program finished with exit code 0
+elapsedTime=0.653791
+========= master_lag: 0.02 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:15.718924) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:15.719249) =========
+rm -rf scripts properties
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502525.482170-1589430190
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.047668
+========= master_lag: 0.02 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:15.783198) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 17:02:15.783527) =========
+bash -c 'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502525.482170-1589430190
+  _=/tools/buildbot/bin/python
+ using PTY: False
+2018-06-08 17:02:15,925 truncating revision to first 12 chars
+2018-06-08 17:02:15,926 Setting DEBUG logging.
+2018-06-08 17:02:15,926 attempt 1/10
+2018-06-08 17:02:15,926 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/releases/mozilla-esr52/cbfdf01aac45?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-08 17:02:17,215 unpacking tar archive at: mozilla-esr52-cbfdf01aac45/testing/mozharness/
+program finished with exit code 0
+elapsedTime=2.390583
+========= master_lag: 0.02 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 17:02:18.191642) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:18.198195) =========
+script_repo_revision: cbfdf01aac455e0591471201c96b89dee98190b5
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:18.198819) =========
+
+========= Started downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:18.199304) =========
+========= Finished downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:18.213089) =========
+
+========= Started '/tools/buildbot/bin/python scripts/scripts/desktop_unittest.py ...' interrupted (results: 4, elapsed: 11 secs) (at 2018-06-08 17:02:18.213549) =========
+/tools/buildbot/bin/python scripts/scripts/desktop_unittest.py --cfg unittests/linux_unittest.py --mochitest-suite mochitest-devtools-chrome --e10s --total-chunks 8 --this-chunk 6 --blob-upload-branch mozilla-esr52 --download-symbols ondemand
+ in dir /builds/slave/test/. (timeout 1800 secs) (maxTime 4800 secs)
+ watching logfiles {}
+ argv: ['/tools/buildbot/bin/python', 'scripts/scripts/desktop_unittest.py', '--cfg', 'unittests/linux_unittest.py', '--mochitest-suite', 'mochitest-devtools-chrome', '--e10s', '--total-chunks', '8', '--this-chunk', '6', '--blob-upload-branch', 'mozilla-esr52', '--download-symbols', 'ondemand']
+ environment:
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=:0
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  MOZ_HIDE_RESULTS_TABLE=1
+  MOZ_NODE_PATH=/usr/bin/node
+  MOZ_NO_REMOTE=1
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  NO_FAIL_ON_TEST_ERRORS=1
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PROPERTIES_FILE=/builds/slave/test/buildprops.json
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502525.482170-1589430190
+  _=/tools/buildbot/bin/python
+ using PTY: False
+17:02:18     INFO - MultiFileLogger online at 20180608 17:02:18 in /builds/slave/test
+17:02:18     INFO - Run as scripts/scripts/desktop_unittest.py --cfg unittests/linux_unittest.py --mochitest-suite mochitest-devtools-chrome --e10s --total-chunks 8 --this-chunk 6 --blob-upload-branch mozilla-esr52 --download-symbols ondemand
+17:02:18     INFO - Dumping config to /builds/slave/test/logs/localconfig.json.
+17:02:18     INFO - {'all_cppunittest_suites': {'cppunittest': {'tests': ('tests/cppunittest',)}},
+17:02:18     INFO -  'all_gtest_suites': {'gtest': ()},
+17:02:18     INFO -  'all_jittest_suites': {'jittest': (),
+17:02:18     INFO -                         'jittest-chunked': (),
+17:02:18     INFO -                         'jittest1': ('--total-chunks=2', '--this-chunk=1'),
+17:02:18     INFO -                         'jittest2': ('--total-chunks=2', '--this-chunk=2')},
+17:02:18     INFO -  'all_mochitest_suites': {'a11y': ('--flavor=a11y',),
+17:02:18     INFO -                           'browser-chrome': ('--flavor=browser',),
+17:02:18     INFO -                           'browser-chrome-addons': ('--flavor=browser',
+17:02:18     INFO -                                                     '--chunk-by-runtime',
+17:02:18     INFO -                                                     '--tag=addons'),
+17:02:18     INFO -                           'browser-chrome-chunked': ('--flavor=browser',
+17:02:18     INFO -                                                      '--chunk-by-runtime'),
+17:02:18     INFO -                           'browser-chrome-clipboard': ('--flavor=browser',
+17:02:18     INFO -                                                        '--subsuite=clipboard'),
+17:02:18     INFO -                           'browser-chrome-coverage': ('--flavor=browser',
+17:02:18     INFO -                                                       '--chunk-by-runtime',
+17:02:18     INFO -                                                       '--timeout=1200'),
+17:02:18     INFO -                           'browser-chrome-gpu': ('--flavor=browser',
+17:02:18     INFO -                                                  '--subsuite=gpu'),
+17:02:18     INFO -                           'browser-chrome-screenshots': ('--flavor=browser',
+17:02:18     INFO -                                                          '--subsuite=screenshots'),
+17:02:18     INFO -                           'chrome': ('--flavor=chrome',),
+17:02:18     INFO -                           'chrome-chunked': ('--flavor=chrome',
+17:02:18     INFO -                                              '--chunk-by-dir=4'),
+17:02:18     INFO -                           'chrome-clipboard': ('--flavor=chrome',
+17:02:18     INFO -                                                '--subsuite=clipboard'),
+17:02:18     INFO -                           'chrome-gpu': ('--flavor=chrome', '--subsuite=gpu'),
+17:02:18     INFO -                           'jetpack-addon': ('--flavor=jetpack-addon',),
+17:02:18     INFO -                           'jetpack-package': ('--flavor=jetpack-package',),
+17:02:18     INFO -                           'jetpack-package-clipboard': ('--flavor=jetpack-package',
+17:02:18     INFO -                                                         '--subsuite=clipboard'),
+17:02:18     INFO -                           'mochitest-devtools-chrome': ('--flavor=browser',
+17:02:18     INFO -                                                         '--subsuite=devtools'),
+17:02:18     INFO -                           'mochitest-devtools-chrome-chunked': ('--flavor=browser',
+17:02:18     INFO -                                                                 '--subsuite=devtools',
+17:02:18     INFO -                                                                 '--chunk-by-runtime'),
+17:02:18     INFO -                           'mochitest-devtools-chrome-coverage': ('--flavor=browser',
+17:02:18     INFO -                                                                  '--subsuite=devtools',
+17:02:18     INFO -                                                                  '--chunk-by-runtime',
+17:02:18     INFO -                                                                  '--timeout=1200'),
+17:02:18     INFO -                           'mochitest-gl': ('--subsuite=webgl',),
+17:02:18     INFO -                           'mochitest-media': ('--subsuite=media',),
+17:02:18     INFO -                           'plain': (),
+17:02:18     INFO -                           'plain-chunked': ('--chunk-by-dir=4',),
+17:02:18     INFO -                           'plain-clipboard': ('--subsuite=clipboard',),
+17:02:18     INFO -                           'plain-gpu': ('--subsuite=gpu',),
+17:02:18     INFO -                           'valgrind-plain': ('--valgrind=/usr/bin/valgrind',
+17:02:18     INFO -                                              '--valgrind-supp-files=/builds/slave/test/build/tests/mochitest/x86_64-redhat-linux-gnu.sup,/builds/slave/test/build/tests/mochitest/cross-architecture.sup',
+17:02:18     INFO -                                              '--timeout=900',
+17:02:18     INFO -                                              '--max-timeouts=50')},
+17:02:18     INFO -  'all_mozbase_suites': {'mozbase': ()},
+17:02:18     INFO -  'all_reftest_suites': {'crashtest': {'options': ('--suite=crashtest',),
+17:02:18     INFO -                                       'tests': ('tests/reftest/tests/testing/crashtest/crashtests.list',)},
+17:02:18     INFO -                         'jsreftest': {'options': ('--extra-profile-file=tests/jsreftest/tests/user.js',
+17:02:18     INFO -                                                   '--suite=jstestbrowser'),
+17:02:18     INFO -                                       'tests': ('tests/jsreftest/tests/jstests.list',)},
+17:02:18     INFO -                         'reftest': {'options': ('--suite=reftest',),
+17:02:18     INFO -                                     'tests': ('tests/reftest/tests/layout/reftests/reftest.list',)},
+17:02:18     INFO -                         'reftest-no-accel': {'options': ('--suite=reftest',
+17:02:18     INFO -                                                          '--setpref=layers.acceleration.force-enabled=disabled'),
+17:02:18     INFO -                                              'tests': ('tests/reftest/tests/layout/reftests/reftest.list',)}},
+17:02:18     INFO -  'all_xpcshell_suites': {'xpcshell': {'options': ('--xpcshell=%(abs_app_dir)s/xpcshell',
+17:02:18     INFO -                                                   '--manifest=tests/xpcshell/tests/xpcshell.ini'),
+17:02:18     INFO -                                       'tests': ()},
+17:02:18     INFO -                          'xpcshell-addons': {'options': ('--xpcshell=%(abs_app_dir)s/xpcshell',
+17:02:18     INFO -                                                          '--tag=addons',
+17:02:18     INFO -                                                          '--manifest=tests/xpcshell/tests/xpcshell.ini'),
+17:02:18     INFO -                                              'tests': ()},
+17:02:18     INFO -                          'xpcshell-coverage': {'options': ('--xpcshell=%(abs_app_dir)s/xpcshell',
+17:02:18     INFO -                                                            '--manifest=tests/xpcshell/tests/xpcshell.ini'),
+17:02:18     INFO -                                                'tests': ()}},
+17:02:18     INFO -  'allow_software_gl_layers': False,
+17:02:18     INFO -  'append_to_log': False,
+17:02:18     INFO -  'base_work_dir': '/builds/slave/test',
+17:02:18     INFO -  'binary_path': '/builds/slave/test/build/application/firefox/firefox-bin',
+17:02:18     INFO -  'blob_upload_branch': 'mozilla-esr52',
+17:02:18     INFO -  'blob_uploader_auth_file': '/builds/slave/test/oauth.txt',
+17:02:18     INFO -  'buildbot_json_path': 'buildprops.json',
+17:02:18     INFO -  'buildbot_max_log_size': 52428800,
+17:02:18     INFO -  'code_coverage': False,
+17:02:18     INFO -  'config_files': ('unittests/linux_unittest.py',),
+17:02:18     INFO -  'default_blob_upload_servers': ('https://blobupload.elasticbeanstalk.com',),
+17:02:18     INFO -  'download_minidump_stackwalk': True,
+17:02:18     INFO -  'download_nodejs': True,
+17:02:18     INFO -  'download_symbols': 'ondemand',
+17:02:18     INFO -  'e10s': True,
+17:02:18     INFO -  'exe_suffix': '',
+17:02:18     INFO -  'exes': {'python': '/tools/buildbot/bin/python',
+17:02:18     INFO -           'tooltool.py': '/tools/tooltool.py',
+17:02:18     INFO -           'virtualenv': ('/tools/buildbot/bin/python',
+17:02:18     INFO -                          '/tools/misc-python/virtualenv.py')},
+17:02:18     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+17:02:18     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+17:02:18     INFO -  'installer_path': '/builds/slave/test/build/installer.tar.bz2',
+17:02:18     INFO -  'log_level': 'info',
+17:02:18     INFO -  'log_to_console': True,
+17:02:18     INFO -  'minidump_save_path': '%(abs_work_dir)s/../minidumps',
+17:02:18     INFO -  'minidump_stackwalk_path': 'linux64-minidump_stackwalk',
+17:02:18     INFO -  'minidump_tooltool_manifest_path': 'config/tooltool-manifests/linux64/releng.manifest',
+17:02:18     INFO -  'minimum_tests_zip_dirs': ('bin/*',
+17:02:18     INFO -                             'certs/*',
+17:02:18     INFO -                             'config/*',
+17:02:18     INFO -                             'mach',
+17:02:18     INFO -                             'marionette/*',
+17:02:18     INFO -                             'modules/*',
+17:02:18     INFO -                             'mozbase/*',
+17:02:18     INFO -                             'tools/*'),
+17:02:18     INFO -  'no_random': False,
+17:02:18     INFO -  'nodejs_path': 'node-linux-x64/bin/node',
+17:02:18     INFO -  'nodejs_tooltool_manifest_path': 'config/tooltool-manifests/linux64/nodejs.manifest',
+17:02:18     INFO -  'opt_config_files': (),
+17:02:18     INFO -  'pip_index': False,
+17:02:18     INFO -  'preflight_run_cmd_suites': ({'architectures': ('32bit', '64bit'),
+17:02:18     INFO -                                'cmd': ('xset', 's', 'off', 's', 'reset'),
+17:02:18     INFO -                                'enabled': True,
+17:02:18     INFO -                                'halt_on_failure': False,
+17:02:18     INFO -                                'name': 'disable_screen_saver'},
+17:02:18     INFO -                               {'architectures': ('32bit',),
+17:02:18     INFO -                                'cmd': ('python',
+17:02:18     INFO -                                        '../scripts/external_tools/mouse_and_screen_resolution.py',
+17:02:18     INFO -                                        '--configuration-file',
+17:02:18     INFO -                                        '../scripts/external_tools/machine-configuration.json'),
+17:02:18     INFO -                                'enabled': False,
+17:02:18     INFO -                                'halt_on_failure': True,
+17:02:18     INFO -                                'name': 'run mouse & screen adjustment script'}),
+17:02:18     INFO -  'require_test_zip': True,
+17:02:18     INFO -  'run_all_suites': False,
+17:02:18     INFO -  'run_cmd_checks_enabled': True,
+17:02:18     INFO -  'run_file_names': {'cppunittest': 'runcppunittests.py',
+17:02:18     INFO -                     'gtest': 'rungtests.py',
+17:02:18     INFO -                     'jittest': 'jit_test.py',
+17:02:18     INFO -                     'mochitest': 'runtests.py',
+17:02:18     INFO -                     'mozbase': 'test.py',
+17:02:18     INFO -                     'mozmill': 'runtestlist.py',
+17:02:18     INFO -                     'reftest': 'runreftest.py',
+17:02:18     INFO -                     'xpcshell': 'runxpcshelltests.py'},
+17:02:18     INFO -  'specific_tests_zip_dirs': {'cppunittest': ('cppunittest/*',),
+17:02:18     INFO -                              'gtest': ('gtest/*',),
+17:02:18     INFO -                              'jittest': ('jit-test/*',),
+17:02:18     INFO -                              'mochitest': ('mochitest/*',),
+17:02:18     INFO -                              'mozbase': ('mozbase/*',),
+17:02:18     INFO -                              'mozmill': ('mozmill/*',),
+17:02:18     INFO -                              'reftest': ('reftest/*', 'jsreftest/*'),
+17:02:18     INFO -                              'xpcshell': ('xpcshell/*',)},
+17:02:18     INFO -  'specified_mochitest_suites': ('mochitest-devtools-chrome',),
+17:02:18     INFO -  'strict_content_sandbox': False,
+17:02:18     INFO -  'suite_definitions': {'cppunittest': {'options': ('--symbols-path=%(symbols_path)s',
+17:02:18     INFO -                                                    '--xre-path=%(abs_app_dir)s'),
+17:02:18     INFO -                                        'run_filename': 'runcppunittests.py',
+17:02:18     INFO -                                        'testsdir': 'cppunittest'},
+17:02:18     INFO -                        'gtest': {'options': ('--xre-path=%(abs_res_dir)s',
+17:02:18     INFO -                                              '--cwd=%(gtest_dir)s',
+17:02:18     INFO -                                              '--symbols-path=%(symbols_path)s',
+17:02:18     INFO -                                              '--utility-path=tests/bin',
+17:02:18     INFO -                                              '%(binary_path)s'),
+17:02:18     INFO -                                  'run_filename': 'rungtests.py'},
+17:02:18     INFO -                        'jittest': {'options': ('tests/bin/js',
+17:02:18     INFO -                                                '--no-slow',
+17:02:18     INFO -                                                '--no-progress',
+17:02:18     INFO -                                                '--format=automation',
+17:02:18     INFO -                                                '--jitflags=all',
+17:02:18     INFO -                                                '--timeout=970'),
+17:02:18     INFO -                                    'run_filename': 'jit_test.py',
+17:02:18     INFO -                                    'run_timeout': 1000,
+17:02:18     INFO -                                    'testsdir': 'jit-test/jit-test'},
+17:02:18     INFO -                        'mochitest': {'options': ('--appname=%(binary_path)s',
+17:02:18     INFO -                                                  '--utility-path=tests/bin',
+17:02:18     INFO -                                                  '--extra-profile-file=tests/bin/plugins',
+17:02:18     INFO -                                                  '--symbols-path=%(symbols_path)s',
+17:02:18     INFO -                                                  '--certificate-path=tests/certs',
+17:02:18     INFO -                                                  '--setpref=webgl.force-enabled=true',
+17:02:18     INFO -                                                  '--quiet',
+17:02:18     INFO -                                                  '--log-raw=%(raw_log_file)s',
+17:02:18     INFO -                                                  '--log-errorsummary=%(error_summary_file)s',
+17:02:18     INFO -                                                  '--use-test-media-devices',
+17:02:18     INFO -                                                  '--screenshot-on-fail',
+17:02:18     INFO -                                                  '--cleanup-crashes',
+17:02:18     INFO -                                                  '--marionette-startup-timeout=180'),
+17:02:18     INFO -                                      'run_filename': 'runtests.py',
+17:02:18     INFO -                                      'testsdir': 'mochitest'},
+17:02:18     INFO -                        'mozbase': {'options': ('-b', '%(binary_path)s'),
+17:02:18     INFO -                                    'run_filename': 'test.py',
+17:02:18     INFO -                                    'testsdir': 'mozbase'},
+17:02:18     INFO -                        'mozmill': {'options': ('--binary=%(binary_path)s',
+17:02:18     INFO -                                                '--testing-modules-dir=test/modules',
+17:02:18     INFO -                                                '--plugins-path=%(test_plugin_path)s',
+17:02:18     INFO -                                                '--symbols-path=%(symbols_path)s'),
+17:02:18     INFO -                                    'run_filename': 'runtestlist.py',
+17:02:18     INFO -                                    'testsdir': 'mozmill'},
+17:02:18     INFO -                        'reftest': {'options': ('--appname=%(binary_path)s',
+17:02:18     INFO -                                                '--utility-path=tests/bin',
+17:02:18     INFO -                                                '--extra-profile-file=tests/bin/plugins',
+17:02:18     INFO -                                                '--symbols-path=%(symbols_path)s',
+17:02:18     INFO -                                                '--log-raw=%(raw_log_file)s',
+17:02:18     INFO -                                                '--log-errorsummary=%(error_summary_file)s',
+17:02:18     INFO -                                                '--cleanup-crashes'),
+17:02:18     INFO -                                    'run_filename': 'runreftest.py',
+17:02:18     INFO -                                    'testsdir': 'reftest'},
+17:02:18     INFO -                        'xpcshell': {'options': ('--symbols-path=%(symbols_path)s',
+17:02:18     INFO -                                                 '--test-plugin-path=%(test_plugin_path)s',
+17:02:18     INFO -                                                 '--log-raw=%(raw_log_file)s',
+17:02:18     INFO -                                                 '--log-errorsummary=%(error_summary_file)s',
+17:02:18     INFO -                                                 '--utility-path=tests/bin'),
+17:02:18     INFO -                                     'run_filename': 'runxpcshelltests.py',
+17:02:18     INFO -                                     'testsdir': 'xpcshell'}},
+17:02:18     INFO -  'this_chunk': '6',
+17:02:18     INFO -  'tooltool_cache': '/builds/tooltool_cache',
+17:02:18     INFO -  'total_chunks': '8',
+17:02:18     INFO -  'unstructured_flavors': {'cppunittest': (),
+17:02:18     INFO -                           'gtest': (),
+17:02:18     INFO -                           'jittest': (),
+17:02:18     INFO -                           'mochitest': ('jetpack',),
+17:02:18     INFO -                           'mozbase': (),
+17:02:18     INFO -                           'mozmill': (),
+17:02:18     INFO -                           'xpcshell': ()},
+17:02:18     INFO -  'vcs_output_timeout': 1000,
+17:02:18     INFO -  'virtualenv_path': 'venv',
+17:02:18     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+17:02:18     INFO -  'work_dir': 'build',
+17:02:18     INFO -  'xpcshell_name': 'xpcshell'}
+17:02:18     INFO - [mozharness: 2018-06-09 00:02:18.791782Z] Running clobber step.
+17:02:18     INFO - Running pre-action listener: _resource_record_pre_action
+17:02:18     INFO - Running main action method: clobber
+17:02:18     INFO - rmtree: /builds/slave/test/build
+17:02:18     INFO - retry: Calling rmtree with args: ('/builds/slave/test/build',), kwargs: {}, attempt #1
+17:02:22     INFO - Running post-action listener: _resource_record_post_action
+17:02:22     INFO - [mozharness: 2018-06-09 00:02:22.782975Z] Finished clobber step (success)
+17:02:22     INFO - [mozharness: 2018-06-09 00:02:22.783413Z] Running read-buildbot-config step.
+17:02:22     INFO - Running pre-action listener: _resource_record_pre_action
+17:02:22     INFO - Running main action method: read_buildbot_config
+17:02:22     INFO - Using buildbot properties:
+17:02:22     INFO - {
+17:02:22     INFO -     "project": "", 
+17:02:22     INFO -     "product": "firefox", 
+17:02:22     INFO -     "script_repo_revision": "production", 
+17:02:22     INFO -     "scheduler": "tests-mozilla-esr52-ubuntu64_vm-pgo-unittest", 
+17:02:22     INFO -     "repository": "", 
+17:02:22     INFO -     "buildername": "Ubuntu VM 12.04 x64 mozilla-esr52 pgo test mochitest-e10s-devtools-chrome-6", 
+17:02:22     INFO -     "buildid": "20180608150819", 
+17:02:22     INFO -     "pgo_build": "True", 
+17:02:22     INFO -     "basedir": "/builds/slave/test", 
+17:02:22     INFO -     "buildnumber": 8, 
+17:02:22     INFO -     "slavename": "tst-linux64-spot-009", 
+17:02:22     INFO -     "master": "http://buildbot-master52.bb.releng.use1.mozilla.com:8201/", 
+17:02:22     INFO -     "platform": "linux64", 
+17:02:22     INFO -     "branch": "mozilla-esr52", 
+17:02:22     INFO -     "revision": "cbfdf01aac455e0591471201c96b89dee98190b5", 
+17:02:22     INFO -     "repo_path": "releases/mozilla-esr52", 
+17:02:22     INFO -     "moz_repo_path": "", 
+17:02:22     INFO -     "stage_platform": "linux64-pgo", 
+17:02:22     INFO -     "builduid": "b298b373e93d4f8dbf92436c9ed838a2", 
+17:02:22     INFO -     "slavebuilddir": "test"
+17:02:22     INFO - }
+17:02:22     INFO - Found installer url https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2.
+17:02:22     INFO - Found a test packages url https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json.
+17:02:22     INFO - Running post-action listener: _resource_record_post_action
+17:02:22     INFO - [mozharness: 2018-06-09 00:02:22.806007Z] Finished read-buildbot-config step (success)
+17:02:22     INFO - [mozharness: 2018-06-09 00:02:22.806356Z] Running download-and-extract step.
+17:02:22     INFO - Running pre-action listener: _pre_download_and_extract
+17:02:22  WARNING - Try message not found.
+17:02:22     INFO - Running pre-action listener: _resource_record_pre_action
+17:02:22     INFO - Running main action method: download_and_extract
+17:02:22     INFO - mkdir: /builds/slave/test/build/tests
+17:02:22     INFO - Downloading https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json to /builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json
+17:02:22     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json', 'file_name': '/builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json'}, attempt #1
+17:02:24     INFO - Downloaded 1361 bytes.
+17:02:24     INFO - Reading from file /builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json
+17:02:24     INFO - Using the following test package requirements:
+17:02:24     INFO - {u'common': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip'],
+17:02:24     INFO -  u'cppunittest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+17:02:24     INFO -                   u'firefox-52.8.2.en-US.linux-x86_64.cppunittest.tests.zip'],
+17:02:24     INFO -  u'gtest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+17:02:24     INFO -             u'firefox-52.8.2.en-US.linux-x86_64.gtest.tests.zip'],
+17:02:24     INFO -  u'jittest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+17:02:24     INFO -               u'jsshell-linux-x86_64.zip'],
+17:02:24     INFO -  u'mochitest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+17:02:24     INFO -                 u'firefox-52.8.2.en-US.linux-x86_64.mochitest.tests.zip'],
+17:02:24     INFO -  u'mozbase': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip'],
+17:02:24     INFO -  u'reftest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+17:02:24     INFO -               u'firefox-52.8.2.en-US.linux-x86_64.reftest.tests.zip'],
+17:02:24     INFO -  u'talos': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+17:02:24     INFO -             u'firefox-52.8.2.en-US.linux-x86_64.talos.tests.zip'],
+17:02:24     INFO -  u'web-platform': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+17:02:24     INFO -                    u'firefox-52.8.2.en-US.linux-x86_64.web-platform.tests.zip'],
+17:02:24     INFO -  u'xpcshell': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+17:02:24     INFO -                u'firefox-52.8.2.en-US.linux-x86_64.xpcshell.tests.zip']}
+17:02:24     INFO - Downloading packages: [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip', u'firefox-52.8.2.en-US.linux-x86_64.mochitest.tests.zip'] for test suite category: mochitest
+17:02:24     INFO - Adding 'mozinfo.json' for extraction from common.tests zip file
+17:02:24     INFO - Downloading and extracting to /builds/slave/test/build/tests these dirs bin/*, certs/*, config/*, mach, marionette/*, modules/*, mozbase/*, tools/*, mochitest/*, mozinfo.json from https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.common.tests.zip
+17:02:24     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.common.tests.zip'}, attempt #1
+17:02:24     INFO - Fetch https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.common.tests.zip into memory
+17:02:25     INFO - Http code: 200
+17:02:25     INFO - via: 1.1 3344ddc09ccf1d185bb41add18940cc4.cloudfront.net (CloudFront)
+17:02:25     INFO - x-amz-cf-id: V1uiP4tszXPJs_b-HFqNe2vpf68ovrj7hTLtEsXAg7KywbZquhIAYQ==
+17:02:25     INFO - x-amz-version-id: amyEguiG3.NEsCgIpfpr7ojoc30OcAP5
+17:02:28     INFO - Expected file size: 22192748
+17:02:28     INFO - Obtained file size: 22192748
+
+command interrupted, attempting to kill
+process killed by signal 9
+program finished with exit code -1
+elapsedTime=11.196916
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+========= master_lag: 0.02 =========
+========= Finished '/tools/buildbot/bin/python scripts/scripts/desktop_unittest.py ...' interrupted (results: 4, elapsed: 11 secs) (at 2018-06-08 17:02:29.429201) =========
+
+========= Started 'bash -c ...' interrupted (results: 4, elapsed: 0 secs) (at 2018-06-08 17:02:29.430239) =========
+bash -c 'for file in `ls -1`; do cat $file; done'
+ in dir /builds/slave/test/properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'for file in `ls -1`; do cat $file; done']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test/properties
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502525.482170-1589430190
+  _=/tools/buildbot/bin/python
+ using PTY: False
+
+command interrupted, attempting to kill
+process killed by signal 9
+program finished with exit code -1
+elapsedTime=0.021017
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' interrupted (results: 4, elapsed: 0 secs) (at 2018-06-08 17:02:29.465509) =========
+
+========= Started 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:29.466042) =========
+rm -f oauth.txt
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'oauth.txt']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502525.482170-1589430190
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.020274
+========= master_lag: 0.05 =========
+========= Finished 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:29.539170) =========
+
+========= Started reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 17:02:29.539472) =========
+========= Finished reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 17:02:29.539723) =========
+
+========= Total master_lag: 0.14 =========
+

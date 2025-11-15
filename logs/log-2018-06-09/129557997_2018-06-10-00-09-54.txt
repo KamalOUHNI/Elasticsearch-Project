@@ -1,0 +1,1332 @@
+builder: mozilla-esr52_yosemite_r7-debug_test-web-platform-tests-3
+slave: t-yosemite-r7-0019
+starttime: 1528585794.74
+results: retry (5)
+buildid: 20180609145619
+builduid: b1c96505513c43fda408cdf95090aab8
+revision: 1e9a9a6b6e74d8eafe01f87850eb3d85bfba88d8
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:54.745384) =========
+master: http://buildbot-master107.bb.releng.scl3.mozilla.com:8201/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:54.746411) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:54.747159) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:54.761704) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:54.762013) =========
+bash -c 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.TLLoKewpbp/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners
+  TMPDIR=/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+--2018-06-09 16:09:54--  https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py
+Resolving hg.mozilla.org... 63.245.215.102, 63.245.215.25
+Connecting to hg.mozilla.org|63.245.215.102|:443... connected.
+HTTP request sent, awaiting response... 200 Script output follows
+Length: 12179 (12K) [text/x-python]
+Saving to: 'archiver_client.py'
+
+     0K .......... .                                          100% 42.2M=0s
+
+2018-06-09 16:09:54 (42.2 MB/s) - 'archiver_client.py' saved [12179/12179]
+
+program finished with exit code 0
+elapsedTime=0.222843
+========= master_lag: 0.02 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:55.001265) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:55.001943) =========
+rm -rf scripts properties
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.TLLoKewpbp/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners
+  TMPDIR=/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.029157
+========= master_lag: 0.02 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:55.053250) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-09 16:09:55.053993) =========
+bash -c 'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev 1e9a9a6b6e74d8eafe01f87850eb3d85bfba88d8 --destination scripts --debug'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev 1e9a9a6b6e74d8eafe01f87850eb3d85bfba88d8 --destination scripts --debug']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.TLLoKewpbp/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners
+  TMPDIR=/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+2018-06-09 16:09:55,155 truncating revision to first 12 chars
+2018-06-09 16:09:55,155 Setting DEBUG logging.
+2018-06-09 16:09:55,155 attempt 1/10
+2018-06-09 16:09:55,155 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/releases/mozilla-esr52/1e9a9a6b6e74?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-09 16:09:56,784 unpacking tar archive at: mozilla-esr52-1e9a9a6b6e74/testing/mozharness/
+program finished with exit code 0
+elapsedTime=2.042065
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-09 16:09:57.109987) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:57.110367) =========
+script_repo_revision: 1e9a9a6b6e74d8eafe01f87850eb3d85bfba88d8
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:57.110844) =========
+
+========= Started downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:57.111151) =========
+========= Finished downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-09 16:09:57.119879) =========
+
+========= Started '/tools/buildbot/bin/python -u ...' interrupted (results: 5, elapsed: 36 mins, 31 secs) (at 2018-06-09 16:09:57.120184) =========
+/tools/buildbot/bin/python -u scripts/scripts/web_platform_tests.py --cfg web_platform_tests/prod_config.py --test-type=testharness --total-chunks 10 --this-chunk 3 --blob-upload-branch mozilla-esr52 --download-symbols true
+ in dir /builds/slave/test/. (timeout 1800 secs) (maxTime 7200 secs)
+ watching logfiles {}
+ argv: ['/tools/buildbot/bin/python', '-u', 'scripts/scripts/web_platform_tests.py', '--cfg', 'web_platform_tests/prod_config.py', '--test-type=testharness', '--total-chunks', '10', '--this-chunk', '3', '--blob-upload-branch', 'mozilla-esr52', '--download-symbols', 'true']
+ environment:
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.TLLoKewpbp/Render
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  MOZ_HIDE_RESULTS_TABLE=1
+  MOZ_NODE_PATH=/usr/local/bin/node
+  MOZ_NO_REMOTE=1
+  NO_EM_RESTART=1
+  NO_FAIL_ON_TEST_ERRORS=1
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PROPERTIES_FILE=/builds/slave/test/buildprops.json
+  PWD=/builds/slave/test
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners
+  TMPDIR=/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=warn
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+16:09:57     INFO - MultiFileLogger online at 20180609 16:09:57 in /builds/slave/test
+16:09:57     INFO - Run as scripts/scripts/web_platform_tests.py --cfg web_platform_tests/prod_config.py --test-type=testharness --total-chunks 10 --this-chunk 3 --blob-upload-branch mozilla-esr52 --download-symbols true
+16:09:57     INFO - Dumping config to /builds/slave/test/logs/localconfig.json.
+16:09:57     INFO - {'allow_software_gl_layers': False,
+16:09:57     INFO -  'append_to_log': False,
+16:09:57     INFO -  'base_work_dir': '/builds/slave/test',
+16:09:57     INFO -  'blob_upload_branch': 'mozilla-esr52',
+16:09:57     INFO -  'blob_uploader_auth_file': '/builds/slave/test/oauth.txt',
+16:09:57     INFO -  'buildbot_json_path': 'buildprops.json',
+16:09:57     INFO -  'config_files': ('web_platform_tests/prod_config.py',),
+16:09:57     INFO -  'default_blob_upload_servers': ('https://blobupload.elasticbeanstalk.com',),
+16:09:57     INFO -  'download_minidump_stackwalk': True,
+16:09:57     INFO -  'download_symbols': 'true',
+16:09:57     INFO -  'download_tooltool': True,
+16:09:57     INFO -  'e10s': False,
+16:09:57     INFO -  'exes': {'python': '/tools/buildbot/bin/python',
+16:09:57     INFO -           'tooltool.py': '/tools/tooltool.py',
+16:09:57     INFO -           'virtualenv': ('/tools/buildbot/bin/python',
+16:09:57     INFO -                          '/tools/misc-python/virtualenv.py')},
+16:09:57     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+16:09:57     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+16:09:57     INFO -  'log_level': 'info',
+16:09:57     INFO -  'log_to_console': True,
+16:09:57     INFO -  'opt_config_files': (),
+16:09:57     INFO -  'options': ('--prefs-root=%(test_path)s/prefs',
+16:09:57     INFO -              '--processes=1',
+16:09:57     INFO -              '--config=%(test_path)s/wptrunner.ini',
+16:09:57     INFO -              '--ca-cert-path=%(test_path)s/certs/cacert.pem',
+16:09:57     INFO -              '--host-key-path=%(test_path)s/certs/web-platform.test.key',
+16:09:57     INFO -              '--host-cert-path=%(test_path)s/certs/web-platform.test.pem',
+16:09:57     INFO -              '--certutil-binary=%(test_install_path)s/bin/certutil'),
+16:09:57     INFO -  'pip_index': False,
+16:09:57     INFO -  'require_test_zip': True,
+16:09:57     INFO -  'test_type': ('testharness',),
+16:09:57     INFO -  'this_chunk': '3',
+16:09:57     INFO -  'tooltool_cache': '/builds/tooltool_cache',
+16:09:57     INFO -  'total_chunks': '10',
+16:09:57     INFO -  'virtualenv_path': 'venv',
+16:09:57     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+16:09:57     INFO -  'work_dir': 'build'}
+16:09:57     INFO - [mozharness: 2018-06-09 23:09:57.326865Z] Running clobber step.
+16:09:57     INFO - Running pre-action listener: _resource_record_pre_action
+16:09:57     INFO - Running main action method: clobber
+16:09:57     INFO - rmtree: /builds/slave/test/build
+16:09:57     INFO - retry: Calling rmtree with args: ('/builds/slave/test/build',), kwargs: {}, attempt #1
+16:09:59     INFO - Running post-action listener: _resource_record_post_action
+16:09:59     INFO - [mozharness: 2018-06-09 23:09:59.995581Z] Finished clobber step (success)
+16:09:59     INFO - [mozharness: 2018-06-09 23:09:59.995711Z] Running read-buildbot-config step.
+16:09:59     INFO - Running pre-action listener: _resource_record_pre_action
+16:09:59     INFO - Running main action method: read_buildbot_config
+16:09:59     INFO - Using buildbot properties:
+16:09:59     INFO - {
+16:09:59     INFO -     "project": "", 
+16:09:59     INFO -     "product": "firefox", 
+16:09:59     INFO -     "script_repo_revision": "production", 
+16:09:59     INFO -     "scheduler": "tests-mozilla-esr52-yosemite_r7-debug-unittest", 
+16:09:59     INFO -     "repository": "", 
+16:09:59     INFO -     "buildername": "Rev7 MacOSX Yosemite 10.10.5 mozilla-esr52 debug test web-platform-tests-3", 
+16:09:59     INFO -     "buildid": "20180609145619", 
+16:09:59     INFO -     "pgo_build": "False", 
+16:09:59     INFO -     "basedir": "/builds/slave/test", 
+16:09:59     INFO -     "buildnumber": 22, 
+16:09:59     INFO -     "slavename": "t-yosemite-r7-0019", 
+16:09:59     INFO -     "master": "http://buildbot-master107.bb.releng.scl3.mozilla.com:8201/", 
+16:09:59     INFO -     "platform": "macosx64", 
+16:09:59     INFO -     "branch": "mozilla-esr52", 
+16:09:59     INFO -     "revision": "1e9a9a6b6e74d8eafe01f87850eb3d85bfba88d8", 
+16:09:59     INFO -     "repo_path": "releases/mozilla-esr52", 
+16:09:59     INFO -     "moz_repo_path": "", 
+16:09:59     INFO -     "stage_platform": "macosx64", 
+16:09:59     INFO -     "builduid": "b1c96505513c43fda408cdf95090aab8", 
+16:09:59     INFO -     "slavebuilddir": "test"
+16:09:59     INFO - }
+16:09:59     INFO - Found installer url https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg.
+16:09:59     INFO - Found a test packages url https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.test_packages.json.
+16:09:59     INFO - Running post-action listener: _resource_record_post_action
+16:09:59     INFO - [mozharness: 2018-06-09 23:09:59.999226Z] Finished read-buildbot-config step (success)
+16:09:59     INFO - [mozharness: 2018-06-09 23:09:59.999344Z] Running download-and-extract step.
+16:09:59     INFO - Running pre-action listener: _resource_record_pre_action
+16:09:59     INFO - Running main action method: download_and_extract
+16:09:59     INFO - mkdir: /builds/slave/test/build/tests
+16:10:00     INFO - Downloading https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.test_packages.json to /builds/slave/test/build/firefox-52.8.2.en-US.mac64.test_packages.json
+16:10:00     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.test_packages.json', 'file_name': '/builds/slave/test/build/firefox-52.8.2.en-US.mac64.test_packages.json'}, attempt #1
+16:10:01     INFO - Downloaded 1235 bytes.
+16:10:01     INFO - Reading from file /builds/slave/test/build/firefox-52.8.2.en-US.mac64.test_packages.json
+16:10:01     INFO - Using the following test package requirements:
+16:10:01     INFO - {u'common': [u'firefox-52.8.2.en-US.mac64.common.tests.zip'],
+16:10:01     INFO -  u'cppunittest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:10:01     INFO -                   u'firefox-52.8.2.en-US.mac64.cppunittest.tests.zip'],
+16:10:01     INFO -  u'gtest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:10:01     INFO -             u'firefox-52.8.2.en-US.mac64.gtest.tests.zip'],
+16:10:01     INFO -  u'jittest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:10:01     INFO -               u'jsshell-mac64.zip'],
+16:10:01     INFO -  u'mochitest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:10:01     INFO -                 u'firefox-52.8.2.en-US.mac64.mochitest.tests.zip'],
+16:10:01     INFO -  u'mozbase': [u'firefox-52.8.2.en-US.mac64.common.tests.zip'],
+16:10:01     INFO -  u'reftest': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:10:01     INFO -               u'firefox-52.8.2.en-US.mac64.reftest.tests.zip'],
+16:10:01     INFO -  u'talos': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:10:01     INFO -             u'firefox-52.8.2.en-US.mac64.talos.tests.zip'],
+16:10:01     INFO -  u'web-platform': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:10:01     INFO -                    u'firefox-52.8.2.en-US.mac64.web-platform.tests.zip'],
+16:10:01     INFO -  u'xpcshell': [u'firefox-52.8.2.en-US.mac64.common.tests.zip',
+16:10:01     INFO -                u'firefox-52.8.2.en-US.mac64.xpcshell.tests.zip']}
+16:10:01     INFO - Downloading packages: [u'firefox-52.8.2.en-US.mac64.common.tests.zip', u'firefox-52.8.2.en-US.mac64.web-platform.tests.zip'] for test suite category: web-platform
+16:10:01     INFO - Adding 'mach' for extraction from common.tests zip file
+16:10:01     INFO - Adding 'mozinfo.json' for extraction from common.tests zip file
+16:10:01     INFO - Downloading and extracting to /builds/slave/test/build/tests these dirs bin/*, config/*, mozbase/*, marionette/*, tools/wptserve/*, web-platform/*, mach, mozinfo.json from https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.common.tests.zip
+16:10:01     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.common.tests.zip'}, attempt #1
+16:10:01     INFO - Fetch https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.common.tests.zip into memory
+16:10:01     INFO - Http code: 200
+16:10:01     INFO - via: 1.1 7db492e48a5d55351dcb787a8a14e113.cloudfront.net (CloudFront)
+16:10:01     INFO - x-amz-cf-id: nNLdRt6Hf5XhQZshFqpERgYP33l2efWINux7xQQnW7Efo6Y9f_zQDg==
+16:10:01     INFO - x-amz-version-id: idLv8DtLHg5_oRjpobYp9IdWmnxnAAFi
+16:10:02     INFO - Expected file size: 16096421
+16:10:02     INFO - Obtained file size: 16096421
+16:10:02     INFO - Downloading and extracting to /builds/slave/test/build/tests these dirs bin/*, config/*, mozbase/*, marionette/*, tools/wptserve/*, web-platform/*, mach, mozinfo.json from https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.web-platform.tests.zip
+16:10:02     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.web-platform.tests.zip'}, attempt #1
+16:10:02     INFO - Fetch https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.web-platform.tests.zip into memory
+16:10:03     INFO - Http code: 200
+16:10:03     INFO - via: 1.1 6eaa7f856e226a0db7cef6201d3b8393.cloudfront.net (CloudFront)
+16:10:03     INFO - x-amz-cf-id: 0DrMxjHKSXAgmJVGODPwGpgq5wOP4VjStSU5aIYJIqbRnnd1rgoK7g==
+16:10:03     INFO - x-amz-version-id: YdYb1mqqGgXPydbKZlrhsjyF9s2ypdH7
+16:10:04     INFO - Expected file size: 43270018
+16:10:04     INFO - Obtained file size: 43270018
+16:10:14     INFO - Downloading https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg to /builds/slave/test/build/firefox-52.8.2.en-US.mac64.dmg
+16:10:14     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg', 'file_name': '/builds/slave/test/build/firefox-52.8.2.en-US.mac64.dmg'}, attempt #1
+16:10:16     INFO - Downloaded 75546977 bytes.
+16:10:16     INFO - Setting buildbot property build_url to https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg
+16:10:16     INFO - mkdir: /builds/slave/test/properties
+16:10:16     INFO - Writing buildbot properties ['build_url'] to /builds/slave/test/properties/build_url
+16:10:16     INFO - Writing to file /builds/slave/test/properties/build_url
+16:10:16     INFO - Contents:
+16:10:16     INFO -  build_url:https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.dmg
+16:10:16     INFO - retry: Calling query_symbols_url with args: (), kwargs: {'raise_on_failure': True}, attempt #1
+16:10:17     INFO - Setting buildbot property symbols_url to https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip
+16:10:17     INFO - Writing buildbot properties ['symbols_url'] to /builds/slave/test/properties/symbols_url
+16:10:17     INFO - Writing to file /builds/slave/test/properties/symbols_url
+16:10:17     INFO - Contents:
+16:10:17     INFO -  symbols_url:https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip
+16:10:17     INFO - Downloading and extracting to /builds/slave/test/build/symbols these dirs * from https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip
+16:10:17     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip'}, attempt #1
+16:10:17     INFO - Fetch https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip into memory
+16:10:17     INFO - Http code: 200
+16:10:17     INFO - via: 1.1 6eaa7f856e226a0db7cef6201d3b8393.cloudfront.net (CloudFront)
+16:10:17     INFO - x-amz-cf-id: ECfUvEMPvTGUOABVJ5xWhqaMjrSkwmJLDPCtTzbqoT2PfzGIY47Upw==
+16:10:17     INFO - x-amz-version-id: 2wQNY7IQ7h2m3LMajU6YiRI3LHUtqvmv
+16:10:20     INFO - Expected file size: 137467282
+16:10:20     INFO - Obtained file size: 137467282
+16:10:24     INFO - Running post-action listener: _resource_record_post_action
+16:10:24     INFO - Running post-action listener: set_extra_try_arguments
+16:10:24     INFO - [mozharness: 2018-06-09 23:10:24.683168Z] Finished download-and-extract step (success)
+16:10:24     INFO - [mozharness: 2018-06-09 23:10:24.683309Z] Running fetch-geckodriver step.
+16:10:24     INFO - Running pre-action listener: _resource_record_pre_action
+16:10:24     INFO - Running main action method: fetch_geckodriver
+16:10:24     INFO - Running post-action listener: _resource_record_post_action
+16:10:24     INFO - [mozharness: 2018-06-09 23:10:24.683815Z] Finished fetch-geckodriver step (success)
+16:10:24     INFO - [mozharness: 2018-06-09 23:10:24.683927Z] Running create-virtualenv step.
+16:10:24     INFO - Running pre-action listener: _pre_create_virtualenv
+16:10:24     INFO - Running pre-action listener: _resource_record_pre_action
+16:10:24     INFO - Running main action method: create_virtualenv
+16:10:24     INFO - Creating virtualenv /builds/slave/test/build/venv
+16:10:24     INFO - Running command: ['/tools/buildbot/bin/python', '/builds/slave/test/scripts/external_tools/virtualenv/virtualenv.py', '--always-copy', '/builds/slave/test/build/venv'] in /builds/slave/test/build
+16:10:24     INFO - Copy/paste: /tools/buildbot/bin/python /builds/slave/test/scripts/external_tools/virtualenv/virtualenv.py --always-copy /builds/slave/test/build/venv
+16:10:24     INFO - Using partial env: {'VIRTUALENV_NO_DOWNLOAD': '1'}
+16:10:25     INFO -  Using real prefix '/tools/python27'
+16:10:25     INFO -  New python executable in /builds/slave/test/build/venv/bin/python
+16:10:27     INFO -  Installing setuptools, pip, wheel...done.
+16:10:27     INFO - Return code: 0
+16:10:27     INFO - Installing psutil>=3.1.1 into virtualenv /builds/slave/test/build/venv
+16:10:27     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'psutil>=3.1.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10830eb70>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10831ed50>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fc0114d5ca0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1083375e0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10830c540>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x108296e40>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:10:27     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'psutil>=3.1.1'] in /builds/slave/test/build
+16:10:27     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org psutil>=3.1.1
+16:10:27     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render',
+16:10:27     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:10:27     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:10:27     INFO -  'HOME': '/Users/cltbld',
+16:10:27     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:10:27     INFO -  'LOGNAME': 'cltbld',
+16:10:27     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:10:27     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:10:27     INFO -  'MOZ_NO_REMOTE': '1',
+16:10:27     INFO -  'NO_EM_RESTART': '1',
+16:10:27     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:10:27     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:10:27     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:10:27     INFO -  'PWD': '/builds/slave/test',
+16:10:27     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:10:27     INFO -  'SHELL': '/bin/bash',
+16:10:27     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners',
+16:10:27     INFO -  'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/',
+16:10:27     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:10:27     INFO -  'USER': 'cltbld',
+16:10:27     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:10:27     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:10:27     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:10:27     INFO -  'XPC_FLAGS': '0x0',
+16:10:27     INFO -  'XPC_SERVICE_NAME': '0',
+16:10:27     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:10:27     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:10:27     INFO -  Collecting psutil>=3.1.1
+16:10:28     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:10:28     INFO -    SNIMissingWarning
+16:10:28     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:10:28     INFO -    InsecurePlatformWarning
+16:10:29     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:10:29     INFO -    InsecurePlatformWarning
+16:10:31     INFO -  Installing collected packages: psutil
+16:10:31     INFO -  Successfully installed psutil-5.4.3
+16:10:31     INFO - Return code: 0
+16:10:31     INFO - Installing mozsystemmonitor==0.3 into virtualenv /builds/slave/test/build/venv
+16:10:31     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'mozsystemmonitor==0.3']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10830eb70>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10831ed50>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fc0114d5ca0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1083375e0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10830c540>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x108296e40>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:10:31     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'mozsystemmonitor==0.3'] in /builds/slave/test/build
+16:10:31     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org mozsystemmonitor==0.3
+16:10:31     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render',
+16:10:31     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:10:31     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:10:31     INFO -  'HOME': '/Users/cltbld',
+16:10:31     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:10:31     INFO -  'LOGNAME': 'cltbld',
+16:10:31     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:10:31     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:10:31     INFO -  'MOZ_NO_REMOTE': '1',
+16:10:31     INFO -  'NO_EM_RESTART': '1',
+16:10:31     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:10:31     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:10:31     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:10:31     INFO -  'PWD': '/builds/slave/test',
+16:10:31     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:10:31     INFO -  'SHELL': '/bin/bash',
+16:10:31     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners',
+16:10:31     INFO -  'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/',
+16:10:31     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:10:31     INFO -  'USER': 'cltbld',
+16:10:31     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:10:31     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:10:31     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:10:31     INFO -  'XPC_FLAGS': '0x0',
+16:10:31     INFO -  'XPC_SERVICE_NAME': '0',
+16:10:31     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:10:31     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:10:31     INFO -  Collecting mozsystemmonitor==0.3
+16:10:31     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:10:31     INFO -    SNIMissingWarning
+16:10:31     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:10:31     INFO -    InsecurePlatformWarning
+16:10:32     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:10:32     INFO -    InsecurePlatformWarning
+16:10:34     INFO -  Requirement already satisfied (use --upgrade to upgrade): psutil>=3.1.1 in ./venv/lib/python2.7/site-packages (from mozsystemmonitor==0.3)
+16:10:34     INFO -  Installing collected packages: mozsystemmonitor
+16:10:34     INFO -  Successfully installed mozsystemmonitor-0.3
+16:10:34     INFO - Return code: 0
+16:10:34     INFO - Installing jsonschema==2.5.1 into virtualenv /builds/slave/test/build/venv
+16:10:34     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'jsonschema==2.5.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10830eb70>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10831ed50>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fc0114d5ca0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1083375e0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10830c540>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x108296e40>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:10:34     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'jsonschema==2.5.1'] in /builds/slave/test/build
+16:10:34     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org jsonschema==2.5.1
+16:10:34     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render',
+16:10:34     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:10:34     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:10:34     INFO -  'HOME': '/Users/cltbld',
+16:10:34     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:10:34     INFO -  'LOGNAME': 'cltbld',
+16:10:34     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:10:34     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:10:34     INFO -  'MOZ_NO_REMOTE': '1',
+16:10:34     INFO -  'NO_EM_RESTART': '1',
+16:10:34     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:10:34     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:10:34     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:10:34     INFO -  'PWD': '/builds/slave/test',
+16:10:34     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:10:34     INFO -  'SHELL': '/bin/bash',
+16:10:34     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners',
+16:10:34     INFO -  'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/',
+16:10:34     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:10:34     INFO -  'USER': 'cltbld',
+16:10:34     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:10:34     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:10:34     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:10:34     INFO -  'XPC_FLAGS': '0x0',
+16:10:34     INFO -  'XPC_SERVICE_NAME': '0',
+16:10:34     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:10:35     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:10:35     INFO -  Collecting jsonschema==2.5.1
+16:10:35     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:10:35     INFO -    SNIMissingWarning
+16:10:35     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:10:35     INFO -    InsecurePlatformWarning
+16:10:35     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:10:35     INFO -    InsecurePlatformWarning
+16:10:37     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/jsonschema-2.5.1-py2.py3-none-any.whl
+16:10:37     INFO -  Collecting functools32; python_version == "2.7" (from jsonschema==2.5.1)
+16:10:40     INFO -  Installing collected packages: functools32, jsonschema
+16:10:40     INFO -  Successfully installed functools32-3.2.3.post2 jsonschema-2.5.1
+16:10:40     INFO - Return code: 0
+16:10:40     INFO - Installing functools32==3.2.3-2 into virtualenv /builds/slave/test/build/venv
+16:10:41     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'functools32==3.2.3-2']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10830eb70>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10831ed50>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fc0114d5ca0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1083375e0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10830c540>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x108296e40>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:10:41     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'functools32==3.2.3-2'] in /builds/slave/test/build
+16:10:41     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org functools32==3.2.3-2
+16:10:41     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render',
+16:10:41     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:10:41     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:10:41     INFO -  'HOME': '/Users/cltbld',
+16:10:41     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:10:41     INFO -  'LOGNAME': 'cltbld',
+16:10:41     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:10:41     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:10:41     INFO -  'MOZ_NO_REMOTE': '1',
+16:10:41     INFO -  'NO_EM_RESTART': '1',
+16:10:41     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:10:41     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:10:41     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:10:41     INFO -  'PWD': '/builds/slave/test',
+16:10:41     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:10:41     INFO -  'SHELL': '/bin/bash',
+16:10:41     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners',
+16:10:41     INFO -  'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/',
+16:10:41     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:10:41     INFO -  'USER': 'cltbld',
+16:10:41     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:10:41     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:10:41     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:10:41     INFO -  'XPC_FLAGS': '0x0',
+16:10:41     INFO -  'XPC_SERVICE_NAME': '0',
+16:10:41     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:10:41     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:10:41     INFO -  Requirement already satisfied (use --upgrade to upgrade): functools32==3.2.3-2 in ./venv/lib/python2.7/site-packages
+16:10:41     INFO - Return code: 0
+16:10:41     INFO - Installing blobuploader==1.2.4 into virtualenv /builds/slave/test/build/venv
+16:10:41     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'blobuploader==1.2.4']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10830eb70>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10831ed50>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fc0114d5ca0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1083375e0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10830c540>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x108296e40>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:10:41     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'blobuploader==1.2.4'] in /builds/slave/test/build
+16:10:41     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org blobuploader==1.2.4
+16:10:41     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render',
+16:10:41     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:10:41     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:10:41     INFO -  'HOME': '/Users/cltbld',
+16:10:41     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:10:41     INFO -  'LOGNAME': 'cltbld',
+16:10:41     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:10:41     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:10:41     INFO -  'MOZ_NO_REMOTE': '1',
+16:10:41     INFO -  'NO_EM_RESTART': '1',
+16:10:41     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:10:41     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:10:41     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:10:41     INFO -  'PWD': '/builds/slave/test',
+16:10:41     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:10:41     INFO -  'SHELL': '/bin/bash',
+16:10:41     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners',
+16:10:41     INFO -  'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/',
+16:10:41     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:10:41     INFO -  'USER': 'cltbld',
+16:10:41     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:10:41     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:10:41     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:10:41     INFO -  'XPC_FLAGS': '0x0',
+16:10:41     INFO -  'XPC_SERVICE_NAME': '0',
+16:10:41     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:10:41     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:10:41     INFO -  Collecting blobuploader==1.2.4
+16:10:41     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:10:41     INFO -    SNIMissingWarning
+16:10:41     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:10:41     INFO -    InsecurePlatformWarning
+16:10:42     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:10:42     INFO -    InsecurePlatformWarning
+16:10:44     INFO -  Collecting docopt==0.6.1 (from blobuploader==1.2.4)
+16:10:47     INFO -  Collecting requests==1.2.3. (from blobuploader==1.2.4)
+16:10:49     INFO -  Installing collected packages: docopt, requests, blobuploader
+16:10:50     INFO -  Successfully installed blobuploader-1.2.4 docopt-0.6.1 requests-1.2.3
+16:10:50     INFO - Return code: 0
+16:10:50     INFO - Installing None into virtualenv /builds/slave/test/build/venv
+16:10:50     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--no-deps', '--timeout', '120', '-r', '/builds/slave/test/build/tests/config/marionette_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10830eb70>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10831ed50>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fc0114d5ca0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1083375e0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10830c540>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x108296e40>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build/tests/config', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:10:50     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--no-deps', '--timeout', '120', '-r', '/builds/slave/test/build/tests/config/marionette_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org'] in /builds/slave/test/build/tests/config
+16:10:50     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --no-deps --timeout 120 -r /builds/slave/test/build/tests/config/marionette_requirements.txt --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org
+16:10:50     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render',
+16:10:50     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:10:50     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:10:50     INFO -  'HOME': '/Users/cltbld',
+16:10:50     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:10:50     INFO -  'LOGNAME': 'cltbld',
+16:10:50     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:10:50     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:10:50     INFO -  'MOZ_NO_REMOTE': '1',
+16:10:50     INFO -  'NO_EM_RESTART': '1',
+16:10:50     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:10:50     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:10:50     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:10:50     INFO -  'PWD': '/builds/slave/test',
+16:10:50     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:10:50     INFO -  'SHELL': '/bin/bash',
+16:10:50     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners',
+16:10:50     INFO -  'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/',
+16:10:50     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:10:50     INFO -  'USER': 'cltbld',
+16:10:50     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:10:50     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:10:50     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:10:50     INFO -  'XPC_FLAGS': '0x0',
+16:10:50     INFO -  'XPC_SERVICE_NAME': '0',
+16:10:50     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:10:50     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:10:50     INFO -  Processing /builds/slave/test/build/tests/mozbase/manifestparser
+16:10:51     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozcrash
+16:10:51     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozdebug
+16:10:51     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozdevice
+16:10:51     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozfile
+16:10:52     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozhttpd
+16:10:52     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozinfo
+16:10:52     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozinstall
+16:10:52     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozleak
+16:10:53     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozlog
+16:10:53     INFO -  Processing /builds/slave/test/build/tests/mozbase/moznetwork
+16:10:53     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozprocess
+16:10:53     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozprofile
+16:10:53     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozrunner
+16:10:54     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozscreenshot
+16:10:54     INFO -  Processing /builds/slave/test/build/tests/mozbase/moztest
+16:10:54     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozversion
+16:10:54     INFO -  Processing /builds/slave/test/build/tests/tools/wptserve
+16:10:55     INFO -  Processing /builds/slave/test/build/tests/marionette/client
+16:10:55     INFO -  Processing /builds/slave/test/build/tests/marionette/harness/marionette_harness/runner/mixins/browsermob-proxy-py
+16:10:55     INFO -  Processing /builds/slave/test/build/tests/marionette/harness
+16:10:56     INFO -  Processing /builds/slave/test/build/tests/marionette/puppeteer/firefox
+16:10:56     INFO -  Building wheels for collected packages: browsermob-proxy
+16:10:56     INFO -    Running setup.py bdist_wheel for browsermob-proxy: started
+16:10:56     INFO -    Running setup.py bdist_wheel for browsermob-proxy: finished with status 'done'
+16:10:56     INFO -    Stored in directory: /Users/cltbld/Library/Caches/pip/wheels/10/00/c1/79bb793b6a7eb4dca9dfd244010f550ae5044951bcd23c261e
+16:10:56     INFO -  Successfully built browsermob-proxy
+16:10:56     INFO -  Installing collected packages: manifestparser, mozcrash, mozdebug, mozdevice, mozfile, mozhttpd, mozinfo, mozInstall, mozleak, mozlog, moznetwork, mozprocess, mozprofile, mozrunner, mozscreenshot, moztest, mozversion, wptserve, marionette-driver, browsermob-proxy, marionette-harness, firefox-puppeteer
+16:10:56     INFO -    Running setup.py install for manifestparser: started
+16:10:56     INFO -      Running setup.py install for manifestparser: finished with status 'done'
+16:10:56     INFO -    Running setup.py install for mozcrash: started
+16:10:57     INFO -      Running setup.py install for mozcrash: finished with status 'done'
+16:10:57     INFO -    Running setup.py install for mozdebug: started
+16:10:57     INFO -      Running setup.py install for mozdebug: finished with status 'done'
+16:10:57     INFO -    Running setup.py install for mozdevice: started
+16:10:57     INFO -      Running setup.py install for mozdevice: finished with status 'done'
+16:10:57     INFO -    Running setup.py install for mozfile: started
+16:10:58     INFO -      Running setup.py install for mozfile: finished with status 'done'
+16:10:58     INFO -    Running setup.py install for mozhttpd: started
+16:10:58     INFO -      Running setup.py install for mozhttpd: finished with status 'done'
+16:10:58     INFO -    Running setup.py install for mozinfo: started
+16:10:58     INFO -      Running setup.py install for mozinfo: finished with status 'done'
+16:10:58     INFO -    Running setup.py install for mozInstall: started
+16:10:58     INFO -      Running setup.py install for mozInstall: finished with status 'done'
+16:10:58     INFO -    Running setup.py install for mozleak: started
+16:10:59     INFO -      Running setup.py install for mozleak: finished with status 'done'
+16:10:59     INFO -    Running setup.py install for mozlog: started
+16:10:59     INFO -      Running setup.py install for mozlog: finished with status 'done'
+16:10:59     INFO -    Running setup.py install for moznetwork: started
+16:10:59     INFO -      Running setup.py install for moznetwork: finished with status 'done'
+16:10:59     INFO -    Running setup.py install for mozprocess: started
+16:10:59     INFO -      Running setup.py install for mozprocess: finished with status 'done'
+16:10:59     INFO -    Running setup.py install for mozprofile: started
+16:11:00     INFO -      Running setup.py install for mozprofile: finished with status 'done'
+16:11:00     INFO -    Running setup.py install for mozrunner: started
+16:11:00     INFO -      Running setup.py install for mozrunner: finished with status 'done'
+16:11:00     INFO -    Running setup.py install for mozscreenshot: started
+16:11:00     INFO -      Running setup.py install for mozscreenshot: finished with status 'done'
+16:11:00     INFO -    Running setup.py install for moztest: started
+16:11:01     INFO -      Running setup.py install for moztest: finished with status 'done'
+16:11:01     INFO -    Running setup.py install for mozversion: started
+16:11:01     INFO -      Running setup.py install for mozversion: finished with status 'done'
+16:11:01     INFO -    Running setup.py install for wptserve: started
+16:11:01     INFO -      Running setup.py install for wptserve: finished with status 'done'
+16:11:01     INFO -    Running setup.py install for marionette-driver: started
+16:11:02     INFO -      Running setup.py install for marionette-driver: finished with status 'done'
+16:11:02     INFO -    Running setup.py install for marionette-harness: started
+16:11:02     INFO -      Running setup.py install for marionette-harness: finished with status 'done'
+16:11:02     INFO -    Running setup.py install for firefox-puppeteer: started
+16:11:02     INFO -      Running setup.py install for firefox-puppeteer: finished with status 'done'
+16:11:03     INFO -  Successfully installed browsermob-proxy-0.6.0 firefox-puppeteer-52.1.0 manifestparser-1.1 marionette-driver-2.2.0 marionette-harness-4.0.0 mozInstall-1.12 mozcrash-1.0 mozdebug-0.1 mozdevice-0.48 mozfile-1.2 mozhttpd-0.7 mozinfo-0.9 mozleak-0.1 mozlog-3.4 moznetwork-0.27 mozprocess-0.23 mozprofile-0.28 mozrunner-6.13 mozscreenshot-0.1 moztest-0.8 mozversion-1.4 wptserve-1.4.0
+16:11:03     INFO - Return code: 0
+16:11:03     INFO - Installing None into virtualenv /builds/slave/test/build/venv
+16:11:03     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '-r', '/builds/slave/test/build/tests/config/marionette_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x10830eb70>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10831ed50>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7fc0114d5ca0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1083375e0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10830c540>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x108296e40>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build/tests/config', 'env': {'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'XPC_SERVICE_NAME': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11', 'HOME': '/Users/cltbld', 'NO_EM_RESTART': '1', 'IDLEIZER_DISABLE_SHUTDOWN': 'true', 'XPCOM_DEBUG_BREAK': 'warn', 'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render', 'MOZ_NODE_PATH': '/usr/local/bin/node', 'TWISTD_LOG_PATH': '/builds/slave/twistd.log', 'GIT_SHARE_BASE_DIR': '/builds/git-shared', 'VERSIONER_PYTHON_VERSION': '2.7', 'XPC_FLAGS': '0x0', 'NO_FAIL_ON_TEST_ERRORS': '1', 'HG_SHARE_BASE_DIR': '/builds/hg-shared', 'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners', 'SHELL': '/bin/bash', 'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/', '__CF_USER_TEXT_ENCODING': '0x1C:0:0', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json'}}, attempt #1
+16:11:03     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '-r', '/builds/slave/test/build/tests/config/marionette_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org'] in /builds/slave/test/build/tests/config
+16:11:03     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 -r /builds/slave/test/build/tests/config/marionette_requirements.txt --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org
+16:11:03     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render',
+16:11:03     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:11:03     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:11:03     INFO -  'HOME': '/Users/cltbld',
+16:11:03     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:11:03     INFO -  'LOGNAME': 'cltbld',
+16:11:03     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:11:03     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:11:03     INFO -  'MOZ_NO_REMOTE': '1',
+16:11:03     INFO -  'NO_EM_RESTART': '1',
+16:11:03     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:11:03     INFO -  'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:11:03     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:11:03     INFO -  'PWD': '/builds/slave/test',
+16:11:03     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:11:03     INFO -  'SHELL': '/bin/bash',
+16:11:03     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners',
+16:11:03     INFO -  'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/',
+16:11:03     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:11:03     INFO -  'USER': 'cltbld',
+16:11:03     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:11:03     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:11:03     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:11:03     INFO -  'XPC_FLAGS': '0x0',
+16:11:03     INFO -  'XPC_SERVICE_NAME': '0',
+16:11:03     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:11:03     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:11:03     INFO -  Processing /builds/slave/test/build/tests/mozbase/manifestparser
+16:11:04     INFO -    Requirement already satisfied (use --upgrade to upgrade): manifestparser==1.1 from file:///builds/slave/test/build/tests/mozbase/manifestparser in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 1))
+16:11:04     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozcrash
+16:11:04     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozcrash==1.0 from file:///builds/slave/test/build/tests/mozbase/mozcrash in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 2))
+16:11:04     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozdebug
+16:11:04     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozdebug==0.1 from file:///builds/slave/test/build/tests/mozbase/mozdebug in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 3))
+16:11:04     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozdevice
+16:11:04     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozdevice==0.48 from file:///builds/slave/test/build/tests/mozbase/mozdevice in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 4))
+16:11:04     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozfile
+16:11:05     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozfile==1.2 from file:///builds/slave/test/build/tests/mozbase/mozfile in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 5))
+16:11:05     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozhttpd
+16:11:05     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozhttpd==0.7 from file:///builds/slave/test/build/tests/mozbase/mozhttpd in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 6))
+16:11:05     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozinfo
+16:11:05     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozinfo==0.9 from file:///builds/slave/test/build/tests/mozbase/mozinfo in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 7))
+16:11:05     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozinstall
+16:11:05     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozInstall==1.12 from file:///builds/slave/test/build/tests/mozbase/mozinstall in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 8))
+16:11:05     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozleak
+16:11:06     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozleak==0.1 from file:///builds/slave/test/build/tests/mozbase/mozleak in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 9))
+16:11:06     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozlog
+16:11:06     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozlog==3.4 from file:///builds/slave/test/build/tests/mozbase/mozlog in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 10))
+16:11:06     INFO -  Processing /builds/slave/test/build/tests/mozbase/moznetwork
+16:11:06     INFO -    Requirement already satisfied (use --upgrade to upgrade): moznetwork==0.27 from file:///builds/slave/test/build/tests/mozbase/moznetwork in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 11))
+16:11:06     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozprocess
+16:11:06     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozprocess==0.23 from file:///builds/slave/test/build/tests/mozbase/mozprocess in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 12))
+16:11:06     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozprofile
+16:11:07     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozprofile==0.28 from file:///builds/slave/test/build/tests/mozbase/mozprofile in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 13))
+16:11:07     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozrunner
+16:11:07     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozrunner==6.13 from file:///builds/slave/test/build/tests/mozbase/mozrunner in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 14))
+16:11:07     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozscreenshot
+16:11:07     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozscreenshot==0.1 from file:///builds/slave/test/build/tests/mozbase/mozscreenshot in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 15))
+16:11:07     INFO -  Processing /builds/slave/test/build/tests/mozbase/moztest
+16:11:07     INFO -    Requirement already satisfied (use --upgrade to upgrade): moztest==0.8 from file:///builds/slave/test/build/tests/mozbase/moztest in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 16))
+16:11:07     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozversion
+16:11:08     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozversion==1.4 from file:///builds/slave/test/build/tests/mozbase/mozversion in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 17))
+16:11:08     INFO -  Processing /builds/slave/test/build/tests/tools/wptserve
+16:11:08     INFO -    Requirement already satisfied (use --upgrade to upgrade): wptserve==1.4.0 from file:///builds/slave/test/build/tests/tools/wptserve in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 3))
+16:11:08     INFO -  Processing /builds/slave/test/build/tests/marionette/client
+16:11:08     INFO -    Requirement already satisfied (use --upgrade to upgrade): marionette-driver==2.2.0 from file:///builds/slave/test/build/tests/marionette/client in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 4))
+16:11:08     INFO -  Processing /builds/slave/test/build/tests/marionette/harness/marionette_harness/runner/mixins/browsermob-proxy-py
+16:11:08     INFO -    Requirement already satisfied (use --upgrade to upgrade): browsermob-proxy==0.6.0 from file:///builds/slave/test/build/tests/marionette/harness/marionette_harness/runner/mixins/browsermob-proxy-py in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 5))
+16:11:08     INFO -  Processing /builds/slave/test/build/tests/marionette/harness
+16:11:09     INFO -    Requirement already satisfied (use --upgrade to upgrade): marionette-harness==4.0.0 from file:///builds/slave/test/build/tests/marionette/harness in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 6))
+16:11:09     INFO -  Processing /builds/slave/test/build/tests/marionette/puppeteer/firefox
+16:11:09     INFO -    Requirement already satisfied (use --upgrade to upgrade): firefox-puppeteer==52.1.0 from file:///builds/slave/test/build/tests/marionette/puppeteer/firefox in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 9))
+16:11:09     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozfile>=1.0 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozcrash==1.0->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 2))
+16:11:09     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozlog>=3.0 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozcrash==1.0->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 2))
+16:11:09     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozinfo in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozdebug==0.1->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 3))
+16:11:09     INFO -  Requirement already satisfied (use --upgrade to upgrade): moznetwork>=0.24 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozdevice==0.48->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 4))
+16:11:09     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozprocess>=0.19 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozdevice==0.48->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 4))
+16:11:09     INFO -  Collecting blessings>=1.3 (from mozlog==3.4->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 10))
+16:11:09     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:11:09     INFO -    SNIMissingWarning
+16:11:09     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:11:09     INFO -    InsecurePlatformWarning
+16:11:10     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:11:10     INFO -    InsecurePlatformWarning
+16:11:12     INFO -  Requirement already satisfied (use --upgrade to upgrade): requests>=1.1.0 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from browsermob-proxy==0.6.0->-r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 5))
+16:11:12     INFO -  Building wheels for collected packages: browsermob-proxy
+16:11:12     INFO -    Running setup.py bdist_wheel for browsermob-proxy: started
+16:11:12     INFO -    Running setup.py bdist_wheel for browsermob-proxy: finished with status 'done'
+16:11:12     INFO -    Stored in directory: /Users/cltbld/Library/Caches/pip/wheels/10/00/c1/79bb793b6a7eb4dca9dfd244010f550ae5044951bcd23c261e
+16:11:12     INFO -  Successfully built browsermob-proxy
+16:11:12     INFO -  Installing collected packages: blessings
+16:11:12     INFO -  Successfully installed blessings-1.6
+16:11:12     INFO - Return code: 0
+16:11:12     INFO - Done creating virtualenv /builds/slave/test/build/venv.
+16:11:12     INFO - Getting output from command: ['/builds/slave/test/build/venv/bin/pip', 'freeze']
+16:11:12     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip freeze
+16:11:13     INFO - Reading from file tmpfile_stdout
+16:11:13     INFO - Reading from file tmpfile_stderr
+16:11:13     INFO - Current package versions:
+16:11:13     INFO -   blessings == 1.6
+16:11:13     INFO -   blobuploader == 1.2.4
+16:11:13     INFO -   browsermob-proxy == 0.6.0
+16:11:13     INFO -   docopt == 0.6.1
+16:11:13     INFO -   firefox-puppeteer == 52.1.0
+16:11:13     INFO -   functools32 == 3.2.3.post2
+16:11:13     INFO -   jsonschema == 2.5.1
+16:11:13     INFO -   manifestparser == 1.1
+16:11:13     INFO -   marionette-driver == 2.2.0
+16:11:13     INFO -   marionette-harness == 4.0.0
+16:11:13     INFO -   mozInstall == 1.12
+16:11:13     INFO -   mozcrash == 1.0
+16:11:13     INFO -   mozdebug == 0.1
+16:11:13     INFO -   mozdevice == 0.48
+16:11:13     INFO -   mozfile == 1.2
+16:11:13     INFO -   mozhttpd == 0.7
+16:11:13     INFO -   mozinfo == 0.9
+16:11:13     INFO -   mozleak == 0.1
+16:11:13     INFO -   mozlog == 3.4
+16:11:13     INFO -   moznetwork == 0.27
+16:11:13     INFO -   mozprocess == 0.23
+16:11:13     INFO -   mozprofile == 0.28
+16:11:13     INFO -   mozrunner == 6.13
+16:11:13     INFO -   mozscreenshot == 0.1
+16:11:13     INFO -   mozsystemmonitor == 0.3
+16:11:13     INFO -   moztest == 0.8
+16:11:13     INFO -   mozversion == 1.4
+16:11:13     INFO -   psutil == 5.4.3
+16:11:13     INFO -   requests == 1.2.3
+16:11:13     INFO -   wptserve == 1.4.0
+16:11:13     INFO - Running post-action listener: _resource_record_post_action
+16:11:13     INFO - Running post-action listener: _start_resource_monitoring
+16:11:13     INFO - Starting resource monitoring.
+16:11:13     INFO - [mozharness: 2018-06-09 23:11:13.759861Z] Finished create-virtualenv step (success)
+16:11:13     INFO - [mozharness: 2018-06-09 23:11:13.760914Z] Running pull step.
+16:11:13     INFO - Running pre-action listener: _resource_record_pre_action
+16:11:13     INFO - Running main action method: pull
+16:11:13     INFO - Pull has nothing to do!
+16:11:13     INFO - Running post-action listener: _resource_record_post_action
+16:11:13     INFO - [mozharness: 2018-06-09 23:11:13.761756Z] Finished pull step (success)
+16:11:13     INFO - [mozharness: 2018-06-09 23:11:13.761911Z] Running install step.
+16:11:13     INFO - Running pre-action listener: _resource_record_pre_action
+16:11:13     INFO - Running main action method: install
+16:11:13     INFO - Getting output from command: ['/builds/slave/test/build/venv/bin/pip', 'freeze']
+16:11:13     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip freeze
+16:11:14     INFO - Reading from file tmpfile_stdout
+16:11:14     INFO - Reading from file tmpfile_stderr
+16:11:14     INFO - Detecting whether we're running mozinstall >=1.0...
+16:11:14     INFO - Getting output from command: ['/builds/slave/test/build/venv/bin/mozinstall', '-h']
+16:11:14     INFO - Copy/paste: /builds/slave/test/build/venv/bin/mozinstall -h
+16:11:14     INFO - Reading from file tmpfile_stdout
+16:11:14     INFO - Output received:
+16:11:14     INFO -  Usage: mozinstall [options] installer
+16:11:14     INFO -  Options:
+16:11:14     INFO -    -h, --help            show this help message and exit
+16:11:14     INFO -    -d DEST, --destination=DEST
+16:11:14     INFO -                          Directory to install application into. [default:
+16:11:14     INFO -                          "/builds/slave/test"]
+16:11:14     INFO -    --app=APP             Application being installed. [default: firefox]
+16:11:14     INFO - mkdir: /builds/slave/test/build/application
+16:11:14     INFO - Getting output from command: ['/builds/slave/test/build/venv/bin/mozinstall', '/builds/slave/test/build/firefox-52.8.2.en-US.mac64.dmg', '--destination', '/builds/slave/test/build/application']
+16:11:14     INFO - Copy/paste: /builds/slave/test/build/venv/bin/mozinstall /builds/slave/test/build/firefox-52.8.2.en-US.mac64.dmg --destination /builds/slave/test/build/application
+16:11:32     INFO - Reading from file tmpfile_stdout
+16:11:32     INFO - Output received:
+16:11:32     INFO -  /builds/slave/test/build/application/NightlyDebug.app/Contents/MacOS/firefox
+16:11:32     INFO - Running post-action listener: _resource_record_post_action
+16:11:32     INFO - [mozharness: 2018-06-09 23:11:32.726101Z] Finished install step (success)
+16:11:32     INFO - [mozharness: 2018-06-09 23:11:32.726263Z] Running run-tests step.
+16:11:32     INFO - Running pre-action listener: _resource_record_pre_action
+16:11:32     INFO - Running main action method: run_tests
+16:11:32     INFO - mkdir: /builds/slave/test/build/blobber_upload_dir
+16:11:32     INFO - Minidump filename unknown. Determining based upon platform and architecture.
+16:11:32     INFO - Minidump tooltool manifest unknown. Determining based upon platform and architecture.
+16:11:32     INFO - grabbing minidump binary from tooltool
+16:11:32     INFO - Downloading https://raw.githubusercontent.com/mozilla/build-tooltool/master/tooltool.py to /builds/slave/test/build/tooltool.py
+16:11:32     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://raw.githubusercontent.com/mozilla/build-tooltool/master/tooltool.py', 'file_name': '/builds/slave/test/build/tooltool.py'}, attempt #1
+16:11:33     INFO - Downloaded 38066 bytes.
+16:11:33     INFO - Chmoding /builds/slave/test/build/tooltool.py to 0755
+16:11:33     INFO - retry: Calling run_command with args: (['/tools/buildbot/bin/python', '/builds/slave/test/build/tooltool.py', '--url', 'https://api.pub.build.mozilla.org/tooltool/', '--authentication-file', '/builds/relengapi.tok', 'fetch', '-m', '/builds/slave/test/build/tests/config/tooltool-manifests/macosx64/releng.manifest', '-o', '-c', '/builds/tooltool_cache'],), kwargs: {'output_timeout': 600, 'error_list': [{'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1083375e0>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x10830c540>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x108296e40>, 'level': 'critical'}, {'substr': 'ERROR - ', 'level': 'error'}], 'cwd': '/builds/slave/test/build', 'privileged': False}, attempt #1
+16:11:33     INFO - Running command: ['/tools/buildbot/bin/python', '/builds/slave/test/build/tooltool.py', '--url', 'https://api.pub.build.mozilla.org/tooltool/', '--authentication-file', '/builds/relengapi.tok', 'fetch', '-m', '/builds/slave/test/build/tests/config/tooltool-manifests/macosx64/releng.manifest', '-o', '-c', '/builds/tooltool_cache'] in /builds/slave/test/build
+16:11:33     INFO - Copy/paste: /tools/buildbot/bin/python /builds/slave/test/build/tooltool.py --url https://api.pub.build.mozilla.org/tooltool/ --authentication-file /builds/relengapi.tok fetch -m /builds/slave/test/build/tests/config/tooltool-manifests/macosx64/releng.manifest -o -c /builds/tooltool_cache
+16:11:33     INFO - Calling ['/tools/buildbot/bin/python', '/builds/slave/test/build/tooltool.py', '--url', 'https://api.pub.build.mozilla.org/tooltool/', '--authentication-file', '/builds/relengapi.tok', 'fetch', '-m', '/builds/slave/test/build/tests/config/tooltool-manifests/macosx64/releng.manifest', '-o', '-c', '/builds/tooltool_cache'] with output_timeout 600
+16:11:33     INFO -  INFO - File macosx64-minidump_stackwalk retrieved from local cache /builds/tooltool_cache
+16:11:33     INFO - Return code: 0
+16:11:33     INFO - Chmoding /builds/slave/test/build/macosx64-minidump_stackwalk to 0755
+16:11:33     INFO - ENV: MINIDUMP_SAVE_PATH is now /builds/slave/test/build/blobber_upload_dir
+16:11:33     INFO - Running command: ['/builds/slave/test/build/venv/bin/python', '-u', '/builds/slave/test/build/tests/web-platform/runtests.py', '--log-raw=-', '--log-raw=/builds/slave/test/build/blobber_upload_dir/wpt_raw.log', '--log-errorsummary=/builds/slave/test/build/blobber_upload_dir/wpt_errorsummary.log', '--binary=/builds/slave/test/build/application/NightlyDebug.app/Contents/MacOS/firefox', '--symbols-path=https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip', '--stackwalk-binary=/builds/slave/test/build/macosx64-minidump_stackwalk', '--stackfix-dir=/builds/slave/test/build/tests/bin', '--test-type=testharness', '--disable-e10s', '--total-chunks=10', '--this-chunk=3', '--prefs-root=/builds/slave/test/build/tests/web-platform/prefs', '--processes=1', '--config=/builds/slave/test/build/tests/web-platform/wptrunner.ini', '--ca-cert-path=/builds/slave/test/build/tests/web-platform/certs/cacert.pem', '--host-key-path=/builds/slave/test/build/tests/web-platform/certs/web-platform.test.key', '--host-cert-path=/builds/slave/test/build/tests/web-platform/certs/web-platform.test.pem', '--certutil-binary=/builds/slave/test/build/tests/bin/certutil'] in /builds/slave/test/build
+16:11:33     INFO - Copy/paste: /builds/slave/test/build/venv/bin/python -u /builds/slave/test/build/tests/web-platform/runtests.py --log-raw=- --log-raw=/builds/slave/test/build/blobber_upload_dir/wpt_raw.log --log-errorsummary=/builds/slave/test/build/blobber_upload_dir/wpt_errorsummary.log --binary=/builds/slave/test/build/application/NightlyDebug.app/Contents/MacOS/firefox --symbols-path=https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip --stackwalk-binary=/builds/slave/test/build/macosx64-minidump_stackwalk --stackfix-dir=/builds/slave/test/build/tests/bin --test-type=testharness --disable-e10s --total-chunks=10 --this-chunk=3 --prefs-root=/builds/slave/test/build/tests/web-platform/prefs --processes=1 --config=/builds/slave/test/build/tests/web-platform/wptrunner.ini --ca-cert-path=/builds/slave/test/build/tests/web-platform/certs/cacert.pem --host-key-path=/builds/slave/test/build/tests/web-platform/certs/web-platform.test.key --host-cert-path=/builds/slave/test/build/tests/web-platform/certs/web-platform.test.pem --certutil-binary=/builds/slave/test/build/tests/bin/certutil
+16:11:33     INFO - Using env: {'Apple_PubSub_Socket_Render': '/private/tmp/com.apple.launchd.TLLoKewpbp/Render',
+16:11:33     INFO -  'GIT_SHARE_BASE_DIR': '/builds/git-shared',
+16:11:33     INFO -  'HG_SHARE_BASE_DIR': '/builds/hg-shared',
+16:11:33     INFO -  'HOME': '/Users/cltbld',
+16:11:33     INFO -  'IDLEIZER_DISABLE_SHUTDOWN': 'true',
+16:11:33     INFO -  'LOGNAME': 'cltbld',
+16:11:33     INFO -  'MINIDUMP_SAVE_PATH': '/builds/slave/test/build/blobber_upload_dir',
+16:11:33     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:11:33     INFO -  'MOZ_NODE_PATH': '/usr/local/bin/node',
+16:11:33     INFO -  'MOZ_NO_REMOTE': '1',
+16:11:33     INFO -  'NO_EM_RESTART': '1',
+16:11:33     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:11:33     INFO -  'PATH': '/builds/slave/test/build/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11',
+16:11:33     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:11:33     INFO -  'PWD': '/builds/slave/test',
+16:11:33     INFO -  'RUNNER_CONFIG_CMD': '/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg',
+16:11:33     INFO -  'SHELL': '/bin/bash',
+16:11:33     INFO -  'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.hOPSRCEDZJ/Listeners',
+16:11:33     INFO -  'TMPDIR': '/var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/',
+16:11:33     INFO -  'TWISTD_LOG_PATH': '/builds/slave/twistd.log',
+16:11:33     INFO -  'USER': 'cltbld',
+16:11:33     INFO -  'VERSIONER_PYTHON_PREFER_32_BIT': 'no',
+16:11:33     INFO -  'VERSIONER_PYTHON_VERSION': '2.7',
+16:11:33     INFO -  'XPCOM_DEBUG_BREAK': 'warn',
+16:11:33     INFO -  'XPC_FLAGS': '0x0',
+16:11:33     INFO -  'XPC_SERVICE_NAME': '0',
+16:11:33     INFO -  '__CF_USER_TEXT_ENCODING': '0x1C:0:0'}
+16:11:33     INFO - Calling ['/builds/slave/test/build/venv/bin/python', '-u', '/builds/slave/test/build/tests/web-platform/runtests.py', '--log-raw=-', '--log-raw=/builds/slave/test/build/blobber_upload_dir/wpt_raw.log', '--log-errorsummary=/builds/slave/test/build/blobber_upload_dir/wpt_errorsummary.log', '--binary=/builds/slave/test/build/application/NightlyDebug.app/Contents/MacOS/firefox', '--symbols-path=https://queue.taskcluster.net/v1/task/U74IA3KDSVKgDGcrcGz4FQ/artifacts/public/build/firefox-52.8.2.en-US.mac64.crashreporter-symbols.zip', '--stackwalk-binary=/builds/slave/test/build/macosx64-minidump_stackwalk', '--stackfix-dir=/builds/slave/test/build/tests/bin', '--test-type=testharness', '--disable-e10s', '--total-chunks=10', '--this-chunk=3', '--prefs-root=/builds/slave/test/build/tests/web-platform/prefs', '--processes=1', '--config=/builds/slave/test/build/tests/web-platform/wptrunner.ini', '--ca-cert-path=/builds/slave/test/build/tests/web-platform/certs/cacert.pem', '--host-key-path=/builds/slave/test/build/tests/web-platform/certs/web-platform.test.key', '--host-cert-path=/builds/slave/test/build/tests/web-platform/certs/web-platform.test.pem', '--certutil-binary=/builds/slave/test/build/tests/bin/certutil'] with output_timeout 1000
+16:11:34     INFO - STDERR: Opening manifest at /builds/slave/test/build/tests/web-platform/meta/MANIFEST.json
+16:11:34     INFO - STDERR: Opening manifest at /builds/slave/test/build/tests/web-platform/mozilla/meta/MANIFEST.json
+16:11:39     INFO - Using 1 client processes
+16:11:39     INFO - wptserve Starting http server on 127.0.0.1:8000
+16:11:39     INFO - wptserve Starting http server on 127.0.0.1:8001
+16:11:39     INFO - wptserve Starting http server on 127.0.0.1:8443
+16:11:42     INFO - SUITE-START | Running 474 tests
+16:11:42     INFO - Running testharness tests
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_failures.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_failures.html | took 0ms
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_failures_RSA-OAEP.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_failures_RSA-OAEP.html | took 0ms
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_failures_RSA-PSS.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_failures_RSA-PSS.html | took 0ms
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_failures_RSASSA-PKCS1-v1_5.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_failures_RSASSA-PKCS1-v1_5.html | took 0ms
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_successes.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_successes.html | took 1ms
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_successes_AES-CBC.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_successes_AES-CBC.html | took 0ms
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_successes_RSA-OAEP.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_successes_RSA-OAEP.html | took 0ms
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_successes_RSA-PSS.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_successes_RSA-PSS.html | took 0ms
+16:11:42     INFO - TEST-START | /WebCryptoAPI/generateKey/test_successes_RSASSA-PKCS1-v1_5.html
+16:11:42     INFO - TEST-SKIP | /WebCryptoAPI/generateKey/test_successes_RSASSA-PKCS1-v1_5.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/creating-and-passing-registries/new-registry-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/creating-and-passing-registries/new-registry-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/creating-and-passing-registries/no-registry-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/creating-and-passing-registries/no-registry-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/creating-and-passing-registries/share-registry-create-document.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/creating-and-passing-registries/share-registry-create-document.html | took 1ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/creating-and-passing-registries/share-registry-import-document.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/creating-and-passing-registries/share-registry-import-document.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attached-callback-move-element-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attached-callback-move-element-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/detached-callback-move-element-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/detached-callback-move-element-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/detached-callback-with-browsing-context-test.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/custom-element-lifecycle/types-of-callbacks/detached-callback-with-browsing-context-test.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-default-namespace.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-default-namespace.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-duplicate-definition.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-duplicate-definition.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-invalid-type.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-invalid-type.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-local-name-lowercased.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-local-name-lowercased.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-name-is-null.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-name-is-null.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-no-interface-for-name.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-no-interface-for-name.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-svg-namespace-name-is-null.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-svg-namespace-name-is-null.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-svg-namespace.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-svg-namespace.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/definition-construction-algorithm-type-name-lowercased.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/definition-construction-algorithm-type-name-lowercased.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/element-registration-algorithm-no-registry.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/element-registration-algorithm-no-registry.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/extensions-to-document-interface/custom-element-name.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/extensions-to-document-interface/custom-element-name.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/extensions-to-document-interface/custom-element-prototype.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/extensions-to-document-interface/custom-element-prototype.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/unresolved-elements-interface-html-element.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/unresolved-elements-interface-html-element.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/unresolved-elements-interface-html-unknown-element.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/unresolved-elements-interface-html-unknown-element.html | took 0ms
+16:11:42     INFO - TEST-START | /custom-elements/v0/registering/unresolved-elements-interface-svg-element.html
+16:11:42     INFO - TEST-SKIP | /custom-elements/v0/registering/unresolved-elements-interface-svg-element.html | took 0ms
+16:11:42     INFO - TEST-START | /eventsource/format-data-before-final-empty-line.htm
+16:11:42     INFO - TEST-SKIP | /eventsource/format-data-before-final-empty-line.htm | took 0ms
+16:11:42     INFO - TEST-START | /eventsource/format-field-retry-bogus.htm
+16:11:42     INFO - TEST-SKIP | /eventsource/format-field-retry-bogus.htm | took 0ms
+16:11:42     INFO - TEST-START | /eventsource/format-field-retry.htm
+16:11:42     INFO - TEST-SKIP | /eventsource/format-field-retry.htm | took 0ms
+16:11:42     INFO - TEST-START | /mixed-content/blockable/http-csp/cross-origin-http/form-tag/top-level/keep-scheme-redirect/opt-in-blocks.https.html
+16:11:42     INFO - TEST-SKIP | /mixed-content/blockable/http-csp/cross-origin-http/form-tag/top-level/keep-scheme-redirect/opt-in-blocks.https.html | took 0ms
+16:11:42     INFO - TEST-START | /mixed-content/blockable/http-csp/cross-origin-http/form-tag/top-level/no-redirect/opt-in-blocks.https.html
+16:11:42     INFO - TEST-SKIP | /mixed-content/blockable/http-csp/cross-origin-http/form-tag/top-level/no-redirect/opt-in-blocks.https.html | took 0ms
+16:11:42     INFO - TEST-START | /mixed-content/blockable/no-opt-in/cross-origin-http/form-tag/top-level/no-redirect/no-opt-in-blocks.https.html
+16:11:42     INFO - TEST-SKIP | /mixed-content/blockable/no-opt-in/cross-origin-http/form-tag/top-level/no-redirect/no-opt-in-blocks.https.html | took 0ms
+16:11:42     INFO - TEST-START | /mixed-content/blockable/no-opt-in/same-host-http/form-tag/top-level/swap-scheme-redirect/no-opt-in-blocks.https.html
+16:11:42     INFO - TEST-SKIP | /mixed-content/blockable/no-opt-in/same-host-http/form-tag/top-level/swap-scheme-redirect/no-opt-in-blocks.https.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/no-referrer-when-downgrade/meta-referrer/same-origin/http-https/img-tag/upgrade-protocol.keep-origin-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/no-referrer-when-downgrade/meta-referrer/same-origin/http-https/img-tag/upgrade-protocol.keep-origin-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/no-referrer-when-downgrade/meta-referrer/same-origin/http-https/img-tag/upgrade-protocol.no-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/no-referrer-when-downgrade/meta-referrer/same-origin/http-https/img-tag/upgrade-protocol.no-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/no-referrer-when-downgrade/meta-referrer/same-origin/http-https/img-tag/upgrade-protocol.swap-origin-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/no-referrer-when-downgrade/meta-referrer/same-origin/http-https/img-tag/upgrade-protocol.swap-origin-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/no-referrer/meta-referrer/same-origin/http-http/img-tag/generic.keep-origin-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/no-referrer/meta-referrer/same-origin/http-http/img-tag/generic.keep-origin-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/no-referrer/meta-referrer/same-origin/http-http/img-tag/generic.no-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/no-referrer/meta-referrer/same-origin/http-http/img-tag/generic.no-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/no-referrer/meta-referrer/same-origin/http-http/img-tag/generic.swap-origin-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/no-referrer/meta-referrer/same-origin/http-http/img-tag/generic.swap-origin-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/unset-referrer-policy/meta-referrer/cross-origin/http-https/img-tag/upgrade-protocol.keep-origin-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/unset-referrer-policy/meta-referrer/cross-origin/http-https/img-tag/upgrade-protocol.keep-origin-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/unset-referrer-policy/meta-referrer/cross-origin/http-https/img-tag/upgrade-protocol.no-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/unset-referrer-policy/meta-referrer/cross-origin/http-https/img-tag/upgrade-protocol.no-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /referrer-policy/unset-referrer-policy/meta-referrer/cross-origin/http-https/img-tag/upgrade-protocol.swap-origin-redirect.http.html
+16:11:42     INFO - TEST-SKIP | /referrer-policy/unset-referrer-policy/meta-referrer/cross-origin/http-https/img-tag/upgrade-protocol.swap-origin-redirect.http.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/constants-and-properties.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/constants-and-properties.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-attribute-preserve-drawing-buffer.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-attribute-preserve-drawing-buffer.html | took 2ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-attributes-alpha-depth-stencil-antialias.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-attributes-alpha-depth-stencil-antialias.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-creation-and-destruction.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-creation-and-destruction.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-creation.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-creation.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-eviction-with-garbage-collection.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-eviction-with-garbage-collection.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-hidden-alpha.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-hidden-alpha.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-lost-restored.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-lost-restored.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-lost.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-lost.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-release-upon-reload.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-release-upon-reload.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-release-with-workers.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-release-with-workers.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/context-type-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/context-type-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/incorrect-context-object-behaviour.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/incorrect-context-object-behaviour.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/methods.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/methods.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/premultiplyalpha-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/premultiplyalpha-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/context/resource-sharing-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/context/resource-sharing-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-fragcoord-xy-values.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-fragcoord-xy-values.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-fragcoord.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-fragcoord.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-fragdata-and-fragcolor.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-fragdata-and-fragcolor.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-frontfacing.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-frontfacing.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-pointcoord.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/glsl/variables/gl-pointcoord.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/glsl/variables/glsl-built-ins.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/glsl/variables/glsl-built-ins.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/bad-arguments-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/bad-arguments-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/boolean-argument-conversion.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/boolean-argument-conversion.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/delayed-drawing.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/delayed-drawing.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/error-reporting.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/error-reporting.html | took 1ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/functions-returning-strings.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/functions-returning-strings.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/instanceof-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/instanceof-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/invalid-passed-params.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/invalid-passed-params.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/is-object.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/is-object.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/null-object-behaviour.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/null-object-behaviour.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/object-deletion-behaviour.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/object-deletion-behaviour.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/shader-precision-format.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/shader-precision-format.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/type-conversion-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/type-conversion-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/uninitialized-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/uninitialized-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/misc/webgl-specific.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/misc/webgl-specific.html | took 1ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/more/glsl/arrayOutOfBounds.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/more/glsl/arrayOutOfBounds.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/more/glsl/uniformOutOfBounds.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/more/glsl/uniformOutOfBounds.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/ogles/GL/cross/cross_001_to_002.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/ogles/GL/cross/cross_001_to_002.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/ogles/GL/degrees/degrees_001_to_006.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/ogles/GL/degrees/degrees_001_to_006.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/ogles/GL/pow/pow_001_to_008.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/ogles/GL/pow/pow_001_to_008.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/ogles/GL/pow/pow_009_to_016.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/ogles/GL/pow/pow_009_to_016.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/ogles/GL/pow/pow_017_to_024.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/ogles/GL/pow/pow_017_to_024.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/ogles/GL/reflect/reflect_001_to_006.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/ogles/GL/reflect/reflect_001_to_006.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/ogles/GL/sqrt/sqrt_001_to_006.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/ogles/GL/sqrt/sqrt_001_to_006.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/get-active-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/get-active-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/gl-bind-attrib-location-long-names-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/gl-bind-attrib-location-long-names-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/gl-bind-attrib-location-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/gl-bind-attrib-location-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/gl-get-active-attribute.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/gl-get-active-attribute.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/gl-get-active-uniform.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/gl-get-active-uniform.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/gl-getshadersource.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/gl-getshadersource.html | took 9ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/gl-shader-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/gl-shader-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/invalid-UTF-16.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/invalid-UTF-16.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/program-test.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/program-test.html | took 0ms
+16:11:42     INFO - TEST-START | /webgl/conformance-1.0.3/conformance/programs/use-program-crash-with-discard-in-fragment-shader.html
+16:11:42     INFO - TEST-SKIP | /webgl/conformance-1.0.3/conformance/programs/use-program-crash-with-discard-in-fragment-shader.html | took 0ms
+16:11:42     INFO - Setting up ssl
+16:11:42     INFO - PROCESS | certutil | 
+16:11:42     INFO - PROCESS | certutil | 
+16:11:42     INFO - PROCESS | certutil | 
+16:11:42     INFO - Certificate Nickname                                         Trust Attributes
+16:11:42     INFO -                                                              SSL,S/MIME,JAR/XPI
+16:11:42     INFO - 
+16:11:42     INFO - web-platform-tests                                           CT,, 
+16:11:42     INFO - 
+16:11:42     INFO - Application command: /builds/slave/test/build/application/NightlyDebug.app/Contents/MacOS/firefox --marionette about:blank -foreground -profile /var/folders/l_/r1bf4_015llb_nst2zx9qzr000000w/T/tmpyk9zXc.mozrunner
+16:11:42     INFO - Starting runner
+16:11:43     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a5c5000 == 1 [pid = 1829] [id = 1]
+16:11:43     INFO - PROCESS | 1829 | ++DOMWINDOW == 1 (0x11a5c5800) [pid = 1829] [serial = 1] [outer = 0x0]
+16:11:43     INFO - PROCESS | 1829 | ++DOMWINDOW == 2 (0x11a5c6800) [pid = 1829] [serial = 2] [outer = 0x11a5c5800]
+16:11:43     INFO - PROCESS | 1829 | 1528585903938	Marionette	INFO	Listening on port 2828
+16:11:44     INFO - PROCESS | 1829 | ++DOCSHELL 0x11d417800 == 2 [pid = 1829] [id = 2]
+16:11:44     INFO - PROCESS | 1829 | ++DOMWINDOW == 3 (0x11d418000) [pid = 1829] [serial = 3] [outer = 0x0]
+16:11:44     INFO - PROCESS | 1829 | ++DOMWINDOW == 4 (0x11d419000) [pid = 1829] [serial = 4] [outer = 0x11d418000]
+16:11:44     INFO - PROCESS | 1829 | [1829] WARNING: attempt to modify an immutable nsStandardURL: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/netwerk/base/nsStandardURL.cpp, line 1573
+16:11:44     INFO - PROCESS | 1829 | [1829] WARNING: attempt to modify an immutable nsStandardURL: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/netwerk/base/nsStandardURL.cpp, line 1573
+16:11:44     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:11:45     INFO - PROCESS | 1829 | ++DOCSHELL 0x120a66800 == 3 [pid = 1829] [id = 3]
+16:11:45     INFO - PROCESS | 1829 | ++DOMWINDOW == 5 (0x120a66000) [pid = 1829] [serial = 5] [outer = 0x0]
+16:11:45     INFO - PROCESS | 1829 | ++DOCSHELL 0x120a6a000 == 4 [pid = 1829] [id = 4]
+16:11:45     INFO - PROCESS | 1829 | ++DOMWINDOW == 6 (0x120a6a800) [pid = 1829] [serial = 6] [outer = 0x0]
+16:11:45     INFO - PROCESS | 1829 | ++DOCSHELL 0x121858800 == 5 [pid = 1829] [id = 5]
+16:11:45     INFO - PROCESS | 1829 | ++DOMWINDOW == 7 (0x121859000) [pid = 1829] [serial = 7] [outer = 0x0]
+16:11:45     INFO - PROCESS | 1829 | ++DOMWINDOW == 8 (0x12186d800) [pid = 1829] [serial = 8] [outer = 0x121859000]
+16:11:45     INFO - PROCESS | 1829 | ++DOMWINDOW == 9 (0x122b36800) [pid = 1829] [serial = 9] [outer = 0x120a66000]
+16:11:45     INFO - PROCESS | 1829 | ++DOMWINDOW == 10 (0x122b39800) [pid = 1829] [serial = 10] [outer = 0x120a6a800]
+16:11:45     INFO - PROCESS | 1829 | ++DOMWINDOW == 11 (0x122b3e000) [pid = 1829] [serial = 11] [outer = 0x121859000]
+16:11:46     INFO - PROCESS | 1829 | ++DOMWINDOW == 12 (0x11d1e0000) [pid = 1829] [serial = 12] [outer = 0x121859000]
+16:11:46     INFO - PROCESS | 1829 | [1829] WARNING: Could not get disk status from nsIDiskSpaceWatcher: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/uriloader/prefetch/nsOfflineCacheUpdateService.cpp, line 283
+16:11:46     INFO - PROCESS | 1829 | ++DOMWINDOW == 13 (0x124b1a000) [pid = 1829] [serial = 13] [outer = 0x121859000]
+16:11:47     INFO - TEST-START | /2dcontext/image-smoothing/imagesmoothing.html
+16:11:47     INFO - PROCESS | 1829 | ++DOCSHELL 0x125a7e000 == 6 [pid = 1829] [id = 6]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 14 (0x125a7e800) [pid = 1829] [serial = 14] [outer = 0x0]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x125a82800) [pid = 1829] [serial = 15] [outer = 0x125a7e800]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x125c62000) [pid = 1829] [serial = 16] [outer = 0x125a7e800]
+16:11:47     INFO - PROCESS | 1829 | Exported SkiaGL extensions: GL_ARB_framebuffer_object GL_ARB_texture_rg GL_EXT_packed_depth_stencil GL_EXT_bgra
+16:11:47     INFO - PROCESS | 1829 | Determined SkiaGL cache limits: Size 1073741824, Items: 256
+16:11:47     INFO - PROCESS | 1829 | ++DOCSHELL 0x125e19800 == 7 [pid = 1829] [id = 7]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x125e1a000) [pid = 1829] [serial = 17] [outer = 0x0]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 18 (0x125e1e000) [pid = 1829] [serial = 18] [outer = 0x125e1a000]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 19 (0x12648a800) [pid = 1829] [serial = 19] [outer = 0x125e1a000]
+16:11:47     INFO - .........
+16:11:47     INFO - TEST-OK | /2dcontext/image-smoothing/imagesmoothing.html | took 478ms
+16:11:47     INFO - TEST-START | /WebCryptoAPI/generateKey/failures.worker
+16:11:47     INFO - PROCESS | 1829 | ++DOCSHELL 0x127046000 == 8 [pid = 1829] [id = 8]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 20 (0x127046800) [pid = 1829] [serial = 20] [outer = 0x0]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 21 (0x12704a000) [pid = 1829] [serial = 21] [outer = 0x127046800]
+16:11:47     INFO - PROCESS | 1829 | ++DOMWINDOW == 22 (0x12705b800) [pid = 1829] [serial = 22] [outer = 0x127046800]
+16:11:48     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:11:51     INFO - PROCESS | 1829 | ++DOCSHELL 0x11e792800 == 9 [pid = 1829] [id = 9]
+16:11:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 23 (0x11e797000) [pid = 1829] [serial = 23] [outer = 0x0]
+16:11:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 24 (0x11eb48800) [pid = 1829] [serial = 24] [outer = 0x11e797000]
+16:11:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 25 (0x127948800) [pid = 1829] [serial = 25] [outer = 0x11e797000]
+16:11:51     INFO - PROCESS | 1829 | ++DOCSHELL 0x11e78f000 == 10 [pid = 1829] [id = 10]
+16:11:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 26 (0x12794d800) [pid = 1829] [serial = 26] [outer = 0x0]
+16:11:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 27 (0x127955000) [pid = 1829] [serial = 27] [outer = 0x12794d800]
+16:11:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 28 (0x11eb06000) [pid = 1829] [serial = 28] [outer = 0x12794d800]
+16:11:55     INFO - PROCESS | 1829 | --DOCSHELL 0x125a7e000 == 9 [pid = 1829] [id = 6]
+16:12:02     INFO - PROCESS | 1829 | --DOMWINDOW == 27 (0x125a7e800) [pid = 1829] [serial = 14] [outer = 0x0] [url = http://web-platform.test:8000/2dcontext/image-smoothing/imagesmoothing.html]
+16:12:07     INFO - PROCESS | 1829 | --DOMWINDOW == 26 (0x127955000) [pid = 1829] [serial = 27] [outer = 0x0] [url = about:blank]
+16:12:07     INFO - PROCESS | 1829 | --DOMWINDOW == 25 (0x125e1e000) [pid = 1829] [serial = 18] [outer = 0x0] [url = about:blank]
+16:12:07     INFO - PROCESS | 1829 | --DOMWINDOW == 24 (0x12186d800) [pid = 1829] [serial = 8] [outer = 0x0] [url = about:blank]
+16:12:07     INFO - PROCESS | 1829 | --DOMWINDOW == 23 (0x125c62000) [pid = 1829] [serial = 16] [outer = 0x0] [url = about:blank]
+16:12:07     INFO - PROCESS | 1829 | --DOMWINDOW == 22 (0x125a82800) [pid = 1829] [serial = 15] [outer = 0x0] [url = about:blank]
+16:12:07     INFO - PROCESS | 1829 | --DOMWINDOW == 21 (0x12704a000) [pid = 1829] [serial = 21] [outer = 0x0] [url = about:blank]
+16:12:07     INFO - PROCESS | 1829 | --DOMWINDOW == 20 (0x11eb48800) [pid = 1829] [serial = 24] [outer = 0x0] [url = about:blank]
+16:12:07     INFO - PROCESS | 1829 | --DOMWINDOW == 19 (0x11d1e0000) [pid = 1829] [serial = 12] [outer = 0x0] [url = about:blank]
+16:12:14     INFO - PROCESS | 1829 | --DOMWINDOW == 18 (0x122b3e000) [pid = 1829] [serial = 11] [outer = 0x0] [url = about:blank]
+16:12:18     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:12:18     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures.worker | took 30347ms
+16:12:18     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_AES-CBC.worker
+16:12:18     INFO - PROCESS | 1829 | ++DOCSHELL 0x11257a800 == 10 [pid = 1829] [id = 11]
+16:12:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 19 (0x11257b000) [pid = 1829] [serial = 29] [outer = 0x0]
+16:12:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 20 (0x112582000) [pid = 1829] [serial = 30] [outer = 0x11257b000]
+16:12:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 21 (0x112c1e000) [pid = 1829] [serial = 31] [outer = 0x11257b000]
+16:12:18     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:12:21     INFO - PROCESS | 1829 | ++DOMWINDOW == 22 (0x113389000) [pid = 1829] [serial = 32] [outer = 0x12794d800]
+16:12:26     INFO - PROCESS | 1829 | --DOCSHELL 0x127046000 == 9 [pid = 1829] [id = 8]
+16:12:28     INFO - PROCESS | 1829 | --DOMWINDOW == 21 (0x127046800) [pid = 1829] [serial = 20] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures.worker]
+16:12:33     INFO - PROCESS | 1829 | --DOMWINDOW == 20 (0x12705b800) [pid = 1829] [serial = 22] [outer = 0x0] [url = about:blank]
+16:12:33     INFO - PROCESS | 1829 | --DOMWINDOW == 19 (0x112582000) [pid = 1829] [serial = 30] [outer = 0x0] [url = about:blank]
+16:12:33     INFO - PROCESS | 1829 | --DOMWINDOW == 18 (0x11eb06000) [pid = 1829] [serial = 28] [outer = 0x0] [url = about:neterror?e=dnsNotFound&u=https%3A//%25%28server%29s/selfsupport-dummy/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20find%20the%20server%20at%20%25%28server%29s.]
+16:13:21     INFO - PROCESS | 1829 | ++DOMWINDOW == 19 (0x112c07800) [pid = 1829] [serial = 33] [outer = 0x12794d800]
+16:13:40     INFO - PROCESS | 1829 | --DOMWINDOW == 18 (0x113389000) [pid = 1829] [serial = 32] [outer = 0x0] [url = about:neterror?e=dnsNotFound&u=https%3A//%25%28server%29s/selfsupport-dummy/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20find%20the%20server%20at%20%25%28server%29s.]
+16:14:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 19 (0x113713000) [pid = 1829] [serial = 34] [outer = 0x12794d800]
+16:15:08     INFO - PROCESS | 1829 | --DOMWINDOW == 18 (0x112c07800) [pid = 1829] [serial = 33] [outer = 0x0] [url = about:neterror?e=dnsNotFound&u=https%3A//%25%28server%29s/selfsupport-dummy/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20find%20the%20server%20at%20%25%28server%29s.]
+16:15:18     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:15:18     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_AES-CBC.worker | took 180283ms
+16:15:18     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_AES-CTR.worker
+16:15:18     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a539800 == 10 [pid = 1829] [id = 12]
+16:15:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 19 (0x11a53a800) [pid = 1829] [serial = 35] [outer = 0x0]
+16:15:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 20 (0x11a5c4000) [pid = 1829] [serial = 36] [outer = 0x11a53a800]
+16:15:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 21 (0x11c7b3800) [pid = 1829] [serial = 37] [outer = 0x11a53a800]
+16:15:18     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:15:28     INFO - PROCESS | 1829 | --DOCSHELL 0x11257a800 == 9 [pid = 1829] [id = 11]
+16:15:30     INFO - PROCESS | 1829 | --DOMWINDOW == 20 (0x11257b000) [pid = 1829] [serial = 29] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_AES-CBC.worker]
+16:15:35     INFO - PROCESS | 1829 | --DOMWINDOW == 19 (0x112c1e000) [pid = 1829] [serial = 31] [outer = 0x0] [url = about:blank]
+16:15:35     INFO - PROCESS | 1829 | --DOMWINDOW == 18 (0x11a5c4000) [pid = 1829] [serial = 36] [outer = 0x0] [url = about:blank]
+16:16:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 19 (0x111531800) [pid = 1829] [serial = 38] [outer = 0x12794d800]
+16:17:13     INFO - PROCESS | 1829 | --DOMWINDOW == 18 (0x113713000) [pid = 1829] [serial = 34] [outer = 0x0] [url = about:neterror?e=dnsNotFound&u=https%3A//%25%28server%29s/selfsupport-dummy/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20find%20the%20server%20at%20%25%28server%29s.]
+16:18:18     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:18:18     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_AES-CTR.worker | took 180308ms
+16:18:18     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_AES-GCM.worker
+16:18:18     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a5d3000 == 10 [pid = 1829] [id = 13]
+16:18:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 19 (0x11a5dc800) [pid = 1829] [serial = 39] [outer = 0x0]
+16:18:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 20 (0x11c41d000) [pid = 1829] [serial = 40] [outer = 0x11a5dc800]
+16:18:18     INFO - PROCESS | 1829 | ++DOMWINDOW == 21 (0x11cf10800) [pid = 1829] [serial = 41] [outer = 0x11a5dc800]
+16:18:18     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:18:26     INFO - PROCESS | 1829 | --DOCSHELL 0x11a539800 == 9 [pid = 1829] [id = 12]
+16:18:28     INFO - PROCESS | 1829 | --DOMWINDOW == 20 (0x11a53a800) [pid = 1829] [serial = 35] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_AES-CTR.worker]
+16:18:34     INFO - PROCESS | 1829 | --DOMWINDOW == 19 (0x11c7b3800) [pid = 1829] [serial = 37] [outer = 0x0] [url = about:blank]
+16:18:34     INFO - PROCESS | 1829 | --DOMWINDOW == 18 (0x11c41d000) [pid = 1829] [serial = 40] [outer = 0x0] [url = about:blank]
+16:19:21     INFO - PROCESS | 1829 | --DOCSHELL 0x11e792800 == 8 [pid = 1829] [id = 9]
+16:19:31     INFO - PROCESS | 1829 | --DOCSHELL 0x11e78f000 == 7 [pid = 1829] [id = 10]
+16:19:37     INFO - PROCESS | 1829 | --DOMWINDOW == 17 (0x12794d800) [pid = 1829] [serial = 26] [outer = 0x0] [url = about:neterror?e=dnsNotFound&u=https%3A//%25%28server%29s/selfsupport-dummy/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20find%20the%20server%20at%20%25%28server%29s.]
+16:19:37     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11e797000) [pid = 1829] [serial = 23] [outer = 0x0] [url = data:application/vnd.mozilla.xul+xml;charset=utf-8,<window%20id='win'/>]
+16:19:42     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x111531800) [pid = 1829] [serial = 38] [outer = 0x0] [url = about:neterror?e=dnsNotFound&u=https%3A//%25%28server%29s/selfsupport-dummy/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20find%20the%20server%20at%20%25%28server%29s.]
+16:19:42     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x127948800) [pid = 1829] [serial = 25] [outer = 0x0] [url = data:application/vnd.mozilla.xul+xml;charset=utf-8,<window%20id='win'/>]
+16:21:18     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:21:18     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_AES-GCM.worker | took 180299ms
+16:21:18     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_AES-KW.worker
+16:21:19     INFO - PROCESS | 1829 | ++DOCSHELL 0x112c02800 == 8 [pid = 1829] [id = 14]
+16:21:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x112c05800) [pid = 1829] [serial = 42] [outer = 0x0]
+16:21:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x112c17800) [pid = 1829] [serial = 43] [outer = 0x112c05800]
+16:21:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11a53f800) [pid = 1829] [serial = 44] [outer = 0x112c05800]
+16:21:19     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:21:28     INFO - PROCESS | 1829 | --DOCSHELL 0x11a5d3000 == 7 [pid = 1829] [id = 13]
+16:21:30     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11a5dc800) [pid = 1829] [serial = 39] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_AES-GCM.worker]
+16:21:36     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11cf10800) [pid = 1829] [serial = 41] [outer = 0x0] [url = about:blank]
+16:21:36     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x112c17800) [pid = 1829] [serial = 43] [outer = 0x0] [url = about:blank]
+16:22:13     INFO - PROCESS | 1829 | *************************
+16:22:13     INFO - PROCESS | 1829 | A coding exception was thrown and uncaught in a Task.
+16:22:13     INFO - PROCESS | 1829 | 
+16:22:13     INFO - PROCESS | 1829 | Full message: TypeError: NetworkError when attempting to fetch resource.
+16:22:13     INFO - PROCESS | 1829 | Full stack:
+16:22:13     INFO - PROCESS | 1829 | *************************
+16:24:19     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:24:19     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_AES-KW.worker | took 180273ms
+16:24:19     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_ECDH.worker
+16:24:19     INFO - PROCESS | 1829 | ++DOCSHELL 0x11c7a6000 == 8 [pid = 1829] [id = 15]
+16:24:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x11c7aa800) [pid = 1829] [serial = 45] [outer = 0x0]
+16:24:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x11c7b6800) [pid = 1829] [serial = 46] [outer = 0x11c7aa800]
+16:24:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11cf15000) [pid = 1829] [serial = 47] [outer = 0x11c7aa800]
+16:24:19     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:24:29     INFO - PROCESS | 1829 | --DOCSHELL 0x112c02800 == 7 [pid = 1829] [id = 14]
+16:24:31     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x112c05800) [pid = 1829] [serial = 42] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_AES-KW.worker]
+16:24:36     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11a53f800) [pid = 1829] [serial = 44] [outer = 0x0] [url = about:blank]
+16:24:36     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x11c7b6800) [pid = 1829] [serial = 46] [outer = 0x0] [url = about:blank]
+16:27:19     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:27:19     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_ECDH.worker | took 180272ms
+16:27:19     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_ECDSA.worker
+16:27:19     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a533000 == 8 [pid = 1829] [id = 16]
+16:27:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x11a533800) [pid = 1829] [serial = 48] [outer = 0x0]
+16:27:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x11a53e800) [pid = 1829] [serial = 49] [outer = 0x11a533800]
+16:27:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11ca2d000) [pid = 1829] [serial = 50] [outer = 0x11a533800]
+16:27:19     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:27:29     INFO - PROCESS | 1829 | --DOCSHELL 0x11c7a6000 == 7 [pid = 1829] [id = 15]
+16:27:31     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11c7aa800) [pid = 1829] [serial = 45] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_ECDH.worker]
+16:27:36     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11cf15000) [pid = 1829] [serial = 47] [outer = 0x0] [url = about:blank]
+16:27:36     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x11a53e800) [pid = 1829] [serial = 49] [outer = 0x0] [url = about:blank]
+16:30:19     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:30:19     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_ECDSA.worker | took 180282ms
+16:30:19     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_HMAC.worker
+16:30:19     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a5c7800 == 8 [pid = 1829] [id = 17]
+16:30:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x11a5c9800) [pid = 1829] [serial = 51] [outer = 0x0]
+16:30:19     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x11c41a000) [pid = 1829] [serial = 52] [outer = 0x11a5c9800]
+16:30:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11cd81800) [pid = 1829] [serial = 53] [outer = 0x11a5c9800]
+16:30:20     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:30:29     INFO - PROCESS | 1829 | --DOCSHELL 0x11a533000 == 7 [pid = 1829] [id = 16]
+16:30:31     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11a533800) [pid = 1829] [serial = 48] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_ECDSA.worker]
+16:30:37     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11ca2d000) [pid = 1829] [serial = 50] [outer = 0x0] [url = about:blank]
+16:30:37     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x11c41a000) [pid = 1829] [serial = 52] [outer = 0x0] [url = about:blank]
+16:33:20     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:33:20     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_HMAC.worker | took 180291ms
+16:33:20     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_RSA-OAEP.worker
+16:33:20     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a53b800 == 8 [pid = 1829] [id = 18]
+16:33:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x11a53e000) [pid = 1829] [serial = 54] [outer = 0x0]
+16:33:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x11a5d4800) [pid = 1829] [serial = 55] [outer = 0x11a53e000]
+16:33:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11cd86800) [pid = 1829] [serial = 56] [outer = 0x11a53e000]
+16:33:20     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:33:29     INFO - PROCESS | 1829 | --DOCSHELL 0x11a5c7800 == 7 [pid = 1829] [id = 17]
+16:33:31     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11a5c9800) [pid = 1829] [serial = 51] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_HMAC.worker]
+16:33:37     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11cd81800) [pid = 1829] [serial = 53] [outer = 0x0] [url = about:blank]
+16:33:37     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x11a5d4800) [pid = 1829] [serial = 55] [outer = 0x0] [url = about:blank]
+16:36:20     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:36:20     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_RSA-OAEP.worker | took 180336ms
+16:36:20     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_RSA-PSS.worker
+16:36:20     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a543800 == 8 [pid = 1829] [id = 19]
+16:36:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x11a5c7800) [pid = 1829] [serial = 57] [outer = 0x0]
+16:36:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x11c41a000) [pid = 1829] [serial = 58] [outer = 0x11a5c7800]
+16:36:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11ca38800) [pid = 1829] [serial = 59] [outer = 0x11a5c7800]
+16:36:20     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:36:30     INFO - PROCESS | 1829 | --DOCSHELL 0x11a53b800 == 7 [pid = 1829] [id = 18]
+16:36:32     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11a53e000) [pid = 1829] [serial = 54] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_RSA-OAEP.worker]
+16:36:37     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11cd86800) [pid = 1829] [serial = 56] [outer = 0x0] [url = about:blank]
+16:36:37     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x11c41a000) [pid = 1829] [serial = 58] [outer = 0x0] [url = about:blank]
+16:39:20     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:39:20     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_RSA-PSS.worker | took 180300ms
+16:39:20     INFO - TEST-START | /WebCryptoAPI/generateKey/failures_RSASSA-PKCS1-v1_5.worker
+16:39:20     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a539800 == 8 [pid = 1829] [id = 20]
+16:39:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x11a53a800) [pid = 1829] [serial = 60] [outer = 0x0]
+16:39:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x11a543000) [pid = 1829] [serial = 61] [outer = 0x11a53a800]
+16:39:20     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11ca2d000) [pid = 1829] [serial = 62] [outer = 0x11a53a800]
+16:39:21     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:39:30     INFO - PROCESS | 1829 | --DOCSHELL 0x11a543800 == 7 [pid = 1829] [id = 19]
+16:39:32     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11a5c7800) [pid = 1829] [serial = 57] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_RSA-PSS.worker]
+16:39:37     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11ca38800) [pid = 1829] [serial = 59] [outer = 0x0] [url = about:blank]
+16:39:37     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x11a543000) [pid = 1829] [serial = 61] [outer = 0x0] [url = about:blank]
+16:42:21     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:42:21     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/failures_RSASSA-PKCS1-v1_5.worker | took 180305ms
+16:42:21     INFO - TEST-START | /WebCryptoAPI/generateKey/successes.worker
+16:42:21     INFO - PROCESS | 1829 | ++DOCSHELL 0x11c41a000 == 8 [pid = 1829] [id = 21]
+16:42:21     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x11c41a800) [pid = 1829] [serial = 63] [outer = 0x0]
+16:42:21     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x11c505800) [pid = 1829] [serial = 64] [outer = 0x11c41a800]
+16:42:21     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11cd8f800) [pid = 1829] [serial = 65] [outer = 0x11c41a800]
+16:42:21     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:42:30     INFO - PROCESS | 1829 | --DOCSHELL 0x11a539800 == 7 [pid = 1829] [id = 20]
+16:42:32     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11a53a800) [pid = 1829] [serial = 60] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/failures_RSASSA-PKCS1-v1_5.worker]
+16:42:38     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11ca2d000) [pid = 1829] [serial = 62] [outer = 0x0] [url = about:blank]
+16:42:38     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x11c505800) [pid = 1829] [serial = 64] [outer = 0x0] [url = about:blank]
+16:42:51     INFO - PROCESS | 1829 | MARIONETTE LOG: INFO: Timeout fired
+16:42:51     INFO - TEST-ERROR | /WebCryptoAPI/generateKey/successes.worker | took 30318ms
+16:42:51     INFO - TEST-START | /WebCryptoAPI/generateKey/successes_AES-CBC.worker
+16:42:51     INFO - PROCESS | 1829 | ++DOCSHELL 0x11a543800 == 8 [pid = 1829] [id = 22]
+16:42:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 15 (0x11a5c4000) [pid = 1829] [serial = 66] [outer = 0x0]
+16:42:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 16 (0x11c417800) [pid = 1829] [serial = 67] [outer = 0x11a5c4000]
+16:42:51     INFO - PROCESS | 1829 | ++DOMWINDOW == 17 (0x11cd88800) [pid = 1829] [serial = 68] [outer = 0x11a5c4000]
+16:42:51     INFO - PROCESS | 1829 | [1829] WARNING: Failed to retarget HTML data delivery to the parser thread.: file /builds/slave/m-esr52-m64-d-0000000000000000/build/src/parser/html/nsHtml5StreamParser.cpp, line 970
+16:43:01     INFO - PROCESS | 1829 | --DOCSHELL 0x11c41a000 == 7 [pid = 1829] [id = 21]
+16:43:03     INFO - PROCESS | 1829 | --DOMWINDOW == 16 (0x11c41a800) [pid = 1829] [serial = 63] [outer = 0x0] [url = http://web-platform.test:8000/WebCryptoAPI/generateKey/successes.worker]
+16:43:08     INFO - PROCESS | 1829 | --DOMWINDOW == 15 (0x11cd8f800) [pid = 1829] [serial = 65] [outer = 0x0] [url = about:blank]
+16:43:08     INFO - PROCESS | 1829 | --DOMWINDOW == 14 (0x11c417800) [pid = 1829] [serial = 67] [outer = 0x0] [url = about:blank]
+
+remoteFailed: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion.
+]
+[Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion.
+]
+========= Finished '/tools/buildbot/bin/python -u ...' interrupted (results: 5, elapsed: 36 mins, 31 secs) (at 2018-06-09 16:46:28.178908) =========
+
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Total master_lag: 0.05 =========
+

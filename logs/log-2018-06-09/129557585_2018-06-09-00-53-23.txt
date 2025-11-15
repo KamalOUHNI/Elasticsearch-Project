@@ -1,0 +1,1895 @@
+builder: mozilla-esr52_ubuntu64_vm_test_pgo-marionette
+slave: tst-linux64-spot-006
+starttime: 1528502003.32
+results: cancelled (6)
+buildid: 20180608150819
+builduid: b298b373e93d4f8dbf92436c9ed838a2
+revision: cbfdf01aac455e0591471201c96b89dee98190b5
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:23.316931) =========
+master: http://buildbot-master52.bb.releng.use1.mozilla.com:8201/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:23.317425) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:23.317718) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:23.472809) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:23.473136) =========
+bash -c 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755
+  _=/tools/buildbot/bin/python
+ using PTY: False
+--2018-06-08 16:53:23--  https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py
+Resolving hg.mozilla.org (hg.mozilla.org)... 63.245.215.25, 63.245.215.102
+Connecting to hg.mozilla.org (hg.mozilla.org)|63.245.215.25|:443... connected.
+HTTP request sent, awaiting response... 200 Script output follows
+Length: 12179 (12K) [text/x-python]
+Saving to: `archiver_client.py'
+
+     0K .......... .                                          100% 8.08M=0.001s
+
+2018-06-08 16:53:24 (8.08 MB/s) - `archiver_client.py' saved [12179/12179]
+
+program finished with exit code 0
+elapsedTime=0.546448
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:24.032818) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:24.033165) =========
+rm -rf scripts properties
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.018630
+========= master_lag: 0.04 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:24.095107) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 16:53:24.095440) =========
+bash -c 'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug'
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755
+  _=/tools/buildbot/bin/python
+ using PTY: False
+2018-06-08 16:53:24,204 truncating revision to first 12 chars
+2018-06-08 16:53:24,205 Setting DEBUG logging.
+2018-06-08 16:53:24,205 attempt 1/10
+2018-06-08 16:53:24,205 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/releases/mozilla-esr52/cbfdf01aac45?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-08 16:53:25,938 unpacking tar archive at: mozilla-esr52-cbfdf01aac45/testing/mozharness/
+program finished with exit code 0
+elapsedTime=2.876533
+========= master_lag: 0.11 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 16:53:27.080989) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:27.081295) =========
+script_repo_revision: cbfdf01aac455e0591471201c96b89dee98190b5
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:27.081699) =========
+
+========= Started downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:27.082002) =========
+========= Finished downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 16:53:27.102273) =========
+
+========= Started '/tools/buildbot/bin/python scripts/scripts/marionette.py ...' interrupted (results: 4, elapsed: 8 mins, 38 secs) (at 2018-06-08 16:53:27.102548) =========
+/tools/buildbot/bin/python scripts/scripts/marionette.py --cfg marionette/prod_config.py --blob-upload-branch mozilla-esr52
+ in dir /builds/slave/test/. (timeout 1800 secs) (maxTime 7200 secs)
+ watching logfiles {}
+ argv: ['/tools/buildbot/bin/python', 'scripts/scripts/marionette.py', '--cfg', 'marionette/prod_config.py', '--blob-upload-branch', 'mozilla-esr52']
+ environment:
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=:0
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  MOZ_HIDE_RESULTS_TABLE=1
+  MOZ_NODE_PATH=/usr/bin/node
+  MOZ_NO_REMOTE=1
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  NO_FAIL_ON_TEST_ERRORS=1
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PROPERTIES_FILE=/builds/slave/test/buildprops.json
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755
+  _=/tools/buildbot/bin/python
+ using PTY: False
+16:53:27     INFO - MultiFileLogger online at 20180608 16:53:27 in /builds/slave/test
+16:53:27     INFO - Run as scripts/scripts/marionette.py --cfg marionette/prod_config.py --blob-upload-branch mozilla-esr52
+16:53:27     INFO - Dumping config to /builds/slave/test/logs/localconfig.json.
+16:53:27     INFO - {'allow_software_gl_layers': False,
+16:53:27     INFO -  'append_to_log': False,
+16:53:27     INFO -  'base_work_dir': '/builds/slave/test',
+16:53:27     INFO -  'blob_upload_branch': 'mozilla-esr52',
+16:53:27     INFO -  'blob_uploader_auth_file': '/builds/slave/test/oauth.txt',
+16:53:27     INFO -  'buildbot_json_path': 'buildprops.json',
+16:53:27     INFO -  'config_files': ('marionette/prod_config.py',),
+16:53:27     INFO -  'default_actions': ('clobber',
+16:53:27     INFO -                      'read-buildbot-config',
+16:53:27     INFO -                      'download-and-extract',
+16:53:27     INFO -                      'create-virtualenv',
+16:53:27     INFO -                      'install',
+16:53:27     INFO -                      'run-tests'),
+16:53:27     INFO -  'default_blob_upload_servers': ('https://blobupload.elasticbeanstalk.com',),
+16:53:27     INFO -  'download_minidump_stackwalk': True,
+16:53:27     INFO -  'download_symbols': 'ondemand',
+16:53:27     INFO -  'e10s': False,
+16:53:27     INFO -  'exes': {'python': '/tools/buildbot/bin/python',
+16:53:27     INFO -           'tooltool.py': '/tools/tooltool.py',
+16:53:27     INFO -           'virtualenv': ('/tools/buildbot/bin/python',
+16:53:27     INFO -                          '/tools/misc-python/virtualenv.py')},
+16:53:27     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+16:53:27     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+16:53:27     INFO -  'log_level': 'info',
+16:53:27     INFO -  'log_to_console': True,
+16:53:27     INFO -  'marionette_address': 'localhost:2828',
+16:53:27     INFO -  'opt_config_files': (),
+16:53:27     INFO -  'pip_index': False,
+16:53:27     INFO -  'require_test_zip': True,
+16:53:27     INFO -  'structured_output': True,
+16:53:27     INFO -  'suite_definitions': {'marionette_desktop': {'options': ('--log-raw=%(raw_log_file)s',
+16:53:27     INFO -                                                           '--log-errorsummary=%(error_summary_file)s',
+16:53:27     INFO -                                                           '--log-html=%(html_report_file)s',
+16:53:27     INFO -                                                           '--binary=%(binary)s',
+16:53:27     INFO -                                                           '--address=%(address)s',
+16:53:27     INFO -                                                           '--symbols-path=%(symbols_path)s'),
+16:53:27     INFO -                                               'run_filename': '',
+16:53:27     INFO -                                               'testsdir': ''}},
+16:53:27     INFO -  'test_manifest': 'unit-tests.ini',
+16:53:27     INFO -  'tooltool_cache': '/builds/tooltool_cache',
+16:53:27     INFO -  'vcs_share_base': '/builds/hg-shared',
+16:53:27     INFO -  'virtualenv_path': 'venv',
+16:53:27     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+16:53:27     INFO -  'work_dir': 'build'}
+16:53:27     INFO - [mozharness: 2018-06-08 23:53:27.573560Z] Running clobber step.
+16:53:27     INFO - Running pre-action listener: _resource_record_pre_action
+16:53:27     INFO - Running main action method: clobber
+16:53:27     INFO - rmtree: /builds/slave/test/build
+16:53:27     INFO - Running post-action listener: _resource_record_post_action
+16:53:27     INFO - [mozharness: 2018-06-08 23:53:27.595153Z] Finished clobber step (success)
+16:53:27     INFO - [mozharness: 2018-06-08 23:53:27.595778Z] Running read-buildbot-config step.
+16:53:27     INFO - Running pre-action listener: _resource_record_pre_action
+16:53:27     INFO - Running main action method: read_buildbot_config
+16:53:27     INFO - Using buildbot properties:
+16:53:27     INFO - {
+16:53:27     INFO -     "project": "", 
+16:53:27     INFO -     "product": "firefox", 
+16:53:27     INFO -     "script_repo_revision": "production", 
+16:53:27     INFO -     "scheduler": "tests-mozilla-esr52-ubuntu64_vm-pgo-unittest", 
+16:53:27     INFO -     "repository": "", 
+16:53:27     INFO -     "buildername": "Ubuntu VM 12.04 x64 mozilla-esr52 pgo test marionette", 
+16:53:27     INFO -     "buildid": "20180608150819", 
+16:53:27     INFO -     "pgo_build": "True", 
+16:53:27     INFO -     "basedir": "/builds/slave/test", 
+16:53:27     INFO -     "buildnumber": 62, 
+16:53:27     INFO -     "slavename": "tst-linux64-spot-006", 
+16:53:27     INFO -     "master": "http://buildbot-master52.bb.releng.use1.mozilla.com:8201/", 
+16:53:27     INFO -     "platform": "linux64", 
+16:53:27     INFO -     "branch": "mozilla-esr52", 
+16:53:27     INFO -     "revision": "cbfdf01aac455e0591471201c96b89dee98190b5", 
+16:53:27     INFO -     "repo_path": "releases/mozilla-esr52", 
+16:53:27     INFO -     "moz_repo_path": "", 
+16:53:27     INFO -     "stage_platform": "linux64-pgo", 
+16:53:27     INFO -     "builduid": "b298b373e93d4f8dbf92436c9ed838a2", 
+16:53:27     INFO -     "slavebuilddir": "test"
+16:53:27     INFO - }
+16:53:27     INFO - Found installer url https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2.
+16:53:27     INFO - Found a test packages url https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json.
+16:53:27     INFO - Running post-action listener: _resource_record_post_action
+16:53:27     INFO - [mozharness: 2018-06-08 23:53:27.612455Z] Finished read-buildbot-config step (success)
+16:53:27     INFO - [mozharness: 2018-06-08 23:53:27.613074Z] Skipping pull step.
+16:53:27     INFO - [mozharness: 2018-06-08 23:53:27.613606Z] Running download-and-extract step.
+16:53:27     INFO - Running pre-action listener: _resource_record_pre_action
+16:53:27     INFO - Running main action method: download_and_extract
+16:53:27     INFO - mkdir: /builds/slave/test/build/tests
+16:53:27     INFO - Downloading https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json to /builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json
+16:53:27     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json', 'file_name': '/builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json'}, attempt #1
+16:53:29     INFO - Downloaded 1361 bytes.
+16:53:29     INFO - Reading from file /builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.test_packages.json
+16:53:29     INFO - Using the following test package requirements:
+16:53:29     INFO - {u'common': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip'],
+16:53:29     INFO -  u'cppunittest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+16:53:29     INFO -                   u'firefox-52.8.2.en-US.linux-x86_64.cppunittest.tests.zip'],
+16:53:29     INFO -  u'gtest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+16:53:29     INFO -             u'firefox-52.8.2.en-US.linux-x86_64.gtest.tests.zip'],
+16:53:29     INFO -  u'jittest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+16:53:29     INFO -               u'jsshell-linux-x86_64.zip'],
+16:53:29     INFO -  u'mochitest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+16:53:29     INFO -                 u'firefox-52.8.2.en-US.linux-x86_64.mochitest.tests.zip'],
+16:53:29     INFO -  u'mozbase': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip'],
+16:53:29     INFO -  u'reftest': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+16:53:29     INFO -               u'firefox-52.8.2.en-US.linux-x86_64.reftest.tests.zip'],
+16:53:29     INFO -  u'talos': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+16:53:29     INFO -             u'firefox-52.8.2.en-US.linux-x86_64.talos.tests.zip'],
+16:53:29     INFO -  u'web-platform': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+16:53:29     INFO -                    u'firefox-52.8.2.en-US.linux-x86_64.web-platform.tests.zip'],
+16:53:29     INFO -  u'xpcshell': [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip',
+16:53:29     INFO -                u'firefox-52.8.2.en-US.linux-x86_64.xpcshell.tests.zip']}
+16:53:29     INFO - Downloading packages: [u'firefox-52.8.2.en-US.linux-x86_64.common.tests.zip'] for test suite category: common
+16:53:29     INFO - Downloading and extracting to /builds/slave/test/build/tests these dirs * from https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.common.tests.zip
+16:53:29     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.common.tests.zip'}, attempt #1
+16:53:29     INFO - Fetch https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.common.tests.zip into memory
+16:53:31     INFO - Http code: 200
+16:53:31     INFO - via: 1.1 f0ef92e52918ab5129ebd66f2f633cbb.cloudfront.net (CloudFront)
+16:53:31     INFO - x-amz-cf-id: 294Bh9dEAYaWyVLTCHspjpFducbQfbP_Vxh5a4Kiyiu4Vf2mrjBTyA==
+16:53:31     INFO - x-amz-version-id: amyEguiG3.NEsCgIpfpr7ojoc30OcAP5
+16:53:32     INFO - retry: attempt #1 caught exception: [Errno 104] Connection reset by peer
+16:53:32     INFO - retry: Failed, sleeping 60 seconds before retrying
+16:54:32     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.common.tests.zip'}, attempt #2
+16:54:32     INFO - Fetch https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.common.tests.zip into memory
+16:54:34     INFO - Http code: 200
+16:54:34     INFO - via: 1.1 4a55d86b7263f73c6817c7c25d4b3643.cloudfront.net (CloudFront)
+16:54:34     INFO - x-amz-cf-id: FzXOFhiyN9DA9i6_fTooKFUOc5PynFSmRhe4ZzQr0-14CpTZROnX-A==
+16:54:34     INFO - x-amz-version-id: amyEguiG3.NEsCgIpfpr7ojoc30OcAP5
+16:54:36     INFO - Expected file size: 22192748
+16:54:36     INFO - Obtained file size: 22192748
+16:54:47     INFO - Downloading https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2 to /builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2
+16:54:47     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2', 'file_name': '/builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2'}, attempt #1
+16:54:53     INFO - Downloaded 57821935 bytes.
+16:54:53     INFO - Setting buildbot property build_url to https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2
+16:54:53     INFO - mkdir: /builds/slave/test/properties
+16:54:53     INFO - Writing buildbot properties ['build_url'] to /builds/slave/test/properties/build_url
+16:54:53     INFO - Writing to file /builds/slave/test/properties/build_url
+16:54:53     INFO - Contents:
+16:54:53     INFO -  build_url:https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2
+16:54:54     INFO - Running post-action listener: _resource_record_post_action
+16:54:54     INFO - Running post-action listener: set_extra_try_arguments
+16:54:54     INFO - [mozharness: 2018-06-08 23:54:54.762530Z] Finished download-and-extract step (success)
+16:54:54     INFO - [mozharness: 2018-06-08 23:54:54.762915Z] Running create-virtualenv step.
+16:54:54     INFO - Running pre-action listener: _configure_marionette_virtualenv
+16:54:54     INFO - Running pre-action listener: _resource_record_pre_action
+16:54:54     INFO - Running main action method: create_virtualenv
+16:54:54     INFO - Creating virtualenv /builds/slave/test/build/venv
+16:54:54     INFO - Running command: ['/tools/buildbot/bin/python', '/builds/slave/test/scripts/external_tools/virtualenv/virtualenv.py', '--always-copy', '/builds/slave/test/build/venv'] in /builds/slave/test/build
+16:54:54     INFO - Copy/paste: /tools/buildbot/bin/python /builds/slave/test/scripts/external_tools/virtualenv/virtualenv.py --always-copy /builds/slave/test/build/venv
+16:54:54     INFO - Using partial env: {'VIRTUALENV_NO_DOWNLOAD': '1'}
+16:54:56     INFO -  Using real prefix '/usr'
+16:54:56     INFO -  New python executable in /builds/slave/test/build/venv/bin/python
+16:54:58     INFO -  Installing setuptools, pip, wheel...done.
+16:54:58     INFO - Return code: 0
+16:54:58     INFO - Installing psutil>=3.1.1 into virtualenv /builds/slave/test/build/venv
+16:54:59     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'psutil>=3.1.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f9304ffb8f0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7f9305055c60>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1f18ad0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f14720>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f163e0>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1f16850>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'HOME': '/home/cltbld', 'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'DISPLAY': ':0', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_NODE_PATH': '/usr/bin/node', 'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755', 'SHLVL': '1', 'NO_FAIL_ON_TEST_ERRORS': '1', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'MAIL': '/var/mail/cltbld', '_': '/tools/buildbot/bin/python', 'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json', 'CCACHE_DIR': '/builds/ccache'}}, attempt #1
+16:54:59     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'psutil>=3.1.1'] in /builds/slave/test/build
+16:54:59     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org psutil>=3.1.1
+16:54:59     INFO - Using env: {'CCACHE_DIR': '/builds/ccache',
+16:54:59     INFO -  'CCACHE_UMASK': '002',
+16:54:59     INFO -  'DISPLAY': ':0',
+16:54:59     INFO -  'HOME': '/home/cltbld',
+16:54:59     INFO -  'LANG': 'en_US.UTF-8',
+16:54:59     INFO -  'LOGNAME': 'cltbld',
+16:54:59     INFO -  'MAIL': '/var/mail/cltbld',
+16:54:59     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:54:59     INFO -  'MOZ_NODE_PATH': '/usr/bin/node',
+16:54:59     INFO -  'MOZ_NO_REMOTE': '1',
+16:54:59     INFO -  'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript',
+16:54:59     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:54:59     INFO -  'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+16:54:59     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:54:59     INFO -  'PWD': '/builds/slave/test',
+16:54:59     INFO -  'SHELL': '/bin/bash',
+16:54:59     INFO -  'SHLVL': '1',
+16:54:59     INFO -  'TERM': 'linux',
+16:54:59     INFO -  'TMOUT': '86400',
+16:54:59     INFO -  'USER': 'cltbld',
+16:54:59     INFO -  'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755',
+16:54:59     INFO -  '_': '/tools/buildbot/bin/python'}
+16:55:00     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:55:00     INFO -  Collecting psutil>=3.1.1
+16:55:00     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:55:00     INFO -    SNIMissingWarning
+16:55:00     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:55:00     INFO -    InsecurePlatformWarning
+16:55:02     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:55:02     INFO -    InsecurePlatformWarning
+16:55:07     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/psutil-5.4.3.tar.gz (412kB)
+16:55:08     INFO -  Building wheels for collected packages: psutil
+16:55:08     INFO -    Running setup.py bdist_wheel for psutil: started
+16:55:11     INFO -    Running setup.py bdist_wheel for psutil: finished with status 'done'
+16:55:11     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/30/c0/c3/5cdb2b64c0d47a81af9c62935a64d83948d2c2b3e7af3eeee2
+16:55:11     INFO -  Successfully built psutil
+16:55:11     INFO -  Installing collected packages: psutil
+16:55:11     INFO -  Successfully installed psutil-5.4.3
+16:55:11     INFO - Return code: 0
+16:55:11     INFO - Installing mozsystemmonitor==0.3 into virtualenv /builds/slave/test/build/venv
+16:55:11     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'mozsystemmonitor==0.3']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f9304ffb8f0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7f9305055c60>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1f18ad0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f14720>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f163e0>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1f16850>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'HOME': '/home/cltbld', 'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'DISPLAY': ':0', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_NODE_PATH': '/usr/bin/node', 'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755', 'SHLVL': '1', 'NO_FAIL_ON_TEST_ERRORS': '1', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'MAIL': '/var/mail/cltbld', '_': '/tools/buildbot/bin/python', 'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json', 'CCACHE_DIR': '/builds/ccache'}}, attempt #1
+16:55:11     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'mozsystemmonitor==0.3'] in /builds/slave/test/build
+16:55:11     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org mozsystemmonitor==0.3
+16:55:11     INFO - Using env: {'CCACHE_DIR': '/builds/ccache',
+16:55:11     INFO -  'CCACHE_UMASK': '002',
+16:55:11     INFO -  'DISPLAY': ':0',
+16:55:11     INFO -  'HOME': '/home/cltbld',
+16:55:11     INFO -  'LANG': 'en_US.UTF-8',
+16:55:11     INFO -  'LOGNAME': 'cltbld',
+16:55:11     INFO -  'MAIL': '/var/mail/cltbld',
+16:55:11     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:55:11     INFO -  'MOZ_NODE_PATH': '/usr/bin/node',
+16:55:11     INFO -  'MOZ_NO_REMOTE': '1',
+16:55:11     INFO -  'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript',
+16:55:11     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:55:11     INFO -  'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+16:55:11     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:55:11     INFO -  'PWD': '/builds/slave/test',
+16:55:11     INFO -  'SHELL': '/bin/bash',
+16:55:11     INFO -  'SHLVL': '1',
+16:55:11     INFO -  'TERM': 'linux',
+16:55:11     INFO -  'TMOUT': '86400',
+16:55:11     INFO -  'USER': 'cltbld',
+16:55:11     INFO -  'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755',
+16:55:11     INFO -  '_': '/tools/buildbot/bin/python'}
+16:55:12     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:55:12     INFO -  Collecting mozsystemmonitor==0.3
+16:55:12     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:55:12     INFO -    SNIMissingWarning
+16:55:12     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:55:12     INFO -    InsecurePlatformWarning
+16:55:14     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:55:14     INFO -    InsecurePlatformWarning
+16:55:19     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/mozsystemmonitor-0.3.tar.gz
+16:55:20     INFO -  Requirement already satisfied (use --upgrade to upgrade): psutil>=3.1.1 in ./venv/lib/python2.7/site-packages (from mozsystemmonitor==0.3)
+16:55:20     INFO -  Building wheels for collected packages: mozsystemmonitor
+16:55:20     INFO -    Running setup.py bdist_wheel for mozsystemmonitor: started
+16:55:20     INFO -    Running setup.py bdist_wheel for mozsystemmonitor: finished with status 'done'
+16:55:20     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/f4/b7/9c/8a88c92aaad7c1d8bbd68513e1d91ad7f62b7465808c516aa8
+16:55:20     INFO -  Successfully built mozsystemmonitor
+16:55:20     INFO -  Installing collected packages: mozsystemmonitor
+16:55:20     INFO -  Successfully installed mozsystemmonitor-0.3
+16:55:20     INFO - Return code: 0
+16:55:20     INFO - Installing jsonschema==2.5.1 into virtualenv /builds/slave/test/build/venv
+16:55:21     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'jsonschema==2.5.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f9304ffb8f0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7f9305055c60>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1f18ad0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f14720>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f163e0>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1f16850>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'HOME': '/home/cltbld', 'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'DISPLAY': ':0', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_NODE_PATH': '/usr/bin/node', 'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755', 'SHLVL': '1', 'NO_FAIL_ON_TEST_ERRORS': '1', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'MAIL': '/var/mail/cltbld', '_': '/tools/buildbot/bin/python', 'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json', 'CCACHE_DIR': '/builds/ccache'}}, attempt #1
+16:55:21     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'jsonschema==2.5.1'] in /builds/slave/test/build
+16:55:21     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org jsonschema==2.5.1
+16:55:21     INFO - Using env: {'CCACHE_DIR': '/builds/ccache',
+16:55:21     INFO -  'CCACHE_UMASK': '002',
+16:55:21     INFO -  'DISPLAY': ':0',
+16:55:21     INFO -  'HOME': '/home/cltbld',
+16:55:21     INFO -  'LANG': 'en_US.UTF-8',
+16:55:21     INFO -  'LOGNAME': 'cltbld',
+16:55:21     INFO -  'MAIL': '/var/mail/cltbld',
+16:55:21     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:55:21     INFO -  'MOZ_NODE_PATH': '/usr/bin/node',
+16:55:21     INFO -  'MOZ_NO_REMOTE': '1',
+16:55:21     INFO -  'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript',
+16:55:21     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:55:21     INFO -  'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+16:55:21     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:55:21     INFO -  'PWD': '/builds/slave/test',
+16:55:21     INFO -  'SHELL': '/bin/bash',
+16:55:21     INFO -  'SHLVL': '1',
+16:55:21     INFO -  'TERM': 'linux',
+16:55:21     INFO -  'TMOUT': '86400',
+16:55:21     INFO -  'USER': 'cltbld',
+16:55:21     INFO -  'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755',
+16:55:21     INFO -  '_': '/tools/buildbot/bin/python'}
+16:55:21     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:55:21     INFO -  Collecting jsonschema==2.5.1
+16:55:22     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:55:22     INFO -    SNIMissingWarning
+16:55:22     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:55:22     INFO -    InsecurePlatformWarning
+16:55:23     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:55:23     INFO -    InsecurePlatformWarning
+16:55:29     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/jsonschema-2.5.1-py2.py3-none-any.whl
+16:55:30     INFO -  Collecting functools32; python_version == "2.7" (from jsonschema==2.5.1)
+16:55:35     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/functools32-3.2.3-2.tar.gz
+16:55:35     INFO -  Building wheels for collected packages: functools32
+16:55:35     INFO -    Running setup.py bdist_wheel for functools32: started
+16:55:36     INFO -    Running setup.py bdist_wheel for functools32: finished with status 'done'
+16:55:36     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/60/8e/5c/cd0944700dbec48e57da97dbe11bcc84b1332f6b43bc89d9b7
+16:55:36     INFO -  Successfully built functools32
+16:55:36     INFO -  Installing collected packages: functools32, jsonschema
+16:55:36     INFO -  Successfully installed functools32-3.2.3.post2 jsonschema-2.5.1
+16:55:36     INFO - Return code: 0
+16:55:36     INFO - Installing functools32==3.2.3-2 into virtualenv /builds/slave/test/build/venv
+16:55:36     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'functools32==3.2.3-2']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f9304ffb8f0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7f9305055c60>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1f18ad0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f14720>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f163e0>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1f16850>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'HOME': '/home/cltbld', 'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'DISPLAY': ':0', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_NODE_PATH': '/usr/bin/node', 'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755', 'SHLVL': '1', 'NO_FAIL_ON_TEST_ERRORS': '1', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'MAIL': '/var/mail/cltbld', '_': '/tools/buildbot/bin/python', 'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json', 'CCACHE_DIR': '/builds/ccache'}}, attempt #1
+16:55:36     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'functools32==3.2.3-2'] in /builds/slave/test/build
+16:55:36     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org functools32==3.2.3-2
+16:55:36     INFO - Using env: {'CCACHE_DIR': '/builds/ccache',
+16:55:36     INFO -  'CCACHE_UMASK': '002',
+16:55:36     INFO -  'DISPLAY': ':0',
+16:55:36     INFO -  'HOME': '/home/cltbld',
+16:55:36     INFO -  'LANG': 'en_US.UTF-8',
+16:55:36     INFO -  'LOGNAME': 'cltbld',
+16:55:36     INFO -  'MAIL': '/var/mail/cltbld',
+16:55:36     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:55:36     INFO -  'MOZ_NODE_PATH': '/usr/bin/node',
+16:55:36     INFO -  'MOZ_NO_REMOTE': '1',
+16:55:36     INFO -  'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript',
+16:55:36     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:55:36     INFO -  'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+16:55:36     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:55:36     INFO -  'PWD': '/builds/slave/test',
+16:55:36     INFO -  'SHELL': '/bin/bash',
+16:55:36     INFO -  'SHLVL': '1',
+16:55:36     INFO -  'TERM': 'linux',
+16:55:36     INFO -  'TMOUT': '86400',
+16:55:36     INFO -  'USER': 'cltbld',
+16:55:36     INFO -  'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755',
+16:55:36     INFO -  '_': '/tools/buildbot/bin/python'}
+16:55:37     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:55:37     INFO -  Requirement already satisfied (use --upgrade to upgrade): functools32==3.2.3-2 in ./venv/lib/python2.7/site-packages
+16:55:37     INFO - Return code: 0
+16:55:37     INFO - Installing blobuploader==1.2.4 into virtualenv /builds/slave/test/build/venv
+16:55:38     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'blobuploader==1.2.4']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f9304ffb8f0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7f9305055c60>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1f18ad0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f14720>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f163e0>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1f16850>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build', 'env': {'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'HOME': '/home/cltbld', 'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'DISPLAY': ':0', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_NODE_PATH': '/usr/bin/node', 'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755', 'SHLVL': '1', 'NO_FAIL_ON_TEST_ERRORS': '1', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'MAIL': '/var/mail/cltbld', '_': '/tools/buildbot/bin/python', 'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json', 'CCACHE_DIR': '/builds/ccache'}}, attempt #1
+16:55:38     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'blobuploader==1.2.4'] in /builds/slave/test/build
+16:55:38     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org blobuploader==1.2.4
+16:55:38     INFO - Using env: {'CCACHE_DIR': '/builds/ccache',
+16:55:38     INFO -  'CCACHE_UMASK': '002',
+16:55:38     INFO -  'DISPLAY': ':0',
+16:55:38     INFO -  'HOME': '/home/cltbld',
+16:55:38     INFO -  'LANG': 'en_US.UTF-8',
+16:55:38     INFO -  'LOGNAME': 'cltbld',
+16:55:38     INFO -  'MAIL': '/var/mail/cltbld',
+16:55:38     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:55:38     INFO -  'MOZ_NODE_PATH': '/usr/bin/node',
+16:55:38     INFO -  'MOZ_NO_REMOTE': '1',
+16:55:38     INFO -  'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript',
+16:55:38     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:55:38     INFO -  'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+16:55:38     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:55:38     INFO -  'PWD': '/builds/slave/test',
+16:55:38     INFO -  'SHELL': '/bin/bash',
+16:55:38     INFO -  'SHLVL': '1',
+16:55:38     INFO -  'TERM': 'linux',
+16:55:38     INFO -  'TMOUT': '86400',
+16:55:38     INFO -  'USER': 'cltbld',
+16:55:38     INFO -  'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755',
+16:55:38     INFO -  '_': '/tools/buildbot/bin/python'}
+16:55:38     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:55:38     INFO -  Collecting blobuploader==1.2.4
+16:55:38     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:55:38     INFO -    SNIMissingWarning
+16:55:39     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:55:39     INFO -    InsecurePlatformWarning
+16:55:40     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:55:40     INFO -    InsecurePlatformWarning
+16:55:47     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/blobuploader-1.2.4.tar.gz
+16:55:47     INFO -  Collecting requests==1.2.3. (from blobuploader==1.2.4)
+16:55:53     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/requests-1.2.3.tar.gz (348kB)
+16:55:54     INFO -  Collecting docopt==0.6.1 (from blobuploader==1.2.4)
+16:55:59     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/docopt-0.6.1.tar.gz
+16:56:00     INFO -  Building wheels for collected packages: blobuploader, requests, docopt
+16:56:00     INFO -    Running setup.py bdist_wheel for blobuploader: started
+16:56:00     INFO -    Running setup.py bdist_wheel for blobuploader: finished with status 'done'
+16:56:00     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/a7/2a/47/2d3828e4129ffeb548a26f4a87889dc9bc1a58e201a0ff8655
+16:56:00     INFO -    Running setup.py bdist_wheel for requests: started
+16:56:01     INFO -    Running setup.py bdist_wheel for requests: finished with status 'done'
+16:56:01     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/65/bb/90/359b65a7043ffc879dde877c4ad827f452218808c6cccf2658
+16:56:01     INFO -    Running setup.py bdist_wheel for docopt: started
+16:56:02     INFO -    Running setup.py bdist_wheel for docopt: finished with status 'done'
+16:56:02     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/ac/8b/84/7dbe9ada02c48c352fa733c81648516f92c6436f9d5bffad41
+16:56:02     INFO -  Successfully built blobuploader requests docopt
+16:56:02     INFO -  Installing collected packages: requests, docopt, blobuploader
+16:56:02     INFO -  Successfully installed blobuploader-1.2.4 docopt-0.6.1 requests-1.2.3
+16:56:02     INFO - Return code: 0
+16:56:02     INFO - Installing None into virtualenv /builds/slave/test/build/venv
+16:56:03     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--no-deps', '--timeout', '120', '-r', '/builds/slave/test/build/tests/config/marionette_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f9304ffb8f0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7f9305055c60>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1f18ad0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f14720>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f163e0>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1f16850>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build/tests/config', 'env': {'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'HOME': '/home/cltbld', 'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'DISPLAY': ':0', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_NODE_PATH': '/usr/bin/node', 'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755', 'SHLVL': '1', 'NO_FAIL_ON_TEST_ERRORS': '1', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'MAIL': '/var/mail/cltbld', '_': '/tools/buildbot/bin/python', 'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json', 'CCACHE_DIR': '/builds/ccache'}}, attempt #1
+16:56:03     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--no-deps', '--timeout', '120', '-r', '/builds/slave/test/build/tests/config/marionette_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org'] in /builds/slave/test/build/tests/config
+16:56:03     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --no-deps --timeout 120 -r /builds/slave/test/build/tests/config/marionette_requirements.txt --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org
+16:56:03     INFO - Using env: {'CCACHE_DIR': '/builds/ccache',
+16:56:03     INFO -  'CCACHE_UMASK': '002',
+16:56:03     INFO -  'DISPLAY': ':0',
+16:56:03     INFO -  'HOME': '/home/cltbld',
+16:56:03     INFO -  'LANG': 'en_US.UTF-8',
+16:56:03     INFO -  'LOGNAME': 'cltbld',
+16:56:03     INFO -  'MAIL': '/var/mail/cltbld',
+16:56:03     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:56:03     INFO -  'MOZ_NODE_PATH': '/usr/bin/node',
+16:56:03     INFO -  'MOZ_NO_REMOTE': '1',
+16:56:03     INFO -  'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript',
+16:56:03     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:56:03     INFO -  'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+16:56:03     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:56:03     INFO -  'PWD': '/builds/slave/test',
+16:56:03     INFO -  'SHELL': '/bin/bash',
+16:56:03     INFO -  'SHLVL': '1',
+16:56:03     INFO -  'TERM': 'linux',
+16:56:03     INFO -  'TMOUT': '86400',
+16:56:03     INFO -  'USER': 'cltbld',
+16:56:03     INFO -  'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755',
+16:56:03     INFO -  '_': '/tools/buildbot/bin/python'}
+16:56:04     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:56:04     INFO -  Processing /builds/slave/test/build/tests/mozbase/manifestparser
+16:56:04     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozcrash
+16:56:04     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozdebug
+16:56:05     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozdevice
+16:56:05     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozfile
+16:56:05     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozhttpd
+16:56:06     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozinfo
+16:56:06     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozinstall
+16:56:07     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozleak
+16:56:07     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozlog
+16:56:08     INFO -  Processing /builds/slave/test/build/tests/mozbase/moznetwork
+16:56:09     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozprocess
+16:56:09     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozprofile
+16:56:10     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozrunner
+16:56:10     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozscreenshot
+16:56:10     INFO -  Processing /builds/slave/test/build/tests/mozbase/moztest
+16:56:11     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozversion
+16:56:11     INFO -  Processing /builds/slave/test/build/tests/tools/wptserve
+16:56:12     INFO -  Processing /builds/slave/test/build/tests/marionette/client
+16:56:12     INFO -  Processing /builds/slave/test/build/tests/marionette/harness/marionette_harness/runner/mixins/browsermob-proxy-py
+16:56:12     INFO -  Processing /builds/slave/test/build/tests/marionette/harness
+16:56:13     INFO -  Processing /builds/slave/test/build/tests/marionette/puppeteer/firefox
+16:56:13     INFO -  Building wheels for collected packages: browsermob-proxy
+16:56:13     INFO -    Running setup.py bdist_wheel for browsermob-proxy: started
+16:56:13     INFO -    Running setup.py bdist_wheel for browsermob-proxy: finished with status 'done'
+16:56:13     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/10/00/c1/79bb793b6a7eb4dca9dfd244010f550ae5044951bcd23c261e
+16:56:14     INFO -  Successfully built browsermob-proxy
+16:56:14     INFO -  Installing collected packages: manifestparser, mozcrash, mozdebug, mozdevice, mozfile, mozhttpd, mozinfo, mozInstall, mozleak, mozlog, moznetwork, mozprocess, mozprofile, mozrunner, mozscreenshot, moztest, mozversion, wptserve, marionette-driver, browsermob-proxy, marionette-harness, firefox-puppeteer
+16:56:14     INFO -    Running setup.py install for manifestparser: started
+16:56:14     INFO -      Running setup.py install for manifestparser: finished with status 'done'
+16:56:14     INFO -    Running setup.py install for mozcrash: started
+16:56:14     INFO -      Running setup.py install for mozcrash: finished with status 'done'
+16:56:14     INFO -    Running setup.py install for mozdebug: started
+16:56:15     INFO -      Running setup.py install for mozdebug: finished with status 'done'
+16:56:15     INFO -    Running setup.py install for mozdevice: started
+16:56:15     INFO -      Running setup.py install for mozdevice: finished with status 'done'
+16:56:15     INFO -    Running setup.py install for mozfile: started
+16:56:16     INFO -      Running setup.py install for mozfile: finished with status 'done'
+16:56:16     INFO -    Running setup.py install for mozhttpd: started
+16:56:16     INFO -      Running setup.py install for mozhttpd: finished with status 'done'
+16:56:16     INFO -    Running setup.py install for mozinfo: started
+16:56:16     INFO -      Running setup.py install for mozinfo: finished with status 'done'
+16:56:16     INFO -    Running setup.py install for mozInstall: started
+16:56:17     INFO -      Running setup.py install for mozInstall: finished with status 'done'
+16:56:17     INFO -    Running setup.py install for mozleak: started
+16:56:17     INFO -      Running setup.py install for mozleak: finished with status 'done'
+16:56:17     INFO -    Running setup.py install for mozlog: started
+16:56:18     INFO -      Running setup.py install for mozlog: finished with status 'done'
+16:56:18     INFO -    Running setup.py install for moznetwork: started
+16:56:19     INFO -      Running setup.py install for moznetwork: finished with status 'done'
+16:56:19     INFO -    Running setup.py install for mozprocess: started
+16:56:19     INFO -      Running setup.py install for mozprocess: finished with status 'done'
+16:56:19     INFO -    Running setup.py install for mozprofile: started
+16:56:20     INFO -      Running setup.py install for mozprofile: finished with status 'done'
+16:56:20     INFO -    Running setup.py install for mozrunner: started
+16:56:21     INFO -      Running setup.py install for mozrunner: finished with status 'done'
+16:56:21     INFO -    Running setup.py install for mozscreenshot: started
+16:56:21     INFO -      Running setup.py install for mozscreenshot: finished with status 'done'
+16:56:21     INFO -    Running setup.py install for moztest: started
+16:56:22     INFO -      Running setup.py install for moztest: finished with status 'done'
+16:56:22     INFO -    Running setup.py install for mozversion: started
+16:56:22     INFO -      Running setup.py install for mozversion: finished with status 'done'
+16:56:22     INFO -    Running setup.py install for wptserve: started
+16:56:23     INFO -      Running setup.py install for wptserve: finished with status 'done'
+16:56:23     INFO -    Running setup.py install for marionette-driver: started
+16:56:23     INFO -      Running setup.py install for marionette-driver: finished with status 'done'
+16:56:23     INFO -    Running setup.py install for marionette-harness: started
+16:56:24     INFO -      Running setup.py install for marionette-harness: finished with status 'done'
+16:56:24     INFO -    Running setup.py install for firefox-puppeteer: started
+16:56:24     INFO -      Running setup.py install for firefox-puppeteer: finished with status 'done'
+16:56:25     INFO -  Successfully installed browsermob-proxy-0.6.0 firefox-puppeteer-52.1.0 manifestparser-1.1 marionette-driver-2.2.0 marionette-harness-4.0.0 mozInstall-1.12 mozcrash-1.0 mozdebug-0.1 mozdevice-0.48 mozfile-1.2 mozhttpd-0.7 mozinfo-0.9 mozleak-0.1 mozlog-3.4 moznetwork-0.27 mozprocess-0.23 mozprofile-0.28 mozrunner-6.13 mozscreenshot-0.1 moztest-0.8 mozversion-1.4 wptserve-1.4.0
+16:56:25     INFO - Return code: 0
+16:56:25     INFO - Installing None into virtualenv /builds/slave/test/build/venv
+16:56:26     INFO - retry: Calling run_command with args: [['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '-r', '/builds/slave/test/build/tests/config/marionette_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x7f9304ffb8f0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x7f9305055c60>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x1f18ad0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f14720>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f163e0>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1f16850>, 'level': 'critical'}], 'cwd': '/builds/slave/test/build/tests/config', 'env': {'TMOUT': '86400', 'LOGNAME': 'cltbld', 'USER': 'cltbld', 'HOME': '/home/cltbld', 'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'DISPLAY': ':0', 'CCACHE_UMASK': '002', 'LANG': 'en_US.UTF-8', 'TERM': 'linux', 'SHELL': '/bin/bash', 'MOZ_NODE_PATH': '/usr/bin/node', 'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755', 'SHLVL': '1', 'NO_FAIL_ON_TEST_ERRORS': '1', 'MOZ_NO_REMOTE': '1', 'MOZ_HIDE_RESULTS_TABLE': '1', 'MAIL': '/var/mail/cltbld', '_': '/tools/buildbot/bin/python', 'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript', 'PWD': '/builds/slave/test', 'PROPERTIES_FILE': '/builds/slave/test/buildprops.json', 'CCACHE_DIR': '/builds/ccache'}}, attempt #1
+16:56:26     INFO - Running command: ['/builds/slave/test/build/venv/bin/pip', 'install', '--timeout', '120', '-r', '/builds/slave/test/build/tests/config/marionette_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org'] in /builds/slave/test/build/tests/config
+16:56:26     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip install --timeout 120 -r /builds/slave/test/build/tests/config/marionette_requirements.txt --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org
+16:56:26     INFO - Using env: {'CCACHE_DIR': '/builds/ccache',
+16:56:26     INFO -  'CCACHE_UMASK': '002',
+16:56:26     INFO -  'DISPLAY': ':0',
+16:56:26     INFO -  'HOME': '/home/cltbld',
+16:56:26     INFO -  'LANG': 'en_US.UTF-8',
+16:56:26     INFO -  'LOGNAME': 'cltbld',
+16:56:26     INFO -  'MAIL': '/var/mail/cltbld',
+16:56:26     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:56:26     INFO -  'MOZ_NODE_PATH': '/usr/bin/node',
+16:56:26     INFO -  'MOZ_NO_REMOTE': '1',
+16:56:26     INFO -  'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript',
+16:56:26     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:56:26     INFO -  'PATH': '/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+16:56:26     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:56:26     INFO -  'PWD': '/builds/slave/test',
+16:56:26     INFO -  'SHELL': '/bin/bash',
+16:56:26     INFO -  'SHLVL': '1',
+16:56:26     INFO -  'TERM': 'linux',
+16:56:26     INFO -  'TMOUT': '86400',
+16:56:26     INFO -  'USER': 'cltbld',
+16:56:26     INFO -  'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755',
+16:56:26     INFO -  '_': '/tools/buildbot/bin/python'}
+16:56:26     INFO -  Ignoring indexes: https://pypi.python.org/simple
+16:56:26     INFO -  Processing /builds/slave/test/build/tests/mozbase/manifestparser
+16:56:27     INFO -    Requirement already satisfied (use --upgrade to upgrade): manifestparser==1.1 from file:///builds/slave/test/build/tests/mozbase/manifestparser in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 1))
+16:56:27     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozcrash
+16:56:27     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozcrash==1.0 from file:///builds/slave/test/build/tests/mozbase/mozcrash in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 2))
+16:56:27     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozdebug
+16:56:28     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozdebug==0.1 from file:///builds/slave/test/build/tests/mozbase/mozdebug in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 3))
+16:56:28     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozdevice
+16:56:28     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozdevice==0.48 from file:///builds/slave/test/build/tests/mozbase/mozdevice in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 4))
+16:56:28     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozfile
+16:56:28     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozfile==1.2 from file:///builds/slave/test/build/tests/mozbase/mozfile in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 5))
+16:56:28     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozhttpd
+16:56:29     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozhttpd==0.7 from file:///builds/slave/test/build/tests/mozbase/mozhttpd in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 6))
+16:56:29     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozinfo
+16:56:29     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozinfo==0.9 from file:///builds/slave/test/build/tests/mozbase/mozinfo in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 7))
+16:56:29     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozinstall
+16:56:30     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozInstall==1.12 from file:///builds/slave/test/build/tests/mozbase/mozinstall in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 8))
+16:56:30     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozleak
+16:56:30     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozleak==0.1 from file:///builds/slave/test/build/tests/mozbase/mozleak in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 9))
+16:56:30     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozlog
+16:56:30     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozlog==3.4 from file:///builds/slave/test/build/tests/mozbase/mozlog in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 10))
+16:56:30     INFO -  Processing /builds/slave/test/build/tests/mozbase/moznetwork
+16:56:31     INFO -    Requirement already satisfied (use --upgrade to upgrade): moznetwork==0.27 from file:///builds/slave/test/build/tests/mozbase/moznetwork in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 11))
+16:56:31     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozprocess
+16:56:31     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozprocess==0.23 from file:///builds/slave/test/build/tests/mozbase/mozprocess in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 12))
+16:56:31     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozprofile
+16:56:31     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozprofile==0.28 from file:///builds/slave/test/build/tests/mozbase/mozprofile in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 13))
+16:56:31     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozrunner
+16:56:32     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozrunner==6.13 from file:///builds/slave/test/build/tests/mozbase/mozrunner in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 14))
+16:56:32     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozscreenshot
+16:56:32     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozscreenshot==0.1 from file:///builds/slave/test/build/tests/mozbase/mozscreenshot in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 15))
+16:56:32     INFO -  Processing /builds/slave/test/build/tests/mozbase/moztest
+16:56:33     INFO -    Requirement already satisfied (use --upgrade to upgrade): moztest==0.8 from file:///builds/slave/test/build/tests/mozbase/moztest in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 16))
+16:56:33     INFO -  Processing /builds/slave/test/build/tests/mozbase/mozversion
+16:56:33     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozversion==1.4 from file:///builds/slave/test/build/tests/mozbase/mozversion in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 17))
+16:56:33     INFO -  Processing /builds/slave/test/build/tests/tools/wptserve
+16:56:33     INFO -    Requirement already satisfied (use --upgrade to upgrade): wptserve==1.4.0 from file:///builds/slave/test/build/tests/tools/wptserve in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 3))
+16:56:33     INFO -  Processing /builds/slave/test/build/tests/marionette/client
+16:56:34     INFO -    Requirement already satisfied (use --upgrade to upgrade): marionette-driver==2.2.0 from file:///builds/slave/test/build/tests/marionette/client in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 4))
+16:56:34     INFO -  Processing /builds/slave/test/build/tests/marionette/harness/marionette_harness/runner/mixins/browsermob-proxy-py
+16:56:34     INFO -    Requirement already satisfied (use --upgrade to upgrade): browsermob-proxy==0.6.0 from file:///builds/slave/test/build/tests/marionette/harness/marionette_harness/runner/mixins/browsermob-proxy-py in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 5))
+16:56:34     INFO -  Processing /builds/slave/test/build/tests/marionette/harness
+16:56:35     INFO -    Requirement already satisfied (use --upgrade to upgrade): marionette-harness==4.0.0 from file:///builds/slave/test/build/tests/marionette/harness in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 6))
+16:56:35     INFO -  Processing /builds/slave/test/build/tests/marionette/puppeteer/firefox
+16:56:35     INFO -    Requirement already satisfied (use --upgrade to upgrade): firefox-puppeteer==52.1.0 from file:///builds/slave/test/build/tests/marionette/puppeteer/firefox in /builds/slave/test/build/venv/lib/python2.7/site-packages (from -r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 9))
+16:56:35     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozfile>=1.0 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozcrash==1.0->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 2))
+16:56:35     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozlog>=3.0 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozcrash==1.0->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 2))
+16:56:35     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozinfo in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozdebug==0.1->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 3))
+16:56:35     INFO -  Requirement already satisfied (use --upgrade to upgrade): moznetwork>=0.24 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozdevice==0.48->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 4))
+16:56:35     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozprocess>=0.19 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from mozdevice==0.48->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 4))
+16:56:35     INFO -  Collecting blessings>=1.3 (from mozlog==3.4->-r /builds/slave/test/build/tests/config/mozbase_requirements.txt (line 10))
+16:56:35     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+16:56:35     INFO -    SNIMissingWarning
+16:56:35     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:56:35     INFO -    InsecurePlatformWarning
+16:56:37     INFO -  /builds/slave/test/build/venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+16:56:37     INFO -    InsecurePlatformWarning
+16:56:42     INFO -    Downloading https://pypi.pvt.build.mozilla.org/pub/blessings-1.6.tar.gz
+16:56:43     INFO -  Requirement already satisfied (use --upgrade to upgrade): requests>=1.1.0 in /builds/slave/test/build/venv/lib/python2.7/site-packages (from browsermob-proxy==0.6.0->-r /builds/slave/test/build/tests/config/marionette_requirements.txt (line 5))
+16:56:43     INFO -  Building wheels for collected packages: blessings, browsermob-proxy
+16:56:43     INFO -    Running setup.py bdist_wheel for blessings: started
+16:56:43     INFO -    Running setup.py bdist_wheel for blessings: finished with status 'done'
+16:56:43     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/fb/37/ae/c6b15ed5da2ead5847df54c8319487050d4dcc950c9795eae9
+16:56:43     INFO -    Running setup.py bdist_wheel for browsermob-proxy: started
+16:56:44     INFO -    Running setup.py bdist_wheel for browsermob-proxy: finished with status 'done'
+16:56:44     INFO -    Stored in directory: /home/cltbld/.cache/pip/wheels/10/00/c1/79bb793b6a7eb4dca9dfd244010f550ae5044951bcd23c261e
+16:56:44     INFO -  Successfully built blessings browsermob-proxy
+16:56:44     INFO -  Installing collected packages: blessings
+16:56:44     INFO -  Successfully installed blessings-1.6
+16:56:44     INFO - Return code: 0
+16:56:44     INFO - Done creating virtualenv /builds/slave/test/build/venv.
+16:56:44     INFO - Getting output from command: ['/builds/slave/test/build/venv/bin/pip', 'freeze']
+16:56:44     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip freeze
+16:56:46     INFO - Reading from file tmpfile_stdout
+16:56:46     INFO - Reading from file tmpfile_stderr
+16:56:46     INFO - Current package versions:
+16:56:46     INFO -   blessings == 1.6
+16:56:46     INFO -   blobuploader == 1.2.4
+16:56:46     INFO -   browsermob-proxy == 0.6.0
+16:56:46     INFO -   docopt == 0.6.1
+16:56:46     INFO -   firefox-puppeteer == 52.1.0
+16:56:46     INFO -   functools32 == 3.2.3.post2
+16:56:46     INFO -   jsonschema == 2.5.1
+16:56:46     INFO -   manifestparser == 1.1
+16:56:46     INFO -   marionette-driver == 2.2.0
+16:56:46     INFO -   marionette-harness == 4.0.0
+16:56:46     INFO -   mozInstall == 1.12
+16:56:46     INFO -   mozcrash == 1.0
+16:56:46     INFO -   mozdebug == 0.1
+16:56:46     INFO -   mozdevice == 0.48
+16:56:46     INFO -   mozfile == 1.2
+16:56:46     INFO -   mozhttpd == 0.7
+16:56:46     INFO -   mozinfo == 0.9
+16:56:46     INFO -   mozleak == 0.1
+16:56:46     INFO -   mozlog == 3.4
+16:56:46     INFO -   moznetwork == 0.27
+16:56:46     INFO -   mozprocess == 0.23
+16:56:46     INFO -   mozprofile == 0.28
+16:56:46     INFO -   mozrunner == 6.13
+16:56:46     INFO -   mozscreenshot == 0.1
+16:56:46     INFO -   mozsystemmonitor == 0.3
+16:56:46     INFO -   moztest == 0.8
+16:56:46     INFO -   mozversion == 1.4
+16:56:46     INFO -   psutil == 5.4.3
+16:56:46     INFO -   requests == 1.2.3
+16:56:46     INFO -   wptserve == 1.4.0
+16:56:46     INFO - Running post-action listener: _resource_record_post_action
+16:56:46     INFO - Running post-action listener: _start_resource_monitoring
+16:56:46     INFO - Starting resource monitoring.
+16:56:46     INFO - [mozharness: 2018-06-08 23:56:46.795239Z] Finished create-virtualenv step (success)
+16:56:46     INFO - [mozharness: 2018-06-08 23:56:46.801690Z] Running install step.
+16:56:46     INFO - Running pre-action listener: _resource_record_pre_action
+16:56:46     INFO - Running main action method: install
+16:56:46     INFO - Getting output from command: ['/builds/slave/test/build/venv/bin/pip', 'freeze']
+16:56:46     INFO - Copy/paste: /builds/slave/test/build/venv/bin/pip freeze
+16:56:47     INFO - Reading from file tmpfile_stdout
+16:56:47     INFO - Reading from file tmpfile_stderr
+16:56:47     INFO - Detecting whether we're running mozinstall >=1.0...
+16:56:47     INFO - Getting output from command: ['/builds/slave/test/build/venv/bin/mozinstall', '-h']
+16:56:47     INFO - Copy/paste: /builds/slave/test/build/venv/bin/mozinstall -h
+16:56:48     INFO - Reading from file tmpfile_stdout
+16:56:48     INFO - Output received:
+16:56:48     INFO -  Usage: mozinstall [options] installer
+16:56:48     INFO -  Options:
+16:56:48     INFO -    -h, --help            show this help message and exit
+16:56:48     INFO -    -d DEST, --destination=DEST
+16:56:48     INFO -                          Directory to install application into. [default:
+16:56:48     INFO -                          "/builds/slave/test"]
+16:56:48     INFO -    --app=APP             Application being installed. [default: firefox]
+16:56:48     INFO - mkdir: /builds/slave/test/build/application
+16:56:48     INFO - Getting output from command: ['/builds/slave/test/build/venv/bin/mozinstall', '/builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2', '--destination', '/builds/slave/test/build/application']
+16:56:48     INFO - Copy/paste: /builds/slave/test/build/venv/bin/mozinstall /builds/slave/test/build/firefox-52.8.2.en-US.linux-x86_64.tar.bz2 --destination /builds/slave/test/build/application
+16:57:13     INFO - Reading from file tmpfile_stdout
+16:57:13     INFO - Output received:
+16:57:13     INFO -  /builds/slave/test/build/application/firefox/firefox
+16:57:13     INFO - Running post-action listener: _resource_record_post_action
+16:57:13     INFO - [mozharness: 2018-06-08 23:57:13.151276Z] Finished install step (success)
+16:57:13     INFO - [mozharness: 2018-06-08 23:57:13.151688Z] Running run-tests step.
+16:57:13     INFO - Running pre-action listener: _resource_record_pre_action
+16:57:13     INFO - Running main action method: run_tests
+16:57:13     INFO - The emulator type: arm
+16:57:13     INFO - mkdir: /builds/slave/test/build/blobber_upload_dir
+16:57:13     INFO - Minidump filename unknown. Determining based upon platform and architecture.
+16:57:13     INFO - Minidump tooltool manifest unknown. Determining based upon platform and architecture.
+16:57:13     INFO - grabbing minidump binary from tooltool
+16:57:13     INFO - retry: Calling run_command with args: (['/tools/tooltool.py', '--url', 'https://api.pub.build.mozilla.org/tooltool/', '--authentication-file', '/builds/relengapi.tok', 'fetch', '-m', '/builds/slave/test/build/tests/config/tooltool-manifests/linux64/releng.manifest', '-o', '-c', '/builds/tooltool_cache'],), kwargs: {'output_timeout': 600, 'error_list': [{'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f14720>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x1f163e0>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x1f16850>, 'level': 'critical'}, {'substr': 'ERROR - ', 'level': 'error'}], 'cwd': '/builds/slave/test/build', 'privileged': False}, attempt #1
+16:57:13     INFO - Running command: ['/tools/tooltool.py', '--url', 'https://api.pub.build.mozilla.org/tooltool/', '--authentication-file', '/builds/relengapi.tok', 'fetch', '-m', '/builds/slave/test/build/tests/config/tooltool-manifests/linux64/releng.manifest', '-o', '-c', '/builds/tooltool_cache'] in /builds/slave/test/build
+16:57:13     INFO - Copy/paste: /tools/tooltool.py --url https://api.pub.build.mozilla.org/tooltool/ --authentication-file /builds/relengapi.tok fetch -m /builds/slave/test/build/tests/config/tooltool-manifests/linux64/releng.manifest -o -c /builds/tooltool_cache
+16:57:13     INFO - Calling ['/tools/tooltool.py', '--url', 'https://api.pub.build.mozilla.org/tooltool/', '--authentication-file', '/builds/relengapi.tok', 'fetch', '-m', '/builds/slave/test/build/tests/config/tooltool-manifests/linux64/releng.manifest', '-o', '-c', '/builds/tooltool_cache'] with output_timeout 600
+16:57:13     INFO -  INFO - File linux64-minidump_stackwalk not present in local cache folder /builds/tooltool_cache
+16:57:13     INFO -  INFO - Attempting to fetch from 'https://api.pub.build.mozilla.org/tooltool/'...
+16:57:14     INFO -  INFO - File linux64-minidump_stackwalk fetched from https://api.pub.build.mozilla.org/tooltool/ as /builds/slave/test/build/tmpiWXR4L
+16:57:14     INFO -  INFO - File integrity verified, renaming tmpiWXR4L to linux64-minidump_stackwalk
+16:57:14     INFO -  INFO - Updating local cache /builds/tooltool_cache...
+16:57:14     INFO -  INFO - Local cache /builds/tooltool_cache updated with linux64-minidump_stackwalk
+16:57:14     INFO - Return code: 0
+16:57:14     INFO - Chmoding /builds/slave/test/build/linux64-minidump_stackwalk to 0755
+16:57:14     INFO - Running command: ['/builds/slave/test/build/venv/bin/python', '-u', '/builds/slave/test/build/tests/marionette/harness/marionette_harness/runtests.py', '--disable-e10s', '--gecko-log=/builds/slave/test/build/blobber_upload_dir/gecko.log', '--log-raw=-', '--log-raw=/builds/slave/test/build/blobber_upload_dir/marionette_raw.log', '--log-errorsummary=/builds/slave/test/build/blobber_upload_dir/marionette_errorsummary.log', '--log-html=/builds/slave/test/build/blobber_upload_dir/report.html', '--binary=/builds/slave/test/build/application/firefox/firefox', '--address=localhost:2828', '--symbols-path=https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.crashreporter-symbols.zip', '/builds/slave/test/build/tests/marionette/tests/testing/marionette/harness/marionette_harness/tests/unit-tests.ini']
+16:57:14     INFO - Copy/paste: /builds/slave/test/build/venv/bin/python -u /builds/slave/test/build/tests/marionette/harness/marionette_harness/runtests.py --disable-e10s --gecko-log=/builds/slave/test/build/blobber_upload_dir/gecko.log --log-raw=- --log-raw=/builds/slave/test/build/blobber_upload_dir/marionette_raw.log --log-errorsummary=/builds/slave/test/build/blobber_upload_dir/marionette_errorsummary.log --log-html=/builds/slave/test/build/blobber_upload_dir/report.html --binary=/builds/slave/test/build/application/firefox/firefox --address=localhost:2828 --symbols-path=https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.crashreporter-symbols.zip /builds/slave/test/build/tests/marionette/tests/testing/marionette/harness/marionette_harness/tests/unit-tests.ini
+16:57:14     INFO - Using env: {'CCACHE_DIR': '/builds/ccache',
+16:57:14     INFO -  'CCACHE_UMASK': '002',
+16:57:14     INFO -  'DISPLAY': ':0',
+16:57:14     INFO -  'HOME': '/home/cltbld',
+16:57:14     INFO -  'LANG': 'en_US.UTF-8',
+16:57:14     INFO -  'LOGNAME': 'cltbld',
+16:57:14     INFO -  'MAIL': '/var/mail/cltbld',
+16:57:14     INFO -  'MINIDUMP_SAVE_PATH': '/builds/slave/test/build/blobber_upload_dir',
+16:57:14     INFO -  'MINIDUMP_STACKWALK': '/builds/slave/test/build/linux64-minidump_stackwalk',
+16:57:14     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+16:57:14     INFO -  'MOZ_NODE_PATH': '/usr/bin/node',
+16:57:14     INFO -  'MOZ_NO_REMOTE': '1',
+16:57:14     INFO -  'MOZ_UPLOAD_DIR': '/builds/slave/test/build/blobber_upload_dir',
+16:57:14     INFO -  'NODE_PATH': '/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript',
+16:57:14     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+16:57:14     INFO -  'PATH': '/builds/slave/test/build/venv/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+16:57:14     INFO -  'PROPERTIES_FILE': '/builds/slave/test/buildprops.json',
+16:57:14     INFO -  'PWD': '/builds/slave/test',
+16:57:14     INFO -  'SHELL': '/bin/bash',
+16:57:14     INFO -  'SHLVL': '1',
+16:57:14     INFO -  'TERM': 'linux',
+16:57:14     INFO -  'TMOUT': '86400',
+16:57:14     INFO -  'USER': 'cltbld',
+16:57:14     INFO -  'XDG_SESSION_COOKIE': '9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755',
+16:57:14     INFO -  '_': '/tools/buildbot/bin/python'}
+16:57:14     INFO - Calling ['/builds/slave/test/build/venv/bin/python', '-u', '/builds/slave/test/build/tests/marionette/harness/marionette_harness/runtests.py', '--disable-e10s', '--gecko-log=/builds/slave/test/build/blobber_upload_dir/gecko.log', '--log-raw=-', '--log-raw=/builds/slave/test/build/blobber_upload_dir/marionette_raw.log', '--log-errorsummary=/builds/slave/test/build/blobber_upload_dir/marionette_errorsummary.log', '--log-html=/builds/slave/test/build/blobber_upload_dir/report.html', '--binary=/builds/slave/test/build/application/firefox/firefox', '--address=localhost:2828', '--symbols-path=https://queue.taskcluster.net/v1/task/I1iAdq48Sa60c5BCPWswkg/artifacts/public/build/firefox-52.8.2.en-US.linux-x86_64.crashreporter-symbols.zip', '/builds/slave/test/build/tests/marionette/tests/testing/marionette/harness/marionette_harness/tests/unit-tests.ini'] with output_timeout 1000
+16:57:15     INFO - Using workspace for temporary data: "/builds/slave/test"
+16:57:15     INFO - mozversion application_buildid: 20180608150819
+16:57:15     INFO - mozversion application_changeset: cbfdf01aac455e0591471201c96b89dee98190b5
+16:57:15     INFO - mozversion application_display_name: Firefox
+16:57:15     INFO - mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+16:57:15     INFO - mozversion application_name: Firefox
+16:57:15     INFO - mozversion application_remotingname: firefox
+16:57:15     INFO - mozversion application_repository: https://hg.mozilla.org/releases/mozilla-esr52
+16:57:15     INFO - mozversion application_vendor: Mozilla
+16:57:15     INFO - mozversion application_version: 52.8.2
+16:57:15     INFO - mozversion platform_buildid: 20180608150819
+16:57:15     INFO - mozversion platform_changeset: cbfdf01aac455e0591471201c96b89dee98190b5
+16:57:15     INFO - mozversion platform_repository: https://hg.mozilla.org/releases/mozilla-esr52
+16:57:15     INFO - mozversion platform_version: 52.8.2
+16:57:15     INFO - Application command: /builds/slave/test/build/application/firefox/firefox -no-remote -marionette -profile /tmp/tmppX1bg_.mozrunner
+16:57:17     INFO - Profile path is /tmp/tmppX1bg_.mozrunner
+16:57:17     INFO - Starting fixture servers
+16:57:21     INFO - Fixture server listening on http://127.0.0.1:56701/
+16:57:21     INFO - Fixture server listening on https://127.0.0.1:51276/
+16:57:21     INFO - mozinfo updated from: /builds/slave/test/build/tests/mozinfo.json
+16:57:21     INFO - mozinfo is: {u'bin_suffix': u'', u'pgo': True, u'sync': True, u'buildapp': u'browser', u'crashreporter': True, u'addon_signing': True, u'require_signing': False, u'release_or_beta': True, u'appname': u'firefox', u'mozconfig': u'/builds/slave/m-esr52-l64-000000000000000000/build/src/.mozconfig', u'topsrcdir': u'/builds/slave/m-esr52-l64-000000000000000000/build/src', u'telemetry': False, 'os_version': StringVersion ('12.04'), 'version': 'Ubuntu 12.04', u'datareporting': True, u'buildtype_guess': u'pgo', 'bits': 64, 'has_sandbox': True, u'sm_promise': True, u'toolkit': u'gtk3', u'healthreport': True, u'asan': False, u'platform_guess': u'linux64', u'tests_enabled': True, 'linux_distro': 'Ubuntu', u'official': True, u'tsan': False, u'nightly_build': False, u'debug': False, 'os': u'linux', 'processor': u'x86_64'}
+16:57:21     INFO - e10s is disabled
+16:57:21     INFO - mozversion application_buildid: 20180608150819
+16:57:21     INFO - mozversion application_changeset: cbfdf01aac455e0591471201c96b89dee98190b5
+16:57:21     INFO - mozversion application_display_name: Firefox
+16:57:21     INFO - mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+16:57:21     INFO - mozversion application_name: Firefox
+16:57:21     INFO - mozversion application_remotingname: firefox
+16:57:21     INFO - mozversion application_repository: https://hg.mozilla.org/releases/mozilla-esr52
+16:57:21     INFO - mozversion application_vendor: Mozilla
+16:57:21     INFO - mozversion application_version: 52.8.2
+16:57:21     INFO - mozversion platform_buildid: 20180608150819
+16:57:21     INFO - mozversion platform_changeset: cbfdf01aac455e0591471201c96b89dee98190b5
+16:57:21     INFO - mozversion platform_repository: https://hg.mozilla.org/releases/mozilla-esr52
+16:57:21     INFO - mozversion platform_version: 52.8.2
+16:57:21     INFO - SUITE-START | Running 87 tests
+16:57:21     INFO - TEST-START | test_text_chrome.py
+16:57:21     INFO - TEST-SKIP | test_text_chrome.py | took 1ms
+16:57:21     INFO - TEST-START | test_getactiveframe_oop.py
+16:57:21     INFO - TEST-SKIP | test_getactiveframe_oop.py | took 1ms
+16:57:21     INFO - TEST-START | test_set_window_size.py
+16:57:21     INFO - TEST-SKIP | test_set_window_size.py | took 1ms
+16:57:21     INFO - TEST-START | test_marionette.py TestMarionette.test_correct_test_name
+16:57:22     INFO - TEST-PASS | test_marionette.py TestMarionette.test_correct_test_name | took 307ms
+16:57:22     INFO - TEST-START | test_marionette.py TestMarionette.test_wait_for_port_non_existing_process
+16:57:22     INFO - Application command: /builds/slave/test/build/application/firefox/firefox -no-remote -marionette -profile /tmp/tmplmJ9LJ.mozrunner
+16:57:27     INFO - TEST-PASS | test_marionette.py TestMarionette.test_wait_for_port_non_existing_process | took 5201ms
+16:57:27     INFO - TEST-START | test_marionette.py TestProtocol2Errors.test_known_error_status
+16:57:27     INFO - TEST-PASS | test_marionette.py TestProtocol2Errors.test_known_error_status | took 264ms
+16:57:27     INFO - TEST-START | test_marionette.py TestProtocol2Errors.test_malformed_packet
+16:57:27     INFO - TEST-PASS | test_marionette.py TestProtocol2Errors.test_malformed_packet | took 163ms
+16:57:27     INFO - TEST-START | test_marionette.py TestProtocol2Errors.test_unknown_error_status
+16:57:27     INFO - TEST-PASS | test_marionette.py TestProtocol2Errors.test_unknown_error_status | took 105ms
+16:57:27     INFO - TEST-START | test_geckoinstance.py TestGeckoInstance.test_create
+16:57:27     INFO - TEST-PASS | test_geckoinstance.py TestGeckoInstance.test_create | took 106ms
+16:57:27     INFO - TEST-START | test_data_driven.py TestDataDriven.test_marionette_test_case_is_parameterizable
+16:57:28     INFO - TEST-PASS | test_data_driven.py TestDataDriven.test_marionette_test_case_is_parameterizable | took 186ms
+16:57:28     INFO - TEST-START | test_data_driven.py TestDataDriven.test_parameterized
+16:57:28     INFO - TEST-PASS | test_data_driven.py TestDataDriven.test_parameterized | took 69ms
+16:57:28     INFO - TEST-START | test_data_driven.py TestDataDriven.test_parameterized_same_name_raises_error
+16:57:28     INFO - TEST-PASS | test_data_driven.py TestDataDriven.test_parameterized_same_name_raises_error | took 91ms
+16:57:28     INFO - TEST-START | test_data_driven.py TestDataDriven.test_with_parameters
+16:57:28     INFO - TEST-PASS | test_data_driven.py TestDataDriven.test_with_parameters | took 69ms
+16:57:28     INFO - TEST-START | test_session.py TestSession.test_get_session_id
+16:57:28     INFO - TEST-PASS | test_session.py TestSession.test_get_session_id | took 188ms
+16:57:28     INFO - TEST-START | test_session.py TestSession.test_new_session_returns_capabilities
+16:57:28     INFO - TEST-PASS | test_session.py TestSession.test_new_session_returns_capabilities | took 92ms
+16:57:28     INFO - TEST-START | test_session.py TestSession.test_no_session
+16:57:28     INFO - TEST-PASS | test_session.py TestSession.test_no_session | took 104ms
+16:57:28     INFO - TEST-START | test_session.py TestSession.test_session_already_started
+16:57:28     INFO - TEST-PASS | test_session.py TestSession.test_session_already_started | took 104ms
+16:57:28     INFO - TEST-START | test_session.py TestSession.test_set_the_session_id
+16:57:28     INFO - TEST-PASS | test_session.py TestSession.test_set_the_session_id | took 119ms
+16:57:28     INFO - TEST-START | test_capabilities.py TestCapabilities.test_additional_capabilities
+16:57:29     INFO - TEST-PASS | test_capabilities.py TestCapabilities.test_additional_capabilities | took 101ms
+16:57:29     INFO - TEST-START | test_capabilities.py TestCapabilities.test_capability_types
+16:57:29     INFO -  testing value
+16:57:29     INFO -    with desiredCapabilities
+16:57:29     INFO -    with requiredCapabilities
+16:57:29     INFO -  testing value invalid
+16:57:29     INFO -    with desiredCapabilities
+16:57:29     INFO -    with requiredCapabilities
+16:57:29     INFO -  testing value True
+16:57:29     INFO -    with desiredCapabilities
+16:57:29     INFO -    with requiredCapabilities
+16:57:29     INFO -  testing value 42
+16:57:29     INFO -    with desiredCapabilities
+16:57:29     INFO -    with requiredCapabilities
+16:57:29     INFO -  testing value []
+16:57:29     INFO -    with desiredCapabilities
+16:57:29     INFO -    with requiredCapabilities
+16:57:29     INFO - TEST-PASS | test_capabilities.py TestCapabilities.test_capability_types | took 261ms
+16:57:29     INFO - TEST-START | test_capabilities.py TestCapabilities.test_mandated_capabilities
+16:57:29     INFO - TEST-PASS | test_capabilities.py TestCapabilities.test_mandated_capabilities | took 94ms
+16:57:29     INFO - TEST-START | test_capabilities.py TestCapabilities.test_set_specification_level
+16:57:29     INFO - TEST-PASS | test_capabilities.py TestCapabilities.test_set_specification_level | took 182ms
+16:57:29     INFO - TEST-START | test_capabilities.py TestCapabilities.test_supported_features
+16:57:29     INFO - TEST-PASS | test_capabilities.py TestCapabilities.test_supported_features | took 94ms
+16:57:29     INFO - TEST-START | test_capabilities.py TestCapabilities.test_we_can_pass_in_required_capabilities_on_session_start
+16:57:29     INFO - TEST-PASS | test_capabilities.py TestCapabilities.test_we_can_pass_in_required_capabilities_on_session_start | took 186ms
+16:57:29     INFO - TEST-START | test_capabilities.py TestCapabilities.test_we_get_valid_uuid4_when_creating_a_session
+16:57:30     INFO - TEST-PASS | test_capabilities.py TestCapabilities.test_we_get_valid_uuid4_when_creating_a_session | took 266ms
+16:57:30     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_accept_insecure_certs
+16:57:30     INFO -  testing desiredCapabilities
+16:57:30     INFO -    type <type 'str'>
+16:57:30     INFO -    type <type 'int'>
+16:57:30     INFO -    type <type 'dict'>
+16:57:30     INFO -    type <type 'list'>
+16:57:30     INFO -  testing requiredCapabilities
+16:57:30     INFO -    type <type 'str'>
+16:57:30     INFO -    type <type 'int'>
+16:57:30     INFO -    type <type 'dict'>
+16:57:30     INFO -    type <type 'list'>
+16:57:30     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_accept_insecure_certs | took 545ms
+16:57:30     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_browser_name_desired
+16:57:30     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_browser_name_desired | took 134ms
+16:57:30     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_browser_name_desired_allowed_types
+16:57:30     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_browser_name_desired_allowed_types | took 181ms
+16:57:30     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_browser_name_desired_disallowed_types
+16:57:31     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_browser_name_desired_disallowed_types | took 220ms
+16:57:31     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_browser_name_error_on_invalid_required
+16:57:31     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_browser_name_error_on_invalid_required | took 149ms
+16:57:31     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_browser_name_prefers_required
+16:57:31     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_browser_name_prefers_required | took 135ms
+16:57:31     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_browser_name_required
+16:57:31     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_browser_name_required | took 147ms
+16:57:31     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_browser_name_required_allowed_types
+16:57:31     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_browser_name_required_allowed_types | took 188ms
+16:57:31     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_browser_name_requried_disallowed_types
+16:57:32     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_browser_name_requried_disallowed_types | took 210ms
+16:57:32     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_page_load_strategy
+16:57:32     INFO -  valid strategy none
+16:57:32     INFO -  valid strategy eager
+16:57:32     INFO -  valid strategy normal
+16:57:32     INFO -  invalid strategy
+16:57:32     INFO -  invalid strategy EAGER
+16:57:32     INFO -  invalid strategy True
+16:57:32     INFO -  invalid strategy 42
+16:57:32     INFO -  invalid strategy {}
+16:57:32     INFO -  invalid strategy []
+16:57:32     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_page_load_strategy | took 364ms
+16:57:32     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_platform_name_desired
+16:57:32     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_platform_name_desired | took 139ms
+16:57:32     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_platform_name_desired_allowed_types
+16:57:32     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_platform_name_desired_allowed_types | took 184ms
+16:57:32     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_platform_name_desired_disallowed_types
+16:57:32     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_platform_name_desired_disallowed_types | took 209ms
+16:57:32     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_platform_name_error_on_invalid_required
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_platform_name_error_on_invalid_required | took 171ms
+16:57:33     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_platform_name_prefers_required
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_platform_name_prefers_required | took 145ms
+16:57:33     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_platform_name_required
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_platform_name_required | took 100ms
+16:57:33     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_platform_name_required_allowed_types
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_platform_name_required_allowed_types | took 108ms
+16:57:33     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_platform_name_requried_disallowed_types
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_platform_name_requried_disallowed_types | took 133ms
+16:57:33     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_proxy_default
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_proxy_default | took 92ms
+16:57:33     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_proxy_desired
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_proxy_desired | took 103ms
+16:57:33     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_proxy_required
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_proxy_required | took 117ms
+16:57:33     INFO - TEST-START | test_capabilities.py TestCapabilityMatching.test_timeouts
+16:57:33     INFO - TEST-PASS | test_capabilities.py TestCapabilityMatching.test_timeouts | took 84ms
+16:57:34     INFO - TEST-START | test_accessibility.py TestAccessibility.test_click_raises_element_not_accessible
+16:57:36     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_click_raises_element_not_accessible | took 2310ms
+16:57:36     INFO - TEST-START | test_accessibility.py TestAccessibility.test_click_raises_no_exceptions
+16:57:37     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_click_raises_no_exceptions | took 772ms
+16:57:37     INFO - TEST-START | test_accessibility.py TestAccessibility.test_element_is_enabled_to_accessibility
+16:57:37     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_element_is_enabled_to_accessibility | took 417ms
+16:57:37     INFO - TEST-START | test_accessibility.py TestAccessibility.test_element_is_not_enabled_to_accessbility
+16:57:38     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_element_is_not_enabled_to_accessbility | took 760ms
+16:57:38     INFO - TEST-START | test_accessibility.py TestAccessibility.test_element_is_visible_to_accessibility
+16:57:38     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_element_is_visible_to_accessibility | took 532ms
+16:57:38     INFO - TEST-START | test_accessibility.py TestAccessibility.test_element_visible_but_not_visible_to_accessbility
+16:57:39     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_element_visible_but_not_visible_to_accessbility | took 425ms
+16:57:39     INFO - TEST-START | test_accessibility.py TestAccessibility.test_is_selected_raises_no_exception
+16:57:39     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_is_selected_raises_no_exception | took 477ms
+16:57:39     INFO - TEST-START | test_accessibility.py TestAccessibility.test_send_keys_raises_element_not_accessible
+16:57:40     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_send_keys_raises_element_not_accessible | took 375ms
+16:57:40     INFO - TEST-START | test_accessibility.py TestAccessibility.test_send_keys_raises_no_exception
+16:57:40     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_send_keys_raises_no_exception | took 553ms
+16:57:40     INFO - TEST-START | test_accessibility.py TestAccessibility.test_single_tap_raises_element_not_accessible
+16:57:42     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_single_tap_raises_element_not_accessible | took 1758ms
+16:57:42     INFO - TEST-START | test_accessibility.py TestAccessibility.test_single_tap_raises_no_exceptions
+16:57:43     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_single_tap_raises_no_exceptions | took 1114ms
+16:57:43     INFO - TEST-START | test_accessibility.py TestAccessibility.test_valid_click
+16:57:44     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_valid_click | took 820ms
+16:57:44     INFO - TEST-START | test_accessibility.py TestAccessibility.test_valid_single_tap
+16:57:44     INFO - TEST-PASS | test_accessibility.py TestAccessibility.test_valid_single_tap | took 648ms
+16:57:44     INFO - TEST-START | test_expectedfail.py TestFail.test_fails
+16:57:45     INFO - TEST-FAIL | test_expectedfail.py TestFail.test_fails | took 181ms
+16:57:45     INFO - TEST-START | test_import_script.py TestImportScriptChrome.test_clear_scripts_in_other_context
+16:57:45     INFO - TEST-PASS | test_import_script.py TestImportScriptChrome.test_clear_scripts_in_other_context | took 258ms
+16:57:45     INFO - TEST-START | test_import_script.py TestImportScriptChrome.test_import_script
+16:57:45     INFO - TEST-PASS | test_import_script.py TestImportScriptChrome.test_import_script | took 204ms
+16:57:45     INFO - TEST-START | test_import_script.py TestImportScriptChrome.test_import_script_and_clear
+16:57:46     INFO - TEST-PASS | test_import_script.py TestImportScriptChrome.test_import_script_and_clear | took 394ms
+16:57:46     INFO - TEST-START | test_import_script.py TestImportScriptChrome.test_import_script_twice
+16:57:46     INFO - TEST-PASS | test_import_script.py TestImportScriptChrome.test_import_script_twice | took 227ms
+16:57:46     INFO - TEST-START | test_import_script.py TestImportScriptChrome.test_imports_apply_globally
+16:57:46     INFO - TEST-SKIP | test_import_script.py TestImportScriptChrome.test_imports_apply_globally | took 95ms
+16:57:46     INFO - TEST-START | test_import_script.py TestImportScriptChrome.test_multiple_imports
+16:57:46     INFO - TEST-PASS | test_import_script.py TestImportScriptChrome.test_multiple_imports | took 171ms
+16:57:46     INFO - TEST-START | test_import_script.py TestImportScriptContent.test_clear_scripts_in_other_context
+16:57:46     INFO - TEST-PASS | test_import_script.py TestImportScriptContent.test_clear_scripts_in_other_context | took 160ms
+16:57:46     INFO - TEST-START | test_import_script.py TestImportScriptContent.test_import_script
+16:57:46     INFO - TEST-PASS | test_import_script.py TestImportScriptContent.test_import_script | took 165ms
+16:57:46     INFO - TEST-START | test_import_script.py TestImportScriptContent.test_import_script_and_clear
+16:57:47     INFO - TEST-PASS | test_import_script.py TestImportScriptContent.test_import_script_and_clear | took 203ms
+16:57:47     INFO - TEST-START | test_import_script.py TestImportScriptContent.test_import_script_twice
+16:57:47     INFO - TEST-PASS | test_import_script.py TestImportScriptContent.test_import_script_twice | took 141ms
+16:57:47     INFO - TEST-START | test_import_script.py TestImportScriptContent.test_imports_apply_globally
+16:57:48     INFO - TEST-PASS | test_import_script.py TestImportScriptContent.test_imports_apply_globally | took 1512ms
+16:57:48     INFO - TEST-START | test_import_script.py TestImportScriptContent.test_multiple_imports
+16:57:49     INFO - TEST-PASS | test_import_script.py TestImportScriptContent.test_multiple_imports | took 311ms
+16:57:49     INFO - TEST-START | test_click.py TestClick.test_centre_outside_viewport
+16:57:49     INFO - TEST-PASS | test_click.py TestClick.test_centre_outside_viewport | took 487ms
+16:57:49     INFO - TEST-START | test_click.py TestClick.test_centre_outside_viewport_horizontally
+16:57:49     INFO - TEST-PASS | test_click.py TestClick.test_centre_outside_viewport_horizontally | took 367ms
+16:57:49     INFO - TEST-START | test_click.py TestClick.test_centre_outside_viewport_vertically
+16:57:50     INFO - TEST-PASS | test_click.py TestClick.test_centre_outside_viewport_vertically | took 405ms
+16:57:50     INFO - TEST-START | test_click.py TestClick.test_click
+16:57:50     INFO - TEST-PASS | test_click.py TestClick.test_click | took 399ms
+16:57:50     INFO - TEST-START | test_click.py TestClick.test_click_element_obscured_by_absolute_positioned_element
+16:57:51     INFO - TEST-PASS | test_click.py TestClick.test_click_element_obscured_by_absolute_positioned_element | took 421ms
+16:57:51     INFO - TEST-START | test_click.py TestClick.test_click_number_link
+16:57:51     INFO - TEST-PASS | test_click.py TestClick.test_click_number_link | took 707ms
+16:57:51     INFO - TEST-START | test_click.py TestClick.test_clicking_an_element_that_is_not_displayed_raises
+16:57:52     INFO - TEST-PASS | test_click.py TestClick.test_clicking_an_element_that_is_not_displayed_raises | took 384ms
+16:57:52     INFO - TEST-START | test_click.py TestClick.test_clicking_on_a_multiline_link
+16:57:53     INFO - TEST-PASS | test_click.py TestClick.test_clicking_on_a_multiline_link | took 970ms
+16:57:53     INFO - TEST-START | test_click.py TestClick.test_container_element
+16:57:54     INFO - TEST-PASS | test_click.py TestClick.test_container_element | took 1169ms
+16:57:54     INFO - TEST-START | test_click.py TestClick.test_container_element_outside_view
+16:57:54     INFO - TEST-PASS | test_click.py TestClick.test_container_element_outside_view | took 534ms
+16:57:54     INFO - TEST-START | test_click.py TestClick.test_css_transforms
+16:57:55     INFO - TEST-PASS | test_click.py TestClick.test_css_transforms | took 430ms
+16:57:55     INFO - TEST-START | test_click.py TestClick.test_input_file
+16:57:55     INFO - TEST-PASS | test_click.py TestClick.test_input_file | took 379ms
+16:57:55     INFO - TEST-START | test_click.py TestClick.test_obscured_element
+16:57:56     INFO - TEST-PASS | test_click.py TestClick.test_obscured_element | took 553ms
+16:57:56     INFO - TEST-START | test_click.py TestClick.test_scroll_into_view_near_end
+16:57:57     INFO - TEST-PASS | test_click.py TestClick.test_scroll_into_view_near_end | took 821ms
+16:57:57     INFO - TEST-START | test_click.py TestLegacyClick.test_click
+16:57:57     INFO - TEST-PASS | test_click.py TestLegacyClick.test_click | took 598ms
+16:57:57     INFO - TEST-START | test_click.py TestLegacyClick.test_click_number_link
+16:57:58     INFO - TEST-PASS | test_click.py TestLegacyClick.test_click_number_link | took 1082ms
+16:57:58     INFO - TEST-START | test_click.py TestLegacyClick.test_clicking_an_element_that_is_not_displayed_raises
+16:57:59     INFO - TEST-PASS | test_click.py TestLegacyClick.test_clicking_an_element_that_is_not_displayed_raises | took 518ms
+16:57:59     INFO - TEST-START | test_click.py TestLegacyClick.test_clicking_on_a_multiline_link
+16:58:00     INFO - TEST-PASS | test_click.py TestLegacyClick.test_clicking_on_a_multiline_link | took 803ms
+16:58:00     INFO - TEST-START | test_click.py TestLegacyClick.test_scroll_into_view_near_end
+16:58:00     INFO - TEST-PASS | test_click.py TestLegacyClick.test_scroll_into_view_near_end | took 624ms
+16:58:00     INFO - TEST-START | test_click_chrome.py TestClickChrome.test_click
+16:58:01     INFO - TEST-PASS | test_click_chrome.py TestClickChrome.test_click | took 780ms
+16:58:01     INFO - TEST-START | test_checkbox.py TestCheckbox.test_selected
+16:58:02     INFO - TEST-PASS | test_checkbox.py TestCheckbox.test_selected | took 1003ms
+16:58:02     INFO - TEST-START | test_checkbox_chrome.py TestSelectedChrome.test_selected
+16:58:03     INFO - TEST-PASS | test_checkbox_chrome.py TestSelectedChrome.test_selected | took 628ms
+16:58:03     INFO - TEST-START | test_elementsize.py TestElementSize.testShouldReturnTheSizeOfALink
+16:58:03     INFO - TEST-PASS | test_elementsize.py TestElementSize.testShouldReturnTheSizeOfALink | took 475ms
+16:58:03     INFO - TEST-START | test_elementsize_chrome.py TestElementSizeChrome.testShouldReturnTheSizeOfAnInput
+16:58:04     INFO - TEST-PASS | test_elementsize_chrome.py TestElementSizeChrome.testShouldReturnTheSizeOfAnInput | took 546ms
+16:58:04     INFO - TEST-START | test_position.py TestPosition.test_should_get_element_position_back
+16:58:05     INFO - TEST-PASS | test_position.py TestPosition.test_should_get_element_position_back | took 791ms
+16:58:05     INFO - TEST-START | test_rendered_element.py RenderedElementTests.testWeCanGetComputedStyleValueOnElement
+16:58:05     INFO - TEST-PASS | test_rendered_element.py RenderedElementTests.testWeCanGetComputedStyleValueOnElement | took 824ms
+16:58:05     INFO - TEST-START | test_chrome_element_css.py TestChromeElementCSS.test_we_can_get_css_value_on_chrome_element
+16:58:06     INFO - TEST-PASS | test_chrome_element_css.py TestChromeElementCSS.test_we_can_get_css_value_on_chrome_element | took 605ms
+16:58:06     INFO - TEST-START | test_element_state.py TestGetElementAttribute.test_boolean_attributes
+16:58:06     INFO -  testing boolean attribute <textarea autofocus>
+16:58:06     INFO -  testing boolean attribute <textarea disabled>
+16:58:07     INFO -  testing boolean attribute <textarea readonly>
+16:58:07     INFO -  testing boolean attribute <textarea required>
+16:58:07     INFO -  testing boolean attribute <object typemustmatch>
+16:58:07     INFO -  testing boolean attribute <fieldset disabled>
+16:58:08     INFO -  testing boolean attribute <iframe allowfullscreen>
+16:58:08     INFO -  testing boolean attribute <form novalidate>
+16:58:09     INFO -  testing boolean attribute <script async>
+16:58:09     INFO -  testing boolean attribute <script defer>
+16:58:09     INFO -  testing boolean attribute <track default>
+16:58:10     INFO -  testing boolean attribute <button autofocus>
+16:58:10     INFO -  testing boolean attribute <button disabled>
+16:58:11     INFO -  testing boolean attribute <button formnovalidate>
+16:58:11     INFO -  testing boolean attribute <img ismap>
+16:58:12     INFO -  testing boolean attribute <optgroup disabled>
+16:58:12     INFO -  testing boolean attribute <ol reversed>
+16:58:12     INFO -  testing boolean attribute <video autoplay>
+16:58:13     INFO -  testing boolean attribute <video controls>
+16:58:13     INFO -  testing boolean attribute <video loop>
+16:58:14     INFO -  testing boolean attribute <video muted>
+16:58:14     INFO -  testing boolean attribute <details open>
+16:58:14     INFO -  testing boolean attribute <dialog open>
+16:58:15     INFO -  testing boolean attribute <menuitem checked>
+16:58:15     INFO -  testing boolean attribute <menuitem default>
+16:58:15     INFO -  testing boolean attribute <menuitem disabled>
+16:58:15     INFO -  testing boolean attribute <input autofocus>
+16:58:16     INFO -  testing boolean attribute <input checked>
+16:58:16     INFO -  testing boolean attribute <input disabled>
+16:58:16     INFO -  testing boolean attribute <input formnovalidate>
+16:58:16     INFO -  testing boolean attribute <input multiple>
+16:58:17     INFO -  testing boolean attribute <input readonly>
+16:58:17     INFO -  testing boolean attribute <input required>
+16:58:17     INFO -  testing boolean attribute <audio autoplay>
+16:58:17     INFO -  testing boolean attribute <audio controls>
+16:58:18     INFO -  testing boolean attribute <audio loop>
+16:58:18     INFO -  testing boolean attribute <audio muted>
+16:58:18     INFO -  testing boolean attribute <select autofocus>
+16:58:18     INFO -  testing boolean attribute <select disabled>
+16:58:18     INFO -  testing boolean attribute <select multiple>
+16:58:19     INFO -  testing boolean attribute <select required>
+16:58:19     INFO -  testing boolean attribute <option disabled>
+16:58:19     INFO -  testing boolean attribute <option selected>
+16:58:19     INFO - TEST-PASS | test_element_state.py TestGetElementAttribute.test_boolean_attributes | took 13416ms
+16:58:19     INFO - TEST-START | test_element_state.py TestGetElementAttribute.test_global_boolean_attributes
+16:58:20     INFO - TEST-PASS | test_element_state.py TestGetElementAttribute.test_global_boolean_attributes | took 951ms
+16:58:20     INFO - TEST-START | test_element_state.py TestGetElementAttribute.test_normal_attribute
+16:58:21     INFO - TEST-PASS | test_element_state.py TestGetElementAttribute.test_normal_attribute | took 384ms
+16:58:21     INFO - TEST-START | test_element_state.py TestGetElementAttribute.test_xhtml
+16:58:21     INFO - TEST-PASS | test_element_state.py TestGetElementAttribute.test_xhtml | took 283ms
+16:58:21     INFO - TEST-START | test_element_state.py TestGetElementProperty.test_attribute_not_returned
+16:58:21     INFO - TEST-PASS | test_element_state.py TestGetElementProperty.test_attribute_not_returned | took 276ms
+16:58:21     INFO - TEST-START | test_element_state.py TestGetElementProperty.test_get
+16:58:22     INFO - TEST-PASS | test_element_state.py TestGetElementProperty.test_get | took 336ms
+16:58:22     INFO - TEST-START | test_element_state.py TestGetElementProperty.test_manipulated_element
+16:58:22     INFO - TEST-PASS | test_element_state.py TestGetElementProperty.test_manipulated_element | took 391ms
+16:58:22     INFO - TEST-START | test_element_state.py TestGetElementProperty.test_missing_property_returns_default
+16:58:22     INFO - TEST-PASS | test_element_state.py TestGetElementProperty.test_missing_property_returns_default | took 273ms
+16:58:22     INFO - TEST-START | test_element_state.py TestIsElementDisplayed.test_is_displayed
+16:58:23     INFO - TEST-PASS | test_element_state.py TestIsElementDisplayed.test_is_displayed | took 366ms
+16:58:23     INFO - TEST-START | test_element_state.py TestIsElementEnabled.test_is_enabled
+16:58:23     INFO - TEST-PASS | test_element_state.py TestIsElementEnabled.test_is_enabled | took 380ms
+16:58:23     INFO - TEST-START | test_element_state_chrome.py TestGetElementAttributeChrome.test_get
+16:58:24     INFO - TEST-PASS | test_element_state_chrome.py TestGetElementAttributeChrome.test_get | took 612ms
+16:58:24     INFO - TEST-START | test_element_state_chrome.py TestGetElementProperty.test_get
+16:58:24     INFO - TEST-PASS | test_element_state_chrome.py TestGetElementProperty.test_get | took 490ms
+16:58:24     INFO - TEST-START | test_element_state_chrome.py TestIsElementDisplayed.test_isDisplayed
+16:58:24     INFO - TEST-SKIP | test_element_state_chrome.py TestIsElementDisplayed.test_isDisplayed | took 1ms
+16:58:24     INFO - TEST-START | test_element_state_chrome.py TestIsElementEnabledChrome.test_can_get_element_rect
+16:58:25     INFO - TEST-PASS | test_element_state_chrome.py TestIsElementEnabledChrome.test_can_get_element_rect | took 512ms
+16:58:25     INFO - TEST-START | test_element_state_chrome.py TestIsElementEnabledChrome.test_enabled
+16:58:25     INFO - TEST-PASS | test_element_state_chrome.py TestIsElementEnabledChrome.test_enabled | took 572ms
+16:58:25     INFO - TEST-START | test_text.py TestText.testNumericNonShiftKeys
+16:58:26     INFO - TEST-PASS | test_text.py TestText.testNumericNonShiftKeys | took 832ms
+16:58:26     INFO - TEST-START | test_text.py TestText.testShouldTypeAnInteger
+16:58:27     INFO - TEST-PASS | test_text.py TestText.testShouldTypeAnInteger | took 561ms
+16:58:27     INFO - TEST-START | test_text.py TestText.test_arrow_keys_are_not_printable
+16:58:27     INFO - TEST-PASS | test_text.py TestText.test_arrow_keys_are_not_printable | took 823ms
+16:58:27     INFO - TEST-START | test_text.py TestText.test_clearText
+16:58:28     INFO - TEST-PASS | test_text.py TestText.test_clearText | took 697ms
+16:58:28     INFO - TEST-START | test_text.py TestText.test_getText
+16:58:29     INFO - TEST-PASS | test_text.py TestText.test_getText | took 625ms
+16:58:29     INFO - TEST-START | test_text.py TestText.test_sendKeys
+16:58:29     INFO - TEST-PASS | test_text.py TestText.test_sendKeys | took 420ms
+16:58:29     INFO - TEST-START | test_text.py TestText.test_send_keys_to_type_input
+16:58:30     INFO - TEST-PASS | test_text.py TestText.test_send_keys_to_type_input | took 443ms
+16:58:30     INFO - TEST-START | test_text.py TestText.test_should_fire_key_down_events
+16:58:30     INFO - TEST-PASS | test_text.py TestText.test_should_fire_key_down_events | took 569ms
+16:58:30     INFO - TEST-START | test_text.py TestText.test_should_fire_key_press_events
+16:58:31     INFO - TEST-PASS | test_text.py TestText.test_should_fire_key_press_events | took 574ms
+16:58:31     INFO - TEST-START | test_text.py TestText.test_should_fire_key_up_events
+16:58:31     INFO - TEST-PASS | test_text.py TestText.test_should_fire_key_up_events | took 485ms
+16:58:31     INFO - TEST-START | test_text.py TestText.test_should_report_key_code_of_arrow_keys_up_down_events
+16:58:32     INFO - TEST-PASS | test_text.py TestText.test_should_report_key_code_of_arrow_keys_up_down_events | took 1070ms
+16:58:32     INFO - TEST-START | test_text.py TestText.test_should_type_a_mix_of_upper_and_lower_case_character
+16:58:33     INFO - TEST-PASS | test_text.py TestText.test_should_type_a_mix_of_upper_and_lower_case_character | took 456ms
+16:58:33     INFO - TEST-START | test_text.py TestText.test_should_type_a_quote_characters
+16:58:33     INFO - TEST-PASS | test_text.py TestText.test_should_type_a_quote_characters | took 445ms
+16:58:33     INFO - TEST-START | test_text.py TestText.test_should_type_an_at_character
+16:58:34     INFO - TEST-PASS | test_text.py TestText.test_should_type_an_at_character | took 474ms
+16:58:34     INFO - TEST-START | test_text.py TestText.test_should_type_lowercase_characters
+16:58:34     INFO - TEST-PASS | test_text.py TestText.test_should_type_lowercase_characters | took 653ms
+16:58:34     INFO - TEST-START | test_text.py TestText.test_should_type_uppercase_characters
+16:58:35     INFO - TEST-PASS | test_text.py TestText.test_should_type_uppercase_characters | took 923ms
+16:58:35     INFO - TEST-START | test_text.py TestText.test_will_simulate_a_key_down_when_entering_text_into_input_elements
+16:58:36     INFO - TEST-PASS | test_text.py TestText.test_will_simulate_a_key_down_when_entering_text_into_input_elements | took 955ms
+16:58:36     INFO - TEST-START | test_text.py TestText.test_will_simulate_a_key_press_when_entering_text_into_input_elements
+16:58:38     INFO - TEST-PASS | test_text.py TestText.test_will_simulate_a_key_press_when_entering_text_into_input_elements | took 1238ms
+16:58:38     INFO - TEST-START | test_text.py TestText.test_will_simulate_a_key_up_when_entering_text_into_input_elements
+16:58:39     INFO - TEST-PASS | test_text.py TestText.test_will_simulate_a_key_up_when_entering_text_into_input_elements | took 1959ms
+16:58:39     INFO - TEST-START | test_text.py TestText.test_will_simulate_a_keydown_when_entering_text_into_textareas
+16:58:40     INFO - TEST-PASS | test_text.py TestText.test_will_simulate_a_keydown_when_entering_text_into_textareas | took 489ms
+16:58:40     INFO - TEST-START | test_text.py TestText.test_will_simulate_a_keypress_when_entering_text_into_textareas
+16:58:40     INFO - TEST-PASS | test_text.py TestText.test_will_simulate_a_keypress_when_entering_text_into_textareas | took 496ms
+16:58:40     INFO - TEST-START | test_text.py TestText.test_will_simulate_a_keyup_when_entering_text_into_textareas
+16:58:41     INFO - TEST-PASS | test_text.py TestText.test_will_simulate_a_keyup_when_entering_text_into_textareas | took 455ms
+16:58:41     INFO - TEST-START | test_clearing.py TestClear.testContentEditableAreaShouldClear
+16:58:41     INFO - TEST-PASS | test_clearing.py TestClear.testContentEditableAreaShouldClear | took 437ms
+16:58:41     INFO - TEST-START | test_clearing.py TestClear.testTextAreaShouldNotClearWhenDisabled
+16:58:42     INFO - TEST-PASS | test_clearing.py TestClear.testTextAreaShouldNotClearWhenDisabled | took 371ms
+16:58:42     INFO - TEST-START | test_clearing.py TestClear.testTextAreaShouldNotClearWhenReadOnly
+16:58:42     INFO - TEST-PASS | test_clearing.py TestClear.testTextAreaShouldNotClearWhenReadOnly | took 381ms
+16:58:42     INFO - TEST-START | test_clearing.py TestClear.testTextInputShouldNotClearWhenDisabled
+16:58:42     INFO - TEST-PASS | test_clearing.py TestClear.testTextInputShouldNotClearWhenDisabled | took 360ms
+16:58:42     INFO - TEST-START | test_clearing.py TestClear.testTextInputShouldNotClearWhenReadOnly
+16:58:43     INFO - TEST-PASS | test_clearing.py TestClear.testTextInputShouldNotClearWhenReadOnly | took 441ms
+16:58:43     INFO - TEST-START | test_clearing.py TestClear.testWritableTextAreaShouldClear
+16:58:44     INFO - TEST-PASS | test_clearing.py TestClear.testWritableTextAreaShouldClear | took 594ms
+16:58:44     INFO - TEST-START | test_clearing.py TestClear.testWriteableTextInputShouldClear
+16:58:45     INFO - TEST-PASS | test_clearing.py TestClear.testWriteableTextInputShouldClear | took 1620ms
+16:58:45     INFO - TEST-START | test_typing.py TestTypingChrome.test_cut_and_paste_shortcuts
+16:58:46     INFO - TEST-PASS | test_typing.py TestTypingChrome.test_cut_and_paste_shortcuts | took 1320ms
+16:58:46     INFO - TEST-START | test_typing.py TestTypingContent.testAllPrintableKeys
+16:58:46     INFO - TEST-SKIP | test_typing.py TestTypingContent.testAllPrintableKeys | took 0ms
+16:58:46     INFO - TEST-START | test_typing.py TestTypingContent.testArrowKeysShouldNotBePrintable
+16:58:47     INFO - TEST-PASS | test_typing.py TestTypingContent.testArrowKeysShouldNotBePrintable | took 770ms
+16:58:47     INFO - TEST-START | test_typing.py TestTypingContent.testCutAndPasteShortcuts
+16:58:48     INFO - TEST-PASS | test_typing.py TestTypingContent.testCutAndPasteShortcuts | took 957ms
+16:58:48     INFO - TEST-START | test_typing.py TestTypingContent.testLowerCaseAlphaKeys
+16:58:49     INFO - TEST-PASS | test_typing.py TestTypingContent.testLowerCaseAlphaKeys | took 937ms
+16:58:49     INFO - TEST-START | test_typing.py TestTypingContent.testNumericShiftKeys
+16:58:49     INFO - TEST-SKIP | test_typing.py TestTypingContent.testNumericShiftKeys | took 2ms
+16:58:49     INFO - TEST-START | test_typing.py TestTypingContent.testShouldBeAbleToMixUpperAndLowerCaseLetters
+16:58:50     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldBeAbleToMixUpperAndLowerCaseLetters | took 680ms
+16:58:50     INFO - TEST-START | test_typing.py TestTypingContent.testShouldBeAbleToTypeCapitalLetters
+16:58:51     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldBeAbleToTypeCapitalLetters | took 1407ms
+16:58:51     INFO - TEST-START | test_typing.py TestTypingContent.testShouldBeAbleToTypeQuoteMarks
+16:58:52     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldBeAbleToTypeQuoteMarks | took 523ms
+16:58:52     INFO - TEST-START | test_typing.py TestTypingContent.testShouldBeAbleToTypeTheAtCharacter
+16:58:52     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldBeAbleToTypeTheAtCharacter | took 462ms
+16:58:52     INFO - TEST-START | test_typing.py TestTypingContent.testShouldFireKeyDownEvents
+16:58:53     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldFireKeyDownEvents | took 456ms
+16:58:53     INFO - TEST-START | test_typing.py TestTypingContent.testShouldFireKeyPressEvents
+16:58:53     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldFireKeyPressEvents | took 452ms
+16:58:53     INFO - TEST-START | test_typing.py TestTypingContent.testShouldFireKeyUpEvents
+16:58:54     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldFireKeyUpEvents | took 491ms
+16:58:54     INFO - TEST-START | test_typing.py TestTypingContent.testShouldReportKeyCodeOfArrowKeysUpDownEvents
+16:58:54     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldReportKeyCodeOfArrowKeysUpDownEvents | took 716ms
+16:58:54     INFO - TEST-START | test_typing.py TestTypingContent.testShouldSendKeysToElementsWithoutTheValueAttribute
+16:58:55     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldSendKeysToElementsWithoutTheValueAttribute | took 401ms
+16:58:55     INFO - TEST-START | test_typing.py TestTypingContent.testShouldTypeAnInteger
+16:58:55     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldTypeAnInteger | took 508ms
+16:58:55     INFO - TEST-START | test_typing.py TestTypingContent.testShouldTypeLowerCaseLetters
+16:58:56     INFO - TEST-PASS | test_typing.py TestTypingContent.testShouldTypeLowerCaseLetters | took 632ms
+16:58:56     INFO - TEST-START | test_typing.py TestTypingContent.testSpecialSpaceKeys
+16:58:56     INFO - TEST-SKIP | test_typing.py TestTypingContent.testSpecialSpaceKeys | took 1ms
+16:58:56     INFO - TEST-START | test_typing.py TestTypingContent.testUppercaseAlphaKeys
+16:58:56     INFO - TEST-SKIP | test_typing.py TestTypingContent.testUppercaseAlphaKeys | took 0ms
+16:58:56     INFO - TEST-START | test_typing.py TestTypingContent.testWillSimulateAKeyDownWhenEnteringTextIntoInputElements
+16:58:58     INFO - TEST-PASS | test_typing.py TestTypingContent.testWillSimulateAKeyDownWhenEnteringTextIntoInputElements | took 1894ms
+16:58:58     INFO - TEST-START | test_typing.py TestTypingContent.testWillSimulateAKeyDownWhenEnteringTextIntoTextAreas
+16:58:58     INFO - TEST-PASS | test_typing.py TestTypingContent.testWillSimulateAKeyDownWhenEnteringTextIntoTextAreas | took 546ms
+16:58:58     INFO - TEST-START | test_typing.py TestTypingContent.testWillSimulateAKeyPressWhenEnteringTextIntoInputElements
+16:58:59     INFO - TEST-PASS | test_typing.py TestTypingContent.testWillSimulateAKeyPressWhenEnteringTextIntoInputElements | took 501ms
+16:58:59     INFO - TEST-START | test_typing.py TestTypingContent.testWillSimulateAKeyPressWhenEnteringTextIntoTextAreas
+16:58:59     INFO - TEST-PASS | test_typing.py TestTypingContent.testWillSimulateAKeyPressWhenEnteringTextIntoTextAreas | took 486ms
+16:58:59     INFO - TEST-START | test_typing.py TestTypingContent.testWillSimulateAKeyUpWhenEnteringTextIntoInputElements
+16:59:00     INFO - TEST-PASS | test_typing.py TestTypingContent.testWillSimulateAKeyUpWhenEnteringTextIntoInputElements | took 461ms
+16:59:00     INFO - TEST-START | test_typing.py TestTypingContent.testWillSimulateAKeyUpWhenEnteringTextIntoTextAreas
+16:59:00     INFO - TEST-PASS | test_typing.py TestTypingContent.testWillSimulateAKeyUpWhenEnteringTextIntoTextAreas | took 496ms
+16:59:00     INFO - TEST-START | test_typing.py TestTypingContent.test_appends_to_input_text
+16:59:01     INFO - TEST-PASS | test_typing.py TestTypingContent.test_appends_to_input_text | took 442ms
+16:59:01     INFO - TEST-START | test_typing.py TestTypingContent.test_appends_to_textarea
+16:59:01     INFO - TEST-PASS | test_typing.py TestTypingContent.test_appends_to_textarea | took 494ms
+16:59:01     INFO - TEST-START | test_typing.py TestTypingContent.test_not_interactable_if_hidden
+16:59:02     INFO - TEST-PASS | test_typing.py TestTypingContent.test_not_interactable_if_hidden | took 556ms
+16:59:02     INFO - TEST-START | test_log.py TestLog.test_clear
+16:59:02     INFO - TEST-PASS | test_log.py TestLog.test_clear | took 266ms
+16:59:02     INFO - TEST-START | test_log.py TestLog.test_log
+16:59:02     INFO - TEST-PASS | test_log.py TestLog.test_log | took 181ms
+16:59:02     INFO - TEST-START | test_log.py TestLog.test_log_from_async_script
+16:59:03     INFO - TEST-PASS | test_log.py TestLog.test_log_from_async_script | took 942ms
+16:59:03     INFO - TEST-START | test_log.py TestLog.test_log_from_async_script_variable_arguments
+16:59:03     INFO - TEST-PASS | test_log.py TestLog.test_log_from_async_script_variable_arguments | took 128ms
+16:59:03     INFO - TEST-START | test_log.py TestLog.test_log_from_sync_script
+16:59:03     INFO - TEST-PASS | test_log.py TestLog.test_log_from_sync_script | took 104ms
+16:59:03     INFO - TEST-START | test_log.py TestLog.test_log_from_sync_script_level
+16:59:03     INFO - TEST-PASS | test_log.py TestLog.test_log_from_sync_script_level | took 92ms
+16:59:03     INFO - TEST-START | test_log.py TestLog.test_log_level
+16:59:04     INFO - TEST-PASS | test_log.py TestLog.test_log_level | took 102ms
+16:59:04     INFO - TEST-START | test_log.py TestLog.test_multiple_entries
+16:59:04     INFO - TEST-PASS | test_log.py TestLog.test_multiple_entries | took 112ms
+16:59:04     INFO - TEST-START | test_log.py TestLogChrome.test_clear
+16:59:04     INFO - TEST-PASS | test_log.py TestLogChrome.test_clear | took 109ms
+16:59:04     INFO - TEST-START | test_log.py TestLogChrome.test_log
+16:59:04     INFO - TEST-PASS | test_log.py TestLogChrome.test_log | took 112ms
+16:59:04     INFO - TEST-START | test_log.py TestLogChrome.test_log_from_async_script
+16:59:04     INFO - TEST-PASS | test_log.py TestLogChrome.test_log_from_async_script | took 82ms
+16:59:04     INFO - TEST-START | test_log.py TestLogChrome.test_log_from_async_script_variable_arguments
+16:59:04     INFO - TEST-PASS | test_log.py TestLogChrome.test_log_from_async_script_variable_arguments | took 83ms
+16:59:04     INFO - TEST-START | test_log.py TestLogChrome.test_log_from_sync_script
+16:59:04     INFO - TEST-PASS | test_log.py TestLogChrome.test_log_from_sync_script | took 101ms
+16:59:04     INFO - TEST-START | test_log.py TestLogChrome.test_log_from_sync_script_level
+16:59:04     INFO - TEST-PASS | test_log.py TestLogChrome.test_log_from_sync_script_level | took 93ms
+16:59:04     INFO - TEST-START | test_log.py TestLogChrome.test_log_level
+16:59:04     INFO - TEST-PASS | test_log.py TestLogChrome.test_log_level | took 93ms
+16:59:04     INFO - TEST-START | test_log.py TestLogChrome.test_multiple_entries
+16:59:04     INFO - TEST-PASS | test_log.py TestLogChrome.test_multiple_entries | took 86ms
+16:59:04     INFO - TEST-START | test_about_pages.py TestAboutPages.test_back_forward
+16:59:07     INFO - TEST-PASS | test_about_pages.py TestAboutPages.test_back_forward | took 2220ms
+16:59:07     INFO - TEST-START | test_about_pages.py TestAboutPages.test_hang
+16:59:09     INFO - TEST-PASS | test_about_pages.py TestAboutPages.test_hang | took 2487ms
+16:59:09     INFO - TEST-START | test_about_pages.py TestAboutPages.test_navigate_non_remote_about_pages
+16:59:11     INFO - TEST-PASS | test_about_pages.py TestAboutPages.test_navigate_non_remote_about_pages | took 1537ms
+16:59:11     INFO - TEST-START | test_about_pages.py TestAboutPages.test_navigate_shortcut_key
+16:59:12     INFO - TEST-PASS | test_about_pages.py TestAboutPages.test_navigate_shortcut_key | took 1388ms
+16:59:12     INFO - TEST-START | test_about_pages.py TestAboutPages.test_type_to_non_remote_tab
+16:59:12     INFO - TEST-SKIP | test_about_pages.py TestAboutPages.test_type_to_non_remote_tab | took 1ms
+16:59:12     INFO - TEST-START | test_about_pages.py TestAboutPages.test_type_to_remote_tab
+16:59:14     INFO - TEST-PASS | test_about_pages.py TestAboutPages.test_type_to_remote_tab | took 2369ms
+16:59:14     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_check_window
+16:59:15     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_check_window | took 121ms
+16:59:15     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_js_exception
+16:59:15     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_js_exception | took 396ms
+16:59:15     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_ours
+16:59:15     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_ours | took 110ms
+16:59:15     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_simple
+16:59:15     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_simple | took 100ms
+16:59:15     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_timeout
+16:59:16     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_timeout | took 1139ms
+16:59:16     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_unique_timeout
+16:59:19     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_unique_timeout | took 3133ms
+16:59:19     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_unload
+16:59:20     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_async_unload | took 78ms
+16:59:20     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_js_exception
+16:59:20     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_js_exception | took 89ms
+16:59:20     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_no_return
+16:59:20     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_no_return | took 91ms
+16:59:20     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_permission
+16:59:20     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_execute_permission | took 86ms
+16:59:20     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_introspection_of_arguments
+16:59:20     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_introspection_of_arguments | took 110ms
+16:59:20     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_no_timeout
+16:59:21     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_no_timeout | took 666ms
+16:59:21     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_same_context
+16:59:21     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_same_context | took 153ms
+16:59:21     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_sandbox_refresh_arguments
+16:59:21     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_sandbox_refresh_arguments | took 378ms
+16:59:21     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_sandbox_reuse
+16:59:22     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_sandbox_reuse | took 1137ms
+16:59:22     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncChrome.test_script_finished
+16:59:22     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncChrome.test_script_finished | took 129ms
+16:59:22     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_check_window
+16:59:23     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_check_window | took 106ms
+16:59:23     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_js_exception
+16:59:23     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_js_exception | took 109ms
+16:59:23     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_ours
+16:59:23     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_ours | took 98ms
+16:59:23     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_simple
+16:59:23     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_simple | took 120ms
+16:59:23     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_timeout
+16:59:24     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_timeout | took 1105ms
+16:59:24     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_unique_timeout
+16:59:27     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_unique_timeout | took 3432ms
+16:59:27     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_unload
+16:59:28     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_async_unload | took 338ms
+16:59:28     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_js_exception
+16:59:28     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_js_exception | took 119ms
+16:59:28     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_no_return
+16:59:28     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_no_return | took 100ms
+16:59:28     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_execute_permission
+16:59:28     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_execute_permission | took 104ms
+16:59:28     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_introspection_of_arguments
+16:59:28     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_introspection_of_arguments | took 152ms
+16:59:28     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_no_timeout
+16:59:29     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_no_timeout | took 603ms
+16:59:29     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_same_context
+16:59:29     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_same_context | took 100ms
+16:59:29     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_sandbox_refresh_arguments
+16:59:29     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_sandbox_refresh_arguments | took 114ms
+16:59:29     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_sandbox_reuse
+16:59:29     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_sandbox_reuse | took 126ms
+16:59:29     INFO - TEST-START | test_execute_async_script.py TestExecuteAsyncContent.test_script_finished
+16:59:29     INFO - TEST-PASS | test_execute_async_script.py TestExecuteAsyncContent.test_script_finished | took 80ms
+16:59:29     INFO - TEST-START | test_execute_script.py TestElementCollections.test_array
+16:59:29     INFO - TEST-PASS | test_execute_script.py TestElementCollections.test_array | took 266ms
+16:59:30     INFO - TEST-START | test_execute_script.py TestElementCollections.test_html_all_collection
+16:59:30     INFO - TEST-PASS | test_execute_script.py TestElementCollections.test_html_all_collection | took 297ms
+16:59:30     INFO - TEST-START | test_execute_script.py TestElementCollections.test_html_collection
+16:59:30     INFO - TEST-PASS | test_execute_script.py TestElementCollections.test_html_collection | took 304ms
+16:59:30     INFO - TEST-START | test_execute_script.py TestElementCollections.test_html_form_controls_collection
+16:59:30     INFO - TEST-PASS | test_execute_script.py TestElementCollections.test_html_form_controls_collection | took 289ms
+16:59:30     INFO - TEST-START | test_execute_script.py TestElementCollections.test_html_options_collection
+16:59:31     INFO - TEST-PASS | test_execute_script.py TestElementCollections.test_html_options_collection | took 298ms
+16:59:31     INFO - TEST-START | test_execute_script.py TestElementCollections.test_node_list
+16:59:31     INFO - TEST-PASS | test_execute_script.py TestElementCollections.test_node_list | took 276ms
+16:59:31     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_argument_array
+16:59:31     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_argument_array | took 106ms
+16:59:31     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_argument_boolean
+16:59:31     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_argument_boolean | took 103ms
+16:59:31     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_argument_null
+16:59:31     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_argument_null | took 96ms
+16:59:31     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_argument_number
+16:59:31     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_argument_number | took 110ms
+16:59:31     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_argument_object
+16:59:32     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_argument_object | took 167ms
+16:59:32     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_argument_string
+16:59:32     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_argument_string | took 108ms
+16:59:32     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_async_script_timeout
+16:59:32     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_async_script_timeout | took 215ms
+16:59:32     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_exception
+16:59:32     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_exception | took 91ms
+16:59:32     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_globals
+16:59:32     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_globals | took 138ms
+16:59:32     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_invalid_chrome_handle
+16:59:33     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_invalid_chrome_handle | took 1046ms
+16:59:33     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_lasting_side_effects
+16:59:33     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_lasting_side_effects | took 90ms
+16:59:33     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_no_callback
+16:59:33     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_no_callback | took 81ms
+16:59:33     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_no_return_value
+16:59:33     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_no_return_value | took 78ms
+16:59:33     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_permission
+16:59:33     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_permission | took 96ms
+16:59:33     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_privileged_code_inspection
+16:59:34     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_privileged_code_inspection | took 221ms
+16:59:34     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_return_array
+16:59:34     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_return_array | took 190ms
+16:59:34     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_return_boolean
+16:59:34     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_return_boolean | took 155ms
+16:59:34     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_return_number
+16:59:34     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_return_number | took 139ms
+16:59:34     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_return_object
+16:59:35     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_return_object | took 458ms
+16:59:35     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_return_string
+16:59:35     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_return_string | took 181ms
+16:59:35     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_return_web_element
+16:59:35     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_return_web_element | took 109ms
+16:59:35     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_return_web_element_array
+16:59:35     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_return_web_element_array | took 113ms
+16:59:35     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_return_web_element_nodelist
+16:59:35     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_return_web_element_nodelist | took 100ms
+16:59:35     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_sandbox_refresh_arguments
+16:59:35     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_sandbox_refresh_arguments | took 146ms
+16:59:35     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_sandbox_reuse
+16:59:35     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_sandbox_reuse | took 119ms
+16:59:35     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_stacktrace
+16:59:36     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_stacktrace | took 141ms
+16:59:36     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_system_dead_object
+16:59:36     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_system_dead_object | took 111ms
+16:59:36     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_system_globals
+16:59:36     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_system_globals | took 127ms
+16:59:36     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_system_sandbox_wrappedjsobject
+16:59:36     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_system_sandbox_wrappedjsobject | took 101ms
+16:59:36     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_unmarshal_element_collection
+16:59:36     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_unmarshal_element_collection | took 401ms
+16:59:36     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_window_set_timeout_is_not_cancelled
+16:59:36     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_window_set_timeout_is_not_cancelled | took 124ms
+16:59:36     INFO - TEST-START | test_execute_script.py TestExecuteChrome.test_wrappedjsobject
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteChrome.test_wrappedjsobject | took 212ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_argument_array
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_argument_array | took 73ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_argument_boolean
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_argument_boolean | took 74ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_argument_null
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_argument_null | took 79ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_argument_number
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_argument_number | took 104ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_argument_object
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_argument_object | took 87ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_argument_string
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_argument_string | took 104ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_exception
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_exception | took 107ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_globals
+16:59:37     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_globals | took 147ms
+16:59:37     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_lasting_side_effects
+16:59:38     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_lasting_side_effects | took 181ms
+16:59:38     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_no_callback
+16:59:38     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_no_callback | took 90ms
+16:59:38     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_no_return_value
+16:59:38     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_no_return_value | took 85ms
+16:59:38     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_permission
+16:59:38     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_permission | took 93ms
+16:59:38     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_privileged_code_inspection
+16:59:38     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_privileged_code_inspection | took 301ms
+16:59:38     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_return_array
+16:59:38     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_return_array | took 142ms
+16:59:38     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_return_boolean
+16:59:38     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_return_boolean | took 89ms
+16:59:38     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_return_number
+16:59:39     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_return_number | took 111ms
+16:59:39     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_return_object
+16:59:39     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_return_object | took 136ms
+16:59:39     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_return_string
+16:59:39     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_return_string | took 96ms
+16:59:39     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_return_web_element
+16:59:39     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_return_web_element | took 504ms
+16:59:39     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_return_web_element_array
+16:59:40     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_return_web_element_array | took 307ms
+16:59:40     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_return_web_element_nodelist
+16:59:40     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_return_web_element_nodelist | took 266ms
+16:59:40     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_sandbox_refresh_arguments
+16:59:40     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_sandbox_refresh_arguments | took 80ms
+16:59:40     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_sandbox_reuse
+16:59:40     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_sandbox_reuse | took 100ms
+16:59:40     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_stacktrace
+16:59:40     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_stacktrace | took 78ms
+16:59:40     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_system_dead_object
+16:59:40     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_system_dead_object | took 117ms
+16:59:40     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_system_globals
+16:59:40     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_system_globals | took 137ms
+16:59:40     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_system_sandbox_wrappedjsobject
+16:59:40     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_system_sandbox_wrappedjsobject | took 82ms
+16:59:40     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_window_set_timeout_is_not_cancelled
+16:59:45     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_window_set_timeout_is_not_cancelled | took 4264ms
+16:59:45     INFO - TEST-START | test_execute_script.py TestExecuteContent.test_wrappedjsobject
+16:59:45     INFO - TEST-PASS | test_execute_script.py TestExecuteContent.test_wrappedjsobject | took 150ms
+16:59:45     INFO - TEST-START | test_execute_script.py TestExecuteSimpleTestContent.test_stack_trace
+16:59:45     INFO - TEST-PASS | test_execute_script.py TestExecuteSimpleTestContent.test_stack_trace | took 123ms
+16:59:45     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_by_name
+16:59:45     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_by_name | took 307ms
+16:59:45     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_child_element
+16:59:46     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_child_element | took 389ms
+16:59:46     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_class_name
+16:59:46     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_class_name | took 333ms
+16:59:46     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_css_selector
+16:59:46     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_css_selector | took 450ms
+16:59:46     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_css_selector_scope_doesnt_start_at_rootnode
+16:59:47     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_css_selector_scope_doesnt_start_at_rootnode | took 329ms
+16:59:47     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_element_id_is_valid_uuid
+16:59:47     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_element_id_is_valid_uuid | took 285ms
+16:59:47     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_finding_active_element_returns_element
+16:59:47     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_finding_active_element_returns_element | took 250ms
+16:59:47     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_id
+16:59:48     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_id | took 251ms
+16:59:48     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_invalid_css_selector
+16:59:48     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_invalid_css_selector | took 154ms
+16:59:48     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_invalid_css_selector_should_throw
+16:59:48     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_invalid_css_selector_should_throw | took 83ms
+16:59:48     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_invalid_xpath_selector
+16:59:48     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_invalid_xpath_selector | took 105ms
+16:59:48     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_link_text
+16:59:48     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_link_text | took 262ms
+16:59:48     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_link_text_with_trailing_space
+16:59:49     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_link_text_with_trailing_space | took 319ms
+16:59:49     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_not_found
+16:59:49     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_not_found | took 286ms
+16:59:49     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_not_found_from_element
+16:59:50     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_not_found_from_element | took 745ms
+16:59:50     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_not_found_implicit_wait
+16:59:55     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_not_found_implicit_wait | took 4991ms
+16:59:55     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_not_found_implicit_wait_from_element
+17:00:00     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_not_found_implicit_wait_from_element | took 5537ms
+17:00:00     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_partial_link_text
+17:00:00     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_partial_link_text | took 342ms
+17:00:00     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_tag_name
+17:00:01     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_tag_name | took 404ms
+17:00:01     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_unknown_selector
+17:00:01     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_unknown_selector | took 221ms
+17:00:01     INFO - TEST-START | test_element_retrieval.py TestFindElementHTML.test_xpath
+17:00:02     INFO - TEST-PASS | test_element_retrieval.py TestFindElementHTML.test_xpath | took 498ms
+17:00:02     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_active_element
+17:00:02     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_active_element | took 436ms
+17:00:02     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_by_name
+17:00:03     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_by_name | took 1447ms
+17:00:03     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_child_element
+17:00:04     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_child_element | took 401ms
+17:00:04     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_class_name
+17:00:04     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_class_name | took 294ms
+17:00:04     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_css_selector
+17:00:04     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_css_selector | took 288ms
+17:00:04     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_css_selector_scope_does_not_start_at_rootnode
+17:00:05     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_css_selector_scope_does_not_start_at_rootnode | took 342ms
+17:00:05     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_id
+17:00:05     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_id | took 305ms
+17:00:05     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_link_text
+17:00:05     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_link_text | took 319ms
+17:00:05     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_partial_link_text
+17:00:06     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_partial_link_text | took 322ms
+17:00:06     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_tag_name
+17:00:06     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_tag_name | took 396ms
+17:00:06     INFO - TEST-START | test_element_retrieval.py TestFindElementXHTML.test_xpath
+17:00:06     INFO - TEST-PASS | test_element_retrieval.py TestFindElementXHTML.test_xpath | took 345ms
+17:00:06     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_by_name
+17:00:07     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_by_name | took 305ms
+17:00:07     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_child_elements
+17:00:08     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_child_elements | took 749ms
+17:00:08     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_class_name
+17:00:08     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_class_name | took 700ms
+17:00:08     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_css_selector
+17:00:09     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_css_selector | took 411ms
+17:00:09     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_css_selector_scope_doesnt_start_at_rootnode
+17:00:09     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_css_selector_scope_doesnt_start_at_rootnode | took 391ms
+17:00:09     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_element_id_is_valid_uuid
+17:00:09     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_element_id_is_valid_uuid | took 361ms
+17:00:09     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_invalid_css_selector
+17:00:10     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_invalid_css_selector | took 160ms
+17:00:10     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_invalid_css_selector_should_throw
+17:00:10     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_invalid_css_selector_should_throw | took 138ms
+17:00:10     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_invalid_xpath_selector
+17:00:10     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_invalid_xpath_selector | took 145ms
+17:00:10     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_link_text
+17:00:10     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_link_text | took 296ms
+17:00:10     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_link_text_with_trailing_space
+17:00:10     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_link_text_with_trailing_space | took 269ms
+17:00:10     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_partial_link_text
+17:00:11     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_partial_link_text | took 313ms
+17:00:11     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_tag_name
+17:00:11     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_tag_name | took 304ms
+17:00:11     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_unknown_selector
+17:00:11     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_unknown_selector | took 124ms
+17:00:11     INFO - TEST-START | test_element_retrieval.py TestFindElementsHTML.test_xpath
+17:00:11     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsHTML.test_xpath | took 335ms
+17:00:11     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_by_name
+17:00:12     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsXHTML.test_by_name | took 474ms
+17:00:12     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_child_elements
+17:00:12     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsXHTML.test_child_elements | took 350ms
+17:00:12     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_class_name
+17:00:13     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsXHTML.test_class_name | took 450ms
+17:00:13     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_css_selector
+17:00:13     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsXHTML.test_css_selector | took 296ms
+17:00:13     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_css_selector_scope_doesnt_start_at_rootnode
+17:00:13     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsXHTML.test_css_selector_scope_doesnt_start_at_rootnode | took 381ms
+17:00:13     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_link_text
+17:00:14     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsXHTML.test_link_text | took 404ms
+17:00:14     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_partial_link_text
+17:00:14     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsXHTML.test_partial_link_text | took 314ms
+17:00:14     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_tag_name
+17:00:14     INFO - TEST-PASS | test_element_retrieval.py TestFindElementsXHTML.test_tag_name | took 265ms
+17:00:14     INFO - TEST-START | test_element_retrieval.py TestFindElementsXHTML.test_xpath
+17:00:14     INFO - TEST-SKIP | test_element_retrieval.py TestFindElementsXHTML.test_xpath | took 0ms
+17:00:14     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_child_element
+17:00:15     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_child_element | took 589ms
+17:00:15     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_child_elements
+17:00:16     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_child_elements | took 837ms
+17:00:16     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_class_name
+17:00:16     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_class_name | took 586ms
+17:00:16     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_id
+17:00:17     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_id | took 952ms
+17:00:17     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_not_found
+17:00:20     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_not_found | took 2689ms
+17:00:20     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_tag_name
+17:00:21     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_tag_name | took 615ms
+17:00:21     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_that_we_can_find_elements_from_css_selectors
+17:00:21     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_that_we_can_find_elements_from_css_selectors | took 570ms
+17:00:21     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_timeout
+17:00:23     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_timeout | took 1773ms
+17:00:23     INFO - TEST-START | test_findelement_chrome.py TestElementsChrome.test_xpath
+17:00:24     INFO - TEST-PASS | test_findelement_chrome.py TestElementsChrome.test_xpath | took 708ms
+17:00:24     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_certificate_error
+17:00:28     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_certificate_error | took 4148ms
+17:00:28     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_data_urls
+17:00:31     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_data_urls | took 3305ms
+17:00:31     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_frameset
+17:00:31     INFO - TEST-SKIP | test_navigation.py TestBackForwardNavigation.test_frameset | took 0ms
+17:00:31     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_frameset_after_navigating_in_frame
+17:00:36     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_frameset_after_navigating_in_frame | took 4754ms
+17:00:36     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_image_document_to_html
+17:00:38     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_image_document_to_html | took 2372ms
+17:00:38     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_image_document_to_image_document
+17:00:40     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_image_document_to_image_document | took 1715ms
+17:00:40     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_navigate_to_requested_about_page_after_error_page
+17:00:43     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_navigate_to_requested_about_page_after_error_page | took 3167ms
+17:00:43     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_no_history_items
+17:00:44     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_no_history_items | took 937ms
+17:00:44     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_remoteness_change
+17:00:45     INFO - TEST-SKIP | test_navigation.py TestBackForwardNavigation.test_remoteness_change | took 813ms
+17:00:45     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_same_document_hash_change
+17:00:47     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_same_document_hash_change | took 2210ms
+17:00:47     INFO - TEST-START | test_navigation.py TestBackForwardNavigation.test_timeout_error
+17:01:00     INFO - TEST-PASS | test_navigation.py TestBackForwardNavigation.test_timeout_error | took 12841ms
+17:01:00     INFO - TEST-START | test_navigation.py TestNavigate.test_about_blank_for_new_docshell
+17:01:02     INFO - TEST-PASS | test_navigation.py TestNavigate.test_about_blank_for_new_docshell | took 1414ms
+17:01:02     INFO - TEST-START | test_navigation.py TestNavigate.test_error_when_exceeding_page_load_timeout
+17:01:02     INFO - TEST-PASS | test_navigation.py TestNavigate.test_error_when_exceeding_page_load_timeout | took 514ms
+17:01:02     INFO - TEST-START | test_navigation.py TestNavigate.test_find_element_state_complete
+17:01:03     INFO - TEST-PASS | test_navigation.py TestNavigate.test_find_element_state_complete | took 665ms
+17:01:03     INFO - TEST-START | test_navigation.py TestNavigate.test_focus_after_navigation
+17:01:03     INFO - TEST-SKIP | test_navigation.py TestNavigate.test_focus_after_navigation | took 0ms
+17:01:03     INFO - TEST-START | test_navigation.py TestNavigate.test_get_current_url
+17:01:04     INFO - TEST-PASS | test_navigation.py TestNavigate.test_get_current_url | took 668ms
+17:01:04     INFO - TEST-START | test_navigation.py TestNavigate.test_get_current_url_returns_top_level_browsing_context_url
+17:01:04     INFO - TEST-PASS | test_navigation.py TestNavigate.test_get_current_url_returns_top_level_browsing_context_url | took 606ms
+17:01:04     INFO - TEST-START | test_navigation.py TestNavigate.test_invalid_protocol
+17:01:05     INFO - TEST-PASS | test_navigation.py TestNavigate.test_invalid_protocol | took 514ms
+17:01:05     INFO - TEST-START | test_navigation.py TestNavigate.test_navigate_chrome_error
+17:01:05     INFO - TEST-PASS | test_navigation.py TestNavigate.test_navigate_chrome_error | took 492ms
+17:01:05     INFO - TEST-START | test_navigation.py TestNavigate.test_navigate_hash_change
+17:01:06     INFO - TEST-PASS | test_navigation.py TestNavigate.test_navigate_hash_change | took 587ms
+17:01:06     INFO - TEST-START | test_navigation.py TestNavigate.test_navigate_in_child_frame_changes_to_top
+17:01:08     INFO - TEST-PASS | test_navigation.py TestNavigate.test_navigate_in_child_frame_changes_to_top | took 2506ms
+17:01:08     INFO - TEST-START | test_navigation.py TestNavigate.test_navigate_to_same_image_document_twice
+17:01:09     INFO - TEST-PASS | test_navigation.py TestNavigate.test_navigate_to_same_image_document_twice | took 955ms
+17:01:09     INFO - TEST-START | test_navigation.py TestNavigate.test_refresh
+17:01:10     INFO - TEST-PASS | test_navigation.py TestNavigate.test_refresh | took 978ms
+17:01:10     INFO - TEST-START | test_navigation.py TestNavigate.test_set_location_through_execute_script
+17:01:11     INFO - TEST-PASS | test_navigation.py TestNavigate.test_set_location_through_execute_script | took 586ms
+17:01:11     INFO - TEST-START | test_navigation.py TestTLSNavigation.test_deactivation
+17:01:11     INFO -  with safe session
+17:01:11     INFO -  with unsafe session
+17:01:12     INFO -  with safe session again
+17:01:12     INFO - TEST-PASS | test_navigation.py TestTLSNavigation.test_deactivation | took 1228ms
+17:01:12     INFO - TEST-START | test_navigation.py TestTLSNavigation.test_navigate_by_click
+17:01:13     INFO - TEST-PASS | test_navigation.py TestTLSNavigation.test_navigate_by_click | took 656ms
+17:01:13     INFO - TEST-START | test_navigation.py TestTLSNavigation.test_navigate_by_command
+17:01:13     INFO - TEST-PASS | test_navigation.py TestTLSNavigation.test_navigate_by_command | took 383ms
+17:01:13     INFO - TEST-START | test_timeouts.py TestTimeouts.test_compat_input_types
+17:01:13     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_compat_input_types | took 93ms
+17:01:13     INFO - TEST-START | test_timeouts.py TestTimeouts.test_deprecated_set_page_load_timeout
+17:01:13     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_deprecated_set_page_load_timeout | took 183ms
+17:01:13     INFO - TEST-START | test_timeouts.py TestTimeouts.test_deprecated_set_script_timeout
+17:01:14     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_deprecated_set_script_timeout | took 173ms
+17:01:14     INFO - TEST-START | test_timeouts.py TestTimeouts.test_deprecated_set_search_timeout
+17:01:14     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_deprecated_set_search_timeout | took 155ms
+17:01:14     INFO - TEST-START | test_timeouts.py TestTimeouts.test_deprecated_set_timeouts_command
+17:01:14     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_deprecated_set_timeouts_command | took 252ms
+17:01:14     INFO - TEST-START | test_timeouts.py TestTimeouts.test_execute_async_timeout_settimeout
+17:01:16     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_execute_async_timeout_settimeout | took 2529ms
+17:01:16     INFO - TEST-START | test_timeouts.py TestTimeouts.test_no_timeout_settimeout
+17:01:17     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_no_timeout_settimeout | took 875ms
+17:01:17     INFO - TEST-START | test_timeouts.py TestTimeouts.test_page_timeout_fail
+17:01:18     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_page_timeout_fail | took 305ms
+17:01:18     INFO - TEST-START | test_timeouts.py TestTimeouts.test_page_timeout_notdefinetimeout_pass
+17:01:18     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_page_timeout_notdefinetimeout_pass | took 315ms
+17:01:18     INFO - TEST-START | test_timeouts.py TestTimeouts.test_page_timeout_pass
+17:01:18     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_page_timeout_pass | took 319ms
+17:01:18     INFO - TEST-START | test_timeouts.py TestTimeouts.test_reset_timeout
+17:01:18     INFO - Application command: /builds/slave/test/build/application/firefox/firefox -no-remote -marionette -profile /tmp/tmplmJ9LJ.mozrunner
+17:01:23     INFO - Application command: /builds/slave/test/build/application/firefox/firefox -no-remote -marionette -profile /tmp/tmpH_DLsU.mozrunner
+17:01:28     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_reset_timeout | took 9827ms
+17:01:28     INFO - TEST-START | test_timeouts.py TestTimeouts.test_search_timeout_found
+17:01:29     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_search_timeout_found | took 743ms
+17:01:29     INFO - TEST-START | test_timeouts.py TestTimeouts.test_search_timeout_found_settimeout
+17:01:31     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_search_timeout_found_settimeout | took 2579ms
+17:01:31     INFO - TEST-START | test_timeouts.py TestTimeouts.test_search_timeout_notfound_settimeout
+17:01:33     INFO - TEST-PASS | test_timeouts.py TestTimeouts.test_search_timeout_notfound_settimeout | took 1310ms
+17:01:33     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_chain
+17:01:38     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_chain | took 5282ms
+17:01:38     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_chain_flick
+17:01:39     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_chain_flick | took 522ms
+17:01:39     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_context_menu
+17:01:39     INFO - TEST-SKIP | test_single_finger_desktop.py testSingleFingerMouse.test_context_menu | took 0ms
+17:01:39     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_double_tap
+17:01:39     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_double_tap | took 420ms
+17:01:39     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_long_press_action
+17:01:39     INFO - TEST-SKIP | test_single_finger_desktop.py testSingleFingerMouse.test_long_press_action | took 0ms
+17:01:39     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_long_press_fail
+17:01:39     INFO - TEST-SKIP | test_single_finger_desktop.py testSingleFingerMouse.test_long_press_fail | took 0ms
+17:01:39     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_long_press_on_xy_action
+17:01:39     INFO - TEST-SKIP | test_single_finger_desktop.py testSingleFingerMouse.test_long_press_on_xy_action | took 1ms
+17:01:39     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_move_by_offset
+17:01:39     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_move_by_offset | took 454ms
+17:01:39     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_move_element
+17:01:40     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_move_element | took 468ms
+17:01:40     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_press_release
+17:01:40     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_press_release | took 403ms
+17:01:40     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_press_release_twice
+17:01:41     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_press_release_twice | took 500ms
+17:01:41     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_single_tap
+17:01:41     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_single_tap | took 349ms
+17:01:41     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_wait
+17:01:42     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_wait | took 368ms
+17:01:42     INFO - TEST-START | test_single_finger_desktop.py testSingleFingerMouse.test_wait_with_value
+17:01:42     INFO - TEST-PASS | test_single_finger_desktop.py testSingleFingerMouse.test_wait_with_value | took 425ms
+17:01:42     INFO - TEST-START | test_simpletest_sanity.py SimpletestSanityTest.test_is
+17:01:42     INFO - TEST-PASS | test_simpletest_sanity.py SimpletestSanityTest.test_is | took 233ms
+17:01:42     INFO - TEST-START | test_simpletest_sanity.py SimpletestSanityTest.test_isnot
+17:01:42     INFO - TEST-PASS | test_simpletest_sanity.py SimpletestSanityTest.test_isnot | took 212ms
+17:01:42     INFO - TEST-START | test_simpletest_sanity.py SimpletestSanityTest.test_ok
+17:01:43     INFO - TEST-PASS | test_simpletest_sanity.py SimpletestSanityTest.test_ok | took 203ms
+17:01:43     INFO - TEST-START | test_simpletest_sanity.py SimpletestSanityTest.test_todo
+17:01:43     INFO - TEST-PASS | test_simpletest_sanity.py SimpletestSanityTest.test_todo | took 219ms
+17:01:43     INFO - TEST-START | test_anonymous_content.py TestAnonymousNodes.test_find_anonymous_children
+17:01:44     INFO - TEST-PASS | test_anonymous_content.py TestAnonymousNodes.test_find_anonymous_children | took 761ms
+17:01:44     INFO - TEST-START | test_anonymous_content.py TestAnonymousNodes.test_find_anonymous_element_by_attribute
+17:01:45     INFO - TEST-PASS | test_anonymous_content.py TestAnonymousNodes.test_find_anonymous_element_by_attribute | took 1090ms
+17:01:45     INFO - TEST-START | test_anonymous_content.py TestAnonymousNodes.test_find_anonymous_elements_by_attribute
+17:01:46     INFO - TEST-PASS | test_anonymous_content.py TestAnonymousNodes.test_find_anonymous_elements_by_attribute | took 905ms
+17:01:46     INFO - TEST-START | test_anonymous_content.py TestAnonymousNodes.test_switch_to_anonymous_frame
+17:01:47     INFO - TEST-PASS | test_anonymous_content.py TestAnonymousNodes.test_switch_to_anonymous_frame | took 1281ms
+17:01:47     INFO - TEST-START | test_anonymous_content.py TestAnonymousNodes.test_switch_to_anonymous_iframe
+17:01:48     INFO - TEST-PASS | test_anonymous_content.py TestAnonymousNodes.test_switch_to_anonymous_iframe | took 951ms
+17:01:48     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_should_allow_a_user_to_switch_from_an_iframe_back_to_the_main_content_of_the_page
+17:01:49     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_should_allow_a_user_to_switch_from_an_iframe_back_to_the_main_content_of_the_page | took 666ms
+17:01:49     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_carry_on_working_if_the_frame_is_deleted_from_under_us
+17:01:49     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_carry_on_working_if_the_frame_is_deleted_from_under_us | took 931ms
+17:01:49     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_switch_to_a_frame_by_its_index
+17:01:50     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_switch_to_a_frame_by_its_index | took 829ms
+17:01:50     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_switch_to_a_frame_using_a_previously_located_element
+17:01:51     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_switch_to_a_frame_using_a_previously_located_element | took 957ms
+17:01:51     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_switch_to_parent_from_iframe
+17:01:52     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_switch_to_parent_from_iframe | took 449ms
+17:01:52     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_switch_to_parent_from_second_level
+17:01:52     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_should_be_able_to_switch_to_parent_from_second_level | took 720ms
+17:01:52     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_stack_trace
+17:01:53     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_stack_trace | took 560ms
+17:01:53     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_switch_nested
+17:01:54     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_switch_nested | took 1029ms
+17:01:54     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_switch_simple
+17:01:55     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_switch_simple | took 717ms
+17:01:55     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_switch_to_frame_with_negative_index
+17:01:55     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_switch_to_frame_with_negative_index | took 341ms
+17:01:55     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_switch_to_frame_with_out_of_bounds_index
+17:01:55     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_switch_to_frame_with_out_of_bounds_index | took 324ms
+17:01:55     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_switch_to_parent_frame
+17:01:56     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_switch_to_parent_frame | took 755ms
+17:01:56     INFO - TEST-START | test_switch_frame.py TestSwitchFrame.test_switch_to_parent_frame_from_default_context_is_a_noop
+17:01:57     INFO - TEST-PASS | test_switch_frame.py TestSwitchFrame.test_switch_to_parent_frame_from_default_context_is_a_noop | took 440ms
+17:01:57     INFO - TEST-START | test_switch_frame_chrome.py TestSwitchFrameChrome.test_stack_trace
+17:01:57     INFO - TEST-PASS | test_switch_frame_chrome.py TestSwitchFrameChrome.test_stack_trace | took 570ms
+17:01:57     INFO - TEST-START | test_switch_frame_chrome.py TestSwitchFrameChrome.test_switch_simple
+17:01:58     INFO - TEST-PASS | test_switch_frame_chrome.py TestSwitchFrameChrome.test_switch_simple | took 768ms
+17:01:58     INFO - TEST-START | test_switch_remote_frame.py TestSwitchRemoteFrame.test_remote_frame
+17:02:00     INFO - TEST-PASS | test_switch_remote_frame.py TestSwitchRemoteFrame.test_remote_frame | took 1936ms
+17:02:00     INFO - TEST-START | test_switch_remote_frame.py TestSwitchRemoteFrame.test_remote_frame_revisit
+17:02:02     INFO - TEST-PASS | test_switch_remote_frame.py TestSwitchRemoteFrame.test_remote_frame_revisit | took 2261ms
+17:02:02     INFO - TEST-START | test_switch_remote_frame.py TestSwitchRemoteFrame.test_we_can_switch_to_a_remote_frame_by_index
+17:02:05     INFO - TEST-PASS | test_switch_remote_frame.py TestSwitchRemoteFrame.test_we_can_switch_to_a_remote_frame_by_index | took 2459ms
+17:02:05     INFO - TEST-START | test_switch_window_content.py TestSwitchToWindowContent.test_switch_from_content_to_chrome_window_should_not_change_selected_tab
+
+command interrupted, attempting to kill
+process killed by signal 9
+program finished with exit code -1
+elapsedTime=518.325088
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+========= master_lag: 0.04 =========
+========= Finished '/tools/buildbot/bin/python scripts/scripts/marionette.py ...' interrupted (results: 4, elapsed: 8 mins, 38 secs) (at 2018-06-08 17:02:05.469764) =========
+
+========= Started 'bash -c ...' interrupted (results: 4, elapsed: 0 secs) (at 2018-06-08 17:02:05.470810) =========
+bash -c 'for file in `ls -1`; do cat $file; done'
+ in dir /builds/slave/test/properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'for file in `ls -1`; do cat $file; done']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test/properties
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755
+  _=/tools/buildbot/bin/python
+ using PTY: False
+
+command interrupted, attempting to kill
+process killed by signal 9
+program finished with exit code -1
+elapsedTime=0.066083
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+
+========= master_lag: 0.01 =========
+========= Finished 'bash -c ...' interrupted (results: 4, elapsed: 0 secs) (at 2018-06-08 17:02:05.551181) =========
+
+========= Started 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:05.551538) =========
+rm -f oauth.txt
+ in dir /builds/slave/test/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'oauth.txt']
+ environment:
+  HOME=/home/cltbld
+  LANG=en_US.UTF-8
+  LOGNAME=cltbld
+  MAIL=/var/mail/cltbld
+  NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript
+  PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+  PWD=/builds/slave/test
+  SHELL=/bin/bash
+  SHLVL=1
+  TERM=linux
+  TMOUT=86400
+  USER=cltbld
+  XDG_SESSION_COOKIE=9ca12473fbb1d023794ffd180000023c-1528502000.784490-957144755
+  _=/tools/buildbot/bin/python
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.038578
+========= master_lag: 0.06 =========
+========= Finished 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:02:05.645462) =========
+
+========= Started reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 17:02:05.645788) =========
+========= Finished reboot skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 17:02:05.646091) =========
+
+========= Total master_lag: 0.28 =========
+

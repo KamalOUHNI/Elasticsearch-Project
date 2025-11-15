@@ -1,0 +1,1478 @@
+builder: mozilla-esr52_win8_64_test_pgo-jittest
+slave: t-w864-ix-060
+starttime: 1528502381.3
+results: cancelled (6)
+buildid: 20180608150819
+builduid: b298b373e93d4f8dbf92436c9ed838a2
+revision: cbfdf01aac455e0591471201c96b89dee98190b5
+
+========= Started set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 16:59:41.297985) =========
+master: http://buildbot-master111.bb.releng.scl3.mozilla.com:8201/
+========= Finished set props: master (results: 0, elapsed: 0 secs) (at 2018-06-08 16:59:41.298531) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 16:59:41.298822) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 16:59:41.446103) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 16:59:41.446686) =========
+'bash' '-c' 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py'
+ in dir C:\slave\test\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'wget -Oarchiver_client.py --no-check-certificate --tries=10 --waitretry=3 https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Roaming
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=T-W864-IX-060
+  COMSPEC=C:\windows\system32\cmd.exe
+  DCLOCATION=SCL3
+  DNSSUFFIX=wintest.releng.scl3.mozilla.com
+  FP_NO_HOST_CHECK=NO
+  HOMEDRIVE=C:
+  HOMEPATH=\Users\cltbld.T-W864-IX-060.000
+  KTS_HOME=C:\Program Files\KTS
+  KTS_VERSION=1.19c
+  LOCALAPPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Local
+  LOGONSERVER=\\T-W864-IX-060
+  MONDIR=C:\Monitor_config\
+  MOZBUILDDIR=C:\mozilla-build\
+  NUMBER_OF_PROCESSORS=8
+  OS=Windows_NT
+  OURDRIVE=C:
+  PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\mozilla-build\python27;C:\mozilla-build\python27\Scripts;C:\mozilla-build\msys\bin;C:\mozilla-build\vim\vim72;C:\mozilla-build\wget;C:\mozilla-build\info-zip;C:\CoreUtils\bin;C:\mozilla-build\buildbotve\scripts;C:\mozilla-build\hg
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 30 Stepping 5, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=1e05
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PSMODULEPATH=C:\windows\system32\WindowsPowerShell\v1.0\Modules\
+  PUBLIC=C:\Users\Public
+  PWD=C:\slave\test
+  RUNLOGFILE=C:\slave\\runslave.log
+  SLAVEDIR=C:\slave\
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\windows
+  TEMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  TEST1=testie
+  TMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  USERDOMAIN=T-W864-IX-060
+  USERDOMAIN_ROAMINGPROFILE=T-W864-IX-060
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld.T-W864-IX-060.000
+  WINDIR=C:\windows
+ using PTY: False
+--16:59:44--  https://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/archiver_client.py
+           => `archiver_client.py'
+Resolving hg.mozilla.org... 63.245.215.102, 63.245.215.25
+Connecting to hg.mozilla.org|63.245.215.102|:443... connected.
+WARNING: Certificate verification error for hg.mozilla.org: certificate signature failure
+HTTP request sent, awaiting response... 200 Script output follows
+Length: 12,179 (12K) [text/x-python]
+
+    0K .......... .                                          100%   29.25 MB/s
+
+16:59:44 (29.25 MB/s) - `archiver_client.py' saved [12179/12179]
+
+program finished with exit code 0
+elapsedTime=2.693000
+========= master_lag: 0.08 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 16:59:44.223162) =========
+
+========= Started 'rm -rf ...' (results: 0, elapsed: 6 secs) (at 2018-06-08 16:59:44.223528) =========
+'rm' '-rf' 'scripts' 'properties'
+ in dir C:\slave\test\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'scripts', 'properties']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Roaming
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=T-W864-IX-060
+  COMSPEC=C:\windows\system32\cmd.exe
+  DCLOCATION=SCL3
+  DNSSUFFIX=wintest.releng.scl3.mozilla.com
+  FP_NO_HOST_CHECK=NO
+  HOMEDRIVE=C:
+  HOMEPATH=\Users\cltbld.T-W864-IX-060.000
+  KTS_HOME=C:\Program Files\KTS
+  KTS_VERSION=1.19c
+  LOCALAPPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Local
+  LOGONSERVER=\\T-W864-IX-060
+  MONDIR=C:\Monitor_config\
+  MOZBUILDDIR=C:\mozilla-build\
+  NUMBER_OF_PROCESSORS=8
+  OS=Windows_NT
+  OURDRIVE=C:
+  PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\mozilla-build\python27;C:\mozilla-build\python27\Scripts;C:\mozilla-build\msys\bin;C:\mozilla-build\vim\vim72;C:\mozilla-build\wget;C:\mozilla-build\info-zip;C:\CoreUtils\bin;C:\mozilla-build\buildbotve\scripts;C:\mozilla-build\hg
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 30 Stepping 5, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=1e05
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PSMODULEPATH=C:\windows\system32\WindowsPowerShell\v1.0\Modules\
+  PUBLIC=C:\Users\Public
+  PWD=C:\slave\test
+  RUNLOGFILE=C:\slave\\runslave.log
+  SLAVEDIR=C:\slave\
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\windows
+  TEMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  TEST1=testie
+  TMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  USERDOMAIN=T-W864-IX-060
+  USERDOMAIN_ROAMINGPROFILE=T-W864-IX-060
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld.T-W864-IX-060.000
+  WINDIR=C:\windows
+ using PTY: False
+program finished with exit code 0
+elapsedTime=6.811000
+========= master_lag: 0.02 =========
+========= Finished 'rm -rf ...' (results: 0, elapsed: 6 secs) (at 2018-06-08 16:59:51.051182) =========
+
+========= Started 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 16:59:51.051695) =========
+'bash' '-c' u'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug'
+ in dir C:\slave\test\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', u'python archiver_client.py mozharness --repo releases/mozilla-esr52 --rev cbfdf01aac455e0591471201c96b89dee98190b5 --destination scripts --debug']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Roaming
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=T-W864-IX-060
+  COMSPEC=C:\windows\system32\cmd.exe
+  DCLOCATION=SCL3
+  DNSSUFFIX=wintest.releng.scl3.mozilla.com
+  FP_NO_HOST_CHECK=NO
+  HOMEDRIVE=C:
+  HOMEPATH=\Users\cltbld.T-W864-IX-060.000
+  KTS_HOME=C:\Program Files\KTS
+  KTS_VERSION=1.19c
+  LOCALAPPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Local
+  LOGONSERVER=\\T-W864-IX-060
+  MONDIR=C:\Monitor_config\
+  MOZBUILDDIR=C:\mozilla-build\
+  NUMBER_OF_PROCESSORS=8
+  OS=Windows_NT
+  OURDRIVE=C:
+  PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\mozilla-build\python27;C:\mozilla-build\python27\Scripts;C:\mozilla-build\msys\bin;C:\mozilla-build\vim\vim72;C:\mozilla-build\wget;C:\mozilla-build\info-zip;C:\CoreUtils\bin;C:\mozilla-build\buildbotve\scripts;C:\mozilla-build\hg
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 30 Stepping 5, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=1e05
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PSMODULEPATH=C:\windows\system32\WindowsPowerShell\v1.0\Modules\
+  PUBLIC=C:\Users\Public
+  PWD=C:\slave\test
+  RUNLOGFILE=C:\slave\\runslave.log
+  SLAVEDIR=C:\slave\
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\windows
+  TEMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  TEST1=testie
+  TMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  USERDOMAIN=T-W864-IX-060
+  USERDOMAIN_ROAMINGPROFILE=T-W864-IX-060
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld.T-W864-IX-060.000
+  WINDIR=C:\windows
+ using PTY: False
+2018-06-08 16:59:52,154 truncating revision to first 12 chars
+2018-06-08 16:59:52,154 Setting DEBUG logging.
+2018-06-08 16:59:52,154 attempt 1/10
+2018-06-08 16:59:52,154 Getting archive location from https://api.pub.build.mozilla.org/archiver/hgmo/releases/mozilla-esr52/cbfdf01aac45?&preferred_region=us-west-2&suffix=tar.gz&subdir=testing/mozharness
+2018-06-08 16:59:53,523 unpacking tar archive at: mozilla-esr52-cbfdf01aac45/testing/mozharness/
+2018-06-08 16:59:53,631 skipping symlink on windows: configs/single_locale/linux32.py
+program finished with exit code 0
+elapsedTime=2.474000
+========= master_lag: 0.13 =========
+========= Finished 'bash -c ...' (results: 0, elapsed: 2 secs) (at 2018-06-08 16:59:53.653410) =========
+
+========= Started set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 16:59:53.653740) =========
+script_repo_revision: cbfdf01aac455e0591471201c96b89dee98190b5
+========= Finished set props: script_repo_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 16:59:53.654179) =========
+
+========= Started downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 16:59:53.654453) =========
+========= Finished downloading to oauth.txt (results: 0, elapsed: 0 secs) (at 2018-06-08 16:59:53.663639) =========
+
+========= Started 'c:/mozilla-build/python27/python -u ...' interrupted (results: 4, elapsed: 3 mins, 16 secs) (at 2018-06-08 16:59:53.663912) =========
+'c:/mozilla-build/python27/python' '-u' 'scripts/scripts/desktop_unittest.py' '--cfg' 'unittests/win_unittest.py' '--jittest-suite' 'jittest' '--download-symbols' 'ondemand'
+ in dir C:\slave\test\. (timeout 1800 secs) (maxTime 7200 secs)
+ watching logfiles {}
+ argv: ['c:/mozilla-build/python27/python', '-u', 'scripts/scripts/desktop_unittest.py', '--cfg', 'unittests/win_unittest.py', '--jittest-suite', 'jittest', '--download-symbols', 'ondemand']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Roaming
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=T-W864-IX-060
+  COMSPEC=C:\windows\system32\cmd.exe
+  DCLOCATION=SCL3
+  DNSSUFFIX=wintest.releng.scl3.mozilla.com
+  FP_NO_HOST_CHECK=NO
+  HOMEDRIVE=C:
+  HOMEPATH=\Users\cltbld.T-W864-IX-060.000
+  KTS_HOME=C:\Program Files\KTS
+  KTS_VERSION=1.19c
+  LOCALAPPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Local
+  LOGONSERVER=\\T-W864-IX-060
+  MONDIR=C:\Monitor_config\
+  MOZBUILDDIR=C:\mozilla-build\
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_HIDE_RESULTS_TABLE=1
+  MOZ_NO_REMOTE=1
+  NO_EM_RESTART=1
+  NO_FAIL_ON_TEST_ERRORS=1
+  NUMBER_OF_PROCESSORS=8
+  OS=Windows_NT
+  OURDRIVE=C:
+  PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\mozilla-build\python27;C:\mozilla-build\python27\Scripts;C:\mozilla-build\msys\bin;C:\mozilla-build\vim\vim72;C:\mozilla-build\wget;C:\mozilla-build\info-zip;C:\CoreUtils\bin;C:\mozilla-build\buildbotve\scripts;C:\mozilla-build\hg
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 30 Stepping 5, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=1e05
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PROPERTIES_FILE=C:\slave\test/buildprops.json
+  PSMODULEPATH=C:\windows\system32\WindowsPowerShell\v1.0\Modules\
+  PUBLIC=C:\Users\Public
+  PWD=C:\slave\test
+  RUNLOGFILE=C:\slave\\runslave.log
+  SLAVEDIR=C:\slave\
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\windows
+  TEMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  TEST1=testie
+  TMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  USERDOMAIN=T-W864-IX-060
+  USERDOMAIN_ROAMINGPROFILE=T-W864-IX-060
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld.T-W864-IX-060.000
+  WINDIR=C:\windows
+  XPCOM_DEBUG_BREAK=warn
+ using PTY: False
+16:59:54     INFO - MultiFileLogger online at 20180608 16:59:54 in C:\slave\test
+16:59:54     INFO - Run as scripts/scripts/desktop_unittest.py --cfg unittests/win_unittest.py --jittest-suite jittest --download-symbols ondemand
+16:59:54     INFO - Dumping config to C:\slave\test\logs\localconfig.json.
+16:59:54     INFO - {'all_cppunittest_suites': {'cppunittest': ('tests/cppunittest',)},
+16:59:54     INFO -  'all_gtest_suites': {'gtest': ()},
+16:59:54     INFO -  'all_jittest_suites': {'jittest': ()},
+16:59:54     INFO -  'all_mochitest_suites': {'a11y': ('--flavor=a11y',),
+16:59:54     INFO -                           'browser-chrome': ('--flavor=browser',),
+16:59:54     INFO -                           'browser-chrome-addons': ('--flavor=browser',
+16:59:54     INFO -                                                     '--chunk-by-runtime',
+16:59:54     INFO -                                                     '--tag=addons'),
+16:59:54     INFO -                           'browser-chrome-chunked': ('--flavor=browser',
+16:59:54     INFO -                                                      '--chunk-by-runtime'),
+16:59:54     INFO -                           'browser-chrome-clipboard': ('--flavor=browser',
+16:59:54     INFO -                                                        '--subsuite=clipboard'),
+16:59:54     INFO -                           'browser-chrome-gpu': ('--flavor=browser',
+16:59:54     INFO -                                                  '--subsuite=gpu'),
+16:59:54     INFO -                           'browser-chrome-screenshots': ('--flavor=browser',
+16:59:54     INFO -                                                          '--subsuite=screenshots'),
+16:59:54     INFO -                           'chrome': ('--flavor=chrome',),
+16:59:54     INFO -                           'chrome-chunked': ('--flavor=chrome',
+16:59:54     INFO -                                              '--chunk-by-dir=4'),
+16:59:54     INFO -                           'chrome-clipboard': ('--flavor=chrome',
+16:59:54     INFO -                                                '--subsuite=clipboard'),
+16:59:54     INFO -                           'chrome-gpu': ('--flavor=chrome', '--subsuite=gpu'),
+16:59:54     INFO -                           'jetpack-addon': ('--flavor=jetpack-addon',),
+16:59:54     INFO -                           'jetpack-package': ('--flavor=jetpack-package',),
+16:59:54     INFO -                           'jetpack-package-clipboard': ('--flavor=jetpack-package',
+16:59:54     INFO -                                                         '--subsuite=clipboard'),
+16:59:54     INFO -                           'mochitest-devtools-chrome': ('--flavor=browser',
+16:59:54     INFO -                                                         '--subsuite=devtools'),
+16:59:54     INFO -                           'mochitest-devtools-chrome-chunked': ('--flavor=browser',
+16:59:54     INFO -                                                                 '--subsuite=devtools',
+16:59:54     INFO -                                                                 '--chunk-by-runtime'),
+16:59:54     INFO -                           'mochitest-gl': ('--subsuite=webgl',),
+16:59:54     INFO -                           'mochitest-media': ('--subsuite=media',),
+16:59:54     INFO -                           'mochitest-metro-chrome': ('--flavor=browser',
+16:59:54     INFO -                                                      '--metro-immersive'),
+16:59:54     INFO -                           'plain': (),
+16:59:54     INFO -                           'plain-chunked': ('--chunk-by-dir=4',),
+16:59:54     INFO -                           'plain-clipboard': ('--subsuite=clipboard',),
+16:59:54     INFO -                           'plain-gpu': ('--subsuite=gpu',)},
+16:59:54     INFO -  'all_mozbase_suites': {'mozbase': ()},
+16:59:54     INFO -  'all_reftest_suites': {'crashtest': {'options': ('--suite=crashtest',),
+16:59:54     INFO -                                       'tests': ('tests/reftest/tests/testing/crashtest/crashtests.list',)},
+16:59:54     INFO -                         'jsreftest': {'options': ('--extra-profile-file=tests/jsreftest/tests/user.js',),
+16:59:54     INFO -                                       'tests': ('tests/jsreftest/tests/jstests.list',)},
+16:59:54     INFO -                         'reftest': {'options': ('--suite=reftest',),
+16:59:54     INFO -                                     'tests': ('tests/reftest/tests/layout/reftests/reftest.list',)},
+16:59:54     INFO -                         'reftest-gpu': {'options': ('--suite=reftest',
+16:59:54     INFO -                                                     '--setpref=layers.gpu-process.force-enabled=true'),
+16:59:54     INFO -                                         'tests': ('tests/reftest/tests/layout/reftests/reftest.list',)},
+16:59:54     INFO -                         'reftest-no-accel': {'options': ('--suite=reftest',
+16:59:54     INFO -                                                          '--setpref=gfx.direct2d.disabled=true',
+16:59:54     INFO -                                                          '--setpref=layers.acceleration.disabled=true'),
+16:59:54     INFO -                                              'tests': ('tests/reftest/tests/layout/reftests/reftest.list',)}},
+16:59:54     INFO -  'all_xpcshell_suites': {'xpcshell': {'options': ('--xpcshell=%(abs_app_dir)s/xpcshell.exe',
+16:59:54     INFO -                                                   '--manifest=tests/xpcshell/tests/xpcshell.ini'),
+16:59:54     INFO -                                       'tests': ()},
+16:59:54     INFO -                          'xpcshell-addons': {'options': ('--xpcshell=%(abs_app_dir)s/xpcshell.exe',
+16:59:54     INFO -                                                          '--tag=addons',
+16:59:54     INFO -                                                          '--manifest=tests/xpcshell/tests/xpcshell.ini'),
+16:59:54     INFO -                                              'tests': ()}},
+16:59:54     INFO -  'allow_software_gl_layers': False,
+16:59:54     INFO -  'append_to_log': False,
+16:59:54     INFO -  'base_work_dir': 'C:\\slave\\test',
+16:59:54     INFO -  'binary_path': 'C:\\slave\\test\\build\\application\\firefox\\firefox.exe',
+16:59:54     INFO -  'blob_uploader_auth_file': 'C:\\slave\\test\\oauth.txt',
+16:59:54     INFO -  'buildbot_json_path': 'buildprops.json',
+16:59:54     INFO -  'buildbot_max_log_size': 52428800,
+16:59:54     INFO -  'code_coverage': False,
+16:59:54     INFO -  'config_files': ('unittests/win_unittest.py',),
+16:59:54     INFO -  'default_blob_upload_servers': ('https://blobupload.elasticbeanstalk.com',),
+16:59:54     INFO -  'download_minidump_stackwalk': True,
+16:59:54     INFO -  'download_nodejs': True,
+16:59:54     INFO -  'download_symbols': 'ondemand',
+16:59:54     INFO -  'e10s': False,
+16:59:54     INFO -  'exe_suffix': '.exe',
+16:59:54     INFO -  'exes': {'hg': 'c:/mozilla-build/hg/hg',
+16:59:54     INFO -           'mozinstall': ('C:\\slave\\test/build/venv/scripts/python',
+16:59:54     INFO -                          'C:\\slave\\test/build/venv/scripts/mozinstall-script.py'),
+16:59:54     INFO -           'python': 'c:\\mozilla-build\\python27\\python.exe',
+16:59:54     INFO -           'tooltool.py': ('c:\\mozilla-build\\python27\\python.exe',
+16:59:54     INFO -                           'C:/mozilla-build/tooltool.py'),
+16:59:54     INFO -           'virtualenv': ('c:\\mozilla-build\\python27\\python.exe',
+16:59:54     INFO -                          'c:/mozilla-build/buildbotve/virtualenv.py')},
+16:59:54     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+16:59:54     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+16:59:54     INFO -  'installer_path': 'C:\\slave\\test\\build\\installer.zip',
+16:59:54     INFO -  'log_level': 'info',
+16:59:54     INFO -  'log_to_console': True,
+16:59:54     INFO -  'minidump_save_path': '%(abs_work_dir)s/../minidumps',
+16:59:54     INFO -  'minidump_stackwalk_path': 'win32-minidump_stackwalk.exe',
+16:59:54     INFO -  'minidump_tooltool_manifest_path': 'config/tooltool-manifests/win32/releng.manifest',
+16:59:54     INFO -  'minimum_tests_zip_dirs': ('bin/*',
+16:59:54     INFO -                             'certs/*',
+16:59:54     INFO -                             'config/*',
+16:59:54     INFO -                             'mach',
+16:59:54     INFO -                             'marionette/*',
+16:59:54     INFO -                             'modules/*',
+16:59:54     INFO -                             'mozbase/*',
+16:59:54     INFO -                             'tools/*'),
+16:59:54     INFO -  'no_random': False,
+16:59:54     INFO -  'nodejs_path': 'node-win32.exe',
+16:59:54     INFO -  'nodejs_tooltool_manifest_path': 'config/tooltool-manifests/win32/nodejs.manifest',
+16:59:54     INFO -  'opt_config_files': (),
+16:59:54     INFO -  'pip_index': False,
+16:59:54     INFO -  'preflight_run_cmd_suites': ({'architectures': ('32bit', '64bit'),
+16:59:54     INFO -                                'cmd': ('xset', 's', 'off', 's', 'reset'),
+16:59:54     INFO -                                'enabled': False,
+16:59:54     INFO -                                'halt_on_failure': False,
+16:59:54     INFO -                                'name': 'disable_screen_saver'},
+16:59:54     INFO -                               {'architectures': ('32bit',),
+16:59:54     INFO -                                'cmd': ('c:\\mozilla-build\\python27\\python.exe',
+16:59:54     INFO -                                        '../scripts/external_tools/mouse_and_screen_resolution.py',
+16:59:54     INFO -                                        '--configuration-file',
+16:59:54     INFO -                                        '../scripts/external_tools/machine-configuration.json'),
+16:59:54     INFO -                                'enabled': True,
+16:59:54     INFO -                                'halt_on_failure': True,
+16:59:54     INFO -                                'name': 'run mouse & screen adjustment script'}),
+16:59:54     INFO -  'require_test_zip': True,
+16:59:54     INFO -  'run_all_suites': False,
+16:59:54     INFO -  'run_cmd_checks_enabled': True,
+16:59:54     INFO -  'run_file_names': {'cppunittest': 'runcppunittests.py',
+16:59:54     INFO -                     'gtest': 'rungtests.py',
+16:59:54     INFO -                     'jittest': 'jit_test.py',
+16:59:54     INFO -                     'mochitest': 'runtests.py',
+16:59:54     INFO -                     'mozbase': 'test.py',
+16:59:54     INFO -                     'mozmill': 'runtestlist.py',
+16:59:54     INFO -                     'reftest': 'runreftest.py',
+16:59:54     INFO -                     'xpcshell': 'runxpcshelltests.py'},
+16:59:54     INFO -  'specific_tests_zip_dirs': {'cppunittest': ('cppunittest/*',),
+16:59:54     INFO -                              'gtest': ('gtest/*',),
+16:59:54     INFO -                              'jittest': ('jit-test/*',),
+16:59:54     INFO -                              'mochitest': ('mochitest/*',),
+16:59:54     INFO -                              'mozbase': ('mozbase/*',),
+16:59:54     INFO -                              'mozmill': ('mozmill/*',),
+16:59:54     INFO -                              'reftest': ('reftest/*', 'jsreftest/*'),
+16:59:54     INFO -                              'xpcshell': ('xpcshell/*',)},
+16:59:54     INFO -  'specified_jittest_suites': ('jittest',),
+16:59:54     INFO -  'strict_content_sandbox': False,
+16:59:54     INFO -  'suite_definitions': {'cppunittest': {'options': ('--symbols-path=%(symbols_path)s',
+16:59:54     INFO -                                                    '--xre-path=%(abs_app_dir)s'),
+16:59:54     INFO -                                        'run_filename': 'runcppunittests.py',
+16:59:54     INFO -                                        'testsdir': 'cppunittest'},
+16:59:54     INFO -                        'gtest': {'options': ('--xre-path=%(abs_res_dir)s',
+16:59:54     INFO -                                              '--cwd=%(gtest_dir)s',
+16:59:54     INFO -                                              '--symbols-path=%(symbols_path)s',
+16:59:54     INFO -                                              '--utility-path=tests/bin',
+16:59:54     INFO -                                              '%(binary_path)s'),
+16:59:54     INFO -                                  'run_filename': 'rungtests.py'},
+16:59:54     INFO -                        'jittest': {'options': ('tests/bin/js',
+16:59:54     INFO -                                                '--no-slow',
+16:59:54     INFO -                                                '--no-progress',
+16:59:54     INFO -                                                '--format=automation',
+16:59:54     INFO -                                                '--jitflags=all',
+16:59:54     INFO -                                                '--timeout=970'),
+16:59:54     INFO -                                    'run_filename': 'jit_test.py',
+16:59:54     INFO -                                    'run_timeout': 1000,
+16:59:54     INFO -                                    'testsdir': 'jit-test/jit-test'},
+16:59:54     INFO -                        'mochitest': {'options': ('--appname=%(binary_path)s',
+16:59:54     INFO -                                                  '--utility-path=tests/bin',
+16:59:54     INFO -                                                  '--extra-profile-file=tests/bin/plugins',
+16:59:54     INFO -                                                  '--symbols-path=%(symbols_path)s',
+16:59:54     INFO -                                                  '--certificate-path=tests/certs',
+16:59:54     INFO -                                                  '--quiet',
+16:59:54     INFO -                                                  '--log-raw=%(raw_log_file)s',
+16:59:54     INFO -                                                  '--log-errorsummary=%(error_summary_file)s',
+16:59:54     INFO -                                                  '--screenshot-on-fail',
+16:59:54     INFO -                                                  '--cleanup-crashes'),
+16:59:54     INFO -                                      'run_filename': 'runtests.py',
+16:59:54     INFO -                                      'testsdir': 'mochitest'},
+16:59:54     INFO -                        'mozbase': {'options': ('-b', '%(binary_path)s'),
+16:59:54     INFO -                                    'run_filename': 'test.py',
+16:59:54     INFO -                                    'testsdir': 'mozbase'},
+16:59:54     INFO -                        'mozmill': {'options': ('--binary=%(binary_path)s',
+16:59:54     INFO -                                                '--testing-modules-dir=test/modules',
+16:59:54     INFO -                                                '--plugins-path=%(test_plugin_path)s',
+16:59:54     INFO -                                                '--symbols-path=%(symbols_path)s'),
+16:59:54     INFO -                                    'run_filename': 'runtestlist.py',
+16:59:54     INFO -                                    'testsdir': 'mozmill'},
+16:59:54     INFO -                        'reftest': {'options': ('--appname=%(binary_path)s',
+16:59:54     INFO -                                                '--utility-path=tests/bin',
+16:59:54     INFO -                                                '--extra-profile-file=tests/bin/plugins',
+16:59:54     INFO -                                                '--symbols-path=%(symbols_path)s',
+16:59:54     INFO -                                                '--log-raw=%(raw_log_file)s',
+16:59:54     INFO -                                                '--log-errorsummary=%(error_summary_file)s',
+16:59:54     INFO -                                                '--cleanup-crashes'),
+16:59:54     INFO -                                    'run_filename': 'runreftest.py',
+16:59:54     INFO -                                    'testsdir': 'reftest'},
+16:59:54     INFO -                        'xpcshell': {'options': ('--symbols-path=%(symbols_path)s',
+16:59:54     INFO -                                                 '--test-plugin-path=%(test_plugin_path)s',
+16:59:54     INFO -                                                 '--log-raw=%(raw_log_file)s',
+16:59:54     INFO -                                                 '--log-errorsummary=%(error_summary_file)s',
+16:59:54     INFO -                                                 '--utility-path=tests/bin'),
+16:59:54     INFO -                                     'run_filename': 'runxpcshelltests.py',
+16:59:54     INFO -                                     'testsdir': 'xpcshell'}},
+16:59:54     INFO -  'unstructured_flavors': {'cppunittest': (),
+16:59:54     INFO -                           'gtest': (),
+16:59:54     INFO -                           'jittest': (),
+16:59:54     INFO -                           'mochitest': ('jetpack',),
+16:59:54     INFO -                           'mozbase': (),
+16:59:54     INFO -                           'mozmill': (),
+16:59:54     INFO -                           'xpcshell': ()},
+16:59:54     INFO -  'vcs_output_timeout': 1000,
+16:59:54     INFO -  'virtualenv_modules': ('pypiwin32', 'six==1.10.0', 'vcversioner==2.16.0.0'),
+16:59:54     INFO -  'virtualenv_path': 'venv',
+16:59:54     INFO -  'virtualenv_python_dll': 'c:\\mozilla-build\\python27\\python27.dll',
+16:59:54     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+16:59:54     INFO -  'work_dir': 'build',
+16:59:54     INFO -  'xpcshell_name': 'xpcshell.exe'}
+16:59:54     INFO - [mozharness: 2018-06-08 23:59:54.939000Z] Running clobber step.
+16:59:54     INFO - Running pre-action listener: _resource_record_pre_action
+16:59:54     INFO - Running main action method: clobber
+16:59:54     INFO - rmtree: C:\slave\test\build
+16:59:54     INFO - Using _rmtree_windows ...
+16:59:54     INFO - retry: Calling _rmtree_windows with args: ('C:\\slave\\test\\build',), kwargs: {}, attempt #1
+17:01:46     INFO - Running post-action listener: _resource_record_post_action
+17:01:46     INFO - [mozharness: 2018-06-09 00:01:46.360000Z] Finished clobber step (success)
+17:01:46     INFO - [mozharness: 2018-06-09 00:01:46.360000Z] Running read-buildbot-config step.
+17:01:46     INFO - Running pre-action listener: _resource_record_pre_action
+17:01:46     INFO - Running main action method: read_buildbot_config
+17:01:46     INFO - Using buildbot properties:
+17:01:46     INFO - {
+17:01:46     INFO -     "project": "", 
+17:01:46     INFO -     "product": "firefox", 
+17:01:46     INFO -     "script_repo_revision": "production", 
+17:01:46     INFO -     "scheduler": "tests-mozilla-esr52-win8_64-pgo-unittest", 
+17:01:46     INFO -     "repository": "", 
+17:01:46     INFO -     "buildername": "Windows 8 64-bit mozilla-esr52 pgo test jittest", 
+17:01:46     INFO -     "buildid": "20180608150819", 
+17:01:46     INFO -     "pgo_build": "True", 
+17:01:46     INFO -     "basedir": "C:\\slave\\test", 
+17:01:46     INFO -     "buildnumber": 23, 
+17:01:46     INFO -     "slavename": "t-w864-ix-060", 
+17:01:46     INFO -     "revision": "cbfdf01aac455e0591471201c96b89dee98190b5", 
+17:01:46     INFO -     "master": "http://buildbot-master111.bb.releng.scl3.mozilla.com:8201/", 
+17:01:46     INFO -     "platform": "win64", 
+17:01:46     INFO -     "branch": "mozilla-esr52", 
+17:01:46     INFO -     "repo_path": "releases/mozilla-esr52", 
+17:01:46     INFO -     "moz_repo_path": "", 
+17:01:46     INFO -     "stage_platform": "win64-pgo", 
+17:01:46     INFO -     "builduid": "b298b373e93d4f8dbf92436c9ed838a2", 
+17:01:46     INFO -     "slavebuilddir": "test"
+17:01:46     INFO - }
+17:01:46     INFO - Found a test packages url https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.test_packages.json.
+17:01:46     INFO - Found installer url https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.zip.
+17:01:46     INFO - Running post-action listener: _resource_record_post_action
+17:01:46     INFO - [mozharness: 2018-06-09 00:01:46.363000Z] Finished read-buildbot-config step (success)
+17:01:46     INFO - [mozharness: 2018-06-09 00:01:46.363000Z] Running download-and-extract step.
+17:01:46     INFO - Running pre-action listener: _pre_download_and_extract
+17:01:46  WARNING - Try message not found.
+17:01:46     INFO - Running pre-action listener: _resource_record_pre_action
+17:01:46     INFO - Running main action method: download_and_extract
+17:01:46     INFO - mkdir: C:\slave\test\build\tests
+17:01:46     INFO - Downloading https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.test_packages.json to C:\slave\test\build\firefox-52.8.2.en-US.win64.test_packages.json
+17:01:46     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.test_packages.json', 'file_name': 'C:\\slave\\test\\build\\firefox-52.8.2.en-US.win64.test_packages.json'}, attempt #1
+17:01:47     INFO - Downloaded 1218 bytes.
+17:01:47     INFO - Reading from file C:\slave\test\build\firefox-52.8.2.en-US.win64.test_packages.json
+17:01:47     INFO - Using the following test package requirements:
+17:01:47     INFO - {u'common': [u'firefox-52.8.2.en-US.win64.common.tests.zip'],
+17:01:47     INFO -  u'cppunittest': [u'firefox-52.8.2.en-US.win64.common.tests.zip',
+17:01:47     INFO -                   u'firefox-52.8.2.en-US.win64.cppunittest.tests.zip'],
+17:01:47     INFO -  u'gtest': [u'firefox-52.8.2.en-US.win64.common.tests.zip'],
+17:01:47     INFO -  u'jittest': [u'firefox-52.8.2.en-US.win64.common.tests.zip',
+17:01:47     INFO -               u'jsshell-win64.zip'],
+17:01:47     INFO -  u'mochitest': [u'firefox-52.8.2.en-US.win64.common.tests.zip',
+17:01:47     INFO -                 u'firefox-52.8.2.en-US.win64.mochitest.tests.zip'],
+17:01:47     INFO -  u'mozbase': [u'firefox-52.8.2.en-US.win64.common.tests.zip'],
+17:01:47     INFO -  u'reftest': [u'firefox-52.8.2.en-US.win64.common.tests.zip',
+17:01:47     INFO -               u'firefox-52.8.2.en-US.win64.reftest.tests.zip'],
+17:01:47     INFO -  u'talos': [u'firefox-52.8.2.en-US.win64.common.tests.zip',
+17:01:47     INFO -             u'firefox-52.8.2.en-US.win64.talos.tests.zip'],
+17:01:47     INFO -  u'web-platform': [u'firefox-52.8.2.en-US.win64.common.tests.zip',
+17:01:47     INFO -                    u'firefox-52.8.2.en-US.win64.web-platform.tests.zip'],
+17:01:47     INFO -  u'xpcshell': [u'firefox-52.8.2.en-US.win64.common.tests.zip',
+17:01:47     INFO -                u'firefox-52.8.2.en-US.win64.xpcshell.tests.zip']}
+17:01:47     INFO - Downloading packages: [u'firefox-52.8.2.en-US.win64.common.tests.zip', u'jsshell-win64.zip'] for test suite category: jittest
+17:01:47     INFO - Adding 'mozinfo.json' for extraction from common.tests zip file
+17:01:47     INFO - Downloading and extracting to C:\slave\test\build\tests these dirs bin/*, certs/*, config/*, mach, marionette/*, modules/*, mozbase/*, tools/*, jit-test/*, mozinfo.json from https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.common.tests.zip
+17:01:47     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.common.tests.zip'}, attempt #1
+17:01:47     INFO - Fetch https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.common.tests.zip into memory
+17:01:47     INFO - Http code: 200
+17:01:47     INFO - via: 1.1 978198446b6fdba8a499c04f84a3a7e6.cloudfront.net (CloudFront)
+17:01:47     INFO - x-amz-cf-id: 1TfmO5_DFt5ZlEJsT3htzWi83ROyAiWHOChTPZiVIXtcDzgK-M8w7Q==
+17:01:47     INFO - x-amz-version-id: PWIf.SJCY7_2cY1I6UgZuHaMt7l.wuxG
+17:01:48     INFO - Expected file size: 17259713
+17:01:48     INFO - Obtained file size: 17259713
+17:01:55     INFO - Special-casing the jsshell zip file
+17:01:55     INFO - Downloading and extracting to C:\slave\test\build\tests\bin these dirs * from https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/jsshell-win64.zip
+17:01:55     INFO - retry: Calling fetch_url_into_memory with args: (), kwargs: {'url': u'https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/jsshell-win64.zip'}, attempt #1
+17:01:55     INFO - Fetch https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/jsshell-win64.zip into memory
+17:01:56     INFO - Http code: 200
+17:01:56     INFO - via: 1.1 f46e4d7bc5419470a70eb57aa9c935c8.cloudfront.net (CloudFront)
+17:01:56     INFO - x-amz-cf-id: ci40L1WhiBXhvZ8HZOmi0uZW7sfj_n3PXW0XrmjspXvLETwqKY_Y-A==
+17:01:56     INFO - x-amz-version-id: 5jHJBtICWmC58hrmcxv2mBVbH5p5ebzr
+17:01:57     INFO - Expected file size: 9261582
+17:01:57     INFO - Obtained file size: 9261582
+17:01:57     INFO - Downloading https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.zip to C:\slave\test\build\installer.zip
+17:01:57     INFO - retry: Calling _download_file with args: (), kwargs: {'url': 'https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.zip', 'file_name': 'C:\\slave\\test\\build\\installer.zip'}, attempt #1
+17:01:58     INFO - Downloaded 59133206 bytes.
+17:01:58     INFO - Setting buildbot property build_url to https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.zip
+17:01:58     INFO - mkdir: C:\slave\test\properties
+17:01:58     INFO - Writing buildbot properties ['build_url'] to C:\slave\test\properties\build_url
+17:01:58     INFO - Writing to file C:\slave\test\properties\build_url
+17:01:58     INFO - Contents:
+17:01:58     INFO -  build_url:https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.zip
+17:01:59     INFO - Running post-action listener: _resource_record_post_action
+17:01:59     INFO - Running post-action listener: set_extra_try_arguments
+17:01:59     INFO - [mozharness: 2018-06-09 00:01:59.362000Z] Finished download-and-extract step (success)
+17:01:59     INFO - [mozharness: 2018-06-09 00:01:59.362000Z] Running create-virtualenv step.
+17:01:59     INFO - Running pre-action listener: _install_mozbase
+17:01:59     INFO - Running pre-action listener: _pre_create_virtualenv
+17:01:59     INFO - Running pre-action listener: _resource_record_pre_action
+17:01:59     INFO - Running main action method: create_virtualenv
+17:01:59     INFO - Creating virtualenv C:\slave\test\build\venv
+17:01:59     INFO - Running command: ['c:\\mozilla-build\\python27\\python.exe', 'C:\\slave\\test\\scripts\\external_tools\\virtualenv\\virtualenv.py', '--always-copy', 'C:\\slave\\test\\build\\venv'] in C:\slave\test\build
+17:01:59     INFO - Copy/paste: c:\mozilla-build\python27\python.exe C:\slave\test\scripts\external_tools\virtualenv\virtualenv.py --always-copy C:\slave\test\build\venv
+17:01:59     INFO - Using partial env: {'VIRTUALENV_NO_DOWNLOAD': '1'}
+17:02:05     INFO -  New python executable in C:\slave\test\build\venv\Scripts\python.exe
+17:02:14     INFO -  Installing setuptools, pip, wheel...done.
+17:02:14     INFO - Return code: 0
+17:02:14     INFO - Installing pypiwin32 into virtualenv C:\slave\test\build\venv
+17:02:14     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'pypiwin32']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:14     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'pypiwin32'] in C:\slave\test\build
+17:02:14     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org pypiwin32
+17:02:14     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:14     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:14     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:14     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:14     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:14     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:14     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:14     INFO -  'DCLOCATION': 'SCL3',
+17:02:14     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:14     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:14     INFO -  'HOMEDRIVE': 'C:',
+17:02:14     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:14     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:14     INFO -  'KTS_VERSION': '1.19c',
+17:02:14     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:14     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:14     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:14     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:14     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:14     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:14     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:14     INFO -  'NO_EM_RESTART': '1',
+17:02:14     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:14     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:14     INFO -  'OS': 'Windows_NT',
+17:02:14     INFO -  'OURDRIVE': 'C:',
+17:02:14     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:14     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:14     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:14     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:14     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:14     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:14     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:14     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:14     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:14     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:14     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:14     INFO -  'PROMPT': '$P$G',
+17:02:14     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:14     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:14     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:14     INFO -  'PWD': 'C:\\slave\\test',
+17:02:14     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:14     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:14     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:14     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:14     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:14     INFO -  'TEST1': 'testie',
+17:02:14     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:14     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:14     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:14     INFO -  'USERNAME': 'cltbld',
+17:02:14     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:14     INFO -  'WINDIR': 'C:\\windows',
+17:02:14     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:15     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:15     INFO -  Collecting pypiwin32
+17:02:16     INFO -    Downloading http://pypi.pvt.build.mozilla.org/pub/pypiwin32-219-cp27-none-win32.whl (6.7MB)
+17:02:16     INFO -  Installing collected packages: pypiwin32
+17:02:20     INFO -  Successfully installed pypiwin32-219
+17:02:26     INFO - Return code: 0
+17:02:26     INFO - Installing six==1.10.0 into virtualenv C:\slave\test\build\venv
+17:02:26     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'six==1.10.0']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:26     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'six==1.10.0'] in C:\slave\test\build
+17:02:26     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org six==1.10.0
+17:02:26     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:26     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:26     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:26     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:26     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:26     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:26     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:26     INFO -  'DCLOCATION': 'SCL3',
+17:02:26     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:26     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:26     INFO -  'HOMEDRIVE': 'C:',
+17:02:26     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:26     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:26     INFO -  'KTS_VERSION': '1.19c',
+17:02:26     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:26     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:26     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:26     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:26     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:26     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:26     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:26     INFO -  'NO_EM_RESTART': '1',
+17:02:26     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:26     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:26     INFO -  'OS': 'Windows_NT',
+17:02:26     INFO -  'OURDRIVE': 'C:',
+17:02:26     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:26     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:26     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:26     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:26     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:26     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:26     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:26     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:26     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:26     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:26     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:26     INFO -  'PROMPT': '$P$G',
+17:02:26     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:26     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:26     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:26     INFO -  'PWD': 'C:\\slave\\test',
+17:02:26     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:26     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:26     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:26     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:26     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:26     INFO -  'TEST1': 'testie',
+17:02:26     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:26     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:26     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:26     INFO -  'USERNAME': 'cltbld',
+17:02:26     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:26     INFO -  'WINDIR': 'C:\\windows',
+17:02:26     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:27     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:27     INFO -  Collecting six==1.10.0
+17:02:28     INFO -    Downloading http://pypi.pvt.build.mozilla.org/pub/six-1.10.0-py2.py3-none-any.whl
+17:02:28     INFO -  Installing collected packages: six
+17:02:28     INFO -  Successfully installed six-1.10.0
+17:02:28     INFO - Return code: 0
+17:02:28     INFO - Installing vcversioner==2.16.0.0 into virtualenv C:\slave\test\build\venv
+17:02:28     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'vcversioner==2.16.0.0']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:28     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'vcversioner==2.16.0.0'] in C:\slave\test\build
+17:02:28     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org vcversioner==2.16.0.0
+17:02:28     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:28     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:28     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:28     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:28     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:28     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:28     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:28     INFO -  'DCLOCATION': 'SCL3',
+17:02:28     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:28     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:28     INFO -  'HOMEDRIVE': 'C:',
+17:02:28     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:28     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:28     INFO -  'KTS_VERSION': '1.19c',
+17:02:28     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:28     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:28     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:28     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:28     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:28     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:28     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:28     INFO -  'NO_EM_RESTART': '1',
+17:02:28     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:28     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:28     INFO -  'OS': 'Windows_NT',
+17:02:28     INFO -  'OURDRIVE': 'C:',
+17:02:28     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:28     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:28     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:28     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:28     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:28     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:28     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:28     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:28     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:28     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:28     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:28     INFO -  'PROMPT': '$P$G',
+17:02:28     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:28     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:28     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:28     INFO -  'PWD': 'C:\\slave\\test',
+17:02:28     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:28     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:28     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:28     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:28     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:28     INFO -  'TEST1': 'testie',
+17:02:28     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:28     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:28     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:28     INFO -  'USERNAME': 'cltbld',
+17:02:28     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:28     INFO -  'WINDIR': 'C:\\windows',
+17:02:28     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:28     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:28     INFO -  Collecting vcversioner==2.16.0.0
+17:02:30     INFO -  Installing collected packages: vcversioner
+17:02:30     INFO -  Successfully installed vcversioner-2.16.0.0
+17:02:30     INFO - Return code: 0
+17:02:30     INFO - Installing psutil>=3.1.1 into virtualenv C:\slave\test\build\venv
+17:02:30     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'psutil>=3.1.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:30     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'psutil>=3.1.1'] in C:\slave\test\build
+17:02:30     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org psutil>=3.1.1
+17:02:30     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:30     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:30     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:30     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:30     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:30     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:30     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:30     INFO -  'DCLOCATION': 'SCL3',
+17:02:30     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:30     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:30     INFO -  'HOMEDRIVE': 'C:',
+17:02:30     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:30     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:30     INFO -  'KTS_VERSION': '1.19c',
+17:02:30     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:30     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:30     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:30     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:30     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:30     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:30     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:30     INFO -  'NO_EM_RESTART': '1',
+17:02:30     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:30     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:30     INFO -  'OS': 'Windows_NT',
+17:02:30     INFO -  'OURDRIVE': 'C:',
+17:02:30     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:30     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:30     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:30     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:30     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:30     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:30     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:30     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:30     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:30     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:30     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:30     INFO -  'PROMPT': '$P$G',
+17:02:30     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:30     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:30     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:30     INFO -  'PWD': 'C:\\slave\\test',
+17:02:30     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:30     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:30     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:30     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:30     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:30     INFO -  'TEST1': 'testie',
+17:02:30     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:30     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:30     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:30     INFO -  'USERNAME': 'cltbld',
+17:02:30     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:30     INFO -  'WINDIR': 'C:\\windows',
+17:02:30     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:30     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:30     INFO -  Collecting psutil>=3.1.1
+17:02:31     INFO -    Downloading http://pypi.pvt.build.mozilla.org/pub/psutil-5.4.3-cp27-none-win32.whl (220kB)
+17:02:31     INFO -  Installing collected packages: psutil
+17:02:32     INFO -  Successfully installed psutil-5.4.3
+17:02:32     INFO - Return code: 0
+17:02:32     INFO - Installing mozsystemmonitor==0.3 into virtualenv C:\slave\test\build\venv
+17:02:32     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'mozsystemmonitor==0.3']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:32     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'mozsystemmonitor==0.3'] in C:\slave\test\build
+17:02:32     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org mozsystemmonitor==0.3
+17:02:32     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:32     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:32     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:32     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:32     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:32     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:32     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:32     INFO -  'DCLOCATION': 'SCL3',
+17:02:32     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:32     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:32     INFO -  'HOMEDRIVE': 'C:',
+17:02:32     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:32     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:32     INFO -  'KTS_VERSION': '1.19c',
+17:02:32     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:32     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:32     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:32     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:32     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:32     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:32     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:32     INFO -  'NO_EM_RESTART': '1',
+17:02:32     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:32     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:32     INFO -  'OS': 'Windows_NT',
+17:02:32     INFO -  'OURDRIVE': 'C:',
+17:02:32     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:32     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:32     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:32     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:32     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:32     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:32     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:32     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:32     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:32     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:32     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:32     INFO -  'PROMPT': '$P$G',
+17:02:32     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:32     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:32     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:32     INFO -  'PWD': 'C:\\slave\\test',
+17:02:32     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:32     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:32     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:32     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:32     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:32     INFO -  'TEST1': 'testie',
+17:02:32     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:32     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:32     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:32     INFO -  'USERNAME': 'cltbld',
+17:02:32     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:32     INFO -  'WINDIR': 'C:\\windows',
+17:02:32     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:32     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:32     INFO -  Collecting mozsystemmonitor==0.3
+17:02:33     INFO -  Requirement already satisfied (use --upgrade to upgrade): psutil>=3.1.1 in c:\slave\test\build\venv\lib\site-packages (from mozsystemmonitor==0.3)
+17:02:33     INFO -  Installing collected packages: mozsystemmonitor
+17:02:33     INFO -  Successfully installed mozsystemmonitor-0.3
+17:02:34     INFO - Return code: 0
+17:02:34     INFO - Installing jsonschema==2.5.1 into virtualenv C:\slave\test\build\venv
+17:02:34     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'jsonschema==2.5.1']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:34     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'jsonschema==2.5.1'] in C:\slave\test\build
+17:02:34     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org jsonschema==2.5.1
+17:02:34     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:34     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:34     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:34     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:34     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:34     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:34     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:34     INFO -  'DCLOCATION': 'SCL3',
+17:02:34     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:34     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:34     INFO -  'HOMEDRIVE': 'C:',
+17:02:34     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:34     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:34     INFO -  'KTS_VERSION': '1.19c',
+17:02:34     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:34     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:34     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:34     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:34     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:34     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:34     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:34     INFO -  'NO_EM_RESTART': '1',
+17:02:34     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:34     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:34     INFO -  'OS': 'Windows_NT',
+17:02:34     INFO -  'OURDRIVE': 'C:',
+17:02:34     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:34     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:34     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:34     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:34     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:34     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:34     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:34     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:34     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:34     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:34     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:34     INFO -  'PROMPT': '$P$G',
+17:02:34     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:34     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:34     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:34     INFO -  'PWD': 'C:\\slave\\test',
+17:02:34     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:34     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:34     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:34     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:34     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:34     INFO -  'TEST1': 'testie',
+17:02:34     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:34     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:34     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:34     INFO -  'USERNAME': 'cltbld',
+17:02:34     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:34     INFO -  'WINDIR': 'C:\\windows',
+17:02:34     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:34     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:34     INFO -  Collecting jsonschema==2.5.1
+17:02:35     INFO -    Downloading http://pypi.pvt.build.mozilla.org/pub/jsonschema-2.5.1-py2.py3-none-any.whl
+17:02:35     INFO -  Collecting functools32; python_version == "2.7" (from jsonschema==2.5.1)
+17:02:36     INFO -  Installing collected packages: functools32, jsonschema
+17:02:36     INFO -  Successfully installed functools32-3.2.3.post2 jsonschema-2.5.1
+17:02:37     INFO - Return code: 0
+17:02:37     INFO - Installing functools32==3.2.3-2 into virtualenv C:\slave\test\build\venv
+17:02:37     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'functools32==3.2.3-2']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:37     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'functools32==3.2.3-2'] in C:\slave\test\build
+17:02:37     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org functools32==3.2.3-2
+17:02:37     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:37     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:37     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:37     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:37     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:37     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:37     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:37     INFO -  'DCLOCATION': 'SCL3',
+17:02:37     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:37     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:37     INFO -  'HOMEDRIVE': 'C:',
+17:02:37     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:37     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:37     INFO -  'KTS_VERSION': '1.19c',
+17:02:37     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:37     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:37     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:37     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:37     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:37     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:37     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:37     INFO -  'NO_EM_RESTART': '1',
+17:02:37     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:37     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:37     INFO -  'OS': 'Windows_NT',
+17:02:37     INFO -  'OURDRIVE': 'C:',
+17:02:37     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:37     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:37     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:37     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:37     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:37     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:37     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:37     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:37     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:37     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:37     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:37     INFO -  'PROMPT': '$P$G',
+17:02:37     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:37     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:37     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:37     INFO -  'PWD': 'C:\\slave\\test',
+17:02:37     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:37     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:37     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:37     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:37     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:37     INFO -  'TEST1': 'testie',
+17:02:37     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:37     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:37     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:37     INFO -  'USERNAME': 'cltbld',
+17:02:37     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:37     INFO -  'WINDIR': 'C:\\windows',
+17:02:37     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:37     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:37     INFO -  Requirement already satisfied (use --upgrade to upgrade): functools32==3.2.3-2 in c:\slave\test\build\venv\lib\site-packages
+17:02:37     INFO - Return code: 0
+17:02:37     INFO - Installing blobuploader==1.2.4 into virtualenv C:\slave\test\build\venv
+17:02:37     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'blobuploader==1.2.4']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:37     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'blobuploader==1.2.4'] in C:\slave\test\build
+17:02:37     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org blobuploader==1.2.4
+17:02:37     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:37     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:37     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:37     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:37     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:37     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:37     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:37     INFO -  'DCLOCATION': 'SCL3',
+17:02:37     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:37     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:37     INFO -  'HOMEDRIVE': 'C:',
+17:02:37     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:37     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:37     INFO -  'KTS_VERSION': '1.19c',
+17:02:37     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:37     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:37     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:37     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:37     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:37     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:37     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:37     INFO -  'NO_EM_RESTART': '1',
+17:02:37     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:37     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:37     INFO -  'OS': 'Windows_NT',
+17:02:37     INFO -  'OURDRIVE': 'C:',
+17:02:37     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:37     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:37     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:37     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:37     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:37     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:37     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:37     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:37     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:37     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:37     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:37     INFO -  'PROMPT': '$P$G',
+17:02:37     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:37     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:37     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:37     INFO -  'PWD': 'C:\\slave\\test',
+17:02:37     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:37     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:37     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:37     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:37     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:37     INFO -  'TEST1': 'testie',
+17:02:37     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:37     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:37     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:37     INFO -  'USERNAME': 'cltbld',
+17:02:37     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:37     INFO -  'WINDIR': 'C:\\windows',
+17:02:37     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:37     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:37     INFO -  Collecting blobuploader==1.2.4
+17:02:39     INFO -  Collecting docopt==0.6.1 (from blobuploader==1.2.4)
+17:02:40     INFO -  Collecting requests==1.2.3. (from blobuploader==1.2.4)
+17:02:41     INFO -  Installing collected packages: docopt, requests, blobuploader
+17:02:42     INFO -  Successfully installed blobuploader-1.2.4 docopt-0.6.1 requests-1.2.3
+17:02:42     INFO - Return code: 0
+17:02:42     INFO - Installing None into virtualenv C:\slave\test\build\venv
+17:02:42     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--no-deps', '--timeout', '120', '-r', 'C:\\slave\\test\\build\\tests\\config\\mozbase_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build\\tests\\config', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:42     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--no-deps', '--timeout', '120', '-r', 'C:\\slave\\test\\build\\tests\\config\\mozbase_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org'] in C:\slave\test\build\tests\config
+17:02:42     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --no-deps --timeout 120 -r C:\slave\test\build\tests\config\mozbase_requirements.txt --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org
+17:02:42     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:42     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:42     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:42     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:42     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:42     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:42     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:42     INFO -  'DCLOCATION': 'SCL3',
+17:02:42     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:42     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:42     INFO -  'HOMEDRIVE': 'C:',
+17:02:42     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:42     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:42     INFO -  'KTS_VERSION': '1.19c',
+17:02:42     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:42     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:42     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:42     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:42     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:42     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:42     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:42     INFO -  'NO_EM_RESTART': '1',
+17:02:42     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:42     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:42     INFO -  'OS': 'Windows_NT',
+17:02:42     INFO -  'OURDRIVE': 'C:',
+17:02:42     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:42     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:42     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:42     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:42     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:42     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:42     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:42     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:42     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:42     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:42     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:42     INFO -  'PROMPT': '$P$G',
+17:02:42     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:42     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:42     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:42     INFO -  'PWD': 'C:\\slave\\test',
+17:02:42     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:42     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:42     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:42     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:42     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:42     INFO -  'TEST1': 'testie',
+17:02:42     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:42     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:42     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:42     INFO -  'USERNAME': 'cltbld',
+17:02:42     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:42     INFO -  'WINDIR': 'C:\\windows',
+17:02:42     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:02:43     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:02:43     INFO -  Processing c:\slave\test\build\tests\mozbase\manifestparser
+17:02:43     INFO -  Processing c:\slave\test\build\tests\mozbase\mozcrash
+17:02:44     INFO -  Processing c:\slave\test\build\tests\mozbase\mozdebug
+17:02:44     INFO -  Processing c:\slave\test\build\tests\mozbase\mozdevice
+17:02:44     INFO -  Processing c:\slave\test\build\tests\mozbase\mozfile
+17:02:44     INFO -  Processing c:\slave\test\build\tests\mozbase\mozhttpd
+17:02:45     INFO -  Processing c:\slave\test\build\tests\mozbase\mozinfo
+17:02:45     INFO -  Processing c:\slave\test\build\tests\mozbase\mozinstall
+17:02:45     INFO -  Processing c:\slave\test\build\tests\mozbase\mozleak
+17:02:45     INFO -  Processing c:\slave\test\build\tests\mozbase\mozlog
+17:02:46     INFO -  Processing c:\slave\test\build\tests\mozbase\moznetwork
+17:02:46     INFO -  Processing c:\slave\test\build\tests\mozbase\mozprocess
+17:02:46     INFO -  Processing c:\slave\test\build\tests\mozbase\mozprofile
+17:02:47     INFO -  Processing c:\slave\test\build\tests\mozbase\mozrunner
+17:02:47     INFO -  Processing c:\slave\test\build\tests\mozbase\mozscreenshot
+17:02:47     INFO -  Processing c:\slave\test\build\tests\mozbase\moztest
+17:02:47     INFO -  Processing c:\slave\test\build\tests\mozbase\mozversion
+17:02:48     INFO -  Installing collected packages: manifestparser, mozcrash, mozdebug, mozdevice, mozfile, mozhttpd, mozinfo, mozInstall, mozleak, mozlog, moznetwork, mozprocess, mozprofile, mozrunner, mozscreenshot, moztest, mozversion
+17:02:48     INFO -    Running setup.py install for manifestparser: started
+17:02:49     INFO -      Running setup.py install for manifestparser: finished with status 'done'
+17:02:49     INFO -    Running setup.py install for mozcrash: started
+17:02:49     INFO -      Running setup.py install for mozcrash: finished with status 'done'
+17:02:50     INFO -    Running setup.py install for mozdebug: started
+17:02:50     INFO -      Running setup.py install for mozdebug: finished with status 'done'
+17:02:50     INFO -    Running setup.py install for mozdevice: started
+17:02:50     INFO -      Running setup.py install for mozdevice: finished with status 'done'
+17:02:51     INFO -    Running setup.py install for mozfile: started
+17:02:51     INFO -      Running setup.py install for mozfile: finished with status 'done'
+17:02:51     INFO -    Running setup.py install for mozhttpd: started
+17:02:52     INFO -      Running setup.py install for mozhttpd: finished with status 'done'
+17:02:52     INFO -    Running setup.py install for mozinfo: started
+17:02:52     INFO -      Running setup.py install for mozinfo: finished with status 'done'
+17:02:52     INFO -    Running setup.py install for mozInstall: started
+17:02:53     INFO -      Running setup.py install for mozInstall: finished with status 'done'
+17:02:53     INFO -    Running setup.py install for mozleak: started
+17:02:53     INFO -      Running setup.py install for mozleak: finished with status 'done'
+17:02:53     INFO -    Running setup.py install for mozlog: started
+17:02:54     INFO -      Running setup.py install for mozlog: finished with status 'done'
+17:02:54     INFO -    Running setup.py install for moznetwork: started
+17:02:55     INFO -      Running setup.py install for moznetwork: finished with status 'done'
+17:02:55     INFO -    Running setup.py install for mozprocess: started
+17:02:55     INFO -      Running setup.py install for mozprocess: finished with status 'done'
+17:02:56     INFO -    Running setup.py install for mozprofile: started
+17:02:56     INFO -      Running setup.py install for mozprofile: finished with status 'done'
+17:02:57     INFO -    Running setup.py install for mozrunner: started
+17:02:57     INFO -      Running setup.py install for mozrunner: finished with status 'done'
+17:02:57     INFO -    Running setup.py install for mozscreenshot: started
+17:02:58     INFO -      Running setup.py install for mozscreenshot: finished with status 'done'
+17:02:58     INFO -    Running setup.py install for moztest: started
+17:02:58     INFO -      Running setup.py install for moztest: finished with status 'done'
+17:02:58     INFO -    Running setup.py install for mozversion: started
+17:02:59     INFO -      Running setup.py install for mozversion: finished with status 'done'
+17:02:59     INFO -  Successfully installed manifestparser-1.1 mozInstall-1.12 mozcrash-1.0 mozdebug-0.1 mozdevice-0.48 mozfile-1.2 mozhttpd-0.7 mozinfo-0.9 mozleak-0.1 mozlog-3.4 moznetwork-0.27 mozprocess-0.23 mozprofile-0.28 mozrunner-6.13 mozscreenshot-0.1 moztest-0.8 mozversion-1.4
+17:02:59     INFO - Return code: 0
+17:02:59     INFO - Installing None into virtualenv C:\slave\test\build\venv
+17:02:59     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '-r', 'C:\\slave\\test\\build\\tests\\config\\mozbase_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build\\tests\\config', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+17:02:59     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '-r', 'C:\\slave\\test\\build\\tests\\config\\mozbase_requirements.txt', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org'] in C:\slave\test\build\tests\config
+17:02:59     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --timeout 120 -r C:\slave\test\build\tests\config\mozbase_requirements.txt --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub --trusted-host pypi.pub.build.mozilla.org --trusted-host pypi.pvt.build.mozilla.org
+17:02:59     INFO - Using env: {'ALLUSERSPROFILE': 'C:\\ProgramData',
+17:02:59     INFO -  'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming',
+17:02:59     INFO -  'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+17:02:59     INFO -  'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+17:02:59     INFO -  'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+17:02:59     INFO -  'COMPUTERNAME': 'T-W864-IX-060',
+17:02:59     INFO -  'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+17:02:59     INFO -  'DCLOCATION': 'SCL3',
+17:02:59     INFO -  'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com',
+17:02:59     INFO -  'FP_NO_HOST_CHECK': 'NO',
+17:02:59     INFO -  'HOMEDRIVE': 'C:',
+17:02:59     INFO -  'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000',
+17:02:59     INFO -  'KTS_HOME': 'C:\\Program Files\\KTS',
+17:02:59     INFO -  'KTS_VERSION': '1.19c',
+17:02:59     INFO -  'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local',
+17:02:59     INFO -  'LOGONSERVER': '\\\\T-W864-IX-060',
+17:02:59     INFO -  'MONDIR': 'C:\\Monitor_config\\',
+17:02:59     INFO -  'MOZBUILDDIR': 'C:\\mozilla-build\\',
+17:02:59     INFO -  'MOZ_CRASHREPORTER_NO_REPORT': '1',
+17:02:59     INFO -  'MOZ_HIDE_RESULTS_TABLE': '1',
+17:02:59     INFO -  'MOZ_NO_REMOTE': '1',
+17:02:59     INFO -  'NO_EM_RESTART': '1',
+17:02:59     INFO -  'NO_FAIL_ON_TEST_ERRORS': '1',
+17:02:59     INFO -  'NUMBER_OF_PROCESSORS': '8',
+17:02:59     INFO -  'OS': 'Windows_NT',
+17:02:59     INFO -  'OURDRIVE': 'C:',
+17:02:59     INFO -  'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg',
+17:02:59     INFO -  'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+17:02:59     INFO -  'PROCESSOR_ARCHITECTURE': 'x86',
+17:02:59     INFO -  'PROCESSOR_ARCHITEW6432': 'AMD64',
+17:02:59     INFO -  'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+17:02:59     INFO -  'PROCESSOR_LEVEL': '6',
+17:02:59     INFO -  'PROCESSOR_REVISION': '1e05',
+17:02:59     INFO -  'PROGRAMDATA': 'C:\\ProgramData',
+17:02:59     INFO -  'PROGRAMFILES': 'C:\\Program Files (x86)',
+17:02:59     INFO -  'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+17:02:59     INFO -  'PROGRAMW6432': 'C:\\Program Files',
+17:02:59     INFO -  'PROMPT': '$P$G',
+17:02:59     INFO -  'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json',
+17:02:59     INFO -  'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+17:02:59     INFO -  'PUBLIC': 'C:\\Users\\Public',
+17:02:59     INFO -  'PWD': 'C:\\slave\\test',
+17:02:59     INFO -  'RUNLOGFILE': 'C:\\slave\\\\runslave.log',
+17:02:59     INFO -  'SLAVEDIR': 'C:\\slave\\',
+17:02:59     INFO -  'SYSTEMDRIVE': 'C:',
+17:02:59     INFO -  'SYSTEMROOT': 'C:\\windows',
+17:02:59     INFO -  'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:59     INFO -  'TEST1': 'testie',
+17:02:59     INFO -  'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp',
+17:02:59     INFO -  'USERDOMAIN': 'T-W864-IX-060',
+17:02:59     INFO -  'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060',
+17:02:59     INFO -  'USERNAME': 'cltbld',
+17:02:59     INFO -  'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000',
+17:02:59     INFO -  'WINDIR': 'C:\\windows',
+17:02:59     INFO -  'XPCOM_DEBUG_BREAK': 'warn'}
+17:03:00     INFO -  Ignoring indexes: https://pypi.python.org/simple
+17:03:00     INFO -  Processing c:\slave\test\build\tests\mozbase\manifestparser
+17:03:00     INFO -    Requirement already satisfied (use --upgrade to upgrade): manifestparser==1.1 from file:///C:/slave/test/build/tests/mozbase/manifestparser in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 1))
+17:03:00     INFO -  Processing c:\slave\test\build\tests\mozbase\mozcrash
+17:03:00     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozcrash==1.0 from file:///C:/slave/test/build/tests/mozbase/mozcrash in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 2))
+17:03:00     INFO -  Processing c:\slave\test\build\tests\mozbase\mozdebug
+17:03:01     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozdebug==0.1 from file:///C:/slave/test/build/tests/mozbase/mozdebug in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 3))
+17:03:01     INFO -  Processing c:\slave\test\build\tests\mozbase\mozdevice
+17:03:01     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozdevice==0.48 from file:///C:/slave/test/build/tests/mozbase/mozdevice in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 4))
+17:03:01     INFO -  Processing c:\slave\test\build\tests\mozbase\mozfile
+17:03:01     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozfile==1.2 from file:///C:/slave/test/build/tests/mozbase/mozfile in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 5))
+17:03:01     INFO -  Processing c:\slave\test\build\tests\mozbase\mozhttpd
+17:03:01     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozhttpd==0.7 from file:///C:/slave/test/build/tests/mozbase/mozhttpd in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 6))
+17:03:01     INFO -  Processing c:\slave\test\build\tests\mozbase\mozinfo
+17:03:02     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozinfo==0.9 from file:///C:/slave/test/build/tests/mozbase/mozinfo in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 7))
+17:03:02     INFO -  Processing c:\slave\test\build\tests\mozbase\mozinstall
+17:03:02     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozInstall==1.12 from file:///C:/slave/test/build/tests/mozbase/mozinstall in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 8))
+17:03:02     INFO -  Processing c:\slave\test\build\tests\mozbase\mozleak
+17:03:02     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozleak==0.1 from file:///C:/slave/test/build/tests/mozbase/mozleak in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 9))
+17:03:02     INFO -  Processing c:\slave\test\build\tests\mozbase\mozlog
+17:03:03     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozlog==3.4 from file:///C:/slave/test/build/tests/mozbase/mozlog in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 10))
+17:03:03     INFO -  Processing c:\slave\test\build\tests\mozbase\moznetwork
+17:03:03     INFO -    Requirement already satisfied (use --upgrade to upgrade): moznetwork==0.27 from file:///C:/slave/test/build/tests/mozbase/moznetwork in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 11))
+17:03:03     INFO -  Processing c:\slave\test\build\tests\mozbase\mozprocess
+17:03:03     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozprocess==0.23 from file:///C:/slave/test/build/tests/mozbase/mozprocess in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 12))
+17:03:03     INFO -  Processing c:\slave\test\build\tests\mozbase\mozprofile
+17:03:03     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozprofile==0.28 from file:///C:/slave/test/build/tests/mozbase/mozprofile in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 13))
+17:03:03     INFO -  Processing c:\slave\test\build\tests\mozbase\mozrunner
+17:03:04     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozrunner==6.13 from file:///C:/slave/test/build/tests/mozbase/mozrunner in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 14))
+17:03:04     INFO -  Processing c:\slave\test\build\tests\mozbase\mozscreenshot
+17:03:04     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozscreenshot==0.1 from file:///C:/slave/test/build/tests/mozbase/mozscreenshot in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 15))
+17:03:04     INFO -  Processing c:\slave\test\build\tests\mozbase\moztest
+17:03:04     INFO -    Requirement already satisfied (use --upgrade to upgrade): moztest==0.8 from file:///C:/slave/test/build/tests/mozbase/moztest in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 16))
+17:03:04     INFO -  Processing c:\slave\test\build\tests\mozbase\mozversion
+17:03:04     INFO -    Requirement already satisfied (use --upgrade to upgrade): mozversion==1.4 from file:///C:/slave/test/build/tests/mozbase/mozversion in c:\slave\test\build\venv\lib\site-packages (from -r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 17))
+17:03:04     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozfile>=1.0 in c:\slave\test\build\venv\lib\site-packages (from mozcrash==1.0->-r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 2))
+17:03:04     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozlog>=3.0 in c:\slave\test\build\venv\lib\site-packages (from mozcrash==1.0->-r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 2))
+17:03:04     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozinfo in c:\slave\test\build\venv\lib\site-packages (from mozdebug==0.1->-r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 3))
+17:03:04     INFO -  Requirement already satisfied (use --upgrade to upgrade): moznetwork>=0.24 in c:\slave\test\build\venv\lib\site-packages (from mozdevice==0.48->-r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 4))
+17:03:04     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozprocess>=0.19 in c:\slave\test\build\venv\lib\site-packages (from mozdevice==0.48->-r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 4))
+17:03:04     INFO -  Collecting blessings>=1.3 (from mozlog==3.4->-r C:\slave\test\build\tests\config\mozbase_requirements.txt (line 10))
+17:03:06     INFO -  Installing collected packages: blessings
+17:03:06     INFO -  Successfully installed blessings-1.6
+
+command interrupted, attempting to kill
+17:03:09     INFO - Return code: 0
+17:03:09     INFO - Installing pip>=1.5 into virtualenv C:\slave\test\build\venv
+17:03:09     INFO - retry: Calling run_command with args: [['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--timeout', '120', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', '--trusted-host', 'pypi.pub.build.mozilla.org', '--trusted-host', 'pypi.pvt.build.mozilla.org', 'pip>=1.5']], kwargs: {'error_level': 'warning', 'error_list': [{'substr': 'not found or a compiler error:', 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x021E23A0>, 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x022D3020>, 'level': 'warning'}, {'regex': <_sre.SRE_Pattern object at 0x022597F0>, 'level': 'debug'}, {'substr': 'command not found', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x02285758>, 'level': 'warning'}, {'substr': 'Traceback (most recent call last)', 'level': 'error'}, {'substr': 'SyntaxError: ', 'level': 'error'}, {'substr': 'TypeError: ', 'level': 'error'}, {'substr': 'NameError: ', 'level': 'error'}, {'substr': 'ZeroDivisionError: ', 'level': 'error'}, {'regex': <_sre.SRE_Pattern object at 0x0048AB20>, 'level': 'critical'}, {'regex': <_sre.SRE_Pattern object at 0x022A3660>, 'level': 'critical'}], 'cwd': 'C:\\slave\\test\\build', 'env': {'TMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'TEST1': 'testie', 'COMPUTERNAME': 'T-W864-IX-060', 'USERDOMAIN': 'T-W864-IX-060', 'KTS_VERSION': '1.19c', 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel', 'PROGRAMFILES': 'C:\\Program Files (x86)', 'PROCESSOR_REVISION': '1e05', 'DNSSUFFIX': 'wintest.releng.scl3.mozilla.com', 'SYSTEMROOT': 'C:\\windows', 'NO_EM_RESTART': '1', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'OURDRIVE': 'C:', 'MOZ_HIDE_RESULTS_TABLE': '1', 'XPCOM_DEBUG_BREAK': 'warn', 'MONDIR': 'C:\\Monitor_config\\', 'TEMP': 'C:\\Users\\CLTBLD~1.000\\AppData\\Local\\Temp', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'RUNLOGFILE': 'C:\\slave\\\\runslave.log', 'PROCESSOR_ARCHITECTURE': 'x86', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'USERPROFILE': 'C:\\Users\\cltbld.T-W864-IX-060.000', 'LOCALAPPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Local', 'HOMEPATH': '\\Users\\cltbld.T-W864-IX-060.000', 'USERDOMAIN_ROAMINGPROFILE': 'T-W864-IX-060', 'MOZBUILDDIR': 'C:\\mozilla-build\\', 'PROGRAMW6432': 'C:\\Program Files', 'USERNAME': 'cltbld', 'LOGONSERVER': '\\\\T-W864-IX-060', 'MOZ_NO_REMOTE': '1', 'COMSPEC': 'C:\\windows\\system32\\cmd.exe', 'PROGRAMDATA': 'C:\\ProgramData', 'PROPERTIES_FILE': 'C:\\slave\\test/buildprops.json', 'PATH': 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\mozilla-build\\python27;C:\\mozilla-build\\python27\\Scripts;C:\\mozilla-build\\msys\\bin;C:\\mozilla-build\\vim\\vim72;C:\\mozilla-build\\wget;C:\\mozilla-build\\info-zip;C:\\CoreUtils\\bin;C:\\mozilla-build\\buildbotve\\scripts;C:\\mozilla-build\\hg', 'PROMPT': '$P$G', 'NO_FAIL_ON_TEST_ERRORS': '1', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'FP_NO_HOST_CHECK': 'NO', 'DCLOCATION': 'SCL3', 'APPDATA': 'C:\\Users\\cltbld.T-W864-IX-060.000\\AppData\\Roaming', 'HOMEDRIVE': 'C:', 'SYSTEMDRIVE': 'C:', 'SLAVEDIR': 'C:\\slave\\', 'NUMBER_OF_PROCESSORS': '8', 'PWD': 'C:\\slave\\test', 'PROCESSOR_LEVEL': '6', 'KTS_HOME': 'C:\\Program Files\\KTS', 'PROCESSOR_ARCHITEW6432': 'AMD64', 'MOZ_CRASHREPORTER_NO_REPORT': '1', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'OS': 'Windows_NT', 'PUBLIC': 'C:\\Users\\Public', 'WINDIR': 'C:\\windows'}}, attempt #1
+program finished with exit code 1
+elapsedTime=195.974000
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+The web-page 'stop build' button was pressed by 'rvandermeulen@mozilla.com': Cancelled via self-serve
+========= master_lag: 0.22 =========
+========= Finished 'c:/mozilla-build/python27/python -u ...' interrupted (results: 4, elapsed: 3 mins, 16 secs) (at 2018-06-08 17:03:09.857805) =========
+
+========= Started set props: build_url (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:09.866875) =========
+'cmd' '/C' 'for' '%f' 'in' '(*)' 'do' '@type' '%f'
+ in dir C:\slave\test\properties (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['cmd', '/C', 'for', '%f', 'in', '(*)', 'do', '@type', '%f']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Roaming
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=T-W864-IX-060
+  COMSPEC=C:\windows\system32\cmd.exe
+  DCLOCATION=SCL3
+  DNSSUFFIX=wintest.releng.scl3.mozilla.com
+  FP_NO_HOST_CHECK=NO
+  HOMEDRIVE=C:
+  HOMEPATH=\Users\cltbld.T-W864-IX-060.000
+  KTS_HOME=C:\Program Files\KTS
+  KTS_VERSION=1.19c
+  LOCALAPPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Local
+  LOGONSERVER=\\T-W864-IX-060
+  MONDIR=C:\Monitor_config\
+  MOZBUILDDIR=C:\mozilla-build\
+  NUMBER_OF_PROCESSORS=8
+  OS=Windows_NT
+  OURDRIVE=C:
+  PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\mozilla-build\python27;C:\mozilla-build\python27\Scripts;C:\mozilla-build\msys\bin;C:\mozilla-build\vim\vim72;C:\mozilla-build\wget;C:\mozilla-build\info-zip;C:\CoreUtils\bin;C:\mozilla-build\buildbotve\scripts;C:\mozilla-build\hg
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 30 Stepping 5, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=1e05
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PSMODULEPATH=C:\windows\system32\WindowsPowerShell\v1.0\Modules\
+  PUBLIC=C:\Users\Public
+  PWD=C:\slave\test\properties
+  RUNLOGFILE=C:\slave\\runslave.log
+  SLAVEDIR=C:\slave\
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\windows
+  TEMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  TEST1=testie
+  TMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  USERDOMAIN=T-W864-IX-060
+  USERDOMAIN_ROAMINGPROFILE=T-W864-IX-060
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld.T-W864-IX-060.000
+  WINDIR=C:\windows
+ using PTY: False
+build_url:https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.zip
+program finished with exit code 0
+elapsedTime=0.101000
+build_url: 'https://queue.taskcluster.net/v1/task/VAgbWLphTjmdh4hh8yTyVw/artifacts/public/build/firefox-52.8.2.en-US.win64.zip'
+========= master_lag: 0.01 =========
+========= Finished set props: build_url (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:09.978893) =========
+
+========= Started 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:09.979225) =========
+'rm' '-f' 'oauth.txt'
+ in dir C:\slave\test\. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'oauth.txt']
+ environment:
+  ALLUSERSPROFILE=C:\ProgramData
+  APPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Roaming
+  COMMONPROGRAMFILES=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+  COMMONPROGRAMW6432=C:\Program Files\Common Files
+  COMPUTERNAME=T-W864-IX-060
+  COMSPEC=C:\windows\system32\cmd.exe
+  DCLOCATION=SCL3
+  DNSSUFFIX=wintest.releng.scl3.mozilla.com
+  FP_NO_HOST_CHECK=NO
+  HOMEDRIVE=C:
+  HOMEPATH=\Users\cltbld.T-W864-IX-060.000
+  KTS_HOME=C:\Program Files\KTS
+  KTS_VERSION=1.19c
+  LOCALAPPDATA=C:\Users\cltbld.T-W864-IX-060.000\AppData\Local
+  LOGONSERVER=\\T-W864-IX-060
+  MONDIR=C:\Monitor_config\
+  MOZBUILDDIR=C:\mozilla-build\
+  NUMBER_OF_PROCESSORS=8
+  OS=Windows_NT
+  OURDRIVE=C:
+  PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\mozilla-build\python27;C:\mozilla-build\python27\Scripts;C:\mozilla-build\msys\bin;C:\mozilla-build\vim\vim72;C:\mozilla-build\wget;C:\mozilla-build\info-zip;C:\CoreUtils\bin;C:\mozilla-build\buildbotve\scripts;C:\mozilla-build\hg
+  PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PROCESSOR_ARCHITECTURE=x86
+  PROCESSOR_ARCHITEW6432=AMD64
+  PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 30 Stepping 5, GenuineIntel
+  PROCESSOR_LEVEL=6
+  PROCESSOR_REVISION=1e05
+  PROGRAMDATA=C:\ProgramData
+  PROGRAMFILES=C:\Program Files (x86)
+  PROGRAMFILES(X86)=C:\Program Files (x86)
+  PROGRAMW6432=C:\Program Files
+  PROMPT=$P$G
+  PSMODULEPATH=C:\windows\system32\WindowsPowerShell\v1.0\Modules\
+  PUBLIC=C:\Users\Public
+  PWD=C:\slave\test
+  RUNLOGFILE=C:\slave\\runslave.log
+  SLAVEDIR=C:\slave\
+  SYSTEMDRIVE=C:
+  SYSTEMROOT=C:\windows
+  TEMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  TEST1=testie
+  TMP=C:\Users\CLTBLD~1.000\AppData\Local\Temp
+  USERDOMAIN=T-W864-IX-060
+  USERDOMAIN_ROAMINGPROFILE=T-W864-IX-060
+  USERNAME=cltbld
+  USERPROFILE=C:\Users\cltbld.T-W864-IX-060.000
+  WINDIR=C:\windows
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.101000
+========= master_lag: 0.01 =========
+========= Finished 'rm -f ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:10.089362) =========
+
+========= Started reboot slave lost (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:10.089741) =========
+
+========= Finished reboot slave lost (results: 0, elapsed: 0 secs) (at 2018-06-08 17:03:10.396428) =========
+
+========= Total master_lag: 0.47 =========
+

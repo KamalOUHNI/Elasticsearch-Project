@@ -1,0 +1,782 @@
+builder: comm-beta-macosx64-debug
+slave: bld-lion-r5-065
+starttime: 1528511676.91
+results: failure (2)
+buildid: 20180608193420
+builduid: 7cae6680135b42af8fad8d644be9c23b
+revision: 8fa44ae05dddb52941a42706aac2690d0ede4e3e
+
+========= Started set props: basedir (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:36.910747) =========
+bash -c pwd
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'pwd']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+/builds/slave/tb-c-beta-m64-d-00000000000000
+program finished with exit code 0
+elapsedTime=0.006818
+basedir: '/builds/slave/tb-c-beta-m64-d-00000000000000'
+========= master_lag: 0.03 =========
+========= Finished set props: basedir (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:36.951302) =========
+
+========= Started set props: hashType (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:36.951627) =========
+hashType: sha512
+========= Finished set props: hashType (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:36.951959) =========
+
+========= Started set props: builddir (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:36.952254) =========
+bash -c 'basename "$PWD"'
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'basename "$PWD"']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+tb-c-beta-m64-d-00000000000000
+program finished with exit code 0
+elapsedTime=0.005636
+builddir: 'tb-c-beta-m64-d-00000000000000'
+========= master_lag: 0.04 =========
+========= Finished set props: builddir (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:37.002571) =========
+
+========= Started clobber build tools (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:37.002898) =========
+rm -rf tools
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-rf', 'tools']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.005451
+========= master_lag: 0.04 =========
+========= Finished clobber build tools (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:37.052112) =========
+
+========= Started clone build tools (results: 0, elapsed: 16 secs) (at 2018-06-08 19:34:37.052431) =========
+hg clone https://hg.mozilla.org/build/tools tools
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/. (timeout 1320 secs)
+ watching logfiles {}
+ argv: ['hg', 'clone', 'https://hg.mozilla.org/build/tools', 'tools']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+warning: connecting to hg.mozilla.org using legacy security technology (TLS 1.0); see https://mercurial-scm.org/wiki/SecureConnections for more info
+applying clone bundle from https://hg.cdn.mozilla.net/build/tools/88b450a68f2444542486da1421f85f3c56225d37.zstd-max.hg
+warning: connecting to hg.cdn.mozilla.net using legacy security technology (TLS 1.0); see https://mercurial-scm.org/wiki/SecureConnections for more info
+adding changesets
+adding manifests
+adding file changes
+added 8423 changesets with 19131 changes to 2172 files (+2 heads)
+finished applying clone bundle
+warning: connecting to hg.mozilla.org using legacy security technology (TLS 1.0); see https://mercurial-scm.org/wiki/SecureConnections for more info
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 1 changesets with 1 changes to 1 files
+new changesets db9d67c3554f
+updating to branch default
+1057 files updated, 0 files merged, 0 files removed, 0 files unresolved
+program finished with exit code 0
+elapsedTime=16.880607
+========= master_lag: 0.01 =========
+========= Finished clone build tools (results: 0, elapsed: 16 secs) (at 2018-06-08 19:34:53.943461) =========
+
+========= Started set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:53.943792) =========
+bash -c pwd
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/tools (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['bash', '-c', 'pwd']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000/tools
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+/builds/slave/tb-c-beta-m64-d-00000000000000/tools
+program finished with exit code 0
+elapsedTime=0.004963
+toolsdir: '/builds/slave/tb-c-beta-m64-d-00000000000000/tools'
+========= master_lag: 0.05 =========
+========= Finished set props: toolsdir (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:53.994658) =========
+
+========= Started no change (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:53.995131) =========
+python tools/buildfarm/maintenance/get_instance_metadata.py
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['python', 'tools/buildfarm/maintenance/get_instance_metadata.py']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+{}
+program finished with exit code 0
+elapsedTime=0.031908
+
+========= master_lag: 0.02 =========
+========= Finished no change (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:54.048337) =========
+
+========= Started checking clobber times (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:54.048688) =========
+python tb-c-beta-m64-d-00000000000000/tools/clobberer/clobberer.py -s tools -t 168 https://api.pub.build.mozilla.org/clobberer/lastclobber comm-beta 'TB OS X 10.7 64-bit comm-beta leak test build' tb-c-beta-m64-d-00000000000000 bld-lion-r5-065 http://buildbot-master85.bb.releng.scl3.mozilla.com:8001/
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/.. (timeout 3600 secs)
+ watching logfiles {}
+ argv: ['python', 'tb-c-beta-m64-d-00000000000000/tools/clobberer/clobberer.py', '-s', 'tools', '-t', '168', 'https://api.pub.build.mozilla.org/clobberer/lastclobber', 'comm-beta', 'TB OS X 10.7 64-bit comm-beta leak test build', 'tb-c-beta-m64-d-00000000000000', 'bld-lion-r5-065', u'http://buildbot-master85.bb.releng.scl3.mozilla.com:8001/']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+2018-06-08 19:34:54,174 - Entering legacy mode.
+2018-06-08 19:34:54,862 - tb-c-beta-m64-d-00000000000000:Our last clobber date: 2018-05-07 15:00:49
+2018-06-08 19:34:54,863 - tb-c-beta-m64-d-00000000000000:Server clobber date:   2018-05-07 15:00:49
+program finished with exit code 0
+elapsedTime=0.815113
+========= master_lag: 0.01 =========
+========= Finished checking clobber times (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:54.875184) =========
+
+========= Started set props: purge_actual purge_target (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:54.875525) =========
+python tools/buildfarm/maintenance/purge_builds.py -s 10 -n info -n 'rel-*:10d' -n 'tb-rel-*:10d' .. /mock/users/cltbld/home/cltbld/build
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/. (timeout 3600 secs)
+ watching logfiles {}
+ argv: ['python', 'tools/buildfarm/maintenance/purge_builds.py', '-s', '10', '-n', 'info', '-n', 'rel-*:10d', '-n', 'tb-rel-*:10d', '..', '/mock/users/cltbld/home/cltbld/build']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LC_ALL=C
+  LOGNAME=cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-m64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  MOZ_SIGN_CMD=python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/signtool.py --cachedir /builds/slave/tb-c-beta-m64-d-00000000000000/signing_cache -t /builds/slave/tb-c-beta-m64-d-00000000000000/token -n /builds/slave/tb-c-beta-m64-d-00000000000000/nonce -c /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  PATH=/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TINDERBOX_OUTPUT=1
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+Ignored directory 'rel-bir-fx-lx_pner_rpks-000000' exceeds cutoff time
+Ignored directory 'rel-m-beta-fx-w64_pner_rpks-00' exceeds cutoff time
+Ignored directory 'rel-m-rel-fx-w32_pner_rpks-000' exceeds cutoff time
+Ignored directory 'rel-map-fx-m64_pner_rpks-00000' exceeds cutoff time
+Ignored directory 'tb-rel-c-beta-m64_beta_u_v_1-0' exceeds cutoff time
+Ignored directory 'tb-rel-c-beta-m64_beta_u_v_5-0' exceeds cutoff time
+Ignored directory 'tb-rel-c-beta-m64_rpk_4-000000' exceeds cutoff time
+853.37 GB of space available
+program finished with exit code 0
+elapsedTime=0.052832
+purge_actual: '853.37GB'
+purge_target: '10GB'
+========= master_lag: 0.01 =========
+========= Finished set props: purge_actual purge_target (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:54.939660) =========
+
+========= Started set_buildids (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:54.940002) =========
+========= Finished set_buildids (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:54.940122) =========
+
+========= Started 'ccache -z' (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:54.940386) =========
+ccache -z
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['ccache', '-z']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LC_ALL=C
+  LOGNAME=cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-m64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  MOZ_SIGN_CMD=python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/signtool.py --cachedir /builds/slave/tb-c-beta-m64-d-00000000000000/signing_cache -t /builds/slave/tb-c-beta-m64-d-00000000000000/token -n /builds/slave/tb-c-beta-m64-d-00000000000000/nonce -c /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  PATH=/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000/build
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TINDERBOX_OUTPUT=1
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+Statistics cleared
+program finished with exit code 0
+elapsedTime=0.539191
+========= master_lag: 0.01 =========
+========= Finished 'ccache -z' (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:55.493802) =========
+
+========= Started delete old package (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:55.494140) =========
+rm -rf objdir-tb/dist/firefox-* objdir-tb/dist/fennec* objdir-tb/dist/seamonkey* objdir-tb/dist/thunderbird* objdir-tb/dist/install/sea/*.exe 
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: rm -rf objdir-tb/dist/firefox-* objdir-tb/dist/fennec* objdir-tb/dist/seamonkey* objdir-tb/dist/thunderbird* objdir-tb/dist/install/sea/*.exe 
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LC_ALL=C
+  LOGNAME=cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-m64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  MOZ_SIGN_CMD=python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/signtool.py --cachedir /builds/slave/tb-c-beta-m64-d-00000000000000/signing_cache -t /builds/slave/tb-c-beta-m64-d-00000000000000/token -n /builds/slave/tb-c-beta-m64-d-00000000000000/nonce -c /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  PATH=/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000/build
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TINDERBOX_OUTPUT=1
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.007547
+========= master_lag: 0.01 =========
+========= Finished delete old package (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:55.514600) =========
+
+========= Started downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:55.514918) =========
+========= Finished downloading to buildprops.json (results: 0, elapsed: 0 secs) (at 2018-06-08 19:34:55.605583) =========
+
+========= Started 'python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/buildfarm/utils/retry.py ...' (results: 0, elapsed: 21 secs) (at 2018-06-08 19:34:55.606012) =========
+python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/buildfarm/utils/retry.py -s 1 -r 5 -t 3660 python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/buildfarm/utils/hgtool.py https://hg.mozilla.org/releases/comm-beta build
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/. (timeout 3720 secs)
+ watching logfiles {}
+ argv: ['python', '/builds/slave/tb-c-beta-m64-d-00000000000000/tools/buildfarm/utils/retry.py', '-s', '1', '-r', '5', '-t', '3660', 'python', '/builds/slave/tb-c-beta-m64-d-00000000000000/tools/buildfarm/utils/hgtool.py', 'https://hg.mozilla.org/releases/comm-beta', 'build']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LC_ALL=C
+  LOGNAME=cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-m64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  MOZ_SIGN_CMD=python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/signtool.py --cachedir /builds/slave/tb-c-beta-m64-d-00000000000000/signing_cache -t /builds/slave/tb-c-beta-m64-d-00000000000000/token -n /builds/slave/tb-c-beta-m64-d-00000000000000/nonce -c /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  PATH=/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+  PROPERTIES_FILE=buildprops.json
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TINDERBOX_OUTPUT=1
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+Executing: ['python', '/builds/slave/tb-c-beta-m64-d-00000000000000/tools/buildfarm/utils/hgtool.py', 'https://hg.mozilla.org/releases/comm-beta', 'build']
+Reporting hg version in use
+command: START
+command: hg -q version
+command: cwd: .
+command: output:
+Mercurial Distributed SCM (version 4.4.1)
+command: END (0.13s elapsed)
+
+Checking if share extension works
+command: START
+command: hg help share
+command: cwd: /builds/slave/tb-c-beta-m64-d-00000000000000
+command: env: {'HGPLAIN': '1'}
+command: END (0.25s elapsed)
+
+/builds/slave/tb-c-beta-m64-d-00000000000000/build doesn't appear to be a valid hg directory; clobbering
+command: START
+command: hg path default
+command: cwd: /builds/hg-shared/releases/comm-beta
+command: env: {'HGPLAIN': '1'}
+command: END (0.25s elapsed)
+
+command: output:
+https://hg.mozilla.org/releases/comm-beta
+
+Updating shared repo
+Reporting hg version in use
+command: START
+command: hg -q version
+command: cwd: .
+command: output:
+Mercurial Distributed SCM (version 4.4.1)
+command: END (0.13s elapsed)
+
+command: START
+command: hg path default
+command: cwd: /builds/hg-shared/releases/comm-beta
+command: env: {'HGPLAIN': '1'}
+command: END (0.25s elapsed)
+
+command: output:
+https://hg.mozilla.org/releases/comm-beta
+
+checking to see if 8fa44ae05dddb52941a42706aac2690d0ede4e3e exists in /builds/hg-shared/releases/comm-beta
+8fa44ae05dddb52941a42706aac2690d0ede4e3e does not exist in /builds/hg-shared/releases/comm-beta
+command: START
+command: hg pull --traceback -r 8fa44ae05dddb52941a42706aac2690d0ede4e3e https://hg.mozilla.org/releases/comm-beta
+command: cwd: /builds/hg-shared/releases/comm-beta
+command: env: {'HGPLAIN': '1'}
+command: END (0.75s elapsed)
+
+command: output:
+pulling from https://hg.mozilla.org/releases/comm-beta
+warning: connecting to hg.mozilla.org using legacy security technology (TLS 1.0); see https://mercurial-scm.org/wiki/SecureConnections for more info
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 1 changesets with 1 changes to 1 files
+new changesets 8fa44ae05ddd
+(run 'hg update' to get a working copy)
+
+Trying to share /builds/hg-shared/releases/comm-beta to /builds/slave/tb-c-beta-m64-d-00000000000000/build
+mkdir: /builds/slave/tb-c-beta-m64-d-00000000000000/build
+command: START
+command: hg share -U /builds/hg-shared/releases/comm-beta /builds/slave/tb-c-beta-m64-d-00000000000000/build
+command: cwd: /builds/slave/tb-c-beta-m64-d-00000000000000
+command: output:
+command: END (0.15s elapsed)
+
+command: START
+command: hg update -C -r 8fa44ae05dddb52941a42706aac2690d0ede4e3e
+command: cwd: /builds/slave/tb-c-beta-m64-d-00000000000000/build
+command: output:
+9127 files updated, 0 files merged, 0 files removed, 0 files unresolved
+command: END (18.45s elapsed)
+
+command: START
+command: hg parent --template {node|short}
+command: cwd: /builds/slave/tb-c-beta-m64-d-00000000000000/build
+command: env: {'HGPLAIN': '1'}
+command: END (0.25s elapsed)
+
+command: output:
+8fa44ae05ddd
+Got revision 8fa44ae05ddd
+program finished with exit code 0
+elapsedTime=21.905444
+========= master_lag: 0.01 =========
+========= Finished 'python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/buildfarm/utils/retry.py ...' (results: 0, elapsed: 21 secs) (at 2018-06-08 19:35:17.522792) =========
+
+========= Started set props: got_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.523536) =========
+hg parent '--template={node}'
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['hg', 'parent', '--template={node}']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000/build
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+8fa44ae05dddb52941a42706aac2690d0ede4e3eprogram finished with exit code 0
+elapsedTime=0.157842
+got_revision: '8fa44ae05dddb52941a42706aac2690d0ede4e3e'
+========= master_lag: 0.01 =========
+========= Finished set props: got_revision (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.693775) =========
+
+========= Started set props: comments (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.694115) =========
+comments: No bug - Tagging bf018896a24267ef30f81f34903fd33370e297d6 with THUNDERBIRD_60_0b7_BUILD3, THUNDERBIRD_60_0b7_RELEASE a=release CLOSED TREE
+========= Finished set props: comments (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.694514) =========
+
+========= Started got mozconfig (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.694794) =========
+cp mail/config/mozconfigs/macosx64/debug .mozconfig
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['cp', 'mail/config/mozconfigs/macosx64/debug', '.mozconfig']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000/build
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.006652
+========= master_lag: 0.05 =========
+========= Finished got mozconfig (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.747247) =========
+
+========= Started 'cat .mozconfig' (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.747576) =========
+cat .mozconfig
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['cat', '.mozconfig']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000/build
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+. "$topsrcdir/build/macosx/mozconfig.common"
+. "$topsrcdir/build/mozconfig.stylo"
+. "$topsrcdir/comm/mail/config/mozconfigs/common"
+
+ac_add_options --enable-debug
+
+# Needed to enable breakpad in application.ini
+export MOZILLA_OFFICIAL=1
+
+# For NSS symbols
+export MOZ_DEBUG_SYMBOLS=1
+
+# Disable checking that add-ons are signed by the trusted root
+MOZ_ADDON_SIGNING=0
+# Disable enforcing that add-ons are signed by the trusted root
+MOZ_REQUIRE_ADDON_SIGNING=0
+
+# Package js shell
+export MOZ_PACKAGE_JSSHELL=1
+
+. "$topsrcdir/comm/build/mozconfig.sccache"
+
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1419472
+ac_add_options --disable-clang-plugin
+program finished with exit code 0
+elapsedTime=0.005941
+========= master_lag: 0.01 =========
+========= Finished 'cat .mozconfig' (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.765616) =========
+
+========= Started 'sh /builds/slave/tb-c-beta-m64-d-00000000000000/tools/scripts/tooltool/tooltool_wrapper.sh ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.765962) =========
+sh /builds/slave/tb-c-beta-m64-d-00000000000000/tools/scripts/tooltool/tooltool_wrapper.sh mail/config/tooltool-manifests/macosx64/releng.manifest https://api.pub.build.mozilla.org/tooltool/ setup.sh /tools/tooltool.py --authentication-file /builds/relengapi.tok
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/build (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['sh', '/builds/slave/tb-c-beta-m64-d-00000000000000/tools/scripts/tooltool/tooltool_wrapper.sh', 'mail/config/tooltool-manifests/macosx64/releng.manifest', 'https://api.pub.build.mozilla.org/tooltool/', 'setup.sh', '/tools/tooltool.py', '--authentication-file', '/builds/relengapi.tok']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LC_ALL=C
+  LOGNAME=cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-m64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  MOZ_SIGN_CMD=python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/signtool.py --cachedir /builds/slave/tb-c-beta-m64-d-00000000000000/signing_cache -t /builds/slave/tb-c-beta-m64-d-00000000000000/token -n /builds/slave/tb-c-beta-m64-d-00000000000000/nonce -c /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  PATH=/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000/build
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TINDERBOX_OUTPUT=1
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+mail/config/tooltool-manifests/macosx64/releng.manifest doesn't exist, skipping...
+program finished with exit code 0
+elapsedTime=0.034092
+========= master_lag: 0.01 =========
+========= Finished 'sh /builds/slave/tb-c-beta-m64-d-00000000000000/tools/scripts/tooltool/tooltool_wrapper.sh ...' (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.812828) =========
+
+========= Started remove old nonce (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.813174) =========
+rm -f nonce
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/. (timeout 1200 secs)
+ watching logfiles {}
+ argv: ['rm', '-f', 'nonce']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LOGNAME=cltbld
+  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+program finished with exit code 0
+elapsedTime=0.004987
+========= master_lag: 0.05 =========
+========= Finished remove old nonce (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.864229) =========
+
+========= Started downloading to token (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.864545) =========
+Slave: bld-lion-r5-065
+IP: 10.26.52.85
+Duration: 25200
+URI: https://mac-v2-signing6.srv.releng.scl3.mozilla.com:9110/token
+========= Finished downloading to token (results: 0, elapsed: 0 secs) (at 2018-06-08 19:35:17.901615) =========
+
+========= Started compile failed (results: 2, elapsed: 0 secs) (at 2018-06-08 19:35:17.902081) =========
+make -f client.mk build MOZ_BUILD_DATE=20180608193420
+ in dir /builds/slave/tb-c-beta-m64-d-00000000000000/build (timeout 10800 secs) (maxTime 19800 secs)
+ watching logfiles {}
+ argv: ['make', '-f', 'client.mk', 'build', u'MOZ_BUILD_DATE=20180608193420']
+ environment:
+  Apple_PubSub_Socket_Render=/tmp/launch-KchoKj/Render
+  CCACHE_COMPRESS=1
+  CCACHE_DIR=/builds/ccache
+  CCACHE_UMASK=002
+  DISPLAY=/tmp/launch-tuBKT4/org.x:0
+  GIT_SHARE_BASE_DIR=/builds/git-shared
+  HG_SHARE_BASE_DIR=/builds/hg-shared
+  HOME=/Users/cltbld
+  IDLEIZER_DISABLE_SHUTDOWN=true
+  LC_ALL=C
+  LOGNAME=cltbld
+  MOZ_AUTOMATION=1
+  MOZ_CRASHREPORTER_NO_REPORT=1
+  MOZ_OBJDIR=/builds/slave/tb-c-beta-m64-d-00000000000000/build/objdir-tb
+  MOZ_SCM_LEVEL=3
+  MOZ_SIGN_CMD=python /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/signtool.py --cachedir /builds/slave/tb-c-beta-m64-d-00000000000000/signing_cache -t /builds/slave/tb-c-beta-m64-d-00000000000000/token -n /builds/slave/tb-c-beta-m64-d-00000000000000/nonce -c /builds/slave/tb-c-beta-m64-d-00000000000000/tools/release/signing/host.cert -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing4.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing5.srv.releng.scl3.mozilla.com:9110 -H gpg:sha2signcode:sha2signcodestub:osslsigncode:signcode:mar:mar_sha384:jar:emevoucher:widevine:widevine_blessed:signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing1.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing2.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing3.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing4.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing6.srv.releng.scl3.mozilla.com:9110 -H macapp:mac-v2-signing7.srv.releng.scl3.mozilla.com:9110
+  PATH=/tools/python/bin:/tools/buildbot/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+  PWD=/builds/slave/tb-c-beta-m64-d-00000000000000/build
+  RUNNER_CONFIG_CMD=/opt/runner/bin/python2.7 /opt/runner/bin/runner -c /opt/runner/runner.cfg
+  SHELL=/bin/bash
+  SSH_AUTH_SOCK=/tmp/launch-yAoxwf/Listeners
+  TINDERBOX_OUTPUT=1
+  TMPDIR=/var/folders/h8/d0jg9cp15nb_jj_6n59_gfw400000w/T/
+  TOOLTOOL_DIR=/builds/slave/tb-c-beta-m64-d-00000000000000/build
+  TWISTD_LOG_PATH=/builds/slave/twistd.log
+  USER=cltbld
+  VERSIONER_PYTHON_PREFER_32_BIT=no
+  VERSIONER_PYTHON_VERSION=2.7
+  XPCOM_DEBUG_BREAK=stack-and-abort
+  __CF_USER_TEXT_ENCODING=0x1C:0:0
+ using PTY: False
+/builds/slave/tb-c-beta-m64-d-00000000000000/build/.mozconfig: line 3: /builds/slave/tb-c-beta-m64-d-00000000000000/build/comm/mail/config/mozconfigs/common: No such file or directory
+client.mk:102: *** missing separator.  Stop.
+program finished with exit code 2
+elapsedTime=0.910050
+========= master_lag: 0.01 =========
+========= Finished compile failed (results: 2, elapsed: 0 secs) (at 2018-06-08 19:35:18.824518) =========
+
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Skipped  (results: not started, elapsed: not started) =========
+========= Started maybe rebooting skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 19:35:18.824898) =========
+========= Finished maybe rebooting skipped (results: 3, elapsed: 0 secs) (at 2018-06-08 19:35:18.825237) =========
+
+========= Total master_lag: 0.40 =========
+
