@@ -102,4 +102,3 @@ volumes:
     driver: local
   filebeat-data:
     driver: local
-    
